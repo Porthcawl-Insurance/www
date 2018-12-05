@@ -1,0 +1,5 @@
+<datalist id = 'naics'>
+{{ range $i, $e := $.Site.Data.naics.blsgov_2018 }}
+<option value = '{{ $e }}'>
+{{ end }}
+</datalist>

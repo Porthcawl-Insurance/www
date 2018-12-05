@@ -1,0 +1,18 @@
+baseURL = 'https://www.cyberfortress.com'
+languageCode = 'en-us'
+title = 'CyberFortress'
+theme = ''
+
+[params]
+  description = "Today's small business insurance is anti-customer. CyberFortress was born to fix it."
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  team = "/:slug/"
+  md = "/:slug/"
+
+[blackfriday]
+  hrefTargetBlank = true
+

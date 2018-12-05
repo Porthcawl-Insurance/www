@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mds on CyberFortress</title>
+    <link>https://www.cyberfortress.com/md/</link>
+    <description>Recent content in Mds on CyberFortress</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Aug 2018 20:14:44 -0500</lastBuildDate>
+    
+	<atom:link href="https://www.cyberfortress.com/md/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Our Culture Blueprint</title>
+      <link>https://www.cyberfortress.com/about/culture/</link>
+      <pubDate>Tue, 07 Aug 2018 20:14:44 -0500</pubDate>
+      
+      <guid>https://www.cyberfortress.com/about/culture/</guid>
+      <description>CyberFortress was formed to be a new kind of company to tackle a big problem. Insurance is one of the most painful and hated experiences in modern life. We want to change that. But we don’t think we can change the insurance industry without first changing ourselves. So we have thrown out a lot of the startup playbook: No founder dictators. No managers. No vesting handcuffs. No work obsession leading to burnout.</description>
+    </item>
+    
+    <item>
+      <title>Terms of Service</title>
+      <link>https://www.cyberfortress.com/about/tos/</link>
+      <pubDate>Tue, 10 Apr 2018 15:45:32 -0500</pubDate>
+      
+      <guid>https://www.cyberfortress.com/about/tos/</guid>
+      <description>These Terms of Service (hereinafter the &amp;ldquo;Terms&amp;rdquo;) are a legal agreement between you and Porthcawl Insurance Services US, LLC d/b/a CyberFortress (referred to in the Terms as &amp;ldquo;CyberFortress&amp;rdquo;, &amp;ldquo;we&amp;rdquo;, us&amp;rdquo; and &amp;ldquo;our&amp;rdquo;).
+IT IS VERY IMPORTANT THAT YOU READ THESE TERM VERY CAREFULLY AS THEY CONSTITUTE A BINDING LEGAL AGREEMENT BETWEEN YOU AND US, AND THEY STATE THE AGREEMENT BETWEEN YOU AND US REGARDING EACH OF OUR LEGAL RIGHTS, REMEDIES AND OBLIGATIONS TO THE OTHER PARTY.</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://www.cyberfortress.com/about/privacy/</link>
+      <pubDate>Mon, 09 Apr 2018 22:11:36 -0500</pubDate>
+      
+      <guid>https://www.cyberfortress.com/about/privacy/</guid>
+      <description>Porthcawl Insurance Services US, Inc. d/b/a CyberFortress and its affiliates (&amp;ldquo;CyberFortress”, we&amp;rdquo;, &amp;ldquo;our&amp;rdquo;, &amp;ldquo;our company&amp;rdquo;) take the privacy of our customers and other visitors to our website (&amp;ldquo;you&amp;rdquo;, &amp;ldquo;your&amp;rdquo;, &amp;ldquo;your company&amp;rdquo;) seriously. Because we value our customer relationships, we do not sell customer information. We will only share your information for the purposes of providing services which you have engaged us to perform on your behalf, such as placing your insurance, and/or providing you with insurance-related products or services, as applicable, and as otherwise permitted or required by law.</description>
+    </item>
+    
+  </channel>
+</rss>

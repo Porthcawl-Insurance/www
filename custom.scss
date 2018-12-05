@@ -1,0 +1,343 @@
+/* Colors */
+
+$pink: lighten(#ef8b8b, 15%);
+$secondary: $pink;
+$success: #7fb069;
+$info: lighten(#94c9f0, 15%);
+$warning: #e5c88d;
+$light: #f8f9fa;
+$light: lighten(#dae1d9, 10%);
+
+$dark: #333333;
+
+$dark-gray: #42494C;
+
+$gray-200: #E9ECEF;
+
+/* New Colors */
+$very-dark: #031927;
+$dark-gray: #2D3047;
+$mid-gray: #8693AB;
+$light-gray: #BDD4E7;
+$light: #F0F8FF;
+$lightest: #F3F3FF;
+
+$orange: #DE9151;
+$purple: #4B296B;
+
+$l-link: $light;
+$d-link: #43BEE2;
+
+
+$font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-seri    f, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-size-base: .95rem;
+$input-border-color: $gray-200;
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
+
+$spacer: 1rem;
+
+/*******************************************************/
+/******* Linear Gradients Mixin / Functions ************/
+/*******************************************************/
+@mixin linear-gradient($direction, $color-stops...){
+  // Direction has been omitted and happens to be a $color-stop
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+  // Color fall back incase gradient not supported
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+// Test if `$value` is a valid direction
+
+@function is-direction($value) {
+  $is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
+  $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
+
+  @return $is-keyword or $is-angle;
+}
+
+/// Convert a direction to legacy syntax
+@function legacy-direction($value) {
+  @if is-direction($value) == false {
+    @error "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.";
+  }
+
+  $conversion-map: (
+    to top          : bottom,
+    to top right    : bottom left,
+    to right top    : left bottom,
+    to right        : left,
+    to bottom right : top left,
+    to right bottom : left top,
+    to bottom       : top,
+    to bottom left  : top right,
+    to left bottom  : right top,
+    to left         : right,
+    to left top     : right bottom,
+    to top left     : bottom right
+  );
+
+  @if map-has-key($conversion-map, $value) {
+    @return map-get($conversion-map, $value);
+  }
+
+  @return 90deg - $value;
+}
+
+/* HTML */
+
+html {
+  position: relative;
+  min-height: 100vh !important;
+}
+
+/* Body */
+
+body {
+  position: relative;
+  min-height: 100vh !important;
+  padding-bottom: 70px;
+
+  @include linear-gradient($mid-gray, $light-gray);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff !important;
+  font-weight: 400 !important;
+  // text-transform: uppercase;
+}
+
+h4, h5, h6 {
+  font-size: 1.2rem !important;
+}
+
+hr {
+  border-top: solid 1px #7f7f7f !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+p, li {
+  color: $dark-gray !important;
+
+  &.text-muted {
+    color: $light !important;
+  }
+}
+
+a {
+  color: $l-link !important;
+}
+
+strong {
+  color: $light;
+}
+
+li:last-child {
+  margin-bottom: 2rem;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.t-shadow-sm {
+    text-shadow: 1px 1px 1px rgba($very-dark, .3);
+}
+
+.t-shadow-lg {
+  text-shadow: 1px 2px 3px rgba($very-dark, .3);
+}
+
+.figure-img{
+  &:hover {
+    box-shadow: 0 0 10px 2px $light-gray;
+  }
+}
+
+.figure-caption{
+  a{
+    &:hover{
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+.career-link {
+  color: $dark-gray !important;
+  text-shadow: 1px 1px 1px rgba(225,225,225,.4);
+  font-size: 1.1rem;
+  &:hover {
+    // text-decoration: none;
+    color: $very-dark !important;
+  }
+}
+
+.contents-list {
+
+}
+
+.btn-primary {
+  background-color: $orange !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  border: $orange 1px solid !important;
+  // box-shadow: 1px 1px 1px rgba($very-dark, .4);
+}
+
+#home-content {
+  z-index: 3 !important;
+}
+
+#background-img {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/landscape-01.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Nav */
+nav {
+  z-index: 5;
+  .nav-link {
+    color: #fff !important;
+    text-transform: none;
+    padding: 8px 20px !important;
+  }
+}
+
+/* Footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+
+  color: #fff;
+  font-size: 0.85rem;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  li {
+    margin: none;
+    margin-bottom: .25em;
+  }
+
+  a {
+    color: $orange !important;
+
+    &:hover, &:focus, &:active {
+      color: $orange !important;
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: $orange !important;
+    }
+  }
+
+  hr {
+    margin: 0 0;
+    border: none;
+    border-top: solid rgba(255,255,255,.15) 1px;
+  }
+}
+
+/* Helpers */
+
+.has-bg-img {
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.icon {
+  svg {
+    width: 40px;
+
+    path {
+      fill: $info;
+    }
+  }
+
+  &.icon-hat {
+    svg {
+      height: 100px;
+    }
+  }
+
+  &.icon-secondary {
+    svg {
+      path {
+        fill: $secondary;
+      }
+    }
+  }
+
+  &.icon-pink {
+    svg {
+      path {
+        fill: $pink;
+      }
+    }
+  }
+}
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  background-color: $dark;
+  overflow-x: hidden;
+  transition: 0.4s;
+
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+
+    p {
+      color: #fff !important;
+    }
+  }
+
+  .overlay-closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #fff;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+      color: #ddd;
+    }
+  }
+}
+
+@import "bootstrap-4.1.3/scss/bootstrap.scss";

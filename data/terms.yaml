@@ -1,0 +1,81 @@
+cybersecurity:
+- dt: Cyber Event
+  dd: Any significant occurrence or ongoing event related to your computer systems including a data breach, data loss, or cyber attack.
+- dt: Data Breach
+  dd: Accidental or intentional exposure of private data and information.
+- dt: Data Loss
+  dd: Destruction of data as a result of an error or accident.
+- dt: Cyber Attack
+  dd: Malicious attempt by criminal actors to gain access to private computer systems or information.
+- dt: PII
+  dd: Stands for "personally identifiable information" and refers to any information that can be used to identify, contact, or locate an individual. This includes names, addresses, social security numbers, dates of birth, email addresses, credit card numbers, bank accounts, employment information, medical records, school history, and more. 49/50 states require companies to notify customers and employees in the event of a data breach involving PII.
+- dt: Funds Transfer Fraud
+  dd: A form of cybercrime that involves social engineering in order to procure money transfers to a non-company bank account.
+- dt: Phishing
+  dd: A specific form of social engineering that utilizes web-related technologies such as email to gain access to sensitive information.
+- dt: Cyber Extortion
+  dd: A form of cybercrime in which malicious actors gain control over computer systems and demand payment in exchange. Commonly related to ransomware.
+- dt: Business Interruption
+  dd: When a business is unable to continue normal operations as a result of an outside event.
+- dt: Malware
+  dd: Stands for "malicious software," a broad category of software programs characterized by an intent to be malicious. Includes viruses, worms, ransomware, and more.
+- dt: DoS
+  dd: Stands for "denial of service" and refers to a category of cyber attack where the attacker floods the target with thousands of requests thereby preventing the target's ability to function.
+- dt: Ransomware
+  dd: A form of malware that takes over a computer system and denies the owner access until a ransom is paid. Rose to public consciousness in 2017 with the WannaCry and NotPetya attacks that affected hundreds of thousands of businesses across the world.
+- dt: Social Engineering
+  dd: Any attempt by a malicious actor to trick or deceive a person into volunteering sensitive information. Social engineering can take a variety of forms and can occur across a number of different technologies.
+- dt: Local Area Network
+  dd: A group of interconnected computers in close proximity to one another. WiFi is the most common example of a local area network.
+- dt: PCI DSS
+  dd: Stands for "payment card industry data security standard." A set of security standards and requirements developed by major credit card companies for any companies that want to handle payments with these cards. Includes Visa, Mastercard, American Express, and Discover.
+- dt: Backup
+  dd: A safe second copy of data stored somewhere other than the primary device. Can be stored both locally or offsite and be either cloud or hardware-based.
+- dt: Password Manager
+  dd: A service that generates unique, complex passwords for each member of an organization.
+- dt: Two-Factor Authentication
+  dd: A form of security for account access that involves a password as well as a temporary authentication code to be inputted.
+- dt: VPN
+  dd: Stands for "virtual private network" and refers to a service that helps extend a private network across a public one so that you can securely share data and surf the web when you’re not in your office.
+- dt: Firewall
+  dd: A protective wall between a secure network and the rest of the Internet that monitors incoming traffic to make sure that it isn't a threat.
+- dt: Antivirus
+  dd: Any form of downloadable software with the function of combating malware.
+- dt: ERM
+  dd: A comprehensive system of risk management across an entire company that includes everything from locking doors to internet use policies to insurance.
+
+insurance:
+- dt: Declarations
+  dd: Named insured(s), address, legal description of property, policy deductibles, policy terms.
+- dt: Insuring Agreements
+  dd: Describes risk, perils, coverage, and promises of the insurer.
+- dt: Conditions
+  dd: Policy provisions, rules of conduct, duties, and obligations required for coverage.
+- dt: Endorsements
+  dd: Add, modify, or take away coverage.
+- dt: Exclusions
+  dd: Exclude certain perils, hazards, or property.
+- dt: Retention/Deductible
+  dd: Amount that the insured is responsible for paying. The higher the retention/deductible, the lower the premium.
+- dt: Limit
+  dd: Ceiling on the amount that the insurer will pay to the insured in the event of a loss.
+- dt: Premium
+  dd: Amount paid by the insured to the insurer in exchange for coverage.
+- dt: Proof of Loss
+  dd: Documents sent by the insured to the insurer demonstrating that a loss has occurred.
+- dt: First Party Losses
+  dd: Damages incurred directly by the insured. Covered by property insurance.
+- dt: Third Party Losses
+  dd: Damages incurred to entities or individuals other than the insured for which the insured is liable. Covered by casualty insurance.
+- dt: Admitted Carrier
+  dd: An insurer that carries a certificate of authority from the state Department of Insurance.
+- dt: Surplus Lines Insurance
+  dd: Insurance that is offered by a non-admitted carrier.
+- dt: Binder
+  dd: Temporary insurance coverage after an application has been submitted. Does not guarantee that a policy will be issued and can be canceled by the insurance company. Ends when policy is issued or canceled.
+- dt: Retroactive Date
+  dd: The cut-off date on an insurance policy. Anything that happened before that point will not be covered under the policy.
+- dt: Primary Insurance
+  dd: Pays immediately on loss.
+- dt: Excess Insurance
+  dd: Pays losses over the primary limit up to the excess limit.

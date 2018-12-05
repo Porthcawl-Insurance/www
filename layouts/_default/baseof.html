@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5G83M37');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <meta name='description' content='{{ if .IsHome }}{{ $.Site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Title }}{{ end }}'>
+
+  {{ if getenv "ROBOTS" }}
+  <meta name='robots' content='{{ getenv "ROBOTS" }}'>
+  {{ else if isset .Params "robots" }}
+  <meta name='robots' content='{{ .Params.robots }}'>
+  {{ end }}
+
+  <title>{{ .Title }}{{ if not .IsHome }} | CyberFortress{{ end }}{{ if .Params.Titleaddtype }} {{ .Type | title }}{{ end }}</title>
+
+  <link type='text/css' rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto'>
+  <link type='text/css' rel='stylesheet' href='/css/style.css'>
+
+  <link rel='icon' type='image/png' href='/images/favicon-32x32.png' sizes='32x32'>
+  <link rel='icon' type='image/png' href='/images/favicon-96x96.png' sizes='96x96'>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src='https://www.googletagmanager.com/ns.html?id=GTM-5G83M37' height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  {{ block "nav" . }}
+  {{ partial "nav.html" . }}
+  {{ end }}
+
+  {{ block "main" . }}
+  {{ end }}
+
+  {{ block "footer" . }}
+  {{ partial "footer.html" . }}
+  {{ end }}
+
+  <!-- Font Awesome
+<script defer src = 'https://use.fontawesome.com/releases/v5.0.9/js/all.js' integrity = 'sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl' crossorigin = 'anonymous'></script>
+-->
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS-->
+  <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+  <!-- <script src='../../jquery.sticky.js'></script> -->
+  <script>
+    {{block "scripts".}}
+
+    {{end}}
+    // $(window).load(function(){
+    //   $("#list-col").sticky({ topSpacing: 0 });
+    // });
+
+    // Form validation //
+    (function() {
+      window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            form.classList.add('was-validated');
+
+          }, false);
+        });
+      }, false);
+    })();
+
+    // Team Photos //
+    $('.figure-img').click(function() {
+      // Go to LinkedIn Page on click
+      var link = $(this).siblings('.figure-caption').find('a').attr('href');
+      window.location.href = link;
+      // window.open(link);
+    });
+
+    $('.figure-img').hover(function() {
+      var link = $(this).siblings('.figure-caption').find('a');
+      $(link).css('fontWeight', 'bold');
+    }, function() {
+      var link = $(this).siblings('.figure-caption').find('a');
+      $(link).css('fontWeight', '400');
+    });
+
+  </script>
+
+</body>
+
+</html>

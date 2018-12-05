@@ -1,0 +1,53 @@
+founders:
+- nam: Huw Edwards
+  tit: CEO
+  img: /images/team/huw-edwards.jpg
+  lip: https://www.linkedin.com/in/huwedwards/
+  jot: "Huw leads CyberFortress as CEO. He took on this role after serving as Chief Financial Officer, Chief Strategy Officer, and a Director on the Board for Jungle Disk, a cybersecurity company in San Antonio, Texas. Prior to acquiring Jungle Disk from Rackspace Huw worked as a Senior Management Associate at Bridgewater Associates, the world’s largest hedge fund with $160bn under management. At Bridgewater he was Manager of Portfolio Compliance & Reporting within the front office, which included responsibility for Daily Returns reporting to the CIOs and for Bridgewater’s quarterly Form PF filings to the SEC. He also led front office efforts to outsource regulatory reporting activities to a third party. Before Bridgewater, Huw joined Rackspace after business school where, after a period leading acquisitions and strategic projects in the Corporate Development & Strategy team, he became the GM of Jungle Disk responsible for day-to-day operations. Earlier in his career he invested in and oversaw MBO and growth investments as a private equity investor at Bridges Ventures, and implemented hedging and risk management solutions for corporate clients while at Goldman Sachs. Huw received his MBA from Harvard Business School where he was a Ford Scholar (awarded to the top ranked student) and Baker Scholar. He also holds undergraduate and masters degrees in Mathematics from Oxford University."
+- nam: Michael DeFelice
+  tit: CTO
+  lip: https://www.linkedin.com/in/mtdefelice/
+  img: /images/team/michael-defelice.jpg
+  jot: "Michael is the CTO of CyberFortress. He is a data scientist, technical strategist, and solutions architect with a passion for incubation projects and an expertise in machine learning and AI. At Jungle Disk, Mike served as the principal data scientist where he led a program to transform the company's data analytics by building out automated systems for continuous revenue behavior modeling and marketing operations. Prior to joining Jungle Disk, Mike worked at Rackspace, Tesoro Companies (now Andeavor), and SBS in technical roles spanning corporate development, product development, systems architecture, and consulting."
+- nam: Grant Herbon
+  tit: Operations Lead
+  lip: https://www.linkedin.com/in/grant-herbon-pmp-a1b4501/
+  img: /images/team/grant-herbon.jpg
+  jot: "Grant leads Operations for CyberFortress. Prior to CyberFortress, Grant served as Marketing Director for Jungle Disk, a data security company for small business in San Antonio. He is passionate about marketing great products, world class customer experiences, and will endeavor to share our story with the world! Earlier in his career, Grant spent 12 years at Rackspace in various Product Management, Marketing, Development, and incubation roles."
+- nam: Nate Shames
+  tit: Product Lead / Producer
+  lip: https://www.linkedin.com/in/nathaniel-shames-76a89ba8/
+  img: /images/team/nate-shames.jpg
+  jot: "Nate leads Product at CyberFortress where he works on developing innovative new ways to protect small businesses. He is a licensed insurance producer in all 50 US states. Prior to CyberFortress, he worked on strategic growth opportunities as a Corporate Strategy Associate at Jungle Disk, a cybersecurity company in San Antonio, Texas. Nate moved into the technology world after a stint in finance at Bridgewater Associates, the world’s largest hedge fund, where he served as a member of Ray Dalio’s special research team. Nate is a magna cum laude graduate of Brown University where he double-majored in History and English Literature and was elected to Phi Beta Kappa as a junior."
+- nam: Beth Watts
+  tit: Business Development Lead / Producer
+  lip: https://www.linkedin.com/in/beth-watts-92983076/
+  img: /images/team/beth-watts.jpg
+  jot: "Beth leads Business Development at CyberFortress. She is a licensed insurance producer in all 50 US states. Before taking on this new challenge, she served as a solutions consultant at Jungle Disk, a cybersecurity company in San Antonio where she focused on helping small businesses find the right security solutions to protect against all manner of cyber threats. Prior to Jungle Disk, she worked at Rackspace as a Microsoft Specialist. Beth has always been passionate about learning and switched to the tech field in 2012 after working several years as an Admissions Counselor in higher education. Beth has a BA from Indiana University in Psychology and an MS in Psychology from Our Lady of the Lake University. Beth spends her spare time trying to keep up with her active toddler and tennis-pro husband."
+- nam: Perry Robinson
+  tit: Advisor, Insurance Strategy
+  lip: https://www.linkedin.com/in/perry-robinson-65782632/
+  img: /images/team/perry-robinson.jpg
+  jot: "Perry advises CyberFortress on insurance strategy and operations. Prior to joining CyberFortress, Perry served as the Chief Regulatory and Compliance Officer at Medable, a healthcare startup in Palo Alto. Perry brings deep expertise in the insurance area, having worked as a Senior Vice President focused on cyber risk and technology at JLT Specialty, one of the largest and oldest specialty insurance brokers in the world. Perry spent nearly ten years at Rackspace serving in a variety of roles, ending as a General Manager for Managed Security. Perry graduated with highest honors from the University of Texas at Austin with a degree in anthropology. He has a JD from Baylor University."
+- nam: Halie Koehler
+  tit: UX Developer
+  lip: https://www.linkedin.com/in/haliekoehler/
+  img: /images/team/halie-koehler.jpeg
+  jot: "Halie leads UX Development at CyberFortress."
+bod:
+- nam: Bret Piatt
+  tit: Chairman
+  img: /images/team/bret-piatt.jpg
+  jot: "Bret leads Jungle Disk - a cybersecurity company that develops data security applications for small businesses - as the President, Chief Executive Officer. Prior to Jungle Disk, he led a 300 person SaaS business unit for Rackspace that served over 75,000 small businesses. His experience at Rackspace also included time as the mergers and acquisitions lead, chair of the Intellectual Property Committee, and as a member of the core team that released the Rackspace Cloud as open source software, creating OpenStack. Before Rackspace, Bret spent over 5 years in product management and engineering roles for AT&T where he was responsible for launching offerings such as AT&T Premises-Based Cisco ASA Firewall Service and PremierServ IP-VPN."
+- nam: Huw Edwards
+  tit: Director
+  img: /images/team/huw-edwards.jpg
+  jot: "In addition to his role as CEO, Huw also serves as a Director of the Board for CyberFortress."
+- nam: Neal Leonard
+  tit: Director
+  img: /images/team/neal-leonard.jpg
+  jot: "Neal Leonard is the Chief Executive Officer of Leonard Holding Company and a Director on the Board for Jungle Disk. The Leonard Holding Company has two major subsidiaries Surlean Foods and New Earth. Before becoming CEO, Neal gained invaluable experience by working in almost all aspects of the business including Production Supervisor, Cattle Buyer, and Vice President of Sales. Leonard Holding Company has approximately 500 employees and almost 400 million in annual revenues. Neal is involved in the San Antonio community. He has served as President for the Transplants for Children organization, a non-profit that serves families of children who had organ transplants in South Texas. Neal was born and raised in San Antonio. He went on to college at Texas Tech University and graduated in 1995 with a Bachelor of Science degree in Agricultural Economics. He completed his MBA at the SMU Cox School of Business in May 2011."
+- nam: Martin Rico
+  tit: Director
+  img: /images/team/martin-rico.jpg
+  jot: "Martin Rico is the Founder and a Director on the Board of Inspired eLearning, a web-based training company on the INC 5000 list of the fastest growing private companies in America. Inspired eLearning delivers corporate training globally in over 25 languages and is in the Leader Quadrant of Gartner’s Magic Quadrant for IT security training. Martin is also the President of Monte Tulum Real Estate with both commercial and residential real estate investments and is a Director on the Board for Carpe Diem Schools, a local public charter school focused on using eLearning to enhance K-12 education. Prior to founding Inspired eLearning, Martin served as COO of TechNow, a technology and IT security company that delivers instructor-led training and consulting services. Martin received Bachelor of Applied Science from University of Texas at Austin."

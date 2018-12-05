@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+<section class='py-5 text-white'>
+  <div class='container'>
+
+    <div class='row'>
+      <div class='col'>
+        <h1 class='display-4'>Join Us</h1>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-md-8 offset-md-0'>
+        <p>We believe that small business insurance should be easy to understand, easy to buy, and easy to file claim. Interested in joining us? Read our <a href='/about/culture/'>culture blueprint</a> and let us know what you think!</p>
+      </div>
+    </div>
+
+    <!-- <div class='mt-4 row'>
+      <div class='col-md-8 offset-md-0'>
+        <h2>Culture Blueprint</h2>
+        <ul class='list-unstyled'>
+          <li><a href='/about/culture/'>The CyberFortress Culture Blueprint</a></li>
+        </ul>
+
+      </div>
+    </div> -->
+
+    {{ range $i, $e := .Data.Pages }}
+    <div class='row'>
+      <div class='col-md-8 offset-md-0'>
+        {{ if eq $i 0 }}
+        <h2>Careers</h2>
+        {{ end }}
+          <a class='career-link' href='{{ .RelPermalink }}'>{{ .Title }}</a>
+          <p class='small text-muted'>Posted {{ .Date.Format "January 2, 2006" }}</p>
+      </div>
+    </div>
+
+    {{ end }}
+
+  </div>
+
+</section>
+
+{{ end }}

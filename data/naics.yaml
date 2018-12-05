@@ -1,0 +1,1145 @@
+blsgov_2018:
+  - Accommodation (NAICS 721)
+  - Accommodation and Food Services (NAICS 72)
+  - Administrative and Support Services (NAICS 561)
+  - Administrative and Support and Waste Management and Remediation Services (NAICS 56)
+  - Air Transportation (NAICS 481)
+  - Ambulatory Health Care Services (NAICS 621)
+  - Amusement, Gambling, and Recreation Industries (NAICS 713)
+  - Apparel Manufacturing (NAICS 315)
+  - Arts, Entertainment, and Recreation (NAICS 71)
+  - Beverage and Tobacco Product Manufacturing (NAICS 312)
+  - Broadcasting (except Internet) (NAICS 515)
+  - Chemical Manufacturing (NAICS 325)
+  - Clothing and Clothing Accessories Stores (NAICS 448)
+  - Computer and Electronic Product Manufacturing (NAICS 334)
+  - Construction (NAICS 23)
+  - Couriers and Messengers (NAICS 492)
+  - Credit Intermediation and Related Activities (NAICS 522)
+  - Data Processing, Hosting, and Related Services (NAICS 518)
+  - Educational Services (NAICS 61)
+  - Electrical Equipment, Appliance, and Component Manufacturing (NAICS 335)
+  - Electronics and Appliance Stores (NAICS 443)
+  - Finance and Insurance (NAICS 52)
+  - Food Manufacturing (NAICS 311)
+  - Food Services and Drinking Places (NAICS 722)
+  - Food and Beverage Stores (NAICS 445)
+  - Funds, Trusts, and Other Financial Vehicles (NAICS 525)
+  - Furniture and Home Furnishings Stores (NAICS 442)
+  - Furniture and Related Product Manufacturing (NAICS 337)
+  - General Merchandise Stores (NAICS 452)
+  - Health Care and Social Assistance (NAICS 62)
+  - Health and Personal Care Stores (NAICS 446)
+  - Heavy and Civil Engineering Construction (NAICS 237)
+  - Hospitals (NAICS 622)
+  - Information (NAICS 51)
+  - Insurance Carriers and Related Activities (NAICS 524)
+  - Internet Publishing and Broadcasting (NAICS 516)
+  - Machinery Manufacturing (NAICS 333)
+  - Management of Companies and Enterprises (NAICS 55)
+  - Manufacturing (NAICS 31-33)
+  - Merchant Wholesalers, Durable Goods (NAICS 423)
+  - Merchant Wholesalers, Nondurable Goods (NAICS 424)
+  - Miscellaneous Manufacturing (NAICS 339)
+  - Miscellaneous Store Retailers (NAICS 453)
+  - Motion Picture and Sound Recording Industries (NAICS 512)
+  - Motor Vehicle and Parts Dealers (NAICS 441)
+  - Nonstore Retailers (NAICS 454)
+  - Nursing and Residential Care Facilities (NAICS 623)
+  - Offices of Certified Public Accountants (NAICS 541211)
+  - Offices of Lawyers (NAICS 541110)
+  - Offices of Physicians, Mental Health Specialists (NAICS 621112)
+  - Other Information Services (NAICS 519)
+  - Other Services (except Public Administration) (NAICS 81)
+  - Performing Arts, Spectator Sports, and Related Industries (NAICS 711)
+  - Personal and Laundry Services (NAICS 812)
+  - Petroleum and Coal Products Manufacturing (NAICS 324)
+  - Plastics and Rubber Products Manufacturing (NAICS 326)
+  - Primary Metal Manufacturing (NAICS 331)
+  - Printing and Related Support Activities (NAICS 323)
+  - Professional, Scientific, and Technical Services (NAICS 54)
+  - Publishing Industries (except Internet) (NAICS 511)
+  - Rail Transportation (NAICS 482)
+  - Real Estate (NAICS 531)
+  - Real Estate and Rental and Leasing (NAICS 53)
+  - Religious, Grantmaking, Civic, Professional, and Similar Organizations (NAICS 813)
+  - Rental and Leasing Services (NAICS 532)
+  - Repair and Maintenance (NAICS 811)
+  - Retail Trade (NAICS 44-45)
+  - Scenic and Sightseeing Transportation (NAICS 487)
+  - Securities, Commodity Contracts, and Other Financial Investments and Related Activities (NAICS 523)
+  - Social Assistance (NAICS 624)
+  - Specialty Trade Contractors (NAICS 238)
+  - Sporting Goods, Hobby, Book, and Music Stores (NAICS 451)
+  - Support Activities for Transportation (NAICS 488)
+  - Telecommunications (NAICS 517)
+  - Transit and Ground Passenger Transportation (NAICS 485)
+  - Transportation Equipment Manufacturing (NAICS 336)
+  - Transportation and Warehousing (NAICS 48-49)
+  - Truck Transportation (NAICS 484)
+  - Utilities (NAICS 22)
+  - Warehousing and Storage (NAICS 493)
+  - Waste Management and Remediation Services (NAICS 562)
+  - Water Transportation (NAICS 483)
+  - Wholesale Electronic Markets and Agents and Brokers (NAICS 425)
+  - Wholesale Trade (NAICS 42)
+  - Wood Product Manufacturing (NAICS 321)
+
+titles_2017:
+  - Abrasive Product Manufacturing
+  - Adhesive Manufacturing
+  - Administration of Air and Water Resource and Solid Waste Management Programs 
+  - Administration of Conservation Programs 
+  - Administration of Education Programs 
+  - Administration of General Economic Programs 
+  - Administration of Housing Programs 
+  - Administration of Human Resource Programs (except Education, Public Health, and Veterans' Affairs Programs) 
+  - Administration of Public Health Programs 
+  - Administration of Urban Planning and Community and Rural Development 
+  - Administration of Veterans' Affairs 
+  - Administrative Management and General Management Consulting Services 
+  - Advertising Agencies
+  - Advertising Material Distribution Services
+  - Agents and Managers for Artists, Athletes, Entertainers, and Other Public Figures
+  - Air Traffic Control
+  - Air and Gas Compressor Manufacturing 
+  - Air-Conditioning and Warm Air Heating Equipment and Commercial and Industrial Refrigeration Equipment Manufacturing 
+  - Aircraft Engine and Engine Parts Manufacturing 
+  - Aircraft Manufacturing 
+  - All Other Amusement and Recreation Industries 
+  - All Other Animal Production 
+  - All Other Automotive Repair and Maintenance 
+  - All Other Basic Organic Chemical Manufacturing 
+  - All Other Business Support Services 
+  - All Other Consumer Goods Rental 
+  - All Other Converted Paper Product Manufacturing 
+  - All Other General Merchandise Stores 
+  - All Other Grain Farming 
+  - All Other Health and Personal Care Stores 
+  - All Other Home Furnishings Stores 
+  - All Other Information Services
+  - All Other Insurance Related Activities 
+  - All Other Leather Good and Allied Product Manufacturing 
+  - All Other Legal Services 
+  - All Other Metal Ore Mining 
+  - All Other Miscellaneous Ambulatory Health Care Services 
+  - All Other Miscellaneous Chemical Product and Preparation Manufacturing 
+  - All Other Miscellaneous Crop Farming 
+  - All Other Miscellaneous Electrical Equipment and Component Manufacturing 
+  - All Other Miscellaneous Fabricated Metal Product Manufacturing 
+  - All Other Miscellaneous Food Manufacturing 
+  - All Other Miscellaneous General Purpose Machinery Manufacturing 
+  - All Other Miscellaneous Manufacturing 
+  - All Other Miscellaneous Nonmetallic Mineral Product Manufacturing 
+  - All Other Miscellaneous Schools and Instruction 
+  - All Other Miscellaneous Store Retailers (except Tobacco Stores) 
+  - All Other Miscellaneous Textile Product Mills 
+  - All Other Miscellaneous Waste Management Services 
+  - All Other Miscellaneous Wood Product Manufacturing 
+  - All Other Nondepository Credit Intermediation 
+  - All Other Nonmetallic Mineral Mining 
+  - All Other Outpatient Care Centers 
+  - All Other Personal Services 
+  - All Other Petroleum and Coal Products Manufacturing 
+  - All Other Pipeline Transportation
+  - All Other Plastics Product Manufacturing 
+  - All Other Professional, Scientific, and Technical Services
+  - All Other Publishers 
+  - All Other Rubber Product Manufacturing 
+  - All Other Specialty Food Stores 
+  - All Other Specialty Trade Contractors
+  - All Other Support Activities for Transportation 
+  - All Other Support Services
+  - All Other Telecommunications 
+  - All Other Transit and Ground Passenger Transportation 
+  - All Other Transportation Equipment Manufacturing 
+  - All Other Travel Arrangement and Reservation Services 
+  - All Other Traveler Accommodation 
+  - Alumina Refining and Primary Aluminum Production 
+  - Aluminum Foundries (except Die-Casting) 
+  - Aluminum Sheet, Plate, and Foil Manufacturing 
+  - Ambulance Services 
+  - American Indian and Alaska Native Tribal Governments 
+  - Ammunition (except Small Arms) Manufacturing 
+  - Amusement Arcades
+  - Amusement and Theme Parks 
+  - Analytical Laboratory Instrument Manufacturing 
+  - Animal (except Poultry) Slaughtering 
+  - Anthracite Mining 
+  - Apiculture
+  - Apparel Accessories and Other Apparel Manufacturing 
+  - Apple Orchards 
+  - Appliance Repair and Maintenance 
+  - Apprenticeship Training 
+  - Architectural Services
+  - Armored Car Services 
+  - Art Dealers 
+  - Artificial and Synthetic Fibers and Filaments Manufacturing
+  - Asphalt Paving Mixture and Block Manufacturing 
+  - Asphalt Shingle and Coating Materials Manufacturing 
+  - Assisted Living Facilities for the Elderly 
+  - Audio and Video Equipment Manufacturing
+  - Automatic Environmental Control Manufacturing for Residential, Commercial, and Appliance Use 
+  - Automobile Driving Schools 
+  - Automobile Manufacturing 
+  - Automobile and Other Motor Vehicle Merchant Wholesalers 
+  - Automotive Body, Paint, and Interior Repair and Maintenance 
+  - Automotive Exhaust System Repair 
+  - Automotive Glass Replacement Shops 
+  - Automotive Oil Change and Lubrication Shops 
+  - Automotive Parts and Accessories Stores 
+  - Automotive Transmission Repair 
+  - Baked Goods Stores 
+  - Ball and Roller Bearing Manufacturing
+  - Barber Shops 
+  - Bare Printed Circuit Board Manufacturing  
+  - Beauty Salons 
+  - Bed-and-Breakfast Inns 
+  - Beef Cattle Ranching and Farming 
+  - Beer and Ale Merchant Wholesalers 
+  - Beer, Wine, and Liquor Stores 
+  - Beet Sugar Manufacturing 
+  - Berry (except Strawberry) Farming 
+  - Biological Product (except Diagnostic) Manufacturing 
+  - Biomass Electric Power Generation 
+  - Bituminous Coal Underground Mining 
+  - Bituminous Coal and Lignite Surface Mining 
+  - Blank Magnetic and Optical Recording Media Manufacturing 
+  - Blind and Shade Manufacturing
+  - Blood and Organ Banks 
+  - Boat Building 
+  - Boat Dealers 
+  - Bolt, Nut, Screw, Rivet, and Washer Manufacturing 
+  - Book Publishers 
+  - Book Stores 
+  - Book, Periodical, and Newspaper Merchant Wholesalers 
+  - Books Printing 
+  - Bottled Water Manufacturing 
+  - Bowling Centers
+  - Breakfast Cereal Manufacturing
+  - Breweries
+  - Brick, Stone, and Related Construction Material Merchant Wholesalers 
+  - Broadwoven Fabric Mills
+  - Broilers and Other Meat Type Chicken Production 
+  - Broom, Brush, and Mop Manufacturing 
+  - Building Inspection Services
+  - Burial Casket Manufacturing 
+  - Bus and Other Motor Vehicle Transit Systems 
+  - Business Associations 
+  - Business and Secretarial Schools 
+  - Business to Business Electronic Markets 
+  - Cable and Other Subscription Programming
+  - Cafeterias, Grill Buffets, and Buffets 
+  - Cane Sugar Manufacturing 
+  - Capacitor, Resistor, Coil, Transformer, and Other Inductor Manufacturing 
+  - Car Washes 
+  - Carbon and Graphite Product Manufacturing 
+  - Carpet and Rug Mills
+  - Carpet and Upholstery Cleaning Services
+  - Casino Hotels
+  - Casinos (except Casino Hotels)
+  - Caterers
+  - Cattle Feedlots 
+  - Cement Manufacturing
+  - Cemeteries and Crematories 
+  - Charter Bus Industry
+  - Cheese Manufacturing 
+  - Chicken Egg Production 
+  - Child Day Care Services 
+  - Child and Youth Services 
+  - Children's and Infants' Clothing Stores 
+  - Chocolate and Confectionery Manufacturing from Cacao Beans 
+  - Citrus (except Orange) Groves 
+  - Civic and Social Organizations 
+  - Claims Adjusting 
+  - Clay Building Material and Refractories Manufacturing 
+  - Clay and Ceramic and Refractory Minerals Mining 
+  - Clothing Accessories Stores 
+  - Coal and Other Mineral and Ore Merchant Wholesalers 
+  - Coastal and Great Lakes Freight Transportation 
+  - Coastal and Great Lakes Passenger Transportation 
+  - Coffee and Tea Manufacturing 
+  - Coin-Operated Laundries and Drycleaners 
+  - Collection Agencies
+  - Colleges, Universities, and Professional Schools 
+  - Commercial Air, Rail, and Water Transportation Equipment Rental and Leasing 
+  - Commercial Bakeries 
+  - Commercial Banking 
+  - Commercial Photography 
+  - Commercial Printing (except Screen and Books) 
+  - Commercial Screen Printing 
+  - Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance 
+  - Commercial and Institutional Building Construction 
+  - Commercial, Industrial, and Institutional Electric Lighting Fixture Manufacturing 
+  - Commodity Contracts Brokerage 
+  - Commodity Contracts Dealing 
+  - Communication Equipment Repair and Maintenance 
+  - Community Food Services 
+  - Commuter Rail Systems 
+  - Computer Facilities Management Services 
+  - Computer Storage Device Manufacturing 
+  - Computer Systems Design Services 
+  - Computer Terminal and Other Computer Peripheral Equipment Manufacturing 
+  - Computer Training 
+  - Computer and Computer Peripheral Equipment and Software Merchant Wholesalers 
+  - Computer and Office Machine Repair and Maintenance 
+  - Concrete Block and Brick Manufacturing 
+  - Concrete Pipe Manufacturing 
+  - Confectionery Manufacturing from Purchased Chocolate 
+  - Confectionery Merchant Wholesalers 
+  - Confectionery and Nut Stores 
+  - Construction Machinery Manufacturing
+  - Construction Sand and Gravel Mining 
+  - Construction and Mining (except Oil Well) Machinery and Equipment Merchant Wholesalers 
+  - Construction, Mining, and Forestry Machinery and Equipment Rental and Leasing 
+  - Consumer Electronics Repair and Maintenance 
+  - Consumer Electronics and Appliances Rental
+  - Consumer Lending 
+  - Continuing Care Retirement Communities 
+  - Convenience Stores 
+  - Convention and Trade Show Organizers
+  - Convention and Visitors Bureaus 
+  - Conveyor and Conveying Equipment Manufacturing 
+  - Cookie and Cracker Manufacturing 
+  - Copper Rolling, Drawing, Extruding, and Alloying
+  - Copper, Nickel, Lead, and Zinc Mining 
+  - Corn Farming 
+  - Corporate, Subsidiary, and Regional Managing Offices 
+  - Correctional Institutions 
+  - Corrugated and Solid Fiber Box Manufacturing 
+  - Cosmetics, Beauty Supplies, and Perfume Stores 
+  - Cosmetology and Barber Schools 
+  - Cotton Farming
+  - Cotton Ginning 
+  - Couriers and Express Delivery Services
+  - Court Reporting and Stenotype Services 
+  - Courts 
+  - Creamery Butter Manufacturing 
+  - Credit Bureaus
+  - Credit Card Issuing 
+  - Credit Unions 
+  - Crop Harvesting, Primarily by Machine 
+  - Crude Petroleum Extraction 
+  - Crushed and Broken Granite Mining and Quarrying 
+  - Crushed and Broken Limestone Mining and Quarrying 
+  - Current-Carrying Wiring Device Manufacturing 
+  - Curtain and Linen Mills
+  - Custom Architectural Woodwork and Millwork Manufacturing 
+  - Custom Compounding of Purchased Resins 
+  - Custom Computer Programming Services 
+  - Custom Roll Forming 
+  - Cut Stock, Resawing Lumber, and Planing 
+  - Cut Stone and Stone Product Manufacturing 
+  - Cut and Sew Apparel Contractors 
+  - Cutting Tool and Machine Tool Accessory Manufacturing 
+  - Cyclic Crude, Intermediate, and Gum and Wood Chemical Manufacturing 
+  - Dairy Cattle and Milk Production
+  - Dairy Product (except Dried or Canned) Merchant Wholesalers 
+  - Dance Companies 
+  - Data Processing, Hosting, and Related Services
+  - Deep Sea Freight Transportation 
+  - Deep Sea Passenger Transportation 
+  - Dental Equipment and Supplies Manufacturing 
+  - Dental Laboratories 
+  - Department Stores 
+  - Diagnostic Imaging Centers 
+  - Diet and Weight Reducing Centers 
+  - Dimension Stone Mining and Quarrying 
+  - Direct Health and Medical Insurance Carriers 
+  - Direct Life Insurance Carriers 
+  - Direct Mail Advertising
+  - Direct Property and Casualty Insurance Carriers 
+  - Direct Title Insurance Carriers 
+  - Directory and Mailing List Publishers 
+  - Distilleries 
+  - Document Preparation Services
+  - Dog and Cat Food Manufacturing 
+  - Doll, Toy, and Game Manufacturing
+  - Drafting Services
+  - Dried and Dehydrated Food Manufacturing 
+  - Drilling Oil and Gas Wells
+  - Drinking Places (Alcoholic Beverages) 
+  - Drive-In Motion Picture Theaters 
+  - Drugs and Druggists' Sundries Merchant Wholesalers 
+  - Dry Pasta, Dough, and Flour Mixes Manufacturing from Purchased Flour 
+  - Dry Pea and Bean Farming 
+  - Dry, Condensed, and Evaporated Dairy Product Manufacturing 
+  - Drycleaning and Laundry Services (except Coin-Operated) 
+  - Drywall and Insulation Contractors 
+  - Dual-Purpose Cattle Ranching and Farming 
+  - Educational Support Services
+  - Electric Bulk Power Transmission and Control 
+  - Electric Lamp Bulb and Part Manufacturing
+  - Electric Power Distribution 
+  - Electrical Apparatus and Equipment, Wiring Supplies, and Related Equipment Merchant Wholesalers 
+  - Electrical Contractors and Other Wiring Installation Contractors
+  - Electromedical and Electrotherapeutic Apparatus Manufacturing 
+  - Electronic Computer Manufacturing 
+  - Electronic Connector Manufacturing 
+  - Electronic Shopping and Mail-Order Houses 
+  - Electronics Stores 
+  - Electroplating, Plating, Polishing, Anodizing, and Coloring 
+  - Elementary and Secondary Schools 
+  - Elevator and Moving Stairway Manufacturing 
+  - Emergency and Other Relief Services 
+  - Employment Placement Agencies 
+  - Engineered Wood Member (except Truss) Manufacturing 
+  - Engineering Services
+  - Environment, Conservation and Wildlife Organizations 
+  - Environmental Consulting Services
+  - Ethyl Alcohol Manufacturing 
+  - Exam Preparation and Tutoring 
+  - Executive Offices 
+  - Executive Search Services 
+  - Executive and Legislative Offices, Combined 
+  - Explosives Manufacturing
+  - Exterminating and Pest Control Services
+  - Fabric Coating Mills
+  - Fabricated Pipe and Pipe Fitting Manufacturing 
+  - Fabricated Structural Metal Manufacturing 
+  - Facilities Support Services
+  - Family Clothing Stores 
+  - Family Planning Centers 
+  - Farm Labor Contractors and Crew Leaders 
+  - Farm Machinery and Equipment Manufacturing 
+  - Farm Management Services 
+  - Farm Product Warehousing and Storage
+  - Farm Supplies Merchant Wholesalers 
+  - Farm and Garden Machinery and Equipment Merchant Wholesalers 
+  - Fastener, Button, Needle, and Pin Manufacturing 
+  - Fats and Oils Refining and Blending 
+  - Fertilizer (Mixing Only) Manufacturing 
+  - Fiber Optic Cable Manufacturing 
+  - Fiber, Yarn, and Thread Mills 
+  - Financial Transactions Processing, Reserve, and Clearinghouse Activities 
+  - Fine Arts Schools 
+  - Finfish Farming and Fish Hatcheries 
+  - Finfish Fishing 
+  - Finish Carpentry Contractors
+  - Fire Protection 
+  - Fish and Seafood Markets 
+  - Fish and Seafood Merchant Wholesalers 
+  - Fitness and Recreational Sports Centers 
+  - Flat Glass Manufacturing 
+  - Flavoring Syrup and Concentrate Manufacturing
+  - Flight Training 
+  - Floor Covering Stores 
+  - Flooring Contractors
+  - Floriculture Production 
+  - Florists 
+  - Flour Milling 
+  - Flower, Nursery Stock, and Florists' Supplies Merchant Wholesalers 
+  - Fluid Milk Manufacturing 
+  - Fluid Power Cylinder and Actuator Manufacturing 
+  - Fluid Power Pump and Motor Manufacturing 
+  - Fluid Power Valve and Hose Fitting Manufacturing 
+  - Folding Paperboard Box Manufacturing 
+  - Food (Health) Supplement Stores 
+  - Food Product Machinery Manufacturing 
+  - Food Service Contractors
+  - Footwear Manufacturing 
+  - Footwear Merchant Wholesalers 
+  - Footwear and Leather Goods Repair
+  - Forest Nurseries and Gathering of Forest Products 
+  - Formal Wear and Costume Rental
+  - Fossil Fuel Electric Power Generation 
+  - Framing Contractors 
+  - Freestanding Ambulatory Surgical and Emergency Centers 
+  - Freight Transportation Arrangement 
+  - Fresh Fruit and Vegetable Merchant Wholesalers 
+  - Frozen Cakes, Pies, and Other Pastries Manufacturing 
+  - Frozen Fruit, Juice, and Vegetable Manufacturing 
+  - Frozen Specialty Food Manufacturing 
+  - Fruit and Tree Nut Combination Farming 
+  - Fruit and Vegetable Canning 
+  - Fruit and Vegetable Markets 
+  - Fuel Dealers 
+  - Full-Service Restaurants 
+  - Funeral Homes and Funeral Services 
+  - Fur-Bearing Animal and Rabbit Production
+  - Furniture Merchant Wholesalers 
+  - Furniture Stores 
+  - Gasket, Packing, and Sealing Device Manufacturing 
+  - Gasoline Stations with Convenience Stores 
+  - General Automotive Repair 
+  - General Freight Trucking, Local 
+  - General Freight Trucking, Long-Distance, Less Than Truckload 
+  - General Freight Trucking, Long-Distance, Truckload 
+  - General Line Grocery Merchant Wholesalers 
+  - General Medical and Surgical Hospitals 
+  - General Rental Centers
+  - General Warehousing and Storage 
+  - Geophysical Surveying and Mapping Services
+  - Geothermal Electric Power Generation 
+  - Gift, Novelty, and Souvenir Stores 
+  - Glass Container Manufacturing 
+  - Glass Product Manufacturing Made of Purchased Glass 
+  - Glass and Glazing Contractors 
+  - Goat Farming
+  - Gold Ore Mining 
+  - Golf Courses and Country Clubs
+  - Grain and Field Bean Merchant Wholesalers 
+  - Grantmaking Foundations 
+  - Grape Vineyards 
+  - Graphic Design Services
+  - Greeting Card Publishers 
+  - Ground or Treated Mineral and Earth Manufacturing 
+  - Guided Missile and Space Vehicle Manufacturing 
+  - Guided Missile and Space Vehicle Propulsion Unit and Propulsion Unit Parts Manufacturing 
+  - Gypsum Product Manufacturing
+  - HMO Medical Centers 
+  - Hardware Manufacturing
+  - Hardware Merchant Wholesalers 
+  - Hardware Stores 
+  - Hardwood Veneer and Plywood Manufacturing 
+  - Hay Farming 
+  - Hazardous Waste Collection 
+  - Hazardous Waste Treatment and Disposal 
+  - Health and Welfare Funds 
+  - Heating Equipment (except Warm Air Furnaces) Manufacturing 
+  - Heavy Duty Truck Manufacturing
+  - Highway, Street, and Bridge Construction 
+  - Historical Sites
+  - Hobby, Toy, and Game Stores 
+  - Hog and Pig Farming 
+  - Home Centers 
+  - Home Furnishing Merchant Wholesalers 
+  - Home Health Care Services
+  - Home Health Equipment Rental 
+  - Home and Garden Equipment Repair and Maintenance 
+  - Horses and Other Equine Production
+  - Hosiery and Sock Mills
+  - Hotels (except Casino Hotels) and Motels 
+  - Household Appliance Stores 
+  - Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers 
+  - Household Furniture (except Wood and Metal) Manufacturing 
+  - Human Resources Consulting Services 
+  - Human Rights Organizations 
+  - Hunting and Trapping
+  - Hydroelectric Power Generation 
+  - Ice Cream and Frozen Dessert Manufacturing
+  - Ice Manufacturing 
+  - In-Vitro Diagnostic Substance Manufacturing 
+  - Independent Artists, Writers, and Performers 
+  - Industrial Building Construction 
+  - Industrial Design Services
+  - Industrial Gas Manufacturing
+  - Industrial Launderers 
+  - Industrial Machinery and Equipment Merchant Wholesalers 
+  - Industrial Mold Manufacturing 
+  - Industrial Process Furnace and Oven Manufacturing 
+  - Industrial Sand Mining 
+  - Industrial Supplies Merchant Wholesalers
+  - Industrial Truck, Tractor, Trailer, and Stacker Machinery Manufacturing 
+  - Industrial Valve Manufacturing 
+  - Industrial and Commercial Fan and Blower and Air Purification Equipment Manufacturing 
+  - Industrial and Personal Service Paper Merchant Wholesalers 
+  - Inland Water Freight Transportation 
+  - Inland Water Passenger Transportation 
+  - Institutional Furniture Manufacturing 
+  - Instrument Manufacturing for Measuring and Testing Electricity and Electrical Signals 
+  - Instruments and Related Products Manufacturing for Measuring, Displaying, and Controlling Industrial Process Variables 
+  - Insurance Agencies and Brokerages 
+  - Interior Design Services
+  - International Affairs 
+  - International Trade Financing 
+  - Internet Publishing and Broadcasting and Web Search Portals
+  - Interurban and Rural Bus Transportation
+  - Investigation Services 
+  - Investment Advice 
+  - Investment Banking and Securities Dealing 
+  - Iron Foundries 
+  - Iron Ore Mining
+  - Iron and Steel Forging 
+  - Iron and Steel Mills and Ferroalloy Manufacturing 
+  - Iron and Steel Pipe and Tube Manufacturing from Purchased Steel
+  - Irradiation Apparatus Manufacturing 
+  - Janitorial Services 
+  - Jewelry Stores 
+  - Jewelry and Silverware Manufacturing 
+  - Jewelry, Watch, Precious Stone, and Precious Metal Merchant Wholesalers 
+  - Junior Colleges 
+  - Kaolin and Ball Clay Mining 
+  - Kidney Dialysis Centers 
+  - Knit Fabric Mills
+  - Labor Unions and Similar Labor Organizations 
+  - Laminated Plastics Plate, Sheet (except Packaging), and Shape Manufacturing
+  - Land Subdivision 
+  - Landscape Architectural Services
+  - Landscaping Services
+  - Language Schools 
+  - Lawn and Garden Tractor and Home Lawn and Garden Equipment Manufacturing 
+  - Leather and Hide Tanning and Finishing
+  - Legal Counsel and Prosecution 
+  - Legislative Bodies 
+  - Lessors of Miniwarehouses and Self-Storage Units 
+  - Lessors of Nonfinancial Intangible Assets (except Copyrighted Works)
+  - Lessors of Nonresidential Buildings (except Miniwarehouses) 
+  - Lessors of Other Real Estate Property 
+  - Lessors of Residential Buildings and Dwellings 
+  - Libraries and Archives 
+  - Light Truck and Utility Vehicle Manufacturing 
+  - Lime Manufacturing
+  - Limited-Service Restaurants 
+  - Limousine Service
+  - Line-Haul Railroads 
+  - Linen Supply 
+  - Livestock Merchant Wholesalers 
+  - Local Messengers and Local Delivery
+  - Locksmiths 
+  - Logging 
+  - Luggage and Leather Goods Stores 
+  - Lumber, Plywood, Millwork, and Wood Panel Merchant Wholesalers 
+  - Machine Shops
+  - Machine Tool Manufacturing 
+  - Major Household Appliance Manufacturing 
+  - Malt Manufacturing 
+  - Manufactured (Mobile) Home Dealers 
+  - Manufactured Home (Mobile Home) Manufacturing 
+  - Marinas
+  - Marine Cargo Handling
+  - Marketing Consulting Services 
+  - Marketing Research and Public Opinion Polling
+  - Masonry Contractors 
+  - Materials Recovery Facilities 
+  - Mattress Manufacturing
+  - Mayonnaise, Dressing, and Other Prepared Sauce Manufacturing 
+  - Measuring, Dispensing, and Other Pumping Equipment Manufacturing 
+  - Meat Markets 
+  - Meat Processed from Carcasses 
+  - Meat and Meat Product Merchant Wholesalers 
+  - Mechanical Power Transmission Equipment Manufacturing 
+  - Media Buying Agencies
+  - Media Representatives
+  - Medical Laboratories 
+  - Medical, Dental, and Hospital Equipment and Supplies Merchant Wholesalers 
+  - Medicinal and Botanical Manufacturing 
+  - Men's Clothing Stores 
+  - Men's and Boys' Clothing and Furnishings Merchant Wholesalers 
+  - Men’s and Boys’ Cut and Sew Apparel Manufacturing 
+  - Metal Can Manufacturing 
+  - Metal Coating, Engraving (except Jewelry and Silverware), and Allied Services to Manufacturers 
+  - Metal Crown, Closure, and Other Metal Stamping (except Automotive) 
+  - Metal Heat Treating 
+  - Metal Household Furniture Manufacturing 
+  - Metal Kitchen Cookware, Utensil, Cutlery, and Flatware (except Precious) Manufacturing 
+  - Metal Service Centers and Other Metal Merchant Wholesalers 
+  - Metal Tank (Heavy Gauge) Manufacturing
+  - Metal Window and Door Manufacturing 
+  - Military Armored Vehicle, Tank, and Tank Component Manufacturing 
+  - Mineral Wool Manufacturing 
+  - Mining Machinery and Equipment Manufacturing 
+  - Miscellaneous Financial Investment Activities 
+  - Miscellaneous Intermediation 
+  - Mixed Mode Transit Systems 
+  - Mobile Food Services
+  - Monetary Authorities-Central Bank
+  - Mortgage and Nonmortgage Loan Brokers 
+  - Motion Picture Theaters (except Drive-Ins) 
+  - Motion Picture and Video Distribution
+  - Motion Picture and Video Production 
+  - Motor Home Manufacturing 
+  - Motor Vehicle Body Manufacturing 
+  - Motor Vehicle Brake System Manufacturing
+  - Motor Vehicle Electrical and Electronic Equipment Manufacturing
+  - Motor Vehicle Gasoline Engine and Engine Parts Manufacturing
+  - Motor Vehicle Metal Stamping
+  - Motor Vehicle Parts (Used) Merchant Wholesalers 
+  - Motor Vehicle Seating and Interior Trim Manufacturing
+  - Motor Vehicle Steering and Suspension Components (except Spring) Manufacturing
+  - Motor Vehicle Supplies and New Parts Merchant Wholesalers 
+  - Motor Vehicle Towing
+  - Motor Vehicle Transmission and Power Train Parts Manufacturing
+  - Motor and Generator Manufacturing 
+  - Motorcycle, ATV, and All Other Motor Vehicle Dealers 
+  - Motorcycle, Bicycle, and Parts Manufacturing 
+  - Museums 
+  - Mushroom Production 
+  - Music Publishers
+  - Musical Groups and Artists 
+  - Musical Instrument Manufacturing 
+  - Musical Instrument and Supplies Stores 
+  - Nail Salons 
+  - Narrow Fabric Mills and Schiffli Machine Embroidery
+  - National Security 
+  - Natural Gas Distribution 
+  - Natural Gas Extraction 
+  - Nature Parks and Other Similar Institutions
+  - Navigational Services to Shipping 
+  - New Car Dealers 
+  - New Housing For-Sale Builders 
+  - New Multifamily Housing Construction (except For-Sale Builders) 
+  - New Single-Family Housing Construction (except For-Sale Builders) 
+  - News Dealers and Newsstands 
+  - News Syndicates
+  - Newspaper Publishers 
+  - Newsprint Mills 
+  - Nitrogenous Fertilizer Manufacturing 
+  - Nonchocolate Confectionery Manufacturing
+  - Noncurrent-Carrying Wiring Device Manufacturing 
+  - Nonferrous Forging 
+  - Nonferrous Metal (except Aluminum) Smelting and Refining 
+  - Nonferrous Metal (except Copper and Aluminum) Rolling, Drawing, and Extruding 
+  - Nonferrous Metal Die-Casting Foundries 
+  - Nonresidential Property Managers 
+  - Nonscheduled Chartered Freight Air Transportation 
+  - Nonscheduled Chartered Passenger Air Transportation 
+  - Nonupholstered Wood Household Furniture Manufacturing 
+  - Nonwoven Fabric Mills
+  - Nuclear Electric Power Generation 
+  - Nursery and Tree Production 
+  - Nursery, Garden Center, and Farm Supply Stores 
+  - Nursing Care Facilities (Skilled Nursing Facilities) 
+  - Office Administrative Services
+  - Office Equipment Merchant Wholesalers 
+  - Office Furniture (except Wood) Manufacturing 
+  - Office Machinery and Equipment Rental and Leasing
+  - Office Supplies (except Paper) Manufacturing
+  - Office Supplies and Stationery Stores 
+  - Offices of All Other Miscellaneous Health Practitioners 
+  - Offices of Bank Holding Companies 
+  - Offices of Certified Public Accountants 
+  - Offices of Chiropractors 
+  - Offices of Dentists 
+  - Offices of Lawyers
+  - Offices of Mental Health Practitioners (except Physicians) 
+  - Offices of Notaries
+  - Offices of Optometrists
+  - Offices of Other Holding Companies 
+  - Offices of Physical, Occupational and Speech Therapists, and Audiologists 
+  - Offices of Physicians (except Mental Health Specialists) 
+  - Offices of Physicians, Mental Health Specialists 
+  - Offices of Podiatrists 
+  - Offices of Real Estate Agents and Brokers
+  - Offices of Real Estate Appraisers 
+  - Oil and Gas Field Machinery and Equipment Manufacturing 
+  - Oil and Gas Pipeline and Related Structures Construction 
+  - Oilseed (except Soybean) Farming 
+  - Oilseed and Grain Combination Farming 
+  - One-Hour Photofinishing 
+  - Open-End Investment Funds 
+  - Ophthalmic Goods Manufacturing 
+  - Ophthalmic Goods Merchant Wholesalers 
+  - Optical Goods Stores 
+  - Optical Instrument and Lens Manufacturing 
+  - Orange Groves
+  - Ornamental and Architectural Metal Work Manufacturing 
+  - Other Accounting Services 
+  - Other Activities Related to Credit Intermediation 
+  - Other Activities Related to Real Estate 
+  - Other Aircraft Parts and Auxiliary Equipment Manufacturing 
+  - Other Airport Operations 
+  - Other Aluminum Rolling, Drawing, and Extruding 
+  - Other Animal Food Manufacturing 
+  - Other Apparel Knitting Mills 
+  - Other Aquaculture 
+  - Other Automotive Mechanical and Electrical Repair and Maintenance 
+  - Other Basic Inorganic Chemical Manufacturing 
+  - Other Building Equipment Contractors 
+  - Other Building Finishing Contractors
+  - Other Building Material Dealers 
+  - Other Business Service Centers (including Copy Shops) 
+  - Other Chemical and Allied Products Merchant Wholesalers 
+  - Other Chemical and Fertilizer Mineral Mining 
+  - Other Clothing Stores 
+  - Other Commercial Equipment Merchant Wholesalers 
+  - Other Commercial and Industrial Machinery and Equipment Rental and Leasing 
+  - Other Commercial and Service Industry Machinery Manufacturing 
+  - Other Communication and Energy Wire Manufacturing 
+  - Other Communications Equipment Manufacturing
+  - Other Community Housing Services 
+  - Other Computer Related Services
+  - Other Concrete Product Manufacturing 
+  - Other Construction Material Merchant Wholesalers 
+  - Other Crushed and Broken Stone Mining and Quarrying 
+  - Other Cut and Sew Apparel Manufacturing 
+  - Other Depository Credit Intermediation 
+  - Other Direct Insurance (except Life, Health, and Medical) Carriers 
+  - Other Direct Selling Establishments 
+  - Other Electric Power Generation 
+  - Other Electronic Component Manufacturing 
+  - Other Electronic Parts and Equipment Merchant Wholesalers 
+  - Other Electronic and Precision Equipment Repair and Maintenance 
+  - Other Engine Equipment Manufacturing 
+  - Other Fabricated Wire Product Manufacturing 
+  - Other Farm Product Raw Material Merchant Wholesalers 
+  - Other Financial Vehicles 
+  - Other Food Crops Grown Under Cover 
+  - Other Foundation, Structure, and Building Exterior Contractors 
+  - Other Gambling Industries 
+  - Other Gasoline Stations 
+  - Other General Government Support 
+  - Other Grantmaking and Giving Services 
+  - Other Grocery and Related Products Merchant Wholesalers 
+  - Other Guided Missile and Space Vehicle Parts and Auxiliary Equipment Manufacturing 
+  - Other Heavy and Civil Engineering Construction 
+  - Other Individual and Family Services 
+  - Other Industrial Machinery Manufacturing 
+  - Other Insurance Funds 
+  - Other Justice, Public Order, and Safety Activities 
+  - Other Lighting Equipment Manufacturing 
+  - Other Management Consulting Services 
+  - Other Marine Fishing 
+  - Other Measuring and Controlling Device Manufacturing 
+  - Other Metal Container Manufacturing 
+  - Other Metal Valve and Pipe Fitting Manufacturing 
+  - Other Millwork (including Flooring) 
+  - Other Miscellaneous Durable Goods Merchant Wholesalers 
+  - Other Miscellaneous Nondurable Goods Merchant Wholesalers 
+  - Other Motion Picture and Video Industries 
+  - Other Motor Vehicle Parts Manufacturing
+  - Other Noncitrus Fruit Farming 
+  - Other Nonferrous Metal Foundries (except Die-Casting) 
+  - Other Nonhazardous Waste Treatment and Disposal 
+  - Other Nonscheduled Air Transportation 
+  - Other Paperboard Container Manufacturing 
+  - Other Performing Arts Companies 
+  - Other Personal Care Services 
+  - Other Personal and Household Goods Repair and Maintenance 
+  - Other Poultry Production 
+  - Other Pressed and Blown Glass and Glassware Manufacturing 
+  - Other Professional Equipment and Supplies Merchant Wholesalers 
+  - Other Residential Care Facilities 
+  - Other Scientific and Technical Consulting Services
+  - Other Services Related to Advertising 
+  - Other Services to Buildings and Dwellings 
+  - Other Similar Organizations (except Business, Professional, Labor, and Political Organizations) 
+  - Other Snack Food Manufacturing 
+  - Other Social Advocacy Organizations 
+  - Other Sound Recording Industries
+  - Other Specialized Design Services
+  - Other Spectator Sports 
+  - Other Support Activities for Air Transportation
+  - Other Support Activities for Road Transportation 
+  - Other Support Activities for Water Transportation
+  - Other Technical and Trade Schools 
+  - Other Urban Transit Systems 
+  - Other Vegetable (except Potato) and Melon Farming 
+  - Other Warehousing and Storage
+  - Other Waste Collection 
+  - Outdoor Advertising
+  - Outdoor Power Equipment Stores 
+  - Outpatient Mental Health and Substance Abuse Centers 
+  - Overhead Traveling Crane, Hoist, and Monorail System Manufacturing 
+  - Packaged Frozen Food Merchant Wholesalers 
+  - Packaging Machinery Manufacturing 
+  - Packaging and Labeling Services
+  - Packing and Crating 
+  - Paint and Coating Manufacturing
+  - Paint and Wallpaper Stores 
+  - Paint, Varnish, and Supplies Merchant Wholesalers 
+  - Painting and Wall Covering Contractors
+  - Paper (except Newsprint) Mills 
+  - Paper Bag and Coated and Treated Paper Manufacturing
+  - Paperboard Mills 
+  - Parking Lots and Garages 
+  - Parole Offices and Probation Offices 
+  - Passenger Car Leasing 
+  - Passenger Car Rental 
+  - Payroll Services 
+  - Peanut Farming 
+  - Pension Funds 
+  - Periodical Publishers 
+  - Perishable Prepared Food Manufacturing 
+  - Pesticide and Other Agricultural Chemical Manufacturing
+  - Pet Care (except Veterinary) Services 
+  - Pet and Pet Supplies Stores 
+  - Petrochemical Manufacturing
+  - Petroleum Bulk Stations and Terminals 
+  - Petroleum Lubricating Oil and Grease Manufacturing 
+  - Petroleum Refineries
+  - Petroleum and Petroleum Products Merchant Wholesalers (except Bulk Stations and Terminals) 
+  - Pharmaceutical Preparation Manufacturing 
+  - Pharmacies and Drug Stores 
+  - Phosphate Rock Mining 
+  - Phosphatic Fertilizer Manufacturing 
+  - Photofinishing Laboratories (except One-Hour) 
+  - Photographic Equipment and Supplies Merchant Wholesalers 
+  - Photographic Film, Paper, Plate, and Chemical Manufacturing 
+  - Photographic and Photocopying Equipment Manufacturing 
+  - Photography Studios, Portrait 
+  - Piece Goods, Notions, and Other Dry Goods Merchant Wholesalers 
+  - Pipeline Transportation of Crude Oil
+  - Pipeline Transportation of Natural Gas
+  - Pipeline Transportation of Refined Petroleum Products
+  - Plastics Bag and Pouch Manufacturing 
+  - Plastics Bottle Manufacturing
+  - Plastics Material and Resin Manufacturing 
+  - Plastics Materials and Basic Forms and Shapes Merchant Wholesalers 
+  - Plastics Packaging Film and Sheet (including Laminated) Manufacturing 
+  - Plastics Pipe and Pipe Fitting Manufacturing 
+  - Plastics Plumbing Fixture Manufacturing 
+  - Plate Work Manufacturing 
+  - Plumbing Fixture Fitting and Trim Manufacturing 
+  - Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers 
+  - Plumbing, Heating, and Air-Conditioning Contractors 
+  - Police Protection 
+  - Polish and Other Sanitation Good Manufacturing 
+  - Political Organizations 
+  - Polystyrene Foam Product Manufacturing
+  - Port and Harbor Operations
+  - Portfolio Management 
+  - Postal Service
+  - Postharvest Crop Activities (except Cotton Ginning) 
+  - Potash, Soda, and Borate Mineral Mining 
+  - Potato Farming 
+  - Pottery, Ceramics, and Plumbing Fixture Manufacturing 
+  - Poultry Hatcheries
+  - Poultry Processing 
+  - Poultry and Poultry Product Merchant Wholesalers 
+  - Poured Concrete Foundation and Structure Contractors 
+  - Powder Metallurgy Part Manufacturing 
+  - Power Boiler and Heat Exchanger Manufacturing
+  - Power and Communication Line and Related Structures Construction 
+  - Power, Distribution, and Specialty Transformer Manufacturing 
+  - Power-Driven Handtool Manufacturing 
+  - Precision Turned Product Manufacturing 
+  - Prefabricated Metal Building and Component Manufacturing 
+  - Prefabricated Wood Building Manufacturing 
+  - Primary Battery Manufacturing 
+  - Printed Circuit Assembly (Electronic Assembly) Manufacturing 
+  - Printing Ink Manufacturing
+  - Printing Machinery and Equipment Manufacturing 
+  - Printing and Writing Paper Merchant Wholesalers 
+  - Private Households
+  - Private Mail Centers 
+  - Process, Physical Distribution, and Logistics Consulting Services 
+  - Professional Employer Organizations
+  - Professional Organizations 
+  - Professional and Management Development Training 
+  - Promoters of Performing Arts, Sports, and Similar Events with Facilities 
+  - Promoters of Performing Arts, Sports, and Similar Events without Facilities 
+  - Psychiatric and Substance Abuse Hospitals 
+  - Public Finance Activities 
+  - Public Relations Agencies
+  - Pulp Mills 
+  - RV (Recreational Vehicle) Parks and Campgrounds 
+  - Racetracks 
+  - Radio Networks 
+  - Radio Stations 
+  - Radio and Television Broadcasting and Wireless Communications Equipment Manufacturing
+  - Railroad Rolling Stock Manufacturing
+  - Ready-Mix Concrete Manufacturing
+  - Real Estate Credit 
+  - Reconstituted Wood Product Manufacturing 
+  - Record Production and Distribution
+  - Recreational Goods Rental 
+  - Recreational Vehicle Dealers 
+  - Recreational and Vacation Camps (except Campgrounds) 
+  - Recyclable Material Merchant Wholesalers 
+  - Refrigerated Warehousing and Storage
+  - Refrigeration Equipment and Supplies Merchant Wholesalers 
+  - Regulation and Administration of Communications, Electric, Gas, and Other Utilities 
+  - Regulation and Administration of Transportation Programs 
+  - Regulation of Agricultural Marketing and Commodities 
+  - Regulation, Licensing, and Inspection of Miscellaneous Commercial Sectors 
+  - Reinsurance Carriers 
+  - Relay and Industrial Control Manufacturing 
+  - Religious Organizations 
+  - Remediation Services 
+  - Rendering and Meat Byproduct Processing 
+  - Repossession Services 
+  - Research and Development in Biotechnology (except Nanobiotechnology)
+  - Research and Development in Nanotechnology 
+  - Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology) 
+  - Research and Development in the Social Sciences and Humanities 
+  - Residential Electric Lighting Fixture Manufacturing 
+  - Residential Intellectual and Developmental Disability Facilities 
+  - Residential Mental Health and Substance Abuse Facilities 
+  - Residential Property Managers 
+  - Residential Remodelers 
+  - Retail Bakeries 
+  - Reupholstery and Furniture Repair
+  - Rice Farming
+  - Rice Milling 
+  - Roasted Nuts and Peanut Butter Manufacturing 
+  - Rolled Steel Shape Manufacturing 
+  - Rolling Mill and Other Metalworking Machinery Manufacturing 
+  - Roofing Contractors 
+  - Roofing, Siding, and Insulation Material Merchant Wholesalers 
+  - Rooming and Boarding Houses, Dormitories, and Workers' Camps 
+  - Rope, Cordage, Twine, Tire Cord, and Tire Fabric Mills 
+  - Rubber Product Manufacturing for Mechanical Use 
+  - Rubber and Plastics Hoses and Belting Manufacturing
+  - Sales Financing 
+  - Sanitary Paper Product Manufacturing 
+  - Satellite Telecommunications
+  - Savings Institutions 
+  - Saw Blade and Handtool Manufacturing 
+  - Sawmill, Woodworking, and Paper Machinery Manufacturing 
+  - Sawmills 
+  - Scale and Balance Manufacturing 
+  - Scenic and Sightseeing Transportation, Land
+  - Scenic and Sightseeing Transportation, Other
+  - Scenic and Sightseeing Transportation, Water
+  - Scheduled Freight Air Transportation 
+  - Scheduled Passenger Air Transportation 
+  - School and Employee Bus Transportation
+  - Seafood Product Preparation and Packaging
+  - Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing 
+  - Secondary Market Financing 
+  - Secondary Smelting and Alloying of Aluminum 
+  - Secondary Smelting, Refining, and Alloying of Nonferrous Metal (except Copper and Aluminum) 
+  - Securities Brokerage 
+  - Securities and Commodity Exchanges
+  - Security Guards and Patrol Services 
+  - Security Systems Services (except Locksmiths) 
+  - Semiconductor Machinery Manufacturing 
+  - Semiconductor and Related Device Manufacturing 
+  - Septic Tank and Related Services 
+  - Service Establishment Equipment and Supplies Merchant Wholesalers 
+  - Services for the Elderly and Persons with Disabilities 
+  - Sewage Treatment Facilities 
+  - Sewing, Needlework, and Piece Goods Stores 
+  - Sheep Farming
+  - Sheet Metal Work Manufacturing 
+  - Shellfish Farming 
+  - Shellfish Fishing 
+  - Ship Building and Repairing 
+  - Shoe Stores 
+  - Short Line Railroads 
+  - Showcase, Partition, Shelving, and Locker Manufacturing 
+  - Siding Contractors 
+  - Sign Manufacturing
+  - Silver Ore Mining 
+  - Site Preparation Contractors
+  - Skiing Facilities
+  - Small Arms Ammunition Manufacturing 
+  - Small Arms, Ordnance, and Ordnance Accessories Manufacturing 
+  - Small Electrical Appliance Manufacturing
+  - Snack and Nonalcoholic Beverage Bars 
+  - Soap and Other Detergent Manufacturing 
+  - Soft Drink Manufacturing 
+  - Software Publishers
+  - Software and Other Prerecorded Compact Disc, Tape, and Record Reproducing 
+  - Softwood Veneer and Plywood Manufacturing 
+  - Soil Preparation, Planting, and Cultivating 
+  - Solar Electric Power Generation 
+  - Solid Waste Collection 
+  - Solid Waste Combustors and Incinerators 
+  - Solid Waste Landfill 
+  - Sound Recording Studios
+  - Soybean Farming
+  - Soybean and Other Oilseed Processing 
+  - Space Research and Technology 
+  - Special Die and Tool, Die Set, Jig, and Fixture Manufacturing 
+  - Special Needs Transportation 
+  - Specialized Freight (except Used Goods) Trucking, Local 
+  - Specialized Freight (except Used Goods) Trucking, Long-Distance 
+  - Specialty (except Psychiatric and Substance Abuse) Hospitals 
+  - Specialty Canning 
+  - Speed Changer, Industrial High-Speed Drive, and Gear Manufacturing 
+  - Spice and Extract Manufacturing 
+  - Sporting Goods Stores 
+  - Sporting and Athletic Goods Manufacturing
+  - Sporting and Recreational Goods and Supplies Merchant Wholesalers 
+  - Sports Teams and Clubs 
+  - Sports and Recreation Instruction 
+  - Spring Manufacturing 
+  - Stationery Product Manufacturing
+  - Stationery and Office Supplies Merchant Wholesalers 
+  - Steam and Air-Conditioning Supply 
+  - Steel Foundries (except Investment) 
+  - Steel Investment Foundries 
+  - Steel Wire Drawing 
+  - Storage Battery Manufacturing 
+  - Strawberry Farming 
+  - Structural Steel and Precast Concrete Contractors 
+  - Sugar Beet Farming 
+  - Sugarcane Farming
+  - Supermarkets and Other Grocery (except Convenience) Stores 
+  - Support Activities for Animal Production
+  - Support Activities for Coal Mining 
+  - Support Activities for Forestry
+  - Support Activities for Metal Mining 
+  - Support Activities for Nonmetallic Minerals (except Fuels) Mining 
+  - Support Activities for Oil and Gas Operations 
+  - Support Activities for Printing
+  - Support Activities for Rail Transportation
+  - Surface Active Agent Manufacturing 
+  - Surgical Appliance and Supplies Manufacturing 
+  - Surgical and Medical Instrument Manufacturing 
+  - Surveying and Mapping (except Geophysical) Services
+  - Switchgear and Switchboard Apparatus Manufacturing 
+  - Synthetic Dye and Pigment Manufacturing
+  - Synthetic Rubber Manufacturing 
+  - Tax Preparation Services 
+  - Taxi Service 
+  - Telecommunications Resellers 
+  - Telemarketing Bureaus and Other Contact Centers 
+  - Telephone Answering Services 
+  - Telephone Apparatus Manufacturing
+  - Teleproduction and Other Postproduction Services 
+  - Television Broadcasting
+  - Temporary Help Services
+  - Temporary Shelters 
+  - Testing Laboratories
+  - Textile Bag and Canvas Mills 
+  - Textile and Fabric Finishing Mills 
+  - Theater Companies and Dinner Theaters 
+  - Third Party Administration of Insurance and Pension Funds 
+  - Tile and Terrazzo Contractors
+  - Timber Tract Operations
+  - Tire Dealers 
+  - Tire Manufacturing (except Retreading) 
+  - Tire Retreading 
+  - Tire and Tube Merchant Wholesalers 
+  - Title Abstract and Settlement Offices 
+  - Tobacco Farming
+  - Tobacco Manufacturing 
+  - Tobacco Stores 
+  - Tobacco and Tobacco Product Merchant Wholesalers 
+  - Toilet Preparation Manufacturing
+  - Tortilla Manufacturing
+  - Totalizing Fluid Meter and Counting Device Manufacturing 
+  - Tour Operators
+  - Toy and Hobby Goods and Supplies Merchant Wholesalers 
+  - Translation and Interpretation Services
+  - Transportation Equipment and Supplies (except Motor Vehicle) Merchant Wholesalers 
+  - Travel Agencies
+  - Travel Trailer and Camper Manufacturing 
+  - Tree Nut Farming 
+  - Truck Trailer Manufacturing 
+  - Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing 
+  - Truss Manufacturing 
+  - Trust, Fiduciary, and Custody Activities 
+  - Trusts, Estates, and Agency Accounts 
+  - Turbine and Turbine Generator Set Units Manufacturing 
+  - Turkey Production
+  - Unlaminated Plastics Film and Sheet (except Packaging) Manufacturing 
+  - Unlaminated Plastics Profile Shape Manufacturing 
+  - Upholstered Household Furniture Manufacturing 
+  - Uranium-Radium-Vanadium Ore Mining 
+  - Urethane and Other Foam Product (except Polystyrene) Manufacturing
+  - Used Car Dealers 
+  - Used Household and Office Goods Moving
+  - Used Merchandise Stores 
+  - Vending Machine Operators 
+  - Veterinary Services 
+  - Video Tape and Disc Rental
+  - Vocational Rehabilitation Services 
+  - Voluntary Health Organizations 
+  - Warehouse Clubs and Supercenters 
+  - Warm Air Heating and Air-Conditioning Equipment and Supplies Merchant Wholesalers 
+  - Water Supply and Irrigation Systems 
+  - Water and Sewer Line and Related Structures Construction 
+  - Welding and Soldering Equipment Manufacturing 
+  - Wet Corn Milling 
+  - Wheat Farming
+  - Wholesale Trade Agents and Brokers 
+  - Wind Electric Power Generation 
+  - Window Treatment Stores 
+  - Wine and Distilled Alcoholic Beverage Merchant Wholesalers 
+  - Wineries 
+  - Wired Telecommunications Carriers 
+  - Wireless Telecommunications Carriers (except Satellite)
+  - Women's Clothing Stores 
+  - Women's Handbag and Purse Manufacturing 
+  - Women's, Children's, and Infants' Clothing and Accessories Merchant Wholesalers 
+  - Women’s, Girls’, and Infants’ Cut and Sew Apparel Manufacturing 
+  - Wood Container and Pallet Manufacturing
+  - Wood Kitchen Cabinet and Countertop Manufacturing
+  - Wood Office Furniture Manufacturing 
+  - Wood Preservation 
+  - Wood Window and Door Manufacturing 
+  - Zoos and Botanical Gardens 
