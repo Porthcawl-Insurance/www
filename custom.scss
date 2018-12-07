@@ -147,9 +147,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #fff !important;
+  color: $lightest !important;
   font-weight: 400 !important;
   font-size: 1.4rem !important;
+
+  &.main {
+    color: $dark-gray !important;
+  }
 
   @include sm {
     font-size: 1.8rem !important;
@@ -231,8 +235,11 @@ li:last-child {
   }
 }
 
-.contents-list {
-
+.career-box {
+  padding: 10px 20px;
+  background-color: rgba($light, .8);
+  box-shadow: 1px 2px 2px rgba($very-dark, .75);
+  margin: 10px 0;
 }
 
 .btn-primary {
@@ -241,6 +248,19 @@ li:last-child {
   font-weight: bold !important;
   border: $orange 1px solid !important;
   // box-shadow: 1px 1px 1px rgba($very-dark, .4);
+}
+
+/* Chat styling */
+#intercom-container-body {
+  #intercom-container {
+    div {
+      div.intercom-launcher {
+        div.intercom-launcher-open-icon {
+          background-color: $dark-gray !important;
+        }
+      }
+    }
+  }
 }
 
 #home-content {
@@ -258,6 +278,7 @@ li:last-child {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
+  opacity: .8;
 
   @include sm {
       background-size: cover;
@@ -268,8 +289,11 @@ li:last-child {
 /* Nav */
 nav {
   z-index: 5;
+  padding-bottom: 1.5rem !important;
+  padding-top: 1.5rem !important;
+
   .nav-link {
-    color: #fff !important;
+    color: $light !important;
     text-transform: none;
     padding: 8px 20px !important;
     @include sm{
@@ -278,6 +302,10 @@ nav {
   }
   .navbar-brand {
     padding-top: 0;
+  }
+
+  @include sm {
+    padding-top: 0.5rem !important;
   }
 }
 

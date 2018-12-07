@@ -31,8 +31,10 @@
         {{ if eq $i 0 }}
         <h2>Careers</h2>
         {{ end }}
+        <div class='career-box'>
           <a class='career-link' href='{{ .RelPermalink }}'>{{ .Title }}</a>
           <p class='small text-muted'>Posted {{ .Date.Format "January 2, 2006" }}</p>
+        </div>
       </div>
     </div>
 
