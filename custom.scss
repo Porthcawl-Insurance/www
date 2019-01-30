@@ -227,38 +227,35 @@ li:last-child {
 
 .career-link {
   color: $dark-gray !important;
-  text-shadow: 1px 1px 1px rgba(225,225,225,.4);
-  font-size: 1.1rem;
-  &:hover {
-    // text-decoration: none;
-    color: $very-dark !important;
-  }
-}
+  // text-shadow: 1px 1px 1px rgba(225,225,225,.4);
+  font-size: 1.3rem;
+  // text-decoration: underline;
 
-.career-box {
-  padding: 10px 20px;
-  background-color: rgba($light, .8);
-  box-shadow: 1px 2px 2px rgba($very-dark, .75);
-  margin: 10px 0;
+  i.fas {
+    padding-left: 8px;
+    color: #d8774f !important;
+  }
+
+  &:hover {
+    color: $very-dark !important;
+    text-decoration: none;
+    font-weight: bold;
+
+    i.fas {
+      padding-left: 9px;
+    }
+  }
 }
 
 .btn-primary {
   background-color: $orange !important;
   color: #fff !important;
-  font-weight: bold !important;
   border: $orange 1px solid !important;
-  // box-shadow: 1px 1px 1px rgba($very-dark, .4);
-}
 
-/* Chat styling */
-#intercom-container-body {
-  #intercom-container {
-    div {
-      div.intercom-launcher {
-        div.intercom-launcher-open-icon {
-          background-color: $dark-gray !important;
-        }
-      }
+  &.bigger {
+    padding: 10px 24px 10px 24px;
+    @include md {
+      font-size: larger;
     }
   }
 }
