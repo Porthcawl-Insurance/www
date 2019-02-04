@@ -15,16 +15,6 @@
       </div>
     </div>
 
-    <!-- <div class='mt-4 row'>
-      <div class='col-md-8 offset-md-0'>
-        <h2>Culture Blueprint</h2>
-        <ul class='list-unstyled'>
-          <li><a href='/about/culture/'>The CyberFortress Culture Blueprint</a></li>
-        </ul>
-
-      </div>
-    </div> -->
-
     {{ range $i, $e := .Data.Pages }}
     <div class='row'>
       <div class='col-md-8 offset-md-0'>
@@ -32,7 +22,7 @@
         <h2 class=''>Careers</h2>
         {{ end }}
         <div class='mb-2 mt-3'>
-          <a class='career-link' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a> 
+          <a class='career-link' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a>
         </div>
       </div>
     </div>
