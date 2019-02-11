@@ -6,10 +6,20 @@
     <description>Recent content on CyberFortress</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Aug 2018 15:50:36 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 04 Feb 2019 13:42:47 -0600</lastBuildDate>
     
 	<atom:link href="https://www.cyberfortress.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Licenses</title>
+      <link>https://www.cyberfortress.com/licenses/</link>
+      <pubDate>Mon, 04 Feb 2019 13:42:47 -0600</pubDate>
+      
+      <guid>https://www.cyberfortress.com/licenses/</guid>
+      <description> CyberFortress Insurance Services US, LLC is a licensed insurance producer in the following states.
+We&#39;re in the process of getting licenses in all 50 states -- if your state isn&#39;t listed, please check back soon.   State License # Surplus Lines License #     TX 2368785 2376542     </description>
+    </item>
     
     <item>
       <title>Full Stack Developer</title>

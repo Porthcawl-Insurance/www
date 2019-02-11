@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.cyberfortress.com/licenses/</loc>
+    <lastmod>2019-02-04T13:42:47-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.cyberfortress.com/careers/full-stack-developer/</loc>
     <lastmod>2018-08-14T15:50:36-05:00</lastmod>
   </url>
@@ -60,7 +65,13 @@
   
   <url>
     <loc>https://www.cyberfortress.com/</loc>
-    <lastmod>2018-08-14T15:50:36-05:00</lastmod>
+    <lastmod>2019-02-04T13:42:47-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cyberfortress.com/html/</loc>
+    <lastmod>2019-02-04T13:42:47-06:00</lastmod>
     <priority>0</priority>
   </url>
   
