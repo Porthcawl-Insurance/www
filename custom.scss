@@ -180,6 +180,7 @@ hr {
 
 p, li {
   color: $dark-gray !important;
+  font-size: 1.1em !important;
 
   &.text-muted {
     color: $light !important;
@@ -260,8 +261,33 @@ li:last-child {
   }
 }
 
+table.table {
+  thead {
+    background-color: rgba($dark-gray, .5) !important;
+    th {
+      font-weight: 100 !important;
+    }
+  }
+  tbody {
+    color: $dark-gray !important;
+    background-color: $lightest !important;
+  }
+
+  th{
+    padding-left: 1.5em !important;
+  }
+}
+
 #home-content {
   z-index: 3 !important;
+
+  h1 {
+    font-size: 3em !important;
+  }
+
+  h2{
+    font-size: 1.5em !important;
+  }
 }
 
 #background-img {
@@ -311,6 +337,7 @@ nav {
 footer {
   position: absolute;
   bottom: 0;
+  background-color: $mid-gray !important;
 
   width: 100%;
 
@@ -328,15 +355,16 @@ footer {
   }
 
   a {
-    color: $orange !important;
+    color: $lightest !important;
+    font-size: 1.2em !important;
 
     &:hover, &:focus, &:active {
-      color: $orange !important;
+      color: #e9b15d !important;
       text-decoration: none;
     }
 
     &:visited {
-      color: $orange !important;
+      color: #e9b15d !important;
     }
   }
 

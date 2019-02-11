@@ -11,8 +11,8 @@ theme = ''
 
 [permalinks]
   team = "/:slug/"
+  html = "/:slug/"
   md = "/:slug/"
 
 [blackfriday]
   hrefTargetBlank = true
-
