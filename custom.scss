@@ -203,6 +203,10 @@ li:last-child {
   font-weight: bold !important;
 }
 
+.larger {
+  font-size: larger !important;
+}
+
 .t-shadow-sm {
     text-shadow: 1px 1px 1px rgba($very-dark, .3);
 }
@@ -339,10 +343,8 @@ nav {
 footer {
   position: absolute;
   bottom: 0;
-  background-color: $mid-gray !important;
-
+  background-color: rgba($dark-gray, .4) !important;
   width: 100%;
-
   color: #fff;
   font-size: 0.85rem;
 
