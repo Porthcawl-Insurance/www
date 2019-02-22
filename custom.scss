@@ -180,7 +180,7 @@ hr {
 
 p, li {
   color: $dark-gray !important;
-  font-size: 1.1em !important;
+  // font-size: 1.1em !important;
 
   &.text-muted {
     color: $light !important;
@@ -212,6 +212,7 @@ li:last-child {
 }
 
 .figure-img{
+  max-height: 200px;
   &:hover {
     box-shadow: 0 0 10px 2px $light-gray;
   }
@@ -323,6 +324,7 @@ nav {
       margin-top: 30px;
     }
   }
+
   .navbar-brand {
     padding-top: 0;
   }

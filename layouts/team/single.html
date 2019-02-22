@@ -2,36 +2,28 @@
 
 <section class='py-5 text-white'>
   <div class='container'>
-
-    <div class='row'>
-      <div class='col-md-8 offset-md-0'>
-
-
-        <div class='row'>
-          <div class='col'>
-            <h1 class='display-4 pb-5'>Our Team</h1>
-          </div>
-        </div>
-
-        <div class='row'>
-          {{ range sort $.Site.Data.team.founders ".nam" }}
-
-          <div class='col-4 col-sm-3'>
-            <figure class='figure'>
-              <img src='{{ .img }}' class='figure-img img-fluid rounded' alt='{{ .nam }}'>
-              <figcaption class='figure-caption'>
-                <a target='_blank' href='{{ .lip }}'>{{ .nam }}</a><br>
-                {{ .tit }}<br>
-
-              </figcaption>
-            </figure>
-          </div>
-
-          {{ end }}
-        </div>
-
+    <div class='row pb-5'>
+      <div class='col'>
+        <h1 class='display-4 pb-5'>Our Team</h1>
+        <p>Over the past 8 years, our team has helped tens of thousands small businesses with their IT and cybersecurity needs.</p>
+        <p>Our backgrounds include managing risk at the world's largest hedge fund and running web-scale infrastructure services at a leading cloud hosting provider that was obsessed with customer experience.</p>
       </div>
     </div>
+    <!--end of .row-->
+    <div class='row'>
+      {{ range sort $.Site.Data.team.founders ".nam" }}
+      <div class='col-4 col-sm-3'>
+        <figure class='figure'>
+          <img src='{{ .img }}' class='figure-img img-fluid rounded' alt='{{ .nam }}'>
+          <figcaption class='figure-caption'>
+            <a target='_blank' href='{{ .lip }}'>{{ .nam }}</a><br>
+            {{ .tit }}<br>
+          </figcaption>
+        </figure>
+      </div>
+      {{ end }}
+    </div>
+    <!--end of .row-->
 
   </div>
 </section>
