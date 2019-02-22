@@ -180,7 +180,7 @@ hr {
 
 p, li {
   color: $dark-gray !important;
-  font-size: 1.1em !important;
+  // font-size: 1.1em !important;
 
   &.text-muted {
     color: $light !important;
@@ -203,6 +203,10 @@ li:last-child {
   font-weight: bold !important;
 }
 
+.larger {
+  font-size: larger !important;
+}
+
 .t-shadow-sm {
     text-shadow: 1px 1px 1px rgba($very-dark, .3);
 }
@@ -212,6 +216,7 @@ li:last-child {
 }
 
 .figure-img{
+  max-height: 200px;
   &:hover {
     box-shadow: 0 0 10px 2px $light-gray;
   }
@@ -323,6 +328,7 @@ nav {
       margin-top: 30px;
     }
   }
+
   .navbar-brand {
     padding-top: 0;
   }
@@ -337,10 +343,8 @@ nav {
 footer {
   position: absolute;
   bottom: 0;
-  background-color: $mid-gray !important;
-
+  background-color: rgba($dark-gray, .4) !important;
   width: 100%;
-
   color: #fff;
   font-size: 0.85rem;
 
