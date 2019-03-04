@@ -6,6 +6,8 @@ date: 2018-08-07T20:14:44-05:00
 draft: true
 ---
 
+{{% section %}}
+
 CyberFortress was formed to be a new kind of company to tackle a big problem. Insurance is one of the most painful and hated experiences in modern life. We want to change that. But we don’t think we can change the insurance industry without first changing ourselves. So we have thrown out a lot of the startup playbook: No founder dictators. No managers. No vesting handcuffs. No work obsession leading to burnout. No living in a future that doesn’t exist.
 
 #### Contents
@@ -465,3 +467,5 @@ This document was produced over several months of open discussion and conversati
 * Warren Buffett's Letters to Berkshire Hathaway Shareholders
 
 [(Back to Top)](#top)
+
+{{% /section %}}

@@ -6,6 +6,8 @@ date: 2018-04-09T22:11:36-05:00
 draft: true
 ---
 
+{{% section %}}
+
 Porthcawl Insurance Services US, Inc. d/b/a CyberFortress and its affiliates ("CyberFortress”, we", "our", "our company") take the privacy of our customers and other visitors to our website ("you", "your", "your company") seriously. Because we value our customer relationships, we do not sell customer information. We will only share your information for the purposes of providing services which you have engaged us to perform on your behalf, such as placing your insurance, and/or providing you with insurance-related products or services, as applicable, and as otherwise permitted or required by law.
 
 This Privacy Policy outlines our information-sharing practices to help you understand how we protect your privacy, when we collect and use information about you, and the measures we take to protect the confidentiality of that information.
@@ -77,3 +79,4 @@ We reserve the right to make changes to our Privacy Policy at any time. Such cha
 
 Last modified on April 9, 2018
 
+{{% /section %}}

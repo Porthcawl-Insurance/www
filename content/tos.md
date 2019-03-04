@@ -6,6 +6,8 @@ date: 2018-04-10T15:45:32-05:00
 draft: true
 ---
 
+{{% section %}}
+
 These Terms of Service (hereinafter the "Terms")  are a legal agreement between you and Porthcawl Insurance Services US, LLC d/b/a CyberFortress (referred to in the Terms as "CyberFortress", "we", us" and "our").  
 
 IT IS VERY IMPORTANT THAT YOU READ THESE TERM VERY CAREFULLY AS THEY CONSTITUTE A BINDING LEGAL AGREEMENT BETWEEN YOU AND US, AND THEY STATE THE AGREEMENT BETWEEN YOU AND US REGARDING EACH OF OUR LEGAL RIGHTS, REMEDIES AND OBLIGATIONS TO THE OTHER PARTY. **THESE TERMS CONTAIN A CLASS ACTION WAIVER WHICH MEANS THAT IF YOU BRING A CLAIM AGAINST US, YOU WILL ONLY BE ABLE TO DO SO ON AN INDIVIDUAL BASIS. YOU WILL NOT BE ABLE TO PARTICIPATE AS A MEMBER OR PLAINTIFF OF A CLASS OR REPRESENTATIVE ACTION. YOU WILL BE LIMITED TO SEEK ANY LEGAL RELIEF OR TO BRING ANY LEGAL CLAIMS, WHETHER FOR MONETARY DAMAGES, TO OBTAIN AN INJUNCTION OR OBTAIN DECLARATORY RELIEF ON AN INDIVIDUAL BASIS. IF YOU DO NOT AGREE TO THESE TERMS OF SERVICE YOU ARE NOT PERMITTED TO USE OUR SERVICES OR VISIT THIS WEBSITE.**
@@ -90,3 +92,5 @@ These Terms are governed by the laws of the State of Texas, exclusive of any cho
 3. The captions in the Agreement are for convenience only and are not part of the Agreement.
 4. The use of the word "including" in the Agreement shall be read to mean "including without limitation."
 5. Sections 3, 4, 5, 7, 9, and 10 of these Terms of Service and all other provisions that by their nature are intended to survive expiration or termination of the these Terms shall survive expiration or termination of the Terms.
+
+{{% /section %}}
