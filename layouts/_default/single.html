@@ -1,18 +1,15 @@
 {{ define "main" }}
 
-<section class='py-5 text-white'>
+<section class = 'mb-5'>
   <div class='container'>
     <div class='row'>
-      <div class='col-md-12 offset-md-0'>
-
-        <h1 class='mb-5 display-4'>{{ .Params.Title }}</h1>
-
-        {{ .Content }}
-
+      <div class='col'>
+        <h1>{{ .Params.Title }}</h1>
       </div>
     </div>
   </div>
-
 </section>
+
+{{ .Content }}
 
 {{ end }}

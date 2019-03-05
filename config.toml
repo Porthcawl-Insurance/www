@@ -6,13 +6,10 @@ theme = ''
 [params]
   description = "Digital means vulnerable. CyberFortress is building a new way to protect your online revenue in minutes."
 
-[taxonomies]
-  tag = "tags"
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
-[permalinks]
-  team = "/:slug/"
-  html = "/:slug/"
-  md = "/:slug/"
+# Disable taxonomies
+[taxonomies]
 
 [blackfriday]
   hrefTargetBlank = true

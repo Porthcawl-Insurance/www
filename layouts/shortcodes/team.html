@@ -1,0 +1,11 @@
+{{ range sort $.Site.Data.team.founders ".nam" }}
+<div class='col-4 col-sm-3'>
+	<figure class='figure'>
+		<img src='{{ .img }}' class='figure-img img-fluid rounded' alt='{{ .nam }}'>
+		<figcaption class='figure-caption'>
+			<a target='_blank' href='{{ .lip }}'>{{ .nam }}</a><br>
+			{{ .tit }}<br>
+		</figcaption>
+	</figure>
+</div>
+{{ end }}

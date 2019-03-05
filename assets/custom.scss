@@ -293,6 +293,10 @@ table.table {
   h2{
     font-size: 1.5em !important;
   }
+
+  p {
+    font-size: 1.2em;
+  }
 }
 
 #background-img {
@@ -313,6 +317,10 @@ table.table {
   }
 }
 
+#form-get_notified {
+  margin: 0 auto;
+  max-width: 400px;
+}
 
 /* Nav */
 nav {
