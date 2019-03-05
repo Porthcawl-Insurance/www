@@ -1,3 +1,6 @@
+{{ $options := (dict "targetPath" "static/css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "bootstrap")) }}
+{{ $style := resources.Get "custom.scss" | resources.ToCSS $options }}
+
 <!DOCTYPE html>
 <html lang='en'>
 
