@@ -1,15 +1,15 @@
 {{ define "main" }}
 
-<section class='mt-4'>
-  <div class='container'>
+<section>
+  <div class='container pb-4'>
 
     <div class='row'>
       <div class='col'>
-        <h1 class='mb-5'>Join Us</h1>
+        <h1 class='p-4'>Join Us</h1>
       </div>
     </div>
 
-    <div class='row mb-5'>
+    <div class='row mb-5 p-4'>
       <div class='col'>
         <p class='bold larger'>We believe that small business insurance should be easy to understand, easy to buy, and easy to file a claim. </p>
         <p>Interested in joining us? Read our <a href='/about/culture/'>culture blueprint</a> and let us know what you think!</p>
@@ -17,12 +17,12 @@
     </div>
 
     {{ range $i, $e := .Data.Pages }}
-    <div class='row'>
+    <div class='row '>
       <div class='col-md-8 offset-md-0'>
         {{ if eq $i 0 }}
-        <h2 class=''>Careers</h2>
+        <h2 class='pl-4'>Careers</h2>
         {{ end }}
-        <div class='mb-2 mt-3'>
+        <div class='mb-2 mt-3 pl-4'>
           <a class='career-link' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a>
         </div>
       </div>
