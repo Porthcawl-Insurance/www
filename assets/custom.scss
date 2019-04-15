@@ -213,7 +213,7 @@ strong {
 }
 
 li:last-child {
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
 }
 
 .bold {
@@ -403,12 +403,12 @@ table.table {
   }
 
   p {
-    
+
     @include lg {
       font-size: 1em !important;
 
       &:first-child {
-        padding-top: 8em !important;
+        // padding-top: 8em !important;
       }
     }
   }
