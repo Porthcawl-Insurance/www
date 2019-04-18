@@ -11,7 +11,7 @@ $(function() {
       type: 'POST',
       url: 'https://mandrillapp.com/api/1.0/messages/send-template.json',
       data: {
-        'key': '', // Key removed for github push
+        'key': 'texJ0d69RJ75NZSV-OJYOg',
         'template_name': 'score-email',
         'template_content': [{
 
@@ -48,7 +48,6 @@ $(function() {
       }
     }).done(function(response) {
       console.log(response);
-      window.location = "/thanks?domain=" + domain;
     });
 
 
