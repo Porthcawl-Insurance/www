@@ -5,7 +5,6 @@
 {{ define "main" }}
 <!-- <div id='background-img'></div> -->
 <section id='home-content'>
-
   <div id='home-hero' class='container-fluid py-5'>
     <div class='row py-4'>
       <div class='col text-light text-center px-3'>
@@ -16,11 +15,11 @@
     <!--end of .row-->
     <div class='row'>
       <div class='col text-center pt-4'>
-        <p class='text-light center'>Subscribe to get notified on new products &amp; features</p>
-        <form id="form-get_notified" action="https://cyberfortress.us17.list-manage.com/subscribe/post?u=3a610aa079ddfbd87cbbfc849&amp;id=4c86d7d34f" method="post">
-          <input class="form-control" name="EMAIL" placeholder="Email" required>
-          <!-- <small class="form-text text-muted">Subscribe to get notified on new products &amp; features</small> -->
-          <input class="button btn btn-primary mt-4 mb-5 bigger" type="submit" value="Get Notified">
+        <!-- <form id='form-email-testing' action='https://mandrillapp.com/api/1.0/messages/send.json' method='post'> -->
+        <form id='form-email-testing' action='' method='post'>
+          <input name='returl' type='hidden' value='/thanks'>
+          <input id='user-email' class='form-control' name='email' type='email' placeholder='you@business.email.com'>
+          <input id='email-submit' class='button btn btn-primary' type='submit' value='Get Downtime Risk' />
         </form>
       </div>
     </div>
@@ -87,12 +86,12 @@
           <li>
             First, most small businesses, as a result of their size, don’t keep
             large amounts of cash on hand. They can’t afford to.
-            </li>
-            <li>
-              Second, e-commerce is an increasingly important source of revenue for
-              small businesses.
-              </li>
-          </ul>
+          </li>
+          <li>
+            Second, e-commerce is an increasingly important source of revenue for
+            small businesses.
+          </li>
+        </ul>
         <p class='p-3'>
           This is a dangerous combination. If a small business suffers a cyber
           event that prevents them from digitally collecting revenue, they are
