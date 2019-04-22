@@ -14,7 +14,6 @@ $(function() {
         'key': 'texJ0d69RJ75NZSV-OJYOg',
         'template_name': 'score-email',
         'template_content': [{
-
           'name': 'score-email',
           'content': 'score-email'
         }],
