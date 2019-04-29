@@ -141,6 +141,7 @@ html {
 body {
   position: relative;
   min-height: 100vh !important;
+  // padding-bottom: 180px;
   padding-bottom: 70px;
 
   @include linear-gradient($mid-gray, $light-gray);
@@ -206,6 +207,17 @@ p, li {
 
 a {
   color: $l-link !important;
+
+  &.center{
+    text-aligh: center !important;
+  }
+}
+
+img {
+  &.small {
+    max-width: 250px !important;
+    max-height: 200px !important;
+  }
 }
 
 strong {
@@ -245,7 +257,7 @@ li:last-child {
 }
 
 .background-light {
-    background-color: $mid-gray;
+    background-color: $lightest;
 }
 
 .background-dark {
@@ -262,6 +274,24 @@ li:last-child {
 
 .background-orange {
   background-color: $purple !important;
+}
+
+/* Cards */
+
+.card {
+  border: none !important;
+}
+
+.card-header {
+  background-color: $mid-gray !important;
+  color: $lightest !important;
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.card-body {
+  background-color: rgba($lightest, .8) !important;
 }
 
 .img-link {
@@ -299,11 +329,21 @@ li:last-child {
   }
 }
 
-.career-link {
-  color: $dark-gray !important;
-  // text-shadow: 1px 1px 1px rgba(225,225,225,.4);
-  font-size: 1.3rem;
-  // text-decoration: underline;
+.link {
+
+  &.resources {
+    color: $lightest !important;
+    font-size: 1.3rem;
+  }
+
+  &.career {
+    color: $dark-gray !important;
+    font-size: 1.3rem;
+  }
+
+  .img {
+    text-align: center !important;
+  }
 
   i.fas {
     padding-left: 8px;
@@ -334,6 +374,23 @@ li:last-child {
   }
 }
 
+.resource-div {
+  p {
+    opacity: .6 !important;
+  }
+}
+
+.resource-img {
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.social-link {
+    font-size: 2.2em !important;
+    color: $orange !important;
+    padding-right: .5em;
+}
+
 table.table {
   thead {
     background-color: rgba($dark-gray, .5) !important;
@@ -352,7 +409,7 @@ table.table {
 }
 
 #home-content {
-  z-index: 3 !important;
+  // z-index: 3 !important;
 
   h1 {
     font-size: 1.8em !important;
@@ -462,6 +519,21 @@ nav {
 
   .navbar-brand {
     padding-top: 0;
+    @include sm{
+      margin-top: 30px;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: $mid-gray !important;
+    border: none !important;
+  }
+
+  .dropdown-item {
+    &:hover {
+      background-color: $dark-gray !important;
+      color: $lightest !important;
+    }
   }
 
   @include sm {
@@ -510,44 +582,70 @@ footer {
   }
 }
 
-/* Helpers */
+// footer {
+//   position: absolute;
+//   bottom: 0;
+//   background-color: rgba($dark-gray, .4) !important;
+//   width: 100%;
+//   color: #fff;
+//   font-size: 0.85rem;
+//   height: 180px;
+//
+//   h1, h2, h3, h4, h5, h6 {
+//     color: #fff;
+//     text-transform: uppercase;
+//   }
+//
+//   ul {
+//     padding-left: .5em;
+//   }
+//
+//   li {
+//     margin: none;
+//     margin-bottom: .25em;
+//     list-style: none;
+//   }
+//
+//   a {
+//     color: $lightest !important;
+//     font-size: 1.2em !important;
+//
+//     img {
+//       max-height: 100px;
+//       margin: 0px auto !important;
+//     }
+//
+//     &:hover, &:focus, &:active {
+//       color: #e9b15d !important;
+//       text-decoration: none;
+//     }
+//
+//     &:visited {
+//       color: #e9b15d !important;
+//     }
+//   }
+//
+//   p {
+//     margin-bottom: 0;
+//   }
+//
+//   hr {
+//     margin: .75em 0 !important;
+//     border: none;
+//     border-top: 1px solid $lightest !important;
+//   }
+//
+//   .social-link {
+//     display: inline-block;
+//     float: right;
+//     font-size: 2.5em !important;
+//     padding-left: .5em;
+//     @include sm {
+//       float: none;
+//     }
+//
+//   }
+// }
 
-.has-bg-img {
-  background-position: center right;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.icon {
-  svg {
-    width: 40px;
-
-    path {
-      fill: $info;
-    }
-  }
-
-  &.icon-hat {
-    svg {
-      height: 100px;
-    }
-  }
-
-  &.icon-secondary {
-    svg {
-      path {
-        fill: $secondary;
-      }
-    }
-  }
-
-  &.icon-pink {
-    svg {
-      path {
-        fill: $pink;
-      }
-    }
-  }
-}
 
 @import "bootstrap/scss/bootstrap.scss";

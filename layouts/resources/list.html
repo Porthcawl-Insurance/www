@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+<section>
+  <div class='container pb-4'>
+
+    <div class='row'>
+      <div class='col'>
+        <h1 class='p-4'>Resources</h1>
+      </div>
+    </div>
+
+    <div class='row mb-3 p-4'>
+      <div class='col'>
+        <p class='bold larger'>We know that technology is complicated and insurance is boring (to most people...but not to us!). </p>
+        <p>
+          This combination of complexity and boringness can make cyber insurance a confusing subject to say the least. To help make things less
+          confusing, we have put together a list of resources that we hope you enjoy. If you ever have a question, don’t hesitate to <a href='/about/#contact'>contact us</a>. We have technology experts and insurance experts on standby ready to help you out!</p>
+      </div>
+    </div>
+
+    <!-- <div class='row'>
+      <div class='col-md-7 offset-md-0'>
+        <h2>Guides</h2>
+        <ul class='list-unstyled'>
+          <li><a href='/resources/cyber-insurance-terms-and-definitions/'>Cyber Insurance Terms & Definitions</a></li>
+        </ul>
+      </div>
+    </div> -->
+
+    {{ range $i, $e := .Data.Pages }}
+    <div class='row'>
+      <div class='col-md-8 offset-md-0'>
+        <div class='pb-2 px-4 resource-div'>
+
+          <a class='link career bold' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a>
+
+          {{ truncate 140 .Content }}
+        </div>
+      </div>
+    </div>
+
+    {{ end }}
+
+  </div>
+</section>
+
+{{ end }}
