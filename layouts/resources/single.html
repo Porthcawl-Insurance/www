@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<section class='mt-4 mb-4'>
+  <div class='container'>
+
+    <div class='row'>
+
+      <div class='col-md-8'>
+
+        <a class='' href='/resources'><i class="fas fa-angle-left"></i> Back to Resources</a>
+        <h1 class='display-4 my-5'>{{ .Params.Title }}</h1>
+
+        {{ .Content }}
+
+        <a class='mt-4 btn btn-primary' href='{{ .Params.href }}' target='_blank'>Read More</a>
+
+      </div>
+      <!-- end of .col -->
+      <div class='col-md-2'>
+        <a class='' href='{{ .Params.href }}' target='_blank'>
+          <img class='my-5 resource-img' src='{{ .Params.img }}' />
+        </a>
+      </div>
+
+    </div>
+    <!--end of .row-->
+  </div>
+</section>
+
+{{ end }}
