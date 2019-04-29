@@ -141,6 +141,7 @@ html {
 body {
   position: relative;
   min-height: 100vh !important;
+  // padding-bottom: 180px;
   padding-bottom: 70px;
 
   @include linear-gradient($mid-gray, $light-gray);
@@ -275,6 +276,24 @@ li:last-child {
   background-color: $purple !important;
 }
 
+/* Cards */
+
+.card {
+  border: none !important;
+}
+
+.card-header {
+  background-color: $mid-gray !important;
+  color: $lightest !important;
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.card-body {
+  background-color: rgba($lightest, .8) !important;
+}
+
 .img-link {
 
   img {
@@ -366,6 +385,12 @@ li:last-child {
     margin: 0 auto !important;
 }
 
+.social-link {
+    font-size: 2.2em !important;
+    color: $orange !important;
+    padding-right: .5em;
+}
+
 table.table {
   thead {
     background-color: rgba($dark-gray, .5) !important;
@@ -384,7 +409,7 @@ table.table {
 }
 
 #home-content {
-  z-index: 3 !important;
+  // z-index: 3 !important;
 
   h1 {
     font-size: 1.8em !important;
@@ -537,6 +562,71 @@ footer {
     border-top: solid rgba(255,255,255,.15) 1px;
   }
 }
+
+// footer {
+//   position: absolute;
+//   bottom: 0;
+//   background-color: rgba($dark-gray, .4) !important;
+//   width: 100%;
+//   color: #fff;
+//   font-size: 0.85rem;
+//   height: 180px;
+//
+//   h1, h2, h3, h4, h5, h6 {
+//     color: #fff;
+//     text-transform: uppercase;
+//   }
+//
+//   ul {
+//     padding-left: .5em;
+//   }
+//
+//   li {
+//     margin: none;
+//     margin-bottom: .25em;
+//     list-style: none;
+//   }
+//
+//   a {
+//     color: $lightest !important;
+//     font-size: 1.2em !important;
+//
+//     img {
+//       max-height: 100px;
+//       margin: 0px auto !important;
+//     }
+//
+//     &:hover, &:focus, &:active {
+//       color: #e9b15d !important;
+//       text-decoration: none;
+//     }
+//
+//     &:visited {
+//       color: #e9b15d !important;
+//     }
+//   }
+//
+//   p {
+//     margin-bottom: 0;
+//   }
+//
+//   hr {
+//     margin: .75em 0 !important;
+//     border: none;
+//     border-top: 1px solid $lightest !important;
+//   }
+//
+//   .social-link {
+//     display: inline-block;
+//     float: right;
+//     font-size: 2.5em !important;
+//     padding-left: .5em;
+//     @include sm {
+//       float: none;
+//     }
+//
+//   }
+// }
 
 
 @import "bootstrap/scss/bootstrap.scss";
