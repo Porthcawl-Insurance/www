@@ -1,11 +1,55 @@
 ---
-title: "Thank you!"
+title: ""
 description: "Check your Email for your downtime risk score"
 slug: "/thanks"
 date: 2018-04-15T19:53:19-05:00
 draft: true
 ---
 
-<p>
-  Please check your email for <span id='domain'></span>'s downtime risk score.
+{{< block >}}
+
+<h1 class='t-dark p-3'>Your Downtime Risk Score's being generated...</h1>
+<h2 class='t-dark'>We have sent you an email containing your results!</h2>
+<img id='surf-knight' class='img-fluid mt-4' src='/images/knight-email.svg' />
+
+<p class='col-12 col-md-10 offset-md-1'>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis,
+  velit at luctus tincidunt, augue sapien iaculis ante, nec tempus nisi metus
+  vitae sem. In tristique enim nulla, ut cursus felis iaculis vel.
 </p>
+
+
+
+<a class='' data-toggle="modal" data-target="#no-email">
+  Didn't get an email?
+</a>
+
+{{</ block >}}
+
+<!-- -------------------------------------------- -->
+<!-- --------------------- DIDN'T GET EMAIL MODAL -->
+<!-- -------------------------------------------- -->
+
+<div id='no-email' class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4 class='m-2 p-3'>Sorry, that's not a business email.</h4>
+        <p class='m-2 p-3'>
+          We need an email with a unique domain name in order to provide a downtime risk score.
+        </p>
+        <p class='m-2 p-3'>
+          Please try again, using your business email.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn m-auto" data-dismiss="modal">Got it!</button>
+      </div>
+    </div>
+  </div>
+</div>

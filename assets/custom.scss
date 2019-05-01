@@ -18,10 +18,12 @@ $lightest: #F3F3FF;
 /* Accent Colors*/
 $orange: #FF934F;
 $purple: #4B296B;
+$dark-purple: #26193B;
+$teal: #5CB0BC;
 
 /* Link Colors */
 $l-link: $light;
-$d-link: #43BEE2;
+$d-link: #18C5F9;
 
 $input-border-color: $gray-200;
 $input-box-shadow: none;
@@ -175,9 +177,9 @@ h4, h5, h6 {
 }
 
 hr {
-  border-top: solid 1px #7f7f7f !important;
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
+  border-top: solid 1px $lightest !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 p, li {
@@ -206,7 +208,8 @@ p, li {
 }
 
 a {
-  color: $l-link !important;
+  color: $d-link !important;
+  text-decoration: underline;
 
   &.center{
     text-aligh: center !important;
@@ -222,10 +225,6 @@ img {
 
 strong {
   color: $light;
-}
-
-li:last-child {
-  // margin-bottom: 2rem;
 }
 
 .bold {
@@ -276,7 +275,30 @@ li:last-child {
   background-color: $purple !important;
 }
 
-/* Cards */
+.background-img {
+  background-image: url('/images/landscape-01.png');
+  background-size: cover;
+  background-position: bottom;
+}
+
+.block {
+  text-align: center !important;
+  p, h1, h2 {
+    text-align: center !important;
+  }
+  h1{
+    font-size: 1.25em !important;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 1.75em !important;
+  }
+  a{
+    text-decoration: underline !important;
+  }
+}
+
+/***************************** Cards */
 
 .card {
   border: none !important;
@@ -293,6 +315,44 @@ li:last-child {
 .card-body {
   background-color: rgba($lightest, .8) !important;
 }
+
+/***************************** Modals */
+
+.modal-header {
+  background-color: $dark-purple !important;
+
+
+  border-radius: 0 !important;
+
+  .close {
+    color: $lightest !important;
+  }
+}
+
+.modal-body {
+  p, h4 {
+    text-align: center !important;
+    color: $dark-gray !important;
+  }
+}
+
+.modal-footer {
+  background-color: $dark-purple !important;
+  // background-color: $dark-purple !important;
+
+  .btn {
+    background-color: transparent !important;
+    border: 1px solid rgba($lightest, .5) !important;
+    color: $lightest !important;
+    font-size: 1.2em !important;
+
+    &:hover {
+      background-color: rgba($lightest,.05) !important;
+    }
+  }
+}
+
+/**************************** Images */
 
 .img-link {
 
@@ -478,28 +538,31 @@ table.table {
   }
 }
 
-// #background-img {
-//   z-index: 0 !important;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-image: url("/images/landscape-01.png");
-//   background-position: bottom;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   opacity: .8;
-//
-//   @include sm {
-//       background-size: cover;
-//   }
-// }
-
 #form-get_notified,
 #form-email-testing {
   margin: 0 auto;
   max-width: 400px;
+}
+
+#surf-knight {
+  display: block;
+  margin: 2em auto !important;
+  max-width: 500px;
+}
+
+#score-div {
+ padding-left: 0 !important;
+ padding-right: 0 !important;
+
+  #header {
+    h1, h2 {
+      margin-bottom: 0 !important;
+    }
+
+    h2 {
+      font-size: 1.5em !important;
+    }
+  }
 }
 
 /* Nav */
@@ -511,7 +574,7 @@ nav {
   .nav-link {
     color: $light !important;
     text-transform: none;
-    padding: 8px 20px !important;
+    padding: 8px 0px 8px 40px !important;
     @include sm{
       margin-top: 30px;
     }
@@ -566,12 +629,12 @@ footer {
     font-size: 1.2em !important;
 
     &:hover, &:focus, &:active {
-      color: #e9b15d !important;
+      color: $orange !important;
       text-decoration: none;
     }
 
     &:visited {
-      color: #e9b15d !important;
+      color: $orange !important;
     }
   }
 
@@ -581,71 +644,5 @@ footer {
     border-top: solid rgba(255,255,255,.15) 1px;
   }
 }
-
-// footer {
-//   position: absolute;
-//   bottom: 0;
-//   background-color: rgba($dark-gray, .4) !important;
-//   width: 100%;
-//   color: #fff;
-//   font-size: 0.85rem;
-//   height: 180px;
-//
-//   h1, h2, h3, h4, h5, h6 {
-//     color: #fff;
-//     text-transform: uppercase;
-//   }
-//
-//   ul {
-//     padding-left: .5em;
-//   }
-//
-//   li {
-//     margin: none;
-//     margin-bottom: .25em;
-//     list-style: none;
-//   }
-//
-//   a {
-//     color: $lightest !important;
-//     font-size: 1.2em !important;
-//
-//     img {
-//       max-height: 100px;
-//       margin: 0px auto !important;
-//     }
-//
-//     &:hover, &:focus, &:active {
-//       color: #e9b15d !important;
-//       text-decoration: none;
-//     }
-//
-//     &:visited {
-//       color: #e9b15d !important;
-//     }
-//   }
-//
-//   p {
-//     margin-bottom: 0;
-//   }
-//
-//   hr {
-//     margin: .75em 0 !important;
-//     border: none;
-//     border-top: 1px solid $lightest !important;
-//   }
-//
-//   .social-link {
-//     display: inline-block;
-//     float: right;
-//     font-size: 2.5em !important;
-//     padding-left: .5em;
-//     @include sm {
-//       float: none;
-//     }
-//
-//   }
-// }
-
 
 @import "bootstrap/scss/bootstrap.scss";

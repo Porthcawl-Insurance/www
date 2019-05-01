@@ -5,6 +5,7 @@
 {{ define "main" }}
 <!-- <div id='background-img'></div> -->
 <section id='home-content'>
+
   <div id='home-hero' class='container-fluid py-5'>
     <div class='row py-4'>
       <div class='col text-light text-center px-3'>
@@ -14,12 +15,17 @@
     </div>
     <!--end of .row-->
     <div class='row'>
-      <div class='col text-center pt-4'>
+      <div class='col col-md-6 offset-md-3 text-center pt-4'>
+        <p class='text-center t-light'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit
+          semper eros, eu volutpat sapien fringilla in. Nulla efficitur sapien ipsum,
+          ut mollis sapien gravida sed.
+        </p>
         <!-- <form id='form-email-testing' action='https://mandrillapp.com/api/1.0/messages/send.json' method='post'> -->
         <form id='form-email-testing' action='' method='post'>
           <input name='returl' type='hidden' value='/thanks'>
           <input id='user-email' class='form-control' name='email' type='email' placeholder='you@business.email.com'>
-          <input id='email-submit' class='button btn btn-primary' type='submit' value='Get Downtime Risk' />
+          <input id='email-submit' class='button btn btn-primary mt-4' type='submit' value='Get Downtime Risk' />
         </form>
       </div>
     </div>
@@ -109,6 +115,34 @@
     </div>
   </div>
   <!--end of .container-fluid-->
+
 </section>
 
+<!-- ------------------------------------------------ -->
+<!-- ---------------------------- INVALID EMAIL MODAL -->
+<!-- ------------------------------------------------ -->
+
+<div id='invalid' class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4 class='m-2 p-3'>Sorry, that's not a business email.</h4>
+        <p class='m-2 p-3'>
+          We need an email with a unique domain name in order to provide a downtime risk score.
+        </p>
+        <p class='m-2 p-3'>
+          Please try again, using your business email.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn m-auto" data-dismiss="modal">Got it!</button>
+      </div>
+    </div>
+  </div>
+</div>
 {{ end }}

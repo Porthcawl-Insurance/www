@@ -2,6 +2,9 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
+error_handlers:
+- file: public/team/index.html
+
 handlers:
 - url: /
   secure: always
