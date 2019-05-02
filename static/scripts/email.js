@@ -53,7 +53,7 @@ $(function() {
                 },
                 {
                   'name': 'redirect_link',
-                  'content': 'https://cyberfortress-www-sandbox.appspot.com/thanks/'
+                  'content': 'https://cyberfortress-www-sandbox.appspot.com/score/'
                 },
               ],
             }],
@@ -82,6 +82,12 @@ $(function() {
   // -------------------------------------------------------//
 
   $('#email-submit').click(function(e) {
+    e.preventDefault();
+    var fieldValue = $(emailInput).val();
+    sendMessage(fieldValue);
+  });
+
+  $('#email-resend').click(function(e) {
     e.preventDefault();
     var fieldValue = $(emailInput).val();
     sendMessage(fieldValue);

@@ -539,9 +539,15 @@ table.table {
 }
 
 #form-get_notified,
-#form-email-testing {
+#form-email-testing,
+#form-resend-email {
   margin: 0 auto;
   max-width: 400px;
+}
+
+#email-resend {
+  display: block;
+  margin: 1em auto !important;
 }
 
 #surf-knight {
@@ -551,8 +557,26 @@ table.table {
 }
 
 #score-div {
- padding-left: 0 !important;
- padding-right: 0 !important;
+
+  .fas {
+    padding-right: .75em !important;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  h1, h2 {
+    text-align: center !important;
+  }
+
+  h1 {
+    font-size: 1.2em !important;
+  }
+
+  h2 {
+    font-size: 1.4em !important;
+  }
 
   #header {
     h1, h2 {
@@ -561,6 +585,20 @@ table.table {
 
     h2 {
       font-size: 1.5em !important;
+    }
+  }
+
+  #rook-div {
+    svg {
+      display: block;
+      margin: 0 auto;
+      max-height: 200px;
+    }
+  }
+
+  #summary {
+    .flex-item {
+      padding-right: 1.5em !important;
     }
   }
 }

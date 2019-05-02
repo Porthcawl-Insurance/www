@@ -6,27 +6,72 @@ date: 2019-04-30T19:53:19-05:00
 draft: true
 ---
 
-{{< section >}}
-
 <div id='score-div' class='container'>
-  <div id='header' class='d-flex flex-row d-flex justify-content-between align-items-end'>
+  <!-- <div id='header' class='d-flex flex-row justify-content-between align-items-end'>
     <div class='flex-item'>
       <h1>Downtime Risk Score</h1>
     </div>
     <div class='flex-item'>
-      <h2><span id='domain-name'>smallbusiness.com</span></h2>
+      <h2><span id='domain-name'></span></h2>
     </div>
-  </div>
-  <hr />
-  <div class='row'>
-    <div class='col'>
+  </div><!--end of #header-->
 
-    </div>
-    <div class='col background-light'>
+  <!-- <hr /> -->
 
+  <div class='d-flex flex-row row background-light mt-4 p-4'>
+
+    <div class='flex-item col-4 p-3 '>
+      <p class='text-center'>
+        Downtime Risk Score
+      </p>
+      <p class='bold larger text-center'>
+        <span id='domain-name'></span>
+      </p>
+      <div class='score-div p-4'>
+        <p class='text-center'><span id='score'>-</span></p>
+      </div>
     </div>
+
+    <div class='flex-item col-4 p-3'>
+      <div id='rook-div' class='p-3'>
+        {{< rook >}}
+      </div>
+    </div>
+
+    <div id='summary' class='flex-item col-4 p-3'>
+      <h3 class='t-dark'>Score Summary</h3>
+      <div class='d-flex flex-row justify-content-start'>
+        <div class='flex-item py-2 mr-3'>
+          <p id='email'>
+            <i class="fas fa-envelope-open-text"></i> Email &amp; Indentity
+          </p>
+          <p id='hosting'>
+            <i class="fas fa-cloud"></i> Hosting Provider
+          </p>
+          <p id='dns'>
+            <i class="fas fa-globe"></i> DNS
+          </p>
+          <p id='servers'>
+            <i class="fas fa-server"></i> Web Servers
+          </p>
+        </div>
+        <!--end of .flex-item-->
+        <div class='flex-item py-2 mr-3'>
+          <p id='ssl'>
+            <i class="fas fa-shield-alt"></i> TSL / SSL
+          </p>
+          <p id='cms'>
+            <i class="fas fa-cogs"></i> CMS
+          </p>
+          <p id='footprint'>
+            <i class="fas fa-shoe-prints"></i> Footprint
+          </p>
+        </div>
+        <!--end of .flex-item-->
+      </div>
+      <!--end of .flex-row-->
+    </div>
+    <!--end of #summary-->
   </div>
 
 </div>
-
-{{</ section >}}
