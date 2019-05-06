@@ -23,13 +23,11 @@ $teal: #5CB0BC;
 
 /* Link Colors */
 $l-link: $light;
-$d-link: #18C5F9;
+$link: #52D8F9;
 
 $input-border-color: $gray-200;
 $input-box-shadow: none;
 $input-focus-box-shadow: none;
-
-$spacer: 1rem;
 
 /*******************************************************/
 /******* Breakpoints / Media Query Mixin ***************/
@@ -208,11 +206,24 @@ p, li {
 }
 
 a {
-  color: $d-link !important;
+  color: $link !important;
   text-decoration: underline;
 
+  &.block {
+      display: block;
+      margin: 10px auto;
+  }
+
   &.center{
-    text-aligh: center !important;
+    text-align: center !important;
+  }
+
+  &.icon-l {
+    .fas {
+      color: $orange;
+      padding-left: 0;
+      padding-right: .5em;
+    }
   }
 }
 
@@ -225,6 +236,13 @@ img {
 
 strong {
   color: $light;
+}
+
+input {
+  &.minimal {
+    background-color: rgba($lightest,.25);
+    border: none;
+  }
 }
 
 .bold {
@@ -283,20 +301,37 @@ strong {
 
 .block {
   text-align: center !important;
+  padding: 2.5em !important;
+
   p, h1, h2 {
     text-align: center !important;
+    color: $dark-gray !important;
   }
-  h1{
+
+  h1 {
     font-size: 1.25em !important;
-    margin-bottom: 0;
+    margin-bottom: 1.5em !important;
   }
   h2 {
     font-size: 1.75em !important;
   }
-  a{
+  p {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  a {
     text-decoration: underline !important;
   }
 }
+
+.error {
+  display: none;
+  .error-msg {
+    color: #cc444b;
+  }
+}
+
 
 /***************************** Cards */
 
@@ -469,7 +504,6 @@ table.table {
 }
 
 #home-content {
-  // z-index: 3 !important;
 
   h1 {
     font-size: 1.8em !important;
@@ -491,7 +525,7 @@ table.table {
     font-size: 1em !important;
 
     @include sm{
-      font-size: 1.2em !important;
+      // font-size: 1.2em !important;
     }
   }
 

@@ -5,20 +5,17 @@ $(function() {
   var emailInput = $('#user-email');
 
   // -------------------------------------------------------//
-  // Sending Email -----------------------------------------//
+  // Sending Risk Score Email ------------------------------//
   // -------------------------------------------------------//
-
-
 
   var sendMessage = function(email) {
 
     var domain = email.substring(email.indexOf("@") + 1);
 
-
     if (domain.indexOf('gmail') >= 0) { // if invalid email
 
-      // window.location.replace("/invalid/");
-      $('#invalid').modal('show');
+      // $('#invalid').modal('show');
+      window.location.replace("/invalid/");
 
     } else { // if valid email
 
@@ -26,7 +23,7 @@ $(function() {
         type: 'POST',
         url: 'https://mandrillapp.com/api/1.0/messages/send-template.json',
         data: {
-          'key': '',
+          'key': '', // removed for git push
           'template_name': 'score-email',
           'template_content': [{
             'name': 'score-email',
@@ -73,7 +70,6 @@ $(function() {
         }
         return query;
       } //end of parseQuery();
-
     }
   } // end of sendMessage();
 
@@ -83,9 +79,17 @@ $(function() {
 
   $('#email-submit').click(function(e) {
     e.preventDefault();
+
     var fieldValue = $(emailInput).val();
+
+    // $(this).validate();
+
     sendMessage(fieldValue);
   });
+
+  // -------------------------------------------------------//
+  // Email Resend Btn --------------------------------------//
+  // -------------------------------------------------------//
 
   $('#email-resend').click(function(e) {
     e.preventDefault();

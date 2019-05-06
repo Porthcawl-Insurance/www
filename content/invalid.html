@@ -1,13 +1,27 @@
 ---
-title: "Invalid"
-date: 2019-02-04T13:42:47-06:00
+title: "Invalid Email"
+date: 2019-03-03T13:42:47-06:00
 draft: true
 slug: "/invalid"
 ---
 
 {{< block >}}
 
-      <h1 class='t-dark p-3'>Invalid Email!</h1>
-      <p class='bold text-center'>Sorry, we can't provide a risk score for that email address.</p>
+<h1>Sorry, that's not a business email.</h1>
+
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in mollis diam,
+  sed mollis dui. Ut felis mauris, cursus a enim ac, congue dignissim ipsum.
+</p>
+
+<form id='form-email-testing' action='' method='post' class='mb-4'>
+  <input name='returl' type='hidden' value='/thanks'>
+  <label for='email'>Enter your business email below for your downtime risk score.</label>
+  <input id='user-email' class='form-control' name='email' type='email'>
+  <div class='error'>
+    <span class='error-msg'>Invalid email</span>
+  </div>
+  <input id='email-submit' class='button btn btn-primary mt-4' type='submit' value='Get Downtime Risk' />
+</form>
 
 {{</ block >}}

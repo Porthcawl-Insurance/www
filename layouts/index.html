@@ -10,24 +10,28 @@
     <div class='row py-4'>
       <div class='col text-light text-center px-3'>
         <h1 class='t-shadow mt-4'>Digital means vulnerable.</h1>
-        <h2 class='mb-5'>A new way to protect your online revenue. Coming soon.</h2>
+        <h2 class=''>A new way to protect your online revenue. <span class='bold'>Coming soon.</span></h2>
       </div>
     </div>
     <!--end of .row-->
     <div class='row'>
-      <div class='col col-md-6 offset-md-3 text-center pt-4'>
-        <p class='text-center t-light'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit
-          semper eros, eu volutpat sapien fringilla in. Nulla efficitur sapien ipsum,
-          ut mollis sapien gravida sed.
+      <div class='col col-md-8 offset-md-2 text-center py-4'>
+        <p class='text-center t-light'><span class='bold'>In the meantime</span>, find out if <u>your</u> business is at risk.
+          <br />
+          Enter your business email below to get a downtime risk score.
         </p>
-        <!-- <form id='form-email-testing' action='https://mandrillapp.com/api/1.0/messages/send.json' method='post'> -->
-        <form id='form-email-testing' action='' method='post'>
+        <form id='form-email-testing' action='' method='post' class='mb-4'>
           <input name='returl' type='hidden' value='/thanks'>
-          <input id='user-email' class='form-control' name='email' type='email' placeholder='you@business.email.com'>
+          <input id='user-email' class='form-control minimal' name='email' type='email'>
+          <div class='error'>
+            <span class='error-msg'>Invalid email</span>
+          </div>
           <input id='email-submit' class='button btn btn-primary mt-4' type='submit' value='Get Downtime Risk' />
         </form>
+        <a id='why-link' href='#' class='icon-l block' data-toggle="modal" data-target="#whylink-modal"><i class="fas fa-chevron-right"></i> Why do you need a business email?</a>
+        <a id='what-link' href='#' class='icon-l block' data-toggle="modal" data-target="#whatlink-modal"><i class="fas fa-chevron-right"></i> What is downtime risk?</a>
       </div>
+
     </div>
     <!--end of .row-->
   </div>
@@ -145,4 +149,79 @@
     </div>
   </div>
 </div>
+
+<!-- ------------------------------------------------ -->
+<!-- ----------------------- WHY BUSINESS EMAIL MODAL -->
+<!-- ------------------------------------------------ -->
+
+<div id='why' class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-4">
+        <h4 class=''>Didn't get an email?</h4>
+
+        <p class='bold'>
+          Hmm, that's weird. Did you check your junk folder?
+        </p>
+        <hr />
+
+        <p class=''>
+          If it hasn't come through in the next few minutes,<br /> please try again.
+        </p>
+        <form id='form-resend-email' action='' method='post'>
+          <input name='returl' type='hidden' value='/thanks'>
+          <input id='user-email' class='form-control' name='email' type='email' placeholder='you@business.email.com'>
+          <input id='email-resend' class='button btn btn-primary mt-4' type='submit' value='Resend Email' />
+        </form>
+      </div>
+      <div class="modal-footer">
+        <!-- <button id='send-again' type="button" class="btn m-auto" data-dismiss="modal">Close this window</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id='whylink-modal' class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-4">
+        <h4 class=''>Why we need a business email...</h4>
+
+      </div>
+      <div class="modal-footer">
+        <button id='send-again' type="button" class="btn m-auto" data-dismiss="modal">Got it</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id='whatlink-modal' class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-4">
+        <h4 class=''>What is Downtime Risk?</h4>
+
+      </div>
+      <div class="modal-footer">
+        <button id='send-again' type="button" class="btn m-auto" data-dismiss="modal">Close window</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 {{ end }}

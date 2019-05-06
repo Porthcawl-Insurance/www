@@ -3,7 +3,7 @@ api_version: 1
 threadsafe: true
 
 error_handlers:
-- file: public/team/index.html
+- file: public/404.html
 
 handlers:
 - url: /
