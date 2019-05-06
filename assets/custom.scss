@@ -640,34 +640,34 @@ table.table {
 /* Nav */
 nav {
   z-index: 5;
-  padding-bottom: 1.5rem !important;
-  padding-top: 1.5rem !important;
+  background-color: $dark-gray !important;
 
   .nav-link {
     color: $light !important;
     text-transform: none;
     padding: 8px 0px 8px 40px !important;
     @include sm{
-      margin-top: 30px;
+      // margin-top: 30px;
     }
   }
 
   .navbar-brand {
     padding-top: 0;
     @include sm{
-      margin-top: 30px;
+      // margin-top: 30px;
     }
   }
 
   .dropdown-menu {
-    background-color: $mid-gray !important;
+    background-color: $dark-gray !important;
     border: none !important;
   }
 
   .dropdown-item {
+    color: $lightest !important;
     &:hover {
       background-color: $dark-gray !important;
-      color: $lightest !important;
+      color: $orange !important;
     }
   }
 
