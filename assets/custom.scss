@@ -141,7 +141,6 @@ html {
 body {
   position: relative;
   min-height: 100vh !important;
-  // padding-bottom: 180px;
   padding-bottom: 70px;
 
   @include linear-gradient($mid-gray, $light-gray);
@@ -219,6 +218,8 @@ a {
   }
 
   &.icon-l {
+    display: block;
+    margin-bottom: 1em !important;
     .fas {
       color: $orange;
       padding-left: 0;
@@ -242,6 +243,18 @@ input {
   &.minimal {
     background-color: rgba($lightest,.25);
     border: none;
+  }
+}
+
+.container-fluid {
+
+  &.hero {
+    // height: 30vh !important;
+
+    h1 {
+      text-align: center;
+      padding: 2em 1em;
+    }
   }
 }
 
@@ -681,7 +694,8 @@ nav {
 footer {
   position: absolute;
   bottom: 0;
-  background-color: rgba($dark-gray, .4) !important;
+  background-color: $dark-gray !important;
+  // background-color: rgba($dark-gray, .4) !important;
   width: 100%;
   color: #fff;
   font-size: 0.85rem;
@@ -694,11 +708,21 @@ footer {
   li {
     margin: none;
     margin-bottom: .25em;
+    text-align: center;
+
+    @include md {
+      text-align: left;
+    }
+
   }
 
   a {
     color: $lightest !important;
     font-size: 1.2em !important;
+
+    &.social {
+      font-size: 2.5em !important;
+    }
 
     &:hover, &:focus, &:active {
       color: $orange !important;

@@ -6,7 +6,7 @@
 <!-- <div id='background-img'></div> -->
 <section id='home-content'>
 
-  <div id='home-hero' class='container-fluid py-5'>
+  <div id='home-hero' class='hero container-fluid py-5'>
     <div class='row py-4'>
       <div class='col text-light text-center px-3'>
         <h1 class='t-shadow mt-4'>Digital means vulnerable.</h1>
@@ -28,8 +28,9 @@
           </div>
           <input id='email-submit' class='button btn btn-primary mt-4' type='submit' value='Get Downtime Risk' />
         </form>
-        <a id='why-link' href='#' class='icon-l block' data-toggle="modal" data-target="#whylink-modal"><i class="fas fa-chevron-right"></i> Why do you need a business email?</a>
-        <a id='what-link' href='#' class='icon-l block' data-toggle="modal" data-target="#whatlink-modal"><i class="fas fa-chevron-right"></i> What is downtime risk?</a>
+        <a id='why-link' href='#' class='icon-l' data-toggle="modal" data-target="#whylink-modal"><i class="fas fa-chevron-right"></i> Why do you need a business email?</a>
+        <a id='what-link' href='/riskscore/' class='icon-l'><i class="fas fa-chevron-right"></i> What is downtime risk?</a>
+        <!-- <a id='what-link' href='#' class='icon-l' data-toggle="modal" data-target="#whatlink-modal"><i class="fas fa-chevron-right"></i> What is downtime risk?</a> -->
       </div>
 
     </div>
@@ -40,7 +41,7 @@
   <div id='featured-on' class='container-fluid py-5'>
     <div class='container'>
 
-      <p class='text-center'>Featured on</p>
+      <p class='text-center t-dark'>Featured on</p>
       <div class='row align-items-center'>
         <div class='col-6 col-lg-2 offset-lg-1 text-center'>
           <a class='img-link' target='_blank' href='https://www.prnewswire.com/news-releases/plug-and-play-selects-150-startups-for-their-summer-batches-300821308.html'>
@@ -205,7 +206,7 @@
   </div>
 </div>
 
-<div id='whatlink-modal' class="modal fade" tabindex="-1" role="dialog">
+<!-- <div id='whatlink-modal' class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -222,6 +223,6 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 {{ end }}
