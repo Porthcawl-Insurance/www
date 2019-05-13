@@ -2,18 +2,24 @@
 
 $(function() {
 
-  $(document).ready(function () {
+  // --------- Initialize Poppers -------//
+  $(function() {
+    $('[data-toggle="popover"]').popover();
+  });
+
+  // ------ Handle Footer Height -------//
+  $(document).ready(function() {
 
     var footerHeight = $('footer').height();
     console.log(footerHeight);
-    $('body').css('paddingBottom',footerHeight);
+    $('body').css('paddingBottom', footerHeight);
 
   });
 
-  $(window).resize( function () {
+  $(window).resize(function() {
     var footerHeight = $('footer').height();
     console.log(footerHeight);
-    $('body').css('paddingBottom',footerHeight);
+    $('body').css('paddingBottom', footerHeight);
   });
 
 });

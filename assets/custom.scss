@@ -25,6 +25,15 @@ $teal: #5CB0BC;
 $l-link: $light;
 $link: #52D8F9;
 
+/* Risk Level Colors */
+$r1: #cc444b;
+$r2: #d8774f;
+$r3: #de9151;
+$r4: #e9b15d;
+$r5: #fff275;
+$r6: #d3e468;
+$r7: #7ac74f;
+
 $input-border-color: $gray-200;
 $input-box-shadow: none;
 $input-focus-box-shadow: none;
@@ -148,7 +157,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #ffffff !important;
-  font-weight: 400 !important;
+  font-weight: 100 !important;
   font-size: 1.4rem !important;
 
   &.main {
@@ -177,6 +186,14 @@ hr {
   border-top: solid 1px $lightest !important;
   margin-top: 1.5rem !important;
   margin-bottom: 1.5rem !important;
+
+  &.dark {
+    border-top: solid rgba($mid-gray, .5) 1px !important;
+  }
+
+  &.light{
+    border-top: solid rgba(255,255,255,.15) 1px;
+  }
 }
 
 p, li {
@@ -220,10 +237,19 @@ a {
   &.icon-l {
     display: block;
     margin-bottom: 1em !important;
+    font-size: 1.2em;
     .fas {
       color: $orange;
       padding-left: 0;
       padding-right: .5em;
+    }
+  }
+  &.icon-b {
+    font-size: 1.2em;
+    color: $orange !important;
+    font-weight: bold;
+    &:hover{
+      text-decoration: none;
     }
   }
 }
@@ -249,12 +275,14 @@ input {
 .container-fluid {
 
   &.hero {
-    // height: 30vh !important;
-
     h1 {
       text-align: center;
       padding: 2em 1em;
     }
+  }
+
+  &.full-height {
+    height: 100%;
   }
 }
 
@@ -286,6 +314,8 @@ input {
   text-align: left !important;
 }
 
+/************************** Backgrounds */
+
 .background-light {
     background-color: $lightest;
 }
@@ -302,14 +332,70 @@ input {
   @include linear-gradient($mid-gray, $light-gray);
 }
 
-.background-orange {
-  background-color: $purple !important;
-}
-
 .background-img {
   background-image: url('/images/landscape-01.png');
   background-size: cover;
   background-position: bottom;
+}
+
+/***************************** Buttons */
+
+.btn {
+  &.tip {
+    .fas{
+      color: $mid-gray;
+      font-size: 2em;
+
+      &:hover {
+        color: $teal;
+      }
+    }
+
+    &:hover {
+      // background-color: $teal;
+    }
+
+    &:focus {
+
+      .fas {
+        color: $teal;
+      }
+    }
+  }
+}
+
+.btn-primary {
+  background-color: $orange !important;
+  color: #fff !important;
+  border: $orange 1px solid !important;
+
+  &.bigger {
+    padding: 10px 24px 10px 24px;
+    @include md {
+      font-size: larger;
+    }
+  }
+}
+
+/************************* Containers */
+
+.jumbotron {
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+  background-color: $lightest !important;
+  h1 {
+    font-size: 1.5em !important;
+    color: $mid-gray !important;
+  }
+  h2 {
+    font-size: 2.5em !important;
+  }
+  hr {
+
+  }
+  #domain {
+    color: $purple !important;
+  }
 }
 
 .block {
@@ -324,6 +410,9 @@ input {
   h1 {
     font-size: 1.25em !important;
     margin-bottom: 1.5em !important;
+    span {
+      font-size: 1.75em;
+    }
   }
   h2 {
     font-size: 1.75em !important;
@@ -336,6 +425,56 @@ input {
   a {
     text-decoration: underline !important;
   }
+  hr {
+    border-top: solid 1px $mid-gray !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+.cat {
+  background-color: $lightest;
+  padding: 1em;
+  margin: 1em;
+  width: 100%;
+  max-width: 220px;
+  box-shadow: 0px 3px 2px rgba($very-dark, .3);
+
+  p {
+    text-align: center;
+  }
+
+  .icon {
+    font-size: 2em !important;
+    margin-bottom: .2em !important;
+
+    &.r1 {
+      color: $r1;
+    }
+    &.r2 {
+      color: $r2;
+    }
+    &.r3 {
+      color: $r3;
+    }
+    &.r4 {
+      color: $r4;
+    }
+    &.r5 {
+      color: $r5;
+    }
+    &.r6 {
+      color: $r6;
+    }
+    &.r7 {
+      color: $r7;
+    }
+  }
+
+  .c-text {
+    font-size: .9em !important;
+    color: $mid-gray;
+  }
 }
 
 .error {
@@ -345,24 +484,30 @@ input {
   }
 }
 
-
-/***************************** Cards */
-
-.card {
-  border: none !important;
-}
-
-.card-header {
-  background-color: $mid-gray !important;
-  color: $lightest !important;
-  p{
-    margin-bottom: 0;
+div.popover {
+  .popover-header {
+    background-color: $teal;
+    font-size: 1.2em !important;
   }
 }
 
-.card-body {
-  background-color: rgba($lightest, .8) !important;
-}
+/***************************** Cards */
+
+// .card {
+//   border: none !important;
+// }
+//
+// .card-header {
+//   background-color: $mid-gray !important;
+//   color: $lightest !important;
+//   p{
+//     margin-bottom: 0;
+//   }
+// }
+//
+// .card-body {
+//   background-color: rgba($lightest, .8) !important;
+// }
 
 /***************************** Modals */
 
@@ -469,19 +614,6 @@ input {
   }
 }
 
-.btn-primary {
-  background-color: $orange !important;
-  color: #fff !important;
-  border: $orange 1px solid !important;
-
-  &.bigger {
-    padding: 10px 24px 10px 24px;
-    @include md {
-      font-size: larger;
-    }
-  }
-}
-
 .resource-div {
   p {
     opacity: .6 !important;
@@ -520,7 +652,8 @@ table.table {
 
   h1 {
     font-size: 1.8em !important;
-    padding-top: 1em;
+    padding: 1em;
+    padding-bottom: .2em;
 
     @include sm {
       font-size: 3em !important;
@@ -556,8 +689,11 @@ table.table {
 
 #featured-on {
   p {
-    color: $lightest !important;
-    opacity: .8 !important;
+    color: rgba($very-dark, .7);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em !important;
+    margin-bottom: 0;
   }
 }
 
@@ -589,7 +725,11 @@ table.table {
 #form-email-testing,
 #form-resend-email {
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 600px;
+  input {
+    margin: 0 auto;
+    max-width: 400px;
+  }
 }
 
 #email-resend {
@@ -603,51 +743,75 @@ table.table {
   max-width: 500px;
 }
 
-#score-div {
-
-  .fas {
-    padding-right: .75em !important;
+#score-row {
+  div {
+    width: 100%;
+    max-width: 300px;
+    min-width: 200px;
   }
 
   p {
-    margin-bottom: 0;
-  }
-
-  h1, h2 {
     text-align: center !important;
   }
 
-  h1 {
-    font-size: 1.2em !important;
+  i.fal {
+    padding: .2em;
   }
 
-  h2 {
-    font-size: 1.4em !important;
-  }
-
-  #header {
-    h1, h2 {
-      margin-bottom: 0 !important;
-    }
-
-    h2 {
-      font-size: 1.5em !important;
+  #score {
+    font-size: 2em !important;
+    margin-bottom: 0 !important;
+    span {
+      font-size: 1.75em !important;
     }
   }
 
-  #rook-div {
-    svg {
-      display: block;
-      margin: 0 auto;
-      max-height: 200px;
+  #score-message {
+    font-size: 1.1em !important;
+  }
+
+  #compare-message {
+    font-size: .9em !important;
+    color: $mid-gray;
+  }
+
+  #top-factors {
+    .header {
+      font-size: 1.1em !important;
+      color: $mid-gray !important;
+    }
+    div {
+      width: 100%;
+      // border: 1px solid $dark-gray;
+      // background-color: $mid-gray;
+      border-radius: 4px;
+      padding: .3em;
+      p {
+        margin-bottom: 0;
+        font-weight: bold;
+      }
+      i.fas {
+        padding-right: .5em;
+        color: green;
+      }
     }
   }
 
-  #summary {
-    .flex-item {
-      padding-right: 1.5em !important;
-    }
+}
+
+#summary-div {
+  h3{
+    font-size: 1.5em !important;
   }
+}
+
+#rook-svg {
+  display: block;
+    margin: 0 auto !important;
+    height: 100%;
+    width: 100%;
+    max-height: 250px;
+    max-width: 150px;
 }
 
 /* Nav */

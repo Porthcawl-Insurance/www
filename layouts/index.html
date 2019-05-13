@@ -6,6 +6,10 @@
 <!-- <div id='background-img'></div> -->
 <section id='home-content'>
 
+  <!-- ---------------------------------------------- -->
+  <!-- ---------------------------- HERO SECTION ---- -->
+  <!-- ---------------------------------------------- -->
+
   <div id='home-hero' class='hero container-fluid py-5'>
     <div class='row py-4'>
       <div class='col text-light text-center px-3'>
@@ -38,10 +42,13 @@
   </div>
   <!--end of .container-->
 
+  <!-- ---------------------------------------------- -->
+  <!-- ---------------------------- FEATURED -------- -->
+  <!-- ---------------------------------------------- -->
+
   <div id='featured-on' class='container-fluid py-5'>
     <div class='container'>
-
-      <p class='text-center t-dark'>Featured on</p>
+      <p>Featured on</p>
       <div class='row align-items-center'>
         <div class='col-6 col-lg-2 offset-lg-1 text-center'>
           <a class='img-link' target='_blank' href='https://www.prnewswire.com/news-releases/plug-and-play-selects-150-startups-for-their-summer-batches-300821308.html'>
@@ -75,56 +82,64 @@
   </div>
   <!--end of .container-fluid-->
 
+  <!-- ---------------------------------------------- -->
+  <!-- ---------------------------- WHY B.I. -------- -->
+  <!-- ---------------------------------------------- -->
+
   <div id='why' class='container-fluid background-gradient p-3'>
-    <h3 class='pt-5 pb-4 text-center t-light'>Why business interruption insurance?</h3>
+    <div class='container'>
 
-    <div class='row py-5 my-3'>
+      <h3 class='pt-5 pb-4 text-center t-light'>Why business interruption insurance?</h3>
 
-      <div class='col-xs-12 col-xl-6 align-items-center'>
-        <!-- <h3 class='t-light m-4'>Why business interruption insurance?</h3> -->
+      <div class='row py-5 my-3'>
 
-        <img class='img-fluid' src='/images/piggy_knight.png' />
+        <div class='col-xs-12 col-xl-6 align-items-center'>
+          <!-- <h3 class='t-light m-4'>Why business interruption insurance?</h3> -->
+
+          <img class='img-fluid' src='/images/piggy_knight.png' />
+        </div>
+        <div class='col-xs-12 col-md-10 offset-md-1 offset-xl-0 col-xl-5 pt-3'>
+          <!-- <h3 class='mt-5 pb-4 t-light'>Why business interruption insurance?</h3> -->
+
+          <p class='p-3 mt-3'>
+            <span class='bold larger pb-1'>It's pretty simple.</span><br />
+            Small businesses are particularly vulnerable to
+            cyber events as a result of two phenomena.
+          </p>
+          <ul>
+            <li>
+              First, most small businesses, as a result of their size, don’t keep
+              large amounts of cash on hand. They can’t afford to.
+            </li>
+            <li>
+              Second, e-commerce is an increasingly important source of revenue for
+              small businesses.
+            </li>
+          </ul>
+          <p class='p-3'>
+            This is a dangerous combination. If a small business suffers a cyber
+            event that prevents them from digitally collecting revenue, they are
+            faced with the prospect of being unable to make payroll or pay their
+            most critical bills. Their very survival is at stake.
+          </p>
+          <p class='p-3'>
+            <span class='bold larger'>That’s where we come in.</span><br /> We are working on a product that will get cash in your hands as quickly as
+            possible to stop the bleeding until a small business can get back
+            online.
+          </p>
+        </div>
+        <!--end of .col-->
       </div>
-      <div class='col-xs-12 col-md-10 offset-md-1 offset-xl-0 col-xl-5 pt-3'>
-        <!-- <h3 class='mt-5 pb-4 t-light'>Why business interruption insurance?</h3> -->
-
-        <p class='p-3 mt-3'>
-          <span class='bold larger pb-1'>It's pretty simple.</span><br />
-          Small businesses are particularly vulnerable to
-          cyber events as a result of two phenomena.
-        </p>
-        <ul>
-          <li>
-            First, most small businesses, as a result of their size, don’t keep
-            large amounts of cash on hand. They can’t afford to.
-          </li>
-          <li>
-            Second, e-commerce is an increasingly important source of revenue for
-            small businesses.
-          </li>
-        </ul>
-        <p class='p-3'>
-          This is a dangerous combination. If a small business suffers a cyber
-          event that prevents them from digitally collecting revenue, they are
-          faced with the prospect of being unable to make payroll or pay their
-          most critical bills. Their very survival is at stake.
-        </p>
-        <p class='p-3'>
-          <span class='bold larger'>That’s where we come in.</span><br /> We are working on a product that will get cash in your hands as quickly as
-          possible to stop the bleeding until a small business can get back
-          online.
-        </p>
-      </div>
-      <!--end of .col-->
-
+      <!--end of .row-->
     </div>
+    <!-- end of .container-->
   </div>
   <!--end of .container-fluid-->
 
 </section>
 
 <!-- ------------------------------------------------ -->
-<!-- ---------------------------- INVALID EMAIL MODAL -->
+<!-- ---------------------------- MODALS ------------ -->
 <!-- ------------------------------------------------ -->
 
 <div id='invalid' class="modal fade" tabindex="-1" role="dialog">
@@ -150,10 +165,6 @@
     </div>
   </div>
 </div>
-
-<!-- ------------------------------------------------ -->
-<!-- ----------------------- WHY BUSINESS EMAIL MODAL -->
-<!-- ------------------------------------------------ -->
 
 <div id='why' class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -197,7 +208,10 @@
       </div>
       <div class="modal-body p-4">
         <h4 class=''>Why we need a business email...</h4>
-
+        <hr />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae enim varius, congue ante sit amet, ultricies est.
+          </p>
       </div>
       <div class="modal-footer">
         <button id='send-again' type="button" class="btn m-auto" data-dismiss="modal">Got it</button>
@@ -206,23 +220,5 @@
   </div>
 </div>
 
-<!-- <div id='whatlink-modal' class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body p-4">
-        <h4 class=''>What is Downtime Risk?</h4>
-
-      </div>
-      <div class="modal-footer">
-        <button id='send-again' type="button" class="btn m-auto" data-dismiss="modal">Close window</button>
-      </div>
-    </div>
-  </div>
-</div> -->
 
 {{ end }}

@@ -5,73 +5,41 @@ slug: "/score"
 date: 2019-04-30T19:53:19-05:00
 draft: true
 ---
-
-<div id='score-div' class='container'>
-  <!-- <div id='header' class='d-flex flex-row justify-content-between align-items-end'>
-    <div class='flex-item'>
-      <h1>Downtime Risk Score</h1>
-    </div>
-    <div class='flex-item'>
-      <h2><span id='domain-name'></span></h2>
-    </div>
-  </div><!--end of #header-->
-
-  <!-- <hr /> -->
-
-  <div class='d-flex flex-row row background-light mt-4 p-4'>
-
-    <div class='flex-item col-4 p-3 '>
-      <p class='text-center'>
-        Downtime Risk Score
-      </p>
-      <p class='bold larger text-center'>
-        <span id='domain-name'></span>
-      </p>
-      <div class='score-div p-4'>
-        <p class='text-center'><span id='score'>-</span></p>
-      </div>
-    </div>
-
-    <div class='flex-item col-4 p-3'>
-      <div id='rook-div' class='p-3'>
+<div class='jumbotron text-center'>
+  <div class='container'>
+    <h1 class='jumbotron-heading'>Your Downtime Risk Score</h1>
+    <h2 id='domain'>-</h2>
+    <hr class='dark' />
+    <div id='score-row' class='d-flex flex-row flex-wrap p-3 justify-content-center align-items-center'>
+      <div class='p-3'>
         {{< rook >}}
       </div>
-    </div>
-
-    <div id='summary' class='flex-item col-4 p-3'>
-      <h3 class='t-dark'>Score Summary</h3>
-      <div class='d-flex flex-row justify-content-start'>
-        <div class='flex-item py-2 mr-3'>
-          <p id='email'>
-            <i class="fas fa-envelope-open-text"></i> Email &amp; Indentity
-          </p>
-          <p id='hosting'>
-            <i class="fas fa-cloud"></i> Hosting Provider
-          </p>
-          <p id='dns'>
-            <i class="fas fa-globe"></i> DNS
-          </p>
-          <p id='servers'>
-            <i class="fas fa-server"></i> Web Servers
-          </p>
-        </div>
-        <!--end of .flex-item-->
-        <div class='flex-item py-2 mr-3'>
-          <p id='ssl'>
-            <i class="fas fa-shield-alt"></i> TSL / SSL
-          </p>
-          <p id='cms'>
-            <i class="fas fa-cogs"></i> CMS
-          </p>
-          <p id='footprint'>
-            <i class="fas fa-shoe-prints"></i> Footprint
-          </p>
-        </div>
-        <!--end of .flex-item-->
+      <div class='p-3'>
+        <!-- <div class='circle'> -->
+        <p id='score'>-</p>
+        <!-- </div> -->
+        <p id='score-message'></p>
+        <p id='compare-message'>This is higher than 92% of other users</p>
       </div>
-      <!--end of .flex-row-->
     </div>
-    <!--end of #summary-->
+    <!--end of .flex-row-->
+    <a id='full-summary' class='text-center icon-b'>Full Summary<br /><i class="fal fa-chevron-down"></i></a>
+
+  </div>
+  <!--end of .container-->
+</div>
+<!-- end of .jumbotron -->
+<div id='summary-div' class='container-fluid p-5 background-dark'>
+  <h3 class='text-center p-3'>Your downtime risk explained...</h3>
+  <div id='sorted-div' class='d-flex flex-column p-3'>
+
+  </div>
+  <div id='cat-div' class='d-flex flex-row flex-wrap p-3 justify-content-center'>
+
   </div>
 
+</div>
+<!--end of #summary-div -->
+<div class='container-fluid p-5'>
+  <h4 class='text-center p-3 t-dark larger bold'>How do you compare?</h4>
 </div>

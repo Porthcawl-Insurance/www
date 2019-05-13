@@ -7,21 +7,32 @@ slug: "/invalid"
 
 {{< block >}}
 
-<h1>Sorry, that's not a business email.</h1>
+<h1><span class='bold'>Whoops!</span> <Br /> Sorry, that's not a business email.</h1>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in mollis diam,
-  sed mollis dui. Ut felis mauris, cursus a enim ac, congue dignissim ipsum.
+  In order to assess your risk of downtime, we need your business email that shares
+  a domain with your business' website. Not sure what else to write here but
+  there needs to be a bit of something...
 </p>
 
-<form id='form-email-testing' action='' method='post' class='mb-4'>
-  <input name='returl' type='hidden' value='/thanks'>
-  <label for='email'>Enter your business email below for your downtime risk score.</label>
-  <input id='user-email' class='form-control' name='email' type='email'>
-  <div class='error'>
-    <span class='error-msg'>Invalid email</span>
+<a tabindex="0" class="btn tip" role="button" data-toggle="popover" data-trigger="focus" title="Email Example" data-content="And here's some amazing content. It's very engaging. Right?"><i class="fas fa-question-circle"></i></a>
+<!-- <a tabindex="0" class="btn tip" role="button" data-toggle="popover" data-trigger="focus" title="Email Example" data-content="And here's some amazing content. It's very engaging. Right?">?</a> -->
+
+<hr />
+
+<div class='row'>
+  <div class='col background-dark p-3 mx-3'>
+    <form id='form-email-testing' action='' method='post' class='mb-4'>
+      <input name='returl' type='hidden' value='/thanks'>
+      <label class='t-light' for='email'>Enter your business email below for your downtime risk score.</label>
+      <input id='user-email' class='form-control' name='email' type='email'>
+      <div class='error'>
+        <span class='error-msg'>Invalid email</span>
+      </div>
+      <input id='email-submit' class='button btn btn-primary mt-4' type='submit' value='Get Downtime Risk' />
+    </form>
   </div>
-  <input id='email-submit' class='button btn btn-primary mt-4' type='submit' value='Get Downtime Risk' />
-</form>
+</div>
+
 
 {{</ block >}}
