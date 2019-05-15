@@ -14,14 +14,14 @@
     <div class='row py-4'>
       <div class='col text-light text-center px-3'>
         <h1 class='t-shadow mt-4'>Digital means vulnerable.</h1>
-        <h2 class=''>A new way to protect your online revenue. <span class='bold'>Coming soon.</span></h2>
+        <!-- <h2 class=''>A new way to protect your online revenue. <span class='bold'>Coming soon.</span></h2> -->
+        <h2 class=''>Are you vulnerable to a cyber attack that could shut down your business?<br /> Find out in seconds.</h2>
       </div>
     </div>
     <!--end of .row-->
     <div class='row'>
       <div class='col col-md-8 offset-md-2 text-center py-4'>
-        <p class='text-center t-light'><span class='bold'>In the meantime</span>, find out if <u>your</u> business is at risk.
-          <br />
+        <p class='text-center t-light'>
           Enter your business email below to get a downtime risk score.
         </p>
         <form id='form-email-testing' action='' method='post' class='mb-4'>
@@ -33,8 +33,8 @@
           <input id='email-submit' class='button btn btn-primary mt-4' type='submit' value='Get Downtime Risk' />
         </form>
         <a id='why-link' href='#' class='icon-l' data-toggle="modal" data-target="#whylink-modal"><i class="fas fa-chevron-right"></i> Why do you need a business email?</a>
-        <a id='what-link' href='/riskscore/' class='icon-l'><i class="fas fa-chevron-right"></i> What is downtime risk?</a>
-        <!-- <a id='what-link' href='#' class='icon-l' data-toggle="modal" data-target="#whatlink-modal"><i class="fas fa-chevron-right"></i> What is downtime risk?</a> -->
+        <!-- <a id='what-link' href='/riskscore/' class='icon-l'><i class="fas fa-chevron-right"></i> What is downtime risk?</a> -->
+        <a id='what-link' href='#' class='icon-l' data-toggle="modal" data-target="#whatlink-modal"><i class="fas fa-chevron-right"></i> What is downtime risk?</a>
       </div>
 
     </div>
@@ -211,7 +211,34 @@
         <hr />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae enim varius, congue ante sit amet, ultricies est.
-          </p>
+        </p>
+        <p>
+          <a href='/privacy/' class='icon-r'>Check out our Privacy Policy <i class="fas fa-chevron-right"></i></a>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button id='send-again' type="button" class="btn m-auto" data-dismiss="modal">Got it</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id='whatlink-modal' class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-4">
+        <h4 class=''>What is downtime risk?</h4>
+        <hr />
+        <p>
+          <span class='bold'>Downtime</span> is our term for periods when you are unable to collect revenue from digital or online sources like your website or billing software. If you can’t collect revenue, your business is down!        </p>
+        <p>
+          <a href='/riskscore/' class='icon-r'>Learn More about Downtime <i class="fas fa-chevron-right"></i></a>
+        </p>
       </div>
       <div class="modal-footer">
         <button id='send-again' type="button" class="btn m-auto" data-dismiss="modal">Got it</button>

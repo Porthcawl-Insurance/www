@@ -1,7 +1,7 @@
 ---
 title: "Terms of Service"
 description: "Porthcawl Insurance Services Terms of Service"
-slug: "/about/tos/"
+slug: "/tos/"
 date: 2018-04-10T15:45:32-05:00
 draft: true
 ---
@@ -50,7 +50,7 @@ You agree that you will not use our Services in any way that is unlawful or in a
 3. use any bot or other technologies designed to access the services on a remote or automated basis;
 4. purposefully access the Services or send calls to or requests to our servers that exceeds a the reasonable and customary use by a person using or accessing the Services on an individual basis for the purpose for which the Services are provided;
 5. reverse engineer, decompile, disassemble, decipher the website or any Services whether to derive the underlying intellectual property used on the website or to provide the Services or to access any information to which you have not been granted access;
-6. scan, penetrate, or attempt to scan or penetrate the systems used to provide the website or Services for vulnerabilities whether or not you intend to exploit or utilize such vulnerabilities if found; 
+6. scan, penetrate, or attempt to scan or penetrate the systems used to provide the website or Services for vulnerabilities whether or not you intend to exploit or utilize such vulnerabilities if found;
 7. use access to sell or resell the Services, unless authorized to do so under a written agreement;
 8. violate the copyright, including any copyright in the code to the website and to the Services, or  any copyright of content this website nor will you remove any copyright or trademark contained in any of the Services or website content;
 9. you will not use content on this website or data you are provided access to as part of the Services for purposes of creating, operating or selling any competitive service or technology; or
@@ -76,7 +76,7 @@ By using the Services, if you are a legal entity, you allow us to identify you a
 
 ### 9. Intellectual Property
 
-1. We own, or have licensed or obtained approval to use, all intellectual property in and to the Services and to the technology used to provide the Services. Your use of the Services or accessing the website does not grant any right or interest whatsoever in any of the intellectual property except as expressly stated in writing. 
+1. We own, or have licensed or obtained approval to use, all intellectual property in and to the Services and to the technology used to provide the Services. Your use of the Services or accessing the website does not grant any right or interest whatsoever in any of the intellectual property except as expressly stated in writing.
 2. These Terms provide you with a limited and revocable license to access and use our website and Services. This license is not transferable, and is non-exclusive. This license does not transfer any ownership rights to you. Should you use this website or the Services in a way that is inconsistent with, or in violation of these Terms, we may take all steps to terminate such use and you may be legally liable for any damages incurred by us as a result of your actions.
 3. All content on the website and in any Services , including software code, text, images, graphics, company marks, images, video, audio, data compilations, software whether taken individually or together, is our copyrighted property and is protected by United States and international copyright laws. No reproduction or use of the any such copyrighted material is authorized by these Terms unless otherwise expressly stated in a separate written agreement.
 4. Our trademarks and services marks of are our intellectual property. You may not use those marks without our express, prior written agreement. The trademarks of any other parties that may appear on this website or as part of the Services belong to those parties.  You may not use those marks without their express, prior written agreement.
