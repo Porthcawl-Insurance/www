@@ -285,9 +285,19 @@ input {
 .container-fluid {
 
   &.hero {
+    padding: 4em 1em;
     h1 {
       text-align: center;
-      padding: 2em 1em;
+      // padding: 2em 1em;
+    }
+    h2 {
+      text-align: center;
+      font-size: 1.3em !important;
+    }
+    a {
+      text-align: center;
+      // color: $orange !important;
+      margin-top: 1.2em !important;
     }
   }
 
@@ -357,7 +367,7 @@ input {
       font-size: 2em;
 
       &:hover {
-        color: $teal;
+        color: $orange;
       }
     }
 
@@ -368,7 +378,7 @@ input {
     &:focus {
 
       .fas {
-        color: $teal;
+        color: $orange;
       }
     }
   }
@@ -489,17 +499,79 @@ input {
   &.min {
     background-color: transparent !important;
     box-shadow: none;
-    max-width: 120px;
+    max-width: 180px;
 
     .icon {
-      color: $teal !important;
+      color: $r7 !important;
       font-size: 2.5em !important;
     }
 
     .c-title {
       color: $lightest !important;
+      margin-bottom: 5px !important;
+      font-size: 1.25em !important;
+      font-weight: bold;
+      border-bottom: 1px solid rgba($lightest, .2);
+      padding-bottom: 5px;
+    }
+
+    .desc {
+      color: rgba($lightest, .8);
+      margin-bottom: 5px;
+    }
+
+    .btn.tip {
+      display: block;
+      margin: 0 auto;
+      font-size: .7em !important;
+      i {
+        color: $teal !important;
+      }
+
+      &:hover {
+        i{
+          color: $orange !important;
+        }
+      }
+    }
+
+    // &:hover {
+    //   background-color: rgba($lightest, .1) !important;
+    //   .c-title {
+    //
+    //   }
+    // }
+  }
+}
+
+.yes-no {
+  i {
+    padding-right: .5em;
+    font-size: 1.2em;
+  }
+  .example {
+    color: rgba($lightest, .5)!important;
+    font-weight: bold !important;
+    border-radius: 2em;
+    padding: .8em;
+    margin-right: .5em;
+    background-color: rgba($very-dark, .8) !important;
+    &.yes {
+      color: $lightest !important;
+      border: 3px $r7 solid !important;
+      i {
+        color: $r7 !important;
+      }
+    }
+    &.no {
+      border: 3px $r1 solid !important;
+      i {
+        color: $r1 !important;
+      }
     }
   }
+
+
 }
 
 .error {
@@ -509,30 +581,65 @@ input {
   }
 }
 
-div.popover {
-  .popover-header {
-    background-color: $teal;
-    font-size: 1.2em !important;
+/***************************** Cards */
+
+.card {
+  &.trans {
+    background-color: transparent !important;
+  }
+  .card-header {
+    p {
+      margin-bottom: 0 !important;
+      font-size: 1.25em !important;
+      color: $lightest;
+      i {
+        padding-left: 2em;
+        font-size: 1.5em;
+        color: $teal;
+      }
+    }
+  }
+  .card-body {
+    background-color: rgba($lightest, .5);
+    .icon {
+      text-align: center !important;
+      font-size: 2em !important;
+      margin-bottom: 0.2em !important;
+    }
+    .title {
+      text-align: center !important;
+    }
   }
 }
 
-/***************************** Cards */
+/*************************** Popovers */
 
-// .card {
-//   border: none !important;
-// }
-//
-// .card-header {
-//   background-color: $mid-gray !important;
-//   color: $lightest !important;
-//   p{
-//     margin-bottom: 0;
-//   }
-// }
-//
-// .card-body {
-//   background-color: rgba($lightest, .8) !important;
-// }
+.popover {
+  background-color: $dark-gray !important;
+
+  .arrow {
+    &:after {
+      border-right-color: $dark-gray !important;
+    }
+  }
+}
+
+#emailEx {
+  padding: .5em;
+  p {
+    margin-bottom: 0 !important;
+    color: rgba($lightest, .9) !important;
+  }
+  i {
+    padding-right: .5em;
+  }
+  .yes {
+    color: $r7 !important;
+  }
+  .no {
+    color: $r1 !important;
+  }
+}
 
 /***************************** Modals */
 
@@ -557,6 +664,12 @@ div.popover {
     color: $orange !important;
     font-size: 1.1em !important;
   }
+
+  #m-icon {
+    font-size: 4em !important;
+    color: $purple;
+    padding: .1em;
+  }
 }
 
 .modal-footer {
@@ -574,6 +687,16 @@ div.popover {
     }
   }
 }
+
+// #cat-modal {
+//   .modal-body {
+//     .flex-row {
+//       & div:first-child{
+//         max-width: 50px;
+//       }
+//     }
+//   }
+// }
 
 /**************************** Images */
 

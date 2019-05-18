@@ -2,11 +2,6 @@
 
 $(function() {
 
-  // --------- Initialize Poppers -------//
-  $(function() {
-    $('[data-toggle="popover"]').popover();
-  });
-
   // ------ Handle Footer Height -------//
   $(document).ready(function() {
 
