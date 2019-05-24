@@ -288,10 +288,12 @@ input {
     padding: 4em 1em;
     h1 {
       text-align: center;
+      color: $purple !important;
       // padding: 2em 1em;
     }
     h2 {
       text-align: center;
+      color: $lightest !important;
       font-size: 1.3em !important;
     }
     a {
@@ -349,7 +351,7 @@ input {
 }
 
 .background-gradient {
-  @include linear-gradient($mid-gray, $light-gray);
+  @include linear-gradient(rgba($dark-purple, .8), $teal);
 }
 
 .background-img {
@@ -386,7 +388,7 @@ input {
 
 .btn-primary {
   background-color: $orange !important;
-  color: #fff !important;
+  color: $dark-purple !important;
   border: $orange 1px solid !important;
 
   &.bigger {
@@ -394,6 +396,10 @@ input {
     @include md {
       font-size: larger;
     }
+  }
+  &.center {
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -460,6 +466,10 @@ input {
   max-width: 220px;
   box-shadow: 0px 3px 2px rgba($very-dark, .3);
 
+  button {
+    outline: none !important;
+  }
+
   p {
     text-align: center;
   }
@@ -496,6 +506,89 @@ input {
     color: $mid-gray;
   }
 
+  &.top {
+    background-color: rgba($lightest, 1) !important;
+    .c-icon {
+      font-size: 2.5em !important;
+      color: $r7;
+      margin-bottom: 0 !important;
+    }
+    .c-tag {
+      font-size: .8em !important;
+      color: rgba($dark-gray, .8);
+    }
+    .c-name {
+      font-size: 1.2em !important;
+      font-weight: bold;
+    }
+    .c-sum {
+      font-size: .8em !important;
+      color: rgba($dark-gray, .8);
+
+    }
+  }
+
+  &.long {
+    background-color: rgba($lightest, .05) !important;
+    // background-color: transparent !important;
+    max-width: 100%;
+    padding: 0;
+
+    div {
+      padding: 1em;
+    }
+
+    .icon-div {
+      background-color: $lightest;
+      min-width: 120px;
+      .icon {
+        font-size: 2.5em !important;
+        &.r1 {
+          i{
+            color: $r1 !important;
+          }
+        }
+        &.r7 {
+          i {
+            color: $r7 !important;
+          }
+        }
+      }
+      .c-tag {
+        font-size: .8em !important;
+        color: rgba($dark-gray, .5) !important;
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .text-div {
+      width: 100%;
+      p{
+        text-align: left !important;
+        color: $lightest;
+      }
+    }
+
+    .c-title {
+      color: $lightest;
+      font-size: 1.2em !important;
+      margin-bottom: .25em !important;
+    }
+
+    .c-sum {
+      font-size: .75em !important;
+    }
+
+    .sum-div {
+      width: 100%;
+      max-width: 150px;
+      p{
+        color: rgba($lightest, .5) !important;
+      }
+
+    }
+  } /* end of .long */
+
   &.min {
     background-color: transparent !important;
     box-shadow: none;
@@ -524,14 +617,23 @@ input {
       display: block;
       margin: 0 auto;
       font-size: .7em !important;
+      outline-color: transparent !important;
+      outline-style: none !important;
       i {
         color: $teal !important;
       }
 
       &:hover {
+        outline-color: transparent !important;
+        outline-style: none !important;
         i{
           color: $orange !important;
         }
+      }
+
+      &:focus {
+          outline-color: transparent !important;
+          outline-style: none !important;
       }
     }
 
@@ -541,6 +643,21 @@ input {
     //
     //   }
     // }
+  }
+}
+
+.factor {
+  .f-name {
+    white-space: nowrap;
+  }
+  .f-desc {
+    font-size: .8em !important;
+  }
+  .btn.tip {
+    font-size: .5em !important;
+    color: $light-gray !important;
+    padding-left: .1em !important;
+    padding-right: 0 !important;
   }
 }
 
@@ -584,6 +701,28 @@ input {
 /***************************** Cards */
 
 .card {
+
+  &.career {
+    max-width: 200px;
+
+    img.card-img-top {
+      max-width: 200px;
+    }
+    .card-body {
+      padding: 0 !important;
+    }
+    .card-title {
+      background-color: $dark-purple;
+      padding: .7em;
+      color: $lightest;
+    }
+    .card-text {
+      padding-left: .7em;
+      padding-right: .7em;
+      padding-bottom: .7em;
+    }
+  }
+
   &.trans {
     background-color: transparent !important;
   }
@@ -645,10 +784,7 @@ input {
 
 .modal-header {
   background-color: $dark-purple !important;
-
-
   border-radius: 0 !important;
-
   .close {
     color: $lightest !important;
   }
@@ -659,12 +795,10 @@ input {
     text-align: center !important;
     color: $dark-gray !important;
   }
-
   a.icon-r {
     color: $orange !important;
     font-size: 1.1em !important;
   }
-
   #m-icon {
     font-size: 4em !important;
     color: $purple;
@@ -674,29 +808,16 @@ input {
 
 .modal-footer {
   background-color: $dark-purple !important;
-  // background-color: $dark-purple !important;
-
   .btn {
     background-color: transparent !important;
     border: 1px solid rgba($lightest, .5) !important;
     color: $lightest !important;
     font-size: 1.2em !important;
-
     &:hover {
       background-color: rgba($lightest,.05) !important;
     }
   }
 }
-
-// #cat-modal {
-//   .modal-body {
-//     .flex-row {
-//       & div:first-child{
-//         max-width: 50px;
-//       }
-//     }
-//   }
-// }
 
 /**************************** Images */
 
@@ -851,8 +972,13 @@ table.table {
 }
 
 #why {
-  h3 {
+  h3, h4 {
     text-align: center;
+  }
+
+  h4 {
+    font-size: 1.7em !important;
+
   }
 
   p {
@@ -897,11 +1023,6 @@ table.table {
 }
 
 #score-row {
-  div {
-    width: 100%;
-    max-width: 300px;
-    min-width: 200px;
-  }
 
   p {
     text-align: center !important;
@@ -909,6 +1030,46 @@ table.table {
 
   i.fal {
     padding: .2em;
+  }
+
+  .factors {
+
+    max-width: 350px;
+
+    p {
+      margin-bottom: 0;
+      text-align: left !important;
+
+      &.header {
+        color: $purple;
+      }
+    }
+
+    .icon {
+      font-size: 1.5em !important;
+      &.good {
+        color: $r7;
+      }
+      &.bad {
+        color: $r1;
+      }
+    }
+
+    a.factor-exp {
+
+    }
+
+    .text-div {
+      padding: .3em;
+    }
+
+    .f-name {
+      font-weight: bold;
+    }
+    .f-desc {
+      font-size: .8em !important;
+      // display: none;
+    }
   }
 
   #score {
@@ -920,7 +1081,8 @@ table.table {
   }
 
   #score-message {
-    font-size: 1.1em !important;
+    font-size: .8em !important;
+    color: $mid-gray;
   }
 
   #compare-message {
@@ -928,27 +1090,7 @@ table.table {
     color: $mid-gray;
   }
 
-  #top-factors {
-    .header {
-      font-size: 1.1em !important;
-      color: $mid-gray !important;
-    }
-    div {
-      width: 100%;
-      // border: 1px solid $dark-gray;
-      // background-color: $mid-gray;
-      border-radius: 4px;
-      padding: .3em;
-      p {
-        margin-bottom: 0;
-        font-weight: bold;
-      }
-      i.fas {
-        padding-right: .5em;
-        color: green;
-      }
-    }
-  }
+
 
 }
 
@@ -966,6 +1108,8 @@ table.table {
     max-height: 250px;
     max-width: 150px;
 }
+
+
 
 /* Nav */
 nav {

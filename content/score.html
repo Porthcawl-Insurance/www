@@ -5,21 +5,39 @@ slug: "/score"
 date: 2019-04-30T19:53:19-05:00
 draft: true
 ---
+
+<!-- TOP MAIN SECTION -->
 <div class='jumbotron text-center'>
   <div class='container'>
-    <h1 class='jumbotron-heading'>Your Downtime Risk Score</h1>
+
+    <h1 class='jumbotron-heading'>Your Downtime Risk Assessment</h1>
     <h2 id='domain'>-</h2>
+
     <hr class='dark' />
-    <div id='score-row' class='d-flex flex-row flex-wrap p-3 justify-content-center align-items-center'>
+
+
+    <div id='score-row' class='d-flex flex-row flex-wrap p-3 justify-content-between align-items-center'>
       <div class='p-3'>
         {{< rook >}}
       </div>
       <div class='p-3'>
-        <!-- <div class='circle'> -->
         <p id='score'>-</p>
-        <!-- </div> -->
         <p id='score-message'></p>
-        <p id='compare-message'>This is higher than 92% of other users</p>
+      </div>
+      <div class='p-3'>
+        <div id='factors' class=''>
+          <div id='top-factors' class='px-3 factors'>
+            <p class='header'>Top contributing factors</p>
+            <!-- populated from js -->
+          </div>
+
+        </div>
+      </div>
+      <div class='p-3'>
+        <div id='bottom-factors' class='px-3 factors'>
+          <p class='header'>Bottom contributing factors</p>
+          <!-- populated from js -->
+        </div>
       </div>
     </div>
     <!--end of .flex-row-->
@@ -29,17 +47,40 @@ draft: true
   <!--end of .container-->
 </div>
 <!-- end of .jumbotron -->
+
+
+<!-- FULL SUMMARY SECTION -->
 <div id='summary-div' class='container-fluid p-5 background-dark'>
-  <h3 class='text-center p-3'>Your downtime risk explained...</h3>
-  <div id='sorted-div' class='d-flex flex-column p-3'>
+  <div class='container'>
 
-  </div>
-  <div id='cat-div' class='d-flex flex-row flex-wrap p-3 justify-content-center'>
+    <h3 class='text-center p-3'>Your downtime risk explained...</h3>
 
+    <div id='top-div' class='d-flex flex-row p-3'>
+      <div class=''>
+        <p class='larger bold t-light'>More on your Top Contributing Factors</p>
+        <p class='t-light'>
+          These play the biggest part in determining your potential downtime risk
+        </p>
+      </div>
+      <!-- populated from topFactors() -->
+    </div>
+    <hr />
+    <div id='cat-div' class='d-flex flex-row flex-nowrap p-3'>
+      <div id='cat-list' class='d-flex flex-column w-25'>
+        <h4 class=''>And more cool stuff!</h4>
+      </div>
+      <div id='cat-info' class='d-flex flex-column flex-wrap w-75'>
+        <!-- <div id='cat-info' class='d-flex flex-row flex-wrap'> -->
+
+      </div>
+    </div>
   </div>
 
 </div>
 <!--end of #summary-div -->
+
 <div class='container-fluid p-5'>
   <h4 class='text-center p-3 t-dark larger bold'>How do you compare?</h4>
 </div>
+
+{{< factor-modal >}}

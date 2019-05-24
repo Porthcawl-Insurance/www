@@ -23,7 +23,7 @@ $(function() {
         type: 'POST',
         url: 'https://mandrillapp.com/api/1.0/messages/send-template.json',
         data: {
-          'key': '', // removed for git push
+          'key': 'texJ0d69RJ75NZSV-OJYOg', // removed for git push
           'template_name': 'score-email',
           'template_content': [{
             'name': 'score-email',
