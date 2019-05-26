@@ -661,6 +661,32 @@ input {
   }
 }
 
+.factor-grp {
+  // background-color: rgba($lightest, .1) !important;
+  padding: .5em;
+  max-width: 180px;
+  width: 100%;
+  margin: .5em;
+  p {
+    text-align: left;
+  }
+  .icon {
+    margin-bottom: 0;
+    font-size: 2em !important;
+    color: rgba($lightest, .5) !important;
+  }
+  .title {
+    color: $lightest;
+    font-weight: bold;
+    font-size: 1.1em !important;
+    border-bottom: 1px solid $purple;
+    padding-bottom: .5em;
+  }
+  .rs-factor {
+    margin-bottom: .2em;
+  }
+}
+
 .yes-no {
   i {
     padding-right: .5em;
@@ -1024,6 +1050,11 @@ table.table {
 
 #score-row {
 
+  >div {
+      width: 100%;
+      max-width: 33vw;
+  }
+
   p {
     text-align: center !important;
   }
@@ -1034,14 +1065,18 @@ table.table {
 
   .factors {
 
-    max-width: 350px;
+    // max-width: 450px;
 
     p {
       margin-bottom: 0;
       text-align: left !important;
 
       &.header {
-        color: $purple;
+        color: $mid-gray;
+        padding-bottom :.2em;
+        margin-bottom :.2em;
+        border-bottom: 1px solid $mid-gray;
+
       }
     }
 
@@ -1055,6 +1090,10 @@ table.table {
       }
     }
 
+    .collapse-icon {
+
+    }
+
     a.factor-exp {
 
     }
@@ -1065,6 +1104,10 @@ table.table {
 
     .f-name {
       font-weight: bold;
+      span {
+        font-size: .8em;
+        color: $mid-gray;
+      }
     }
     .f-desc {
       font-size: .8em !important;
