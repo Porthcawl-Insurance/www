@@ -7,6 +7,7 @@ $(function() {
     id: 'b1049048-ef36-5d15-85e3-33f1c6dd3518' //Codeup
   }
 
+  // Post for score information
   $.ajax({
     method: "POST",
     url: "https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs",
@@ -14,6 +15,7 @@ $(function() {
     data: JSON.stringify(data),
   }).done(function(response) {
     console.log(response);
+    response = response;
     populate(response);
   }).fail(function(e) {
     console.log(e)
@@ -29,15 +31,23 @@ $(function() {
 
     $('#domain').text(domain);
     $('#score').html('<span>' + score + '</span> / 10 ');
-    $('#score-message').text('Score as of ' + date.toLocaleDateString());
+    $('#score-message').text('as of ' + date.toLocaleDateString());
 
     fillRook(score);
     topFactors(conts);
     categorizeFactors(conts);
+    popFactorSummary(conts);
     popSummary(conts);
 
-    var factorGrp = $('.factor-grp'),
-        factor = $('p.factor');
+      // Post for 'What is Good?' information
+      $.ajax({
+        type: 'POST',
+        url: 'https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs_contributions',
+        contentType: 'application/json',
+        data: JSON.stringify({'id' : result.model.ts})
+      }).done(function(response) {
+        console.log(response);
+      });
 
   }
 
@@ -87,29 +97,23 @@ $(function() {
         tag = this.tag,
         desc = this.description,
         summary = this.summary,
+        weight = this.weight_normalized,
         icon = getIcon(tag),
+        color = getColor(weight),
         collapseId = i + 't-collapse';
 
       $('#top-factors').append(
-        '<div class="d-flex flex-row flex-nowrap align-items-center">' +
-        '<div class="icon-div"><p class="icon good"><i class="' + icon + '"></i></p></div>' +
+        '<div class="d-flex flex-row flex-nowrap align-items-start">' +
+        '<div class="icon-div">' +
+        '<p class="icon ' + color +' text-center">' +
+        '<span class="fa-stack">' +
+        '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
+        '<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
         '<div class="text-div">' +
         '<p class="f-name">' + name + ' <span>[ ' + tag + ' ]</span>' +
-        '<a class="expand-icon" href="#' + collapseId + '" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="' + collapseId + '">' +
-        '<i class="fas fa-plus-circle"></i>' +
-        '</a></p>' +
-        '<div id="' + collapseId + '" class="collapse">' +
-        '<p class="f-desc">' + desc + '</p>' +
-        '</div></div></div>'
-      );
-
-      $('#top-div').append(
-        '<div class="cat top">' +
-        '<p class="c-icon"><i class="' + icon + '"></i></p>' +
-        '<p class="c-tag">[ ' + tag + ' ]</p>' +
-        '<p class="c-name">' + name + '</p><hr class="dark"/>' +
-        '<p class="c-sum">' + desc + '</p>' +
-        '</div>'
+        '</p>' +
+        '<p class="f-desc">' + summary + '</p>' +
+        '</div></div>'
       );
     });
 
@@ -119,21 +123,24 @@ $(function() {
         tag = this[0].tag,
         desc = this[0].description,
         summary = this[0].summary,
+        weight = this[0].weight_normalized,
         icon = getIcon(tag),
+        color = getColor(weight),
         collapseId = i + 'b-collapse';
 
 
       $('#bottom-factors').append(
-        '<div class="d-flex flex-row flex-nowrap align-items-center">' +
-        '<div class="icon-div"><p class="icon bad"><i class="' + icon + '"></i></p></div>' +
+        '<div class="d-flex flex-row flex-nowrap align-items-start">' +
+        '<div class="icon-div">' +
+        '<p class="icon ' + color +' text-center">' +
+        '<span class="fa-stack">' +
+        '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
+        '<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
         '<div class="text-div">' +
         '<p class="f-name">' + name + ' <span>[ ' + tag + ' ]</span>' +
-        '<a class="expand-icon float-right" href="#' + collapseId + '" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="' + collapseId + '">' +
-        '<i class="fas fa-plus-circle"></i>' +
-        '</a></p>' +
-        '<div id="' + collapseId + '" class="collapse">' +
-        '<p class="f-desc">' + desc + '</p>' +
-        '</div></div></div>'
+        '</p>' +
+        '<p class="f-desc">' + summary + '</p>' +
+        '</div></div>'
       );
     });
 
@@ -148,7 +155,7 @@ $(function() {
         clone.pop(lCont);
       }
 
-      console.log(lastConts);
+      // console.log(lastConts);
       return lastConts;
     }
 
@@ -157,7 +164,7 @@ $(function() {
   // categorize factors by tag
   function categorizeFactors(conts) {
     var factorGrps = $('.factor-grp'),
-        factorList = $('.factor-list');
+      factorList = $('.factor-list');
 
     $(conts).each(function() {
       var tag = this.tag;
@@ -176,6 +183,37 @@ $(function() {
     $(factorGrps).each(function(i) {
       if ($(this).children().length <= 2) {
         $(this).hide();
+      }
+    });
+  }
+
+  function popFactorSummary(conts) {
+
+    $(conts).each(function() {
+
+      var desc = this.description,
+        name = this.name,
+        summary = this.summary,
+        tag = this.tag,
+        weight = this.weight_normalized,
+        icon = getIcon(tag),
+        color = getColor(weight);
+
+      if (name != null) {
+        $('#factor-info').append(
+          "<div class='factor-sum d-flex flex-row justify-content-start'>" +
+          "<div class='icon-div " + color + " align-items-center'>" +
+          "<p class='icon text-center'><i class='" + icon + "'></i></p>" +
+          "</div>" +
+          "<div class='text-div d-flex flex-column'>" +
+          "<div class='name-div'>" +
+          "<p class='f-title'>" + name + " <span class='f-tag'>[ " + tag + " ]</span></p>" +
+          "</div>" +
+          "<div class='desc-div'>" +
+          "<p class='f-sum'>" + summary + "</p>" +
+          "<p class='f-desc'>" + desc + "</p>" +
+
+          "</div></div></div>");
       }
     });
   }
@@ -305,18 +343,51 @@ $(function() {
       case 'mx':
         icon = 'fal fa-fingerprint';
         break;
-      case 'server' || 'web-server':
+      case 'server':
         icon = 'fal fa-server';
         break;
+      case 'web-server':
+      icon = 'fal fa-server';
+      break;
       case 'payment':
         icon = 'fal fa-money-bill-wave'
         break;
+      default:
+        icon = 'fal fa-laptop-code';
     }
     return icon;
   }
 
   // color by weight
+  function getColor(weight) {
+    var color;
 
+    switch (true) {
+      case (weight <= 0.143):
+        color = 'r7';
+        break;
+      case (weight <= 0.286):
+        color = 'r6';
+        break;
+      case (weight <= 0.429):
+        color = 'r5';
+        break;
+      case (weight <= 0.572):
+        color = 'r4';
+        break;
+      case (weight <= 0.715):
+        color = 'r3';
+        break;
+      case (weight <= 0.858):
+        color = 'r2';
+        break;
+      case (weight <= 1):
+        color = 'r1';
+        break;
+    }
+
+    return color;
+  }
 
   // scroll to full summary btn function
   $('#full-summary').click(function() {
@@ -324,5 +395,7 @@ $(function() {
       scrollTop: $("#summary-div").offset().top
     }, 1000);
   });
+
+
 
 });

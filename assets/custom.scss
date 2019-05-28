@@ -1,12 +1,5 @@
 $font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-/* Older Colors */
-$pink: lighten(#ef8b8b, 15%);
-$secondary: $pink;
-$info: lighten(#94c9f0, 15%);
-$dark: #333333;
-$gray-200: #E9ECEF;
-
 /* Grays */
 $very-dark: #031927;
 $dark-gray: #2D3047;
@@ -34,7 +27,6 @@ $r5: #fff275;
 $r6: #d3e468;
 $r7: #7ac74f;
 
-$input-border-color: $gray-200;
 $input-box-shadow: none;
 $input-focus-box-shadow: none;
 
@@ -160,10 +152,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 100 !important;
   font-size: 1.4rem !important;
 
-  &.main {
-    color: $dark-gray !important;
-  }
-
   @include sm {
     font-size: 1.8rem !important;
 
@@ -288,8 +276,6 @@ input {
     padding: 4em 1em;
     h1 {
       text-align: center;
-      color: $purple !important;
-      // padding: 2em 1em;
     }
     h2 {
       text-align: center;
@@ -363,6 +349,25 @@ input {
 /***************************** Buttons */
 
 .btn {
+
+  &.btn-primary {
+    background-color: $orange !important;
+    color: $dark-purple !important;
+    border: $orange 1px solid !important;
+  }
+
+  &.bigger {
+    padding: 10px 24px 10px 24px;
+    @include md {
+      font-size: larger;
+    }
+  }
+
+  &.center {
+    display: block;
+    margin: 0 auto;
+  }
+
   &.tip {
     .fas{
       color: $mid-gray;
@@ -386,22 +391,7 @@ input {
   }
 }
 
-.btn-primary {
-  background-color: $orange !important;
-  color: $dark-purple !important;
-  border: $orange 1px solid !important;
 
-  &.bigger {
-    padding: 10px 24px 10px 24px;
-    @include md {
-      font-size: larger;
-    }
-  }
-  &.center {
-    display: block;
-    margin: 0 auto;
-  }
-}
 
 /************************* Containers */
 
@@ -419,9 +409,7 @@ input {
   hr {
 
   }
-  #domain {
-    color: $purple !important;
-  }
+
 }
 
 .block {
@@ -647,17 +635,88 @@ input {
 }
 
 .factor {
+  width: 100%;
+  max-width: 450px;
+
+  p {
+    margin-bottom: 0;
+    text-align: left !important;
+
+    &.header {
+      color: $lightest;
+      font-size: 1.1em !important;
+      background-color: $very-dark;
+      padding:.2em .5em;
+      text-align: center !important;
+      margin-bottom :.2em;
+    }
+  }
+
+  p.icon {
+    font-size: 1.2em !important;
+    &.r7 {
+      .icon-background{
+        color: $r7;
+      }
+    }
+    &.r6 {
+      .icon-background{
+        color: $r6;
+      }
+    }
+    &.r5 {
+      .icon-background{
+        color: $r5;
+      }
+    }
+    &.r4 {
+      .icon-background{
+        color: $r4;
+      }
+    }
+    &.r3 {
+      .icon-background{
+        color: $r3;
+      }
+    }
+    &.r2 {
+      .icon-background{
+        color: $r2;
+      }
+    }
+    &.r1 {
+      .icon-background{
+        color: $r1;
+      }
+    }
+  }
+
+  .text-div {
+    padding: .3em;
+  }
+
   .f-name {
-    white-space: nowrap;
+    font-weight: bold;
+    span {
+      font-size: .8em;
+      color: $mid-gray;
+    }
   }
   .f-desc {
     font-size: .8em !important;
+    // display: none;
   }
-  .btn.tip {
-    font-size: .5em !important;
-    color: $light-gray !important;
-    padding-left: .1em !important;
-    padding-right: 0 !important;
+
+  &.top {
+    .header {
+      color: $r7;
+    }
+  }
+
+  &.bottom{
+    .header {
+      color: $r1;
+    }
   }
 }
 
@@ -685,6 +744,87 @@ input {
   .rs-factor {
     margin-bottom: .2em;
   }
+}
+
+.factor-sum {
+  // background-color: $lightest;
+  margin: .1em;
+
+  .icon-div {
+    min-width: 50px;
+    padding-top:.5em;
+
+    &.r1 {
+      background-color: $r1;
+    }
+    &.r2 {
+      background-color: $r2;
+    }
+    &.r3 {
+      background-color: $r3;
+    }
+    &.r4 {
+      background-color: $r4;
+    }
+    &.r5 {
+      background-color: $r5;
+    }
+    &.r6 {
+      background-color: $r6;
+    }
+    &.r7 {
+      background-color: $r7;
+    }
+
+    .icon {
+      font-size: 1.75em !important;
+      &.r1 {
+        color: $r1;
+      }
+      &.r2 {
+        color: $r2;
+      }
+      &.r3 {
+        color: $r3;
+      }
+      &.r4 {
+        color: $r4;
+      }
+      &.r5 {
+        color: $r5;
+      }
+      &.r6 {
+        color: $r6;
+      }
+      &.r7 {
+        color: $r7;
+      }
+    }
+  }
+
+  .f-tag, .f-desc {
+    font-size: .8em !important;
+    color: rgba($dark-gray, .8);
+  }
+
+  .f-title {
+    font-size: 1.1em !important;
+    font-weight: bold;
+  }
+
+  .text-div {
+    padding: .5em;
+
+    p {
+      margin-bottom: .2em;
+    }
+  }
+
+
+}
+
+#factor-info {
+  max-width: 800px;
 }
 
 .yes-no {
@@ -1030,11 +1170,7 @@ table.table {
 #form-email-testing,
 #form-resend-email {
   margin: 0 auto;
-  max-width: 600px;
-  input {
-    margin: 0 auto;
-    max-width: 400px;
-  }
+
 }
 
 #email-resend {
@@ -1048,93 +1184,26 @@ table.table {
   max-width: 500px;
 }
 
+#jumbotron-score {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
 #score-row {
 
-  >div {
-      width: 100%;
-      max-width: 33vw;
+}
+
+#score {
+  font-size: 2.5em !important;
+  margin-bottom: 0 !important;
+  span {
+    font-size: 2.8em !important;
   }
+}
 
-  p {
-    text-align: center !important;
-  }
-
-  i.fal {
-    padding: .2em;
-  }
-
-  .factors {
-
-    // max-width: 450px;
-
-    p {
-      margin-bottom: 0;
-      text-align: left !important;
-
-      &.header {
-        color: $mid-gray;
-        padding-bottom :.2em;
-        margin-bottom :.2em;
-        border-bottom: 1px solid $mid-gray;
-
-      }
-    }
-
-    .icon {
-      font-size: 1.5em !important;
-      &.good {
-        color: $r7;
-      }
-      &.bad {
-        color: $r1;
-      }
-    }
-
-    .collapse-icon {
-
-    }
-
-    a.factor-exp {
-
-    }
-
-    .text-div {
-      padding: .3em;
-    }
-
-    .f-name {
-      font-weight: bold;
-      span {
-        font-size: .8em;
-        color: $mid-gray;
-      }
-    }
-    .f-desc {
-      font-size: .8em !important;
-      // display: none;
-    }
-  }
-
-  #score {
-    font-size: 2em !important;
-    margin-bottom: 0 !important;
-    span {
-      font-size: 1.75em !important;
-    }
-  }
-
-  #score-message {
-    font-size: .8em !important;
-    color: $mid-gray;
-  }
-
-  #compare-message {
-    font-size: .9em !important;
-    color: $mid-gray;
-  }
-
-
-
+#score-message {
+  font-size: 1em !important;
+  color: $mid-gray !important;
 }
 
 #summary-div {
@@ -1145,14 +1214,21 @@ table.table {
 
 #rook-svg {
   display: block;
-    margin: 0 auto !important;
-    height: 100%;
-    width: 100%;
-    max-height: 250px;
-    max-width: 150px;
+  margin: 0 auto !important;
+  height: 100%;
+  width: 100%;
+  max-height: 200px;
+  max-width: 150px;
 }
 
+#domain {
+  font-size: 3em !important;
+  color: $purple !important;
+}
 
+#score-heading {
+  margin-bottom: .1em!important;
+}
 
 /* Nav */
 nav {

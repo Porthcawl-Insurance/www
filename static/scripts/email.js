@@ -77,15 +77,15 @@ $(function() {
   // Email Submit Btn --------------------------------------//
   // -------------------------------------------------------//
 
-  $('#email-submit').click(function(e) {
-    e.preventDefault();
-
-    var fieldValue = $(emailInput).val();
-
-    // $(this).validate();
-
-    sendMessage(fieldValue);
-  });
+  // $('#email-submit').click(function(e) {
+  //   e.preventDefault();
+  //
+  //   var fieldValue = $(emailInput).val();
+  //
+  //   // $(this).validate();
+  //
+  //   sendMessage(fieldValue);
+  // });
 
   // -------------------------------------------------------//
   // Email Resend Btn --------------------------------------//
