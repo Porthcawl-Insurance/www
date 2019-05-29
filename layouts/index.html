@@ -4,11 +4,7 @@
 
 {{ define "main" }}
 <section id='home-content'>
-
-  <!-- ---------------------------------------------- -->
   <!-- ---------------------------- HERO SECTION ---- -->
-  <!-- ---------------------------------------------- -->
-
   <div id='home-hero' class='hero container-fluid py-5'>
     <div class='row py-4'>
       <div class='col text-light text-center px-3'>
@@ -17,22 +13,30 @@
       </div>
     </div>
     <!--end of .row-->
-    <div class='row'>
-      <div class='col col-md-8 offset-md-2 text-center py-4'>
 
-        <form action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post'>
+    <div class='d-flex flex-column justify-content-center'>
+
+      <!-- DOWNTIME RISK FORM -->
+      <div class='text-center downtime-form small dark p-4'>
+        <form action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
           <input type='hidden' name='returl' value='https://cyberfortress-www-sandbox.appspot.com/thanks/'>
           <div class='form-group'>
             <label for='user-email'>Enter your business email below for a downtime risk assessment</label>
             <input id='user-email' class='form-control' type='email' name='email' placeholder='your.name@yourbusiness.com'>
-          </div>
-          <div class='form-group form-check'>
-            <input id='notifications_option' class='form-check-input' type='checkbox' name='notifications_option' checked>
-            <label class='form-check-label' for='notifications_option'>Yes, I'd like to recieve future CyberFortress updates.</label>
+            <div class='invalid-feedback'>
+              Sorry, this isn't a valid email address.
             </div>
+          </div>
+          <div class='custom-control custom-checkbox'>
+            <input id='notifications_option' class='custom-control-input' type='checkbox' name='notifications_option' checked>
+            <label class='custom-control-label smaller' for='notifications_option'>Yes, I'd like to recieve future CyberFortress updates.</label>
+          </div>
           <button class='btn btn-primary' type='submit'>Get Downtime Risk</button>
         </form>
+      </div>
+      <!-- end of DOWNTIME RISK FORM -->
 
+      <div>
         <a id='why-link' href='#' class='icon-l' data-toggle="modal" data-target="#whylink-modal"><i class="fas fa-chevron-right"></i> Why do you need a business email?</a>
         <a id='what-link' href='#' class='icon-l' data-toggle="modal" data-target="#whatlink-modal"><i class="fas fa-chevron-right"></i> What is downtime risk?</a>
       </div>
@@ -42,10 +46,7 @@
   </div>
   <!--end of .container-->
 
-  <!-- ---------------------------------------------- -->
   <!-- ---------------------------- FEATURED -------- -->
-  <!-- ---------------------------------------------- -->
-
   <div id='featured-on' class='container-fluid py-5'>
     <div class='container'>
       <p>Featured on</p>
@@ -82,10 +83,7 @@
   </div>
   <!--end of .container-fluid-->
 
-  <!-- ---------------------------------------------- -->
   <!-- ---------------------------- WHY B.I. -------- -->
-  <!-- ---------------------------------------------- -->
-
   <div id='why' class='container-fluid background-gradient p-3'>
     <div class='container'>
 
@@ -133,12 +131,10 @@
     <!-- end of .container-->
   </div>
   <!--end of .container-fluid-->
+
 </section>
 
-<!-- ------------------------------------------------ -->
 <!-- ---------------------------- MODALS ------------ -->
-<!-- ------------------------------------------------ -->
-
 <div id='invalid' class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">

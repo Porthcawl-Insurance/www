@@ -391,7 +391,46 @@ input {
   }
 }
 
+/****************************** Forms */
 
+.downtime-form {
+
+  label {
+    color: $lightest;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+
+    &.smaller {
+      font-size: 1.2em;
+    }
+  }
+
+  input[type='email'] {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .invalid-feedback {
+    font-size: 1.1em;
+  }
+
+  &.dark {
+    background-color: $dark-gray;
+    .invalid-feedback {
+      color: rgba($lightest, .75);
+      i{
+        color: $r1;
+        padding-right: .2em;
+      }
+    }
+  }
+
+  &.small {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
 
 /************************* Containers */
 
@@ -415,6 +454,7 @@ input {
 .block {
   text-align: center !important;
   padding: 2.5em !important;
+  max-width: 800px;
 
   p, h1, h2 {
     text-align: center !important;
@@ -443,6 +483,29 @@ input {
     border-top: solid 1px $mid-gray !important;
     margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important;
+  }
+
+  .email-examples {
+
+    p {
+      padding: 0;
+
+      &.good {
+        font-size: 1.25em !important;
+        font-weight: bold;
+        padding-bottom: .75em;
+        i {
+          color: $r7;
+        }
+      }
+
+      &.bad {
+
+        i {
+          color: $r1;
+        }
+      }
+    }
   }
 }
 
@@ -658,6 +721,8 @@ input {
     // }
   }
 }
+
+
 
 .factor {
   width: 100%;
@@ -877,6 +942,8 @@ input {
 
 
 }
+
+
 
 .error {
   display: none;

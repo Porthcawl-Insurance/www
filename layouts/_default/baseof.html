@@ -62,54 +62,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src='/scripts/riskscore.js'></script>
   <script src='/scripts/downtimepage.js'></script>
   <script>
-    // {
-    //   {block "scripts".
-    //   }
-    // }
-    //
-    // {
-    //   {
-    //     end
-    //   }
-    // }
+
+    {{ block "scripts" . }}
+    {{ end }}
 
     // Form validation - with Bootstrap 4//
     (function() {
+      'use strict';
+
       window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
         var forms = document.getElementsByClassName('needs-validation');
 
+        // Loop over them and prevent submission
         var validation = Array.prototype.filter.call(forms, function(form) {
           form.addEventListener('submit', function(event) {
+            // Get Email from input
+            var email = document.getElementById('user-email').value;
+
             if (form.checkValidity() === false) {
               event.preventDefault();
               event.stopPropagation();
             }
-
+            if (email.includes('gmail')) {
+              event.preventDefault();
+              event.stopPropagation();
+              window.location.replace("/invalid/");
+            }
             form.classList.add('was-validated');
-
           }, false);
         });
       }, false);
     })();
 
-    // Intercom Chat //
-    $('.intercom-launcher-open-icon').css('backgroundColor', 'black');
-
-    // Team Photos //
-    $('.figure-img').click(function() {
-      // Go to LinkedIn Page on click
-      var link = $(this).siblings('.figure-caption').find('a').attr('href');
-      window.location.href = link;
-      // window.open(link);
-    });
-
-    $('.figure-img').hover(function() {
-      var link = $(this).siblings('.figure-caption').find('a');
-      $(link).css('fontWeight', 'bold');
-    }, function() {
-      var link = $(this).siblings('.figure-caption').find('a');
-      $(link).css('fontWeight', '400');
-    });
   </script>
 
 </body>
