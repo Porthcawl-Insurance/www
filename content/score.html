@@ -9,12 +9,12 @@ draft: true
 <!-- TOP MAIN SECTION -->
 <div id='jumbotron-score' class='jumbotron'>
   <div class='container'>
-    <div class='d-flex flex-row justify-content-between algin-items-end'>
+    <div class='d-flex flex-column flex-md-row justify-content-between algin-items-end'>
       <div>
         <h2 class='jumbotron-heading bold' id='domain'>-</h2>
       </div>
       <div>
-        <h1 id='score-heading'>Downtime Risk Assessment</h1>
+        <h1 id='score-heading' class=''>Downtime Risk Assessment</h1>
         <p id='score-message' class='text-right'></p>
       </div>
     </div>
@@ -29,7 +29,7 @@ draft: true
         </div>
       </div>
 
-      <div id='factors-row' class='d-flex flex-row justify-content-center'>
+      <div id='factors-row' class='d-flex flex-column flex-md-row justify-content-center'>
         <div class='p-3'>
           <div id='top-factors' class='factor top'>
             <p class='header'>Top contributing factors</p>
@@ -46,22 +46,19 @@ draft: true
     </div>
     <!--end of .flex-row-->
     <hr class='dark' />
-    <a id='full-summary' class='btn center text-center icon-b'>Full Summary<br /><i class="fal fa-chevron-down"></i></a>
+    <a id='full-summary' class='btn center text-center icon-b'>Full Summary<br /><i class="fas fa-chevron-circle-down"></i></a>
   </div>
   <!--end of .container-->
 </div>
 <!-- end of .jumbotron -->
 
-<div class='container-fluid p-5 background-gradient'>
+
+<div id='summary-div' class='container-fluid p-5 background-gradient'>
   <div class='container'>
     <h3 class='text-center p-3'>Your downtime risk explained...</h3>
-
-    <p class='text-center larger t-light'>Here's a more indepth look at the factors contributing to your downtime risk assessment.</p>
-    <hr />
     <div class='d-flex flex-row flex-nowrap justify-content-center'>
-
       <div id='factor-info' class='d-flex flex-column flex-nowrap'>
-
+        <!-- populated from js / popFactorSummary() -->
       </div>
     </div>
     <!--end of .flex-row-->

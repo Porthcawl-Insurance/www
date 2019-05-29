@@ -3,8 +3,8 @@
 $(function() {
 
   var data = {
-    // id: 'f58f0b44-7b20-5fed-b0aa-dc353b89c630', //CyberFortress
-    id: 'b1049048-ef36-5d15-85e3-33f1c6dd3518' //Codeup
+    id: 'f58f0b44-7b20-5fed-b0aa-dc353b89c630', //CyberFortress
+    // id: 'b1049048-ef36-5d15-85e3-33f1c6dd3518' //Codeup
   }
 
   // Post for score information
@@ -104,7 +104,7 @@ $(function() {
 
       $('#top-factors').append(
         '<div class="d-flex flex-row flex-nowrap align-items-start">' +
-        '<div class="icon-div">' +
+        '<div class="icon-div pt-2">' +
         '<p class="icon ' + color +' text-center">' +
         '<span class="fa-stack">' +
         '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
@@ -131,7 +131,7 @@ $(function() {
 
       $('#bottom-factors').append(
         '<div class="d-flex flex-row flex-nowrap align-items-start">' +
-        '<div class="icon-div">' +
+        '<div class="icon-div pt-2">' +
         '<p class="icon ' + color +' text-center">' +
         '<span class="fa-stack">' +
         '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
@@ -202,8 +202,13 @@ $(function() {
       if (name != null) {
         $('#factor-info').append(
           "<div class='factor-sum d-flex flex-row justify-content-start'>" +
-          "<div class='icon-div " + color + " align-items-center'>" +
-          "<p class='icon text-center'><i class='" + icon + "'></i></p>" +
+          "<div class='icon-div'>" +
+          "<p class='icon " + color + " text-center'>" +
+          "<span class='fa-stack'>" +
+          "<i class='fa fa-circle fa-stack-2x icon-background'></i>" +
+          "<i class='" + icon + " fa-stack-1x'></i>" +
+          "</span></p>" +
+          // "<p class='c-tag'>" + tag + "</p>" +
           "</div>" +
           "<div class='text-div d-flex flex-column'>" +
           "<div class='name-div'>" +
@@ -293,8 +298,12 @@ $(function() {
         $('#cat-info').append(
           "<div class='cat long d-flex flex-row justify-content-between'>" +
           "<div class='icon-div'>" +
-          "<p class='icon " + color + "'><i class='" + icon + "'></i></p>" +
-          "<p class='c-tag'>" + tag + "</p>" +
+          "<p class='icon " + color + " text-center'>" +
+          "<span class='fa-stack'>" +
+          "<i class='fa fa-circle fa-stack-2x icon-background'></i>" +
+          "<i class='" + icon + " fa-stack-1x'></i>" +
+          "</span></p>" +
+          // "<p class='c-tag'>" + tag + "</p>" +
           "</div>" +
           "<div class='text-div'>" +
           "<p class='c-title'>" + name + "</p>" +
@@ -307,12 +316,6 @@ $(function() {
 
     }); //end of .each()
 
-    if (widgets.length != 0) {
-      $('#cat-list').append(
-        '<p class="">Widgets</p>' +
-        '<p>'
-      );
-    }
   }
 
   // return icon class based on tag
@@ -320,7 +323,7 @@ $(function() {
     var icon;
     switch (tag) {
       case 'widgets':
-        icon = 'fal fa-puzzle-piece';
+        icon = 'fal fa-tachometer-alt-slow';
         break;
       case 'framework':
         icon = 'fal fa-chart-network';
