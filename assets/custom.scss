@@ -2,9 +2,9 @@ $font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Col
 
 /* Grays */
 $very-dark: #031927;
-$dark-gray: #2D3047;
+$dark-gray: #243142;
 $mid-gray: #8693AB;
-$light-gray: #BDD4E7;
+$light-gray: #CEDBE5;
 $light: #F0F8FF;
 $lightest: #F3F3FF;
 
@@ -274,6 +274,7 @@ input {
 
   &.hero {
     padding: 4em 1em;
+    height: 40vh;
     h1 {
       text-align: center;
     }
@@ -286,6 +287,9 @@ input {
       text-align: center;
       // color: $orange !important;
       margin-top: 1.2em !important;
+    }
+    &.background-img {
+      background-position: center;
     }
   }
 
@@ -1236,7 +1240,15 @@ table.table {
   }
 
   p {
-
+    text-align: center !important;
+    &.text-center{
+      @include md {
+        text-align: center !important;
+      }
+    }
+    @include md {
+      text-align: left !important;
+    }
     @include lg {
       font-size: 1em !important;
 
@@ -1345,7 +1357,7 @@ table.table {
 }
 
 
-
+/* Collapse Nav Sooner*/
 
 
 /* Nav */
