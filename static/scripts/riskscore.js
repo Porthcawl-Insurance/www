@@ -7,6 +7,8 @@ $(function() {
     // id: 'b1049048-ef36-5d15-85e3-33f1c6dd3518' //Codeup
   }
 
+  var results;
+
   // Post for score information
   $.ajax({
     method: "POST",
@@ -15,8 +17,8 @@ $(function() {
     data: JSON.stringify(data),
   }).done(function(response) {
     console.log(response);
-    response = response;
-    populate(response);
+    results = response;
+    populate(results);
   }).fail(function(e) {
     console.log(e)
   });
@@ -33,7 +35,8 @@ $(function() {
     $('#score').html('<span>' + score + '</span> / 10 ');
     $('#score-message').text('as of ' + date.toLocaleDateString());
 
-    fillRook(score);
+    // fillRook(score);
+    d3FillRook(score);
     topFactors(conts);
     categorizeFactors(conts);
     popFactorSummary(conts);
@@ -51,38 +54,86 @@ $(function() {
 
   }
 
+  // function d3FillRook(score){
+  //   var rook = $('#rook-svg');
+  //
+  //   var colors = d3.scaleLinear()
+  //                   .domain([0, d3.max(score)])
+  //                   .range(['#CC444B', '#D8774F', '#DE9151', '#E9B15D', '#FFF275', '#D3E468', '#7AC74F']))
+  //
+  //   rook.transition()
+  //     .css('fill', function(d) {
+  //       return colors(d);
+  //     })
+  //
+  // }
+
   // color rook based on score
   function fillRook(score) {
+    var colors = ['#CC444B',
+                  '#D8774F',
+                  '#DE9151',
+                  '#E9B15D',
+                  '#FFF275',
+                  '#D3E468',
+                  '#7AC74F'];
     var color;
     switch (true) {
       case (score <= 1.42):
         color = '#cc444b';
         $('.r1').css('fill', color);
-        // $('.r1').css({fill: color, transition: "2.0s"});
+        $('.r1').css({fill: color, transition: "2.0s"});
         break;
       case (score <= 2.83):
         color = '#d8774f';
         $('.r1, .r2').css('fill', color);
+        $('.r1').css({fill: color, transition: "2.0s"});
+        $('.r2').css({fill: color, transition: "2.0s"});
         break;
       case (score <= 4.28):
         color = '#de9151';
         $('.r1, .r2, .r3').css('fill', color);
+        $('.r1').css({fill: color, transition: "2.0s"});
+        $('.r2').css({fill: color, transition: "2.0s"});
+        $('.r3').css({fill: color, transition: "2.0s"});
         break;
       case (score <= 5.71):
         color = '#e9b15d';
         $('.r1, .r2, .r3, .r4').css('fill', color);
+        $('.r1').css({fill: color, transition: "2.0s"});
+        $('.r2').css({fill: color, transition: "2.0s"});
+        $('.r3').css({fill: color, transition: "2.0s"});
+        $('.r4').css({fill: color, transition: "2.0s"});
         break;
       case (score <= 7.14):
         color = '#fff275';
         $('.r1, .r2, .r3, .r4, .r5').css('fill', color);
+        $('.r1').css({fill: color, transition: "2.0s"});
+        $('.r2').css({fill: color, transition: "2.0s"});
+        $('.r3').css({fill: color, transition: "2.0s"});
+        $('.r4').css({fill: color, transition: "2.0s"});
+        $('.r5').css({fill: color, transition: "2.0s"});
         break;
       case (score <= 8.57):
         color = '#d3e468';
         $('.r1, .r2, .r3, .r4, .r5, .r6').css('fill', color);
+        $('.r1').css({fill: color, transition: "2.0s"});
+        $('.r2').css({fill: color, transition: "2.0s"});
+        $('.r3').css({fill: color, transition: "2.0s"});
+        $('.r4').css({fill: color, transition: "2.0s"});
+        $('.r5').css({fill: color, transition: "2.0s"});
+        $('.r6').css({fill: color, transition: "2.0s"});
         break;
       case (score <= 10):
         color = '#7ac74f';
         $('.r1, .r2, .r3, .r4, .r5, .r6, .r7').css('fill', color);
+        $('.r1').css({fill: color, transition: "2.0s"});
+        $('.r2').css({fill: color, transition: "2.0s"});
+        $('.r3').css({fill: color, transition: "2.0s"});
+        $('.r4').css({fill: color, transition: "2.0s"});
+        $('.r5').css({fill: color, transition: "2.0s"});
+        $('.r6').css({fill: color, transition: "2.0s"});
+        $('.r7').css({fill: color, transition: "2.0s"});
         break;
     }
   }

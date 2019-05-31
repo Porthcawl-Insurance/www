@@ -5,7 +5,7 @@
 {{ define "main" }}
 <section id='home-content'>
   <!-- ---------------------------- HERO SECTION ---- -->
-  <div id='home-hero' class='hero container-fluid py-5'>
+  <div id='home-hero' class='container-fluid p-5'>
     <div class='row py-4'>
       <div class='col text-light text-center px-3'>
         <h1 class='t-shadow mt-4'>Digital means vulnerable.</h1>
@@ -14,7 +14,7 @@
     </div>
     <!--end of .row-->
 
-    <div class='d-flex flex-column justify-content-center'>
+    <div class='d-flex flex-column justify-content-center mt-4'>
 
       <!-- DOWNTIME RISK FORM -->
       <div class='text-center downtime-form small dark p-4'>
@@ -36,9 +36,9 @@
       </div>
       <!-- end of DOWNTIME RISK FORM -->
 
-      <div>
-        <a id='why-link' href='#' class='icon-l' data-toggle="modal" data-target="#whylink-modal"><i class="fas fa-chevron-right"></i> Why do you need a business email?</a>
-        <a id='what-link' href='#' class='icon-l' data-toggle="modal" data-target="#whatlink-modal"><i class="fas fa-chevron-right"></i> What is downtime risk?</a>
+      <div class='mt-5'>
+        <a id='why-link' href='#' class='icon-l text-center' data-toggle="modal" data-target="#whylink-modal"><i class="fas fa-chevron-right"></i> Why do you need a business email?</a>
+        <a id='what-link' href='#' class='icon-l text-center' data-toggle="modal" data-target="#whatlink-modal"><i class="fas fa-chevron-right"></i> What is downtime risk?</a>
       </div>
 
     </div>
@@ -90,32 +90,33 @@
       <h3 class='pt-5 pb-4 text-center t-light'>Why business interruption insurance?</h3>
 
       <!-- row 1 -->
-      <div class='d-flex flex-row flex-nowrap align-items-start p-3'>
+      <div class='d-flex flex-row flex-wrap flex-lg-nowrap align-items-start p-3'>
+
         <div class=''>
-          <img class='img-fluid' src='/images/revenue.png' />
-        </div>
-        <div class='w-50'>
-          <p>
+          <p class='t-light'>
             <span class='bold larger pb-1'>It's pretty simple.</span><br />
             Small businesses are particularly vulnerable to
             cyber events as a result of two phenomena.
           </p>
-          <ul>
-            <li>
+          <ul class='t-light'>
+            <li class='t-light'>
               First, most small businesses, as a result of their size, don’t keep
               large amounts of cash on hand. They can’t afford to.
             </li>
-            <li>
+            <li class='t-light'>
               Second, e-commerce is an increasingly important source of revenue for
               small businesses.
             </li>
           </ul>
-          <p class=''>
+          <p class='t-light'>
             This is a dangerous combination. If a small business suffers a cyber
             event that prevents them from digitally collecting revenue, they are
             faced with the prospect of being unable to make payroll or pay their
             most critical bills. Their very survival is at stake.
           </p>
+        </div>
+        <div class='pt-4'>
+          <img class='img-fluid' src='/images/revenue.png' />
         </div>
       </div>
       <div class='d-flex flex-column p-3'>

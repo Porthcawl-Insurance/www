@@ -6,7 +6,7 @@ $(function() {
 
   var categories = [{
       name: 'Widgets',
-      icon: 'fal fa-puzzle-piece',
+      icon: 'fal fa-tachometer-alt-slow',
       desc: 'Simple application extensions',
       modId: 'widgets'
     },
@@ -80,7 +80,7 @@ $(function() {
         "<p class='icon'><i class='" + icon + "'></i></p>" +
         "<p class='c-title'>" + name + "</p>" +
         "<p class='desc'>" + desc + "</p>" +
-        "<a id='" + modId + "' tabindex='0' class='btn tip' role='button' data-toggle='modal' data-target='#cat-modal'><i class='fas fa-question-circle'></i></a>" +
+        // "<a id='" + modId + "' tabindex='0' class='btn tip' role='button' data-toggle='modal' data-target='#cat-modal'><i class='fas fa-question-circle'></i></a>" +
         "</div>"
       );
     });
