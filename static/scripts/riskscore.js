@@ -36,7 +36,7 @@ $(function() {
     $('#score-message').text('as of ' + date.toLocaleDateString());
 
     // fillRook(score);
-    d3FillRook(score);
+    // d3FillRook(score);
     topFactors(conts);
     categorizeFactors(conts);
     popFactorSummary(conts);
