@@ -54,19 +54,19 @@ $(function() {
 
   }
 
-  function d3FillRook(score){
-    var rook = $('#rook-svg');
-
-    var colors = d3.scaleLinear()
-                    .domain([0, d3.max(score)])
-                    .range(['#CC444B', '#D8774F', '#DE9151', '#E9B15D', '#FFF275', '#D3E468', '#7AC74F']))
-
-    rook.transition()
-      .css('fill', function(d) {
-        return colors(d);
-      })
-
-  }
+  // function d3FillRook(score){
+  //   var rook = $('#rook-svg');
+  //
+  //   var colors = d3.scaleLinear()
+  //                   .domain([0, d3.max(score)])
+  //                   .range(['#CC444B', '#D8774F', '#DE9151', '#E9B15D', '#FFF275', '#D3E468', '#7AC74F']))
+  //
+  //   rook.transition()
+  //     .css('fill', function(d) {
+  //       return colors(d);
+  //     })
+  //
+  // }
 
   // color rook based on score
   function fillRook(score) {
