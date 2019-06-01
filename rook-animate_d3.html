@@ -1,84 +1,6 @@
 <!DOCTYPE html>
 <html lang = 'en'>
 <head>
-<style type = 'text/css'>
-
-@keyframes rs-red {
-  0%		{ fill: currentColor; }
-	100%  { fill: #CC444B; }
-}
-
-@keyframes rs-orange {
-  0%		{ fill: #D8774F; }
-	100%	{ fill: #DE9151; }
-}
-
-@keyframes rs-yellow {
-  0%		{ fill: #E9B15D; }
-	100%	{ fill: #FFF275; }
-}
-
-@keyframes rs-green {
-  0%		{ fill: #D3E468; }
-	100%  { fill: #7AC74F; }
-}
-
-svg#rook-svg {
-  color: #000;
-  fill: currentColor;
-}
-
-svg .r7 {
-  animation-duration: 2s;
-	animation-timing-function: ease;
-  animation-delay: 0.7s;
-  animation-fill-mode: forwards;
-}
-
-svg .r6 {
-  animation-duration: 2s;
-	animation-timing-function: ease;
-  animation-delay: 0.6s;
-  animation-fill-mode: forwards;
-}
-
-svg .r5 {
-  animation-duration: 2s;
-	animation-timing-function: ease;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-svg .r4 {
-  animation-duration: 2s;
-	animation-timing-function: ease;
-  animation-delay: 0.4s;
-  animation-fill-mode: forwards;
-}
-
-svg .r3 {
-  animation-duration: 2s;
-	animation-timing-function: ease;
-  animation-delay: 0.3s;
-  animation-fill-mode: forwards;
-}
-
-svg .r2 {
-  animation-duration: 2s;
-	animation-timing-function: ease;
-  animation-delay: 0.2s;
-  animation-fill-mode: forwards;
-}
-
-svg .r1 {
-  animation-duration: 2s;
-	animation-timing-function: ease;
-  animation-delay: 0.1s;
-  animation-fill-mode: forwards;
-}
-
-</style>
-</head>
 
 <body>
 <div style = "width: 200px;">
@@ -134,41 +56,34 @@ svg .r1 {
 </svg>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
 
 <script>
-animate_rook = function (risk_score) {
-	risk_score_transform = risk_score / 10 * 7
-	risk_score_rounded = Math.round (risk_score_transform)
+(function () {
+	var score = 8.8
 
-	var rs_color;
-	switch (risk_score_rounded) {
-			case 1:	animation = "rs-red"; break;
-			case 2:	animation = "rs-red"; break;
-			case 3:	animation = "rs-orange"; break;
-			case 4:	animation = "rs-yellow"; break;
-			case 5:	animation = "rs-green"; break;
-			case 6:	animation = "rs-green"; break;
-			case 7:	animation = "rs-green"; break;
-			default: 	animation = "rs-green"; break;
-	}
+	var getScoreColor = d3.scaleQuantize ()
+		.domain ([0, 6])
+		.range (['#CC444B', '#D8774F', '#DE9151', '#E9B15D', '#FFF275', '#D3E468', '#7AC74F']);
 
-	for (i = 1; i <= risk_score_rounded; i++) {
-			$('.r'+i).css ("animation-name" , animation);
-	}
-}
+	var getScoreRow = d3.scaleLinear ()
+		.domain ([0, 10])
+		.range([0, 6]);
 
-$(function () {
-  // Animate the rook given a risk score between 0.0 and 10.0
-	animate_rook (8.8)
-
-});
+	// Note that the group or <g> elements in the rook's svg are ordered backwards
+	d3.select ("#rook-svg").selectAll (".row")
+		.transition ()
+		.delay (function (d, i) { return i * 100})
+		.duration (1000)
+		.style ('fill', function (d, i) {
+			if (i < getScoreRow (score)) {
+				return getScoreColor (getScoreRow (score));
+			}
+		});
+})();
 
 </script>
 
 </body>
 </html>
-
-
-
 
