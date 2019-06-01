@@ -5,28 +5,26 @@
 
 @keyframes rs-red {
   0%		{ fill: currentColor; }
-	100%  { fill: #F00; }
+	100%  { fill: #CC444B; }
 }
 
 @keyframes rs-orange {
-  0%		{ fill: currentColor; }
-	100%	{ fill: #F80; }
+  0%		{ fill: #D8774F; }
+	100%	{ fill: #DE9151; }
 }
 
 @keyframes rs-yellow {
-  0%		{ fill: currentColor; }
-	100%	{ fill: #FF0; }
+  0%		{ fill: #E9B15D; }
+	100%	{ fill: #FFF275; }
 }
 
 @keyframes rs-green {
-	0%  { fill: #F00; }
-	25%  { fill: #F80; }
-	50%  { fill: #FF0; }
-	100%  { fill: #0F0; }
+  0%		{ fill: #D3E468; }
+	100%  { fill: #7AC74F; }
 }
 
 svg#rook-svg {
-  color: #666;
+  color: #000;
   fill: currentColor;
 }
 
@@ -141,7 +139,7 @@ animate_rook = function (risk_score) {
 
 $(function () {
   // Animate the rook given a risk score between 0.0 and 10.0
-	animate_rook (9)
+	animate_rook (10)
 });
 
 </script>
