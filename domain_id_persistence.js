@@ -26,7 +26,7 @@ If still unavailable, present the user with an error.
 _domain_id = getURLParameter ('id')
 if (_domain_id) {
   // Call API function to populate RS data with id = _domain_id
-  localStorage.setItem ('_domain_id', nsId)
+  localStorage.setItem ('_domain_id', _domain_id)
 } else {
   var _domain_id = localStorage.getItem ('_domain_id')
   if (_domain_id) {
