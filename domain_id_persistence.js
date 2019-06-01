@@ -9,8 +9,7 @@ getURLParameter = function (sParam) {
     for (var i = 0; i < sURLVariables.length; i++) {
         var sParameterName = sURLVariables[i].split ('=');
         if (sParameterName[0] == sParam) {
-            console.log (sParameterName[1]);
-            // return sParameterName[1];
+					return sParameterName[1];
         }
     }
 };
