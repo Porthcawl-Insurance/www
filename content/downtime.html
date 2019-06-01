@@ -7,22 +7,23 @@ slug: "/downtime"
 
 {{< hero >}}
 <h1>Downtime Risk</h1>
-<h2 class='pb-4'>How vulnerable are you to a cyber attack?</h2>
+<h2 class='pb-4'>What's <span class='bold'>downtime</span> and how is it assessed?</h2>
 <!-- <button id='getscore-btn' class='btn btn-primary bigger center' role='button' data-toggle='modal' data-target='#getscore-modal'>Find out now</button> -->
 
 {{</ hero >}}
 
 <!-- how do we score -->
 <div class='container-fluid p-3 background-light'>
-  <h3 class='text-center m-3 t-dark'>How does CyberFortress assess downtime?</h3>
+  <!-- <h3 class='text-center m-3 t-dark'>How does CyberFortress assess downtime?</h3> -->
   <div class='container d-flex flex-row flex-wrap p-3'>
     <div class='w-50'>
-      <p class=''>
-        <span class='bold'>Downtime</span> is our term for periods when you are
+      <p class='py-3'>
+        <span class='bold larger'>Downtime</span> is our term for periods when you are
         unable to collect revenue from digital or online sources like your website
         or billing software.
-        </p>
-      <p class=''>
+      </p>
+      <h3 class='t-dark'>How does CyberFortress assess downtime?</h3>
+      <p class='py-3'>
         We're building a machine that continuously collects the evidence of technology
         choices ecommerce businesses make - thousands of features per domain - and
         makes sense of this noise via machine learning. We believe that it is these behavioral
@@ -39,7 +40,7 @@ slug: "/downtime"
 <!-- end of .container-fluid -->
 
 <!-- what effects downtime -->
-<div class='container-fluid background-dark p-3'>
+<div class='container-fluid background-dark px-3 py-5'>
   <h2 class='text-center m-3'>What effects downtime risk?</h2>
 
   <div id='what-effects' class='container d-flex flex-row flex-wrap p-3 justify-content-center'>
@@ -50,6 +51,13 @@ slug: "/downtime"
 </div>
 <!--end of .container-fluid-->
 
-<div id='getScore' class='container-fluid p-3 background-gradient'>
-  {{< riskscore-form >}}
+<div id='get-score' class='container-fluid p-3 background-gradient'>
+  <div class='container d-flex flex-row align-items-center justify-content-center'>
+    <div class='p-3'>
+      <img class='img-fluid' src='/images/Knight.png' />
+    </div>
+    <div class='p-3'>
+      {{< riskscore-form >}}
+    </div>
+  </div>
 </div>

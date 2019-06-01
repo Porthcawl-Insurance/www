@@ -6,22 +6,23 @@ slug: "/invalid"
 ---
 
 {{< block >}}
-<div class='d-flex flex-column'>
 
-  <div class=''>
-    <h1><span class='bold'>Whoops!</span> <Br /> Sorry, that's not a business email.</h1>
-    <p>
-      In order to determine your business’s downtime risk we need your business email
-      so that our risk model can run its analysis on the business domain as opposed to <span class='bold'>gmail.com</span> or <span class='bold'>yahoo.com</span>.
-    </p>
-  </div>
+
+<div class='header'>
+  <h1><span>Whoops!</span><br />Sorry, that's not a business email.</h1>
+</div>
+<div class='body'>
+  <p>
+    In order to determine your business’s downtime risk we need your business email
+    so that our risk model can run its analysis on the business domain as opposed to <span class='bold'>gmail.com</span> or <span class='bold'>yahoo.com</span>.
+  </p>
   <div class='email-examples p-3 mb-3'>
     <p class='good'><i class="fas fa-check-circle"></i> your.name@yourbusiness.com</p>
     <p class='bad'><i class="fas fa-times-circle"></i> your.name@gmail.com</p>
     <p class='bad'><i class="fas fa-times-circle"></i> your.name@hotmail.com</p>
   </div>
   <!-- DOWNTIME RISK FORM -->
-  <div class='text-center downtime-form small dark p-4'>
+  <div class='text-center downtime-form small p-4'>
     <form action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
       <input type='hidden' name='returl' value='https://cyberfortress-www-sandbox.appspot.com/thanks/'>
       <div class='form-group'>
@@ -35,11 +36,13 @@ slug: "/invalid"
         <input id='notifications_option' class='custom-control-input' type='checkbox' name='notifications_option' checked>
         <label class='custom-control-label smaller' for='notifications_option'>Yes, I'd like to recieve future CyberFortress updates.</label>
       </div>
-      <button class='btn btn-primary' type='submit'>Get Downtime Risk</button>
+      <button class='btn btn-primary' type='submit'>Get Assessment</button>
     </form>
   </div>
   <!-- end of DOWNTIME RISK FORM -->
-
 </div>
+<!--end of .body-->
+
+
 
 {{</ block >}}

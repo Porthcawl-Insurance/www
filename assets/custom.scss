@@ -2,7 +2,8 @@ $font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Col
 
 /* Grays */
 $very-dark: #031927;
-$dark-gray: #243142;
+// $dark-gray: #243142; //bluer hue
+$dark-gray: #2D3047; //purpler hue
 $mid-gray: #8693AB;
 $light-gray: #CEDBE5;
 $light: #F0F8FF;
@@ -147,14 +148,13 @@ body {
   @include linear-gradient($mid-gray, $light-gray);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   color: #ffffff !important;
-  font-weight: 100 !important;
+  font-weight: 300 !important;
   font-size: 1.4rem !important;
 
   @include sm {
     font-size: 1.8rem !important;
-
   }
 
   @include md {
@@ -185,15 +185,11 @@ hr {
 }
 
 p, li {
-  color: black;
+  color: $very-dark;
   font-size: 1em !important;
 
   @include sm {
     text-align: left;
-  }
-
-  &.text-muted {
-    color: $light !important;
   }
 
   &.center {
@@ -218,7 +214,7 @@ a {
       margin: 10px auto;
   }
 
-  &.center{
+  &.center {
     text-align: center !important;
   }
 
@@ -259,18 +255,22 @@ img {
   }
 }
 
-strong {
-  color: $light;
-}
-
 input {
+  border-radius: .1rem .1rem 0 0  !important;
   &.minimal {
-    background-color: rgba($lightest,.25);
+    background-color: rgba($dark-purple,.25);
     border: none;
+    border-bottom: 2px solid $lightest;
+    &::placeholder {
+      // font-weight: 200;
+      color: $lightest;
+    }
   }
 }
 
 .container-fluid {
+
+  padding: 4rem !important;
 
   &.hero {
     padding: 4em 1em;
@@ -298,6 +298,8 @@ input {
   }
 }
 
+/********************************** Fonts */
+
 .bold {
   font-weight: bold !important;
 }
@@ -319,11 +321,11 @@ input {
 }
 
 .t-shadow {
-    text-shadow: 1px 2px 2px rgba($very-dark, .2);
+    text-shadow: 0px 2px 2px rgba($dark-purple, .2);
 }
 
-.t-left {
-  text-align: left !important;
+.t-shadow-dark {
+    text-shadow: 0px 2px 2px rgba($dark-purple, .5);
 }
 
 /************************** Backgrounds */
@@ -341,7 +343,12 @@ input {
 }
 
 .background-gradient {
-  @include linear-gradient(rgba($dark-purple, .8), $teal);
+  &.grays {
+    @include linear-gradient($dark-gray, $mid-gray);
+  }
+  &.colorful {
+    @include linear-gradient(rgba($dark-purple, .8), $teal);
+  }
 }
 
 .background-img {
@@ -353,18 +360,19 @@ input {
 /***************************** Buttons */
 
 .btn {
+  border-radius: .1rem !important;
+  font-weight: 300 !important;
 
   &.btn-primary {
     background-color: $orange !important;
-    color: $dark-purple !important;
-    border: $orange 1px solid !important;
+    color: $very-dark !important;
+    border: rgba($r2, .5) 1px solid !important;
+    box-shadow: 0px 3px 3px rgba($very-dark, .25);
   }
 
   &.bigger {
     padding: 10px 24px 10px 24px;
-    @include md {
-      font-size: larger;
-    }
+    font-size: 1.5em !important;
   }
 
   &.center {
@@ -400,12 +408,16 @@ input {
 .downtime-form {
 
   label {
-    color: $lightest;
     font-size: 1.4em;
     margin-bottom: 1em;
 
     &.smaller {
       font-size: 1.2em;
+      font-weight: 300;
+    }
+
+    &.form-check-label {
+      color: $lightest;
     }
   }
 
@@ -418,16 +430,6 @@ input {
     font-size: 1.1em;
   }
 
-  &.dark {
-    background-color: $dark-gray;
-    .invalid-feedback {
-      color: rgba($lightest, .75);
-      i{
-        color: $r1;
-        padding-right: .2em;
-      }
-    }
-  }
 
   &.small {
     width: 100%;
@@ -442,38 +444,27 @@ input {
   border-radius: 0 !important;
   margin-bottom: 0 !important;
   background-color: $lightest !important;
-  h1 {
-    font-size: 1.5em !important;
-    color: $mid-gray !important;
-  }
-  h2 {
-    font-size: 2.5em !important;
-  }
-  hr {
-
-  }
-
 }
 
+/* Thanks & Invalid Pages */
 .block {
-  text-align: center !important;
-  padding: 2.5em !important;
   max-width: 800px;
+  margin: 0 auto;
 
-  p, h1, h2 {
-    text-align: center !important;
-    color: $dark-gray !important;
-  }
+    p, h1, h2 {
+      // text-align: center !important;
+      color: $dark-gray !important;
+    }
 
   h1 {
-    font-size: 1.25em !important;
-    margin-bottom: 1.5em !important;
+    // font-size: 1.25em !important;
+    // margin-bottom: 1.5em !important;
     span {
-      font-size: 1.75em;
+      // font-size: 1.75em;
     }
   }
   h2 {
-    font-size: 1.75em !important;
+    // font-size: 1.75em !important;
   }
   p {
     max-width: 650px;
@@ -487,6 +478,37 @@ input {
     border-top: solid 1px $mid-gray !important;
     margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important;
+  }
+
+  .header, .body {
+    width: 100%;
+  }
+
+  .header {
+    padding: 2.5rem;
+    padding-bottom: 1rem;
+    h1 {
+      color: $dark-gray !important;
+      margin-bottom: 1.5em !important;
+      font-size: 1.7em !important;
+      span {
+        font-weight: bold !important;
+      }
+    }
+    img {
+      max-width: 400px;
+    }
+  }
+
+  .body {
+    padding: 2.5rem;
+    padding-top: 1rem;
+    h2 {
+      font-size: 1.5em !important;
+    }
+    p {
+      text-align: center;
+    }
   }
 
   .email-examples {
@@ -514,16 +536,10 @@ input {
 }
 
 .cat {
-  background-color: $lightest;
   padding: 1em;
   margin: 1em;
   width: 100%;
   max-width: 220px;
-  box-shadow: 0px 3px 2px rgba($very-dark, .3);
-
-  button {
-    outline: none !important;
-  }
 
   p {
     text-align: center;
@@ -559,6 +575,63 @@ input {
   .c-text {
     font-size: .9em !important;
     color: $mid-gray;
+  }
+
+  /* Used on landing page */
+  &.min {
+    max-width: 180px;
+
+    .icon {
+      color: $r7 !important;
+      text-shadow: 0px 2px 3px rgba($dark-purple, .5);
+      font-size: 2.5em !important;
+      margin: 0 auto !important;
+    }
+
+    .c-title {
+      color: $lightest !important;
+      margin-bottom: 5px !important;
+      font-size: 1.25em !important;
+      border-bottom: 1px solid rgba($lightest, .2);
+      text-shadow: 0px 2px 3px rgba($dark-purple, .5);
+      padding-bottom: 5px;
+    }
+
+    .desc {
+      color: $lightest !important;
+      margin-bottom: 5px;
+    }
+
+    .btn.tip {
+      display: block;
+      margin: 0 auto;
+      font-size: .7em !important;
+      outline-color: transparent !important;
+      outline-style: none !important;
+      i {
+        color: $teal !important;
+      }
+
+      &:hover {
+        outline-color: transparent !important;
+        outline-style: none !important;
+        i{
+          color: $orange !important;
+        }
+      }
+
+      &:focus {
+          outline-color: transparent !important;
+          outline-style: none !important;
+      }
+    }
+
+    // &:hover {
+    //   background-color: rgba($lightest, .1) !important;
+    //   .c-title {
+    //
+    //   }
+    // }
   }
 
   &.top {
@@ -669,64 +742,8 @@ input {
     }
   } /* end of .long */
 
-  &.min {
-    background-color: transparent !important;
-    box-shadow: none;
-    max-width: 180px;
 
-    .icon {
-      color: $r7 !important;
-      font-size: 2.5em !important;
-    }
-
-    .c-title {
-      color: $lightest !important;
-      margin-bottom: 5px !important;
-      font-size: 1.25em !important;
-      font-weight: bold;
-      border-bottom: 1px solid rgba($lightest, .2);
-      padding-bottom: 5px;
-    }
-
-    .desc {
-      color: rgba($lightest, .8);
-      margin-bottom: 5px;
-    }
-
-    .btn.tip {
-      display: block;
-      margin: 0 auto;
-      font-size: .7em !important;
-      outline-color: transparent !important;
-      outline-style: none !important;
-      i {
-        color: $teal !important;
-      }
-
-      &:hover {
-        outline-color: transparent !important;
-        outline-style: none !important;
-        i{
-          color: $orange !important;
-        }
-      }
-
-      &:focus {
-          outline-color: transparent !important;
-          outline-style: none !important;
-      }
-    }
-
-    // &:hover {
-    //   background-color: rgba($lightest, .1) !important;
-    //   .c-title {
-    //
-    //   }
-    // }
-  }
 }
-
-
 
 .factor {
   width: 100%;
@@ -946,8 +963,6 @@ input {
 
 
 }
-
-
 
 .error {
   display: none;
@@ -1181,35 +1196,10 @@ table.table {
 }
 
 #home-content {
-
-  h1 {
-    font-size: 1.8em !important;
-    padding: 1em;
-    padding-bottom: .2em;
-
-    @include sm {
-      font-size: 3em !important;
-    }
-  }
-
-  h2{
-    font-size: 1.2em !important;
-    @include sm {
-      font-size: 1.5em !important;
-    }
-  }
-
-  p {
-    font-size: 1em !important;
-
-    @include sm{
-      // font-size: 1.2em !important;
-    }
-  }
-
-  .container, .container-fluid {
-    z-index: 4 !important;
-  }
+  //
+  // .container, .container-fluid {
+  //   z-index: 4 !important;
+  // }
 }
 
 #home-hero {
@@ -1217,79 +1207,62 @@ table.table {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  min-height: 80vh;
+
+  h1 {
+    font-size: 4em !important;
+    font-weight: 400 !important;
+    padding: 1em;
+    padding-bottom: .2em;
+  }
+  h2 {
+    font-size: 1.2em !important;
+  }
+  p, h2 {
+    text-align: center !important;
+  }
+  p {
+    color: $lightest;
+    font-weight: 300;
+    font-size: 1.2em !important;
+  }
+
+  .downtime-form {
+    margin-top: 4rem;
+    label[for='user-email'] {
+      color: $lightest;
+      font-size: 1.75em;
+    }
+  }
 }
 
 #featured-on {
   p {
-    color: rgba($very-dark, .7);
+    color: rgba($dark-purple, .75);
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.5em !important;
+    font-size: 1.25em !important;
     margin-bottom: 0;
   }
 }
-
-#why {
-  h3, h4 {
-    text-align: center;
-  }
-
-  h4 {
-    font-size: 1.7em !important;
-
-  }
-
-  p {
-    text-align: center !important;
-    &.text-center{
-      @include md {
-        text-align: center !important;
-      }
-    }
-    @include md {
-      text-align: left !important;
-    }
-    @include lg {
-      font-size: 1em !important;
-
-      &:first-child {
-        // padding-top: 8em !important;
-      }
-    }
-  }
-
-  img {
-    width: 100%;
-    max-width: 600px;
-      display: block;
-      margin: 0 auto !important;
-  }
-}
-
-#form-get_notified,
-#form-email-testing,
-#form-resend-email {
-  margin: 0 auto;
-
-}
+// 
+// #form-get_notified,
+// #form-email-testing,
+// #form-resend-email {
+//   margin: 0 auto;
+//
+// }
 
 #email-resend {
   display: block;
   margin: 1em auto !important;
 }
 
-h1#invalid-h1 {
-  font-size: 1rem !important;
-}
-
-p#go-check {
-  padding-top: 0;
-}
-
-#mail-knight {
-  display: block;
-  margin: 2em auto !important;
-  max-width: 400px;
+#get-score {
+  img {
+    max-height: 400px !important;
+  }
 }
 
 #jumbotron-score {
@@ -1363,10 +1336,6 @@ p#go-check {
     font-size: 1.5em !important;
   }
 }
-
-
-/* Collapse Nav Sooner*/
-
 
 /* Nav */
 nav {
