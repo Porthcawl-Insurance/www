@@ -1,4 +1,4 @@
-{{ $options := (dict "targetPath" "static/css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $options := (dict "targetPath" "static/css/style.css" "outputStyle" "compressed" "enableSourceMap" false) }}
 {{ $style := resources.Get "custom.scss" | resources.ToCSS $options }}
 
 <!DOCTYPE html>

@@ -28,7 +28,7 @@ if (_domain_id) {
   // Call API function to populate RS data with id = _domain_id
   localStorage.setItem ('_domain_id', nsId)
 } else {
-  var _domain_id = localstorage.getItem ('_domain_id')
+  var _domain_id = localStorage.getItem ('_domain_id')
   if (_domain_id) {
     // TODO: Call API function to populate RS data with id = _domain_id
     ;
