@@ -6,7 +6,7 @@ date: 2018-04-10T15:45:32-05:00
 draft: true
 ---
 
-{{% section %}}
+{{% container-section %}}
 
 These Terms of Service (hereinafter the "Terms")  are a legal agreement between you and Porthcawl Insurance Services US, LLC d/b/a CyberFortress (referred to in the Terms as "CyberFortress", "we", us" and "our").  
 
@@ -93,4 +93,4 @@ These Terms are governed by the laws of the State of Texas, exclusive of any cho
 4. The use of the word "including" in the Agreement shall be read to mean "including without limitation."
 5. Sections 3, 4, 5, 7, 9, and 10 of these Terms of Service and all other provisions that by their nature are intended to survive expiration or termination of the these Terms shall survive expiration or termination of the Terms.
 
-{{% /section %}}
+{{% /container-section %}}
