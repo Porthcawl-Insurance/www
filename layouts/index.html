@@ -5,244 +5,81 @@
 {{ define "main" }}
 <section id='home-content'>
   <!-- ---------------------------- HERO SECTION ---- -->
-  <div id='home-hero' class='container-fluid p-5'>
-    <div class='row py-4'>
-      <div class='col text-light text-center px-3'>
-        <h1 class='t-shadow mt-4'>Digital means vulnerable</h1>
-        <h2 class=''>Are you vulnerable to a cyber attack that could shut down your business?<br /> Find out in seconds.</h2>
-      </div>
-    </div>
-    <!--end of .row-->
+  <div id='home-hero' class='container-fluid d-flex flex-column background-gradient colorful'>
+    <div>
+    <h1 class='t-shadow-dark mt-4'>Digital means vulnerable.</h1>
+    <h2 class=''>Are you vulnerable to a cyber attack that could shut down your business?</h2>
+    <p class=''>Find out in seconds.</p>
+  </div>
 
-    <div class='d-flex flex-column justify-content-center mt-4'>
-
-      <!-- DOWNTIME RISK FORM -->
-      <div class='text-center downtime-form small dark p-4'>
-        <form action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
-          <input type='hidden' name='returl' value='https://cyberfortress-www-sandbox.appspot.com/thanks/'>
-          <div class='form-group'>
-            <label for='user-email'>Enter your business email below for a downtime risk assessment</label>
-            <input id='user-email' class='form-control' type='email' name='email' placeholder='your.name@yourbusiness.com'>
-            <div class='invalid-feedback'>
-              Sorry, this isn't a valid email address.
-            </div>
+    <!-- DOWNTIME RISK FORM -->
+    <div class='downtime-form small minimal'>
+      <form action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
+        <input type='hidden' name='returl' value='https://cyberfortress-www-sandbox.appspot.com/thanks/'>
+        <div class='form-group'>
+          <label for='user-email' class=''>Enter your business email below for a downtime risk assessment</label>
+          <input id='user-email' class='form-control minimal' type='email' name='email' placeholder='your.name@yourbusiness.com'>
+          <div class='invalid-feedback'>
+            Sorry, this isn't a valid email address.
           </div>
-          <div class='custom-control custom-checkbox'>
-            <input id='notifications_option' class='custom-control-input' type='checkbox' name='notifications_option' checked>
-            <label class='custom-control-label smaller' for='notifications_option'>Yes, I'd like to recieve future CyberFortress updates.</label>
-          </div>
-          <button class='btn btn-primary' type='submit'>Get Downtime Risk</button>
-        </form>
-      </div>
-      <!-- end of DOWNTIME RISK FORM -->
-
-      <div class='mt-5'>
-        <a id='why-link' href='#' class='icon-l text-center' data-toggle="modal" data-target="#whylink-modal"><i class="fas fa-chevron-right"></i> Why do you need a business email?</a>
-        <a id='what-link' href='#' class='icon-l text-center' data-toggle="modal" data-target="#whatlink-modal"><i class="fas fa-chevron-right"></i> What is downtime risk?</a>
-      </div>
-
+        </div>
+        <div class='form-group form-check'>
+          <input id='notifications_option' class='form-check-input' type='checkbox' name='notifications_option' checked>
+          <label class='form-check-label smaller' for='notifications_option'>Yes, I'd like to recieve future CyberFortress updates.</label>
+        </div>
+        <button class='btn btn-primary bigger' type='submit'>Get Assessment</button>
+      </form>
     </div>
-    <!--end of .row-->
+    <!-- end of DOWNTIME RISK FORM -->
   </div>
   <!--end of .container-->
 
   <!-- ---------------------------- FEATURED -------- -->
-  <div id='featured-on' class='container-fluid py-5'>
-    <div class='container'>
-      <p>Featured on</p>
-      <div class='row align-items-center'>
-        <div class='col-6 col-lg-2 offset-lg-1 text-center'>
-          <a class='img-link' target='_blank' href='https://www.prnewswire.com/news-releases/plug-and-play-selects-150-startups-for-their-summer-batches-300821308.html'>
-            <img src='/images/pnp_logo.png' alt='Plug and Play' />
-          </a>
-        </div>
-        <div class='col-6 col-lg-2 text-center'>
-          <a class='img-link' target='_blank' href='https://collisionconf.com/'>
-            <img src='/images/collision_logo.png' />
-          </a>
-        </div>
-        <div class='col-6 col-lg-2 text-center'>
-          <a class='img-link' target='_blank' href='https://innoconf.com/'>
-            <img src='/images/inno_logo.png' />
-          </a>
-        </div>
-        <div class='col-6 col-lg-2 text-center'>
-          <a class='img-link' target='_blank' href='https://www.startupssanantonio.com/cyberfortress-delivers-new-kind-of-cyber-insurance/'>
-            <img src='/images/sss_logo.png' />
-          </a>
-        </div>
-        <div class='col col-lg-2 text-center'>
-          <a class='img-link' target='_blank' href='https://xconomy.com/texas/2018/10/16/cyberfortress-plans-2019-launch-as-cyber-insurance-industry-grows/'>
-            <img src='/images/xconomy_logo.png' />
-          </a>
-        </div>
+  <div id='featured-on' class='container-fluid'>
+    <p class='text-center'>Featured on</p>
+    <div class='container d-flex flex-row flex-wrap justify-content-around align-items-center'>
+      <div class='featured-div'>
+        <a class='img-link' target='_blank' href='https://www.prnewswire.com/news-releases/plug-and-play-selects-150-startups-for-their-summer-batches-300821308.html'>
+          <img src='/images/pnp_logo.png' alt='Plug and Play' />
+        </a>
       </div>
-      <!-- end of .row-->
+      <div class='featured-div'>
+        <a class='img-link' target='_blank' href='https://collisionconf.com/'>
+          <img src='/images/collision_logo.png' />
+        </a>
+      </div>
+      <div class='featured-div'>
+        <a class='img-link' target='_blank' href='https://innoconf.com/'>
+          <img src='/images/inno_logo.png' />
+        </a>
+      </div>
+      <div class='featured-div'>
+        <a class='img-link' target='_blank' href='https://www.startupssanantonio.com/cyberfortress-delivers-new-kind-of-cyber-insurance/'>
+          <img src='/images/sss_logo.png' />
+        </a>
+      </div>
+      <div class='featured-div'>
+        <a class='img-link' target='_blank' href='https://xconomy.com/texas/2018/10/16/cyberfortress-plans-2019-launch-as-cyber-insurance-industry-grows/'>
+          <img src='/images/xconomy_logo.png' />
+        </a>
+      </div>
     </div>
     <!--end of .container -->
   </div>
-  <!--end of .container-fluid-->
+  <!--end of #featured-on-->
 
-  <!-- ---------------------------- WHY B.I. -------- -->
-  <div id='why' class='container-fluid background-gradient p-3'>
-    <div class='container'>
+  <!-- -------------------- DOWNTIME EFFECTS -------- -->
+  <div id='downtime-effects' class='container-fluid text-center background-gradient colorful'>
+    <h3 class=''>What effects downtime risk?</h3>
+    <div id='what-effects' class='container d-flex flex-row flex-wrap justify-content-center align-items-start'>
 
-      <h3 class='pt-5 pb-4 text-center t-light'>Why business interruption insurance?</h3>
-
-      <!-- row 1 -->
-      <div class='d-flex flex-row flex-wrap flex-lg-nowrap align-items-start p-3'>
-
-        <div class=''>
-          <p class='t-light'>
-            <span class='bold larger pb-1'>It's pretty simple.</span><br />
-            Small businesses are particularly vulnerable to
-            cyber events as a result of two phenomena.
-          </p>
-          <ul class='t-light'>
-            <li class='t-light'>
-              First, most small businesses, as a result of their size, don’t keep
-              large amounts of cash on hand. They can’t afford to.
-            </li>
-            <li class='t-light'>
-              Second, e-commerce is an increasingly important source of revenue for
-              small businesses.
-            </li>
-          </ul>
-          <p class='t-light'>
-            This is a dangerous combination. If a small business suffers a cyber
-            event that prevents them from digitally collecting revenue, they are
-            faced with the prospect of being unable to make payroll or pay their
-            most critical bills. Their very survival is at stake.
-          </p>
-        </div>
-        <div class='pt-4'>
-          <img class='img-fluid' src='/images/revenue.png' />
-        </div>
-      </div>
-      <div class='d-flex flex-column p-3'>
-        <h4 class='text-center t-light pb-4'>That's where we come in.</h4>
-        <p class='text-center'>
-          We are working on a product that will get cash in your hands as quickly as
-          possible <br /> to stop the bleeding until a small business can get back
-          online.
-        </p>
-        <img class='img-fluid' src='/images/piggy_knight.png' />
-      </div>
     </div>
-    <!-- end of .container-->
+    <!--end of .flew-row-->
   </div>
-  <!--end of .container-fluid-->
-
+  <!-- end of #downtime-effects-->
 </section>
+{{ end }}
 
-<!-- ---------------------------- MODALS ------------ -->
-<div id='invalid' class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h4 class='m-2 p-3'>Sorry, that's not a business email.</h4>
-        <p class='m-2 p-3'>
-          We need an email with a unique domain name in order to provide a downtime risk score.
-        </p>
-        <p class='m-2 p-3'>
-          Please try again, using your business email.
-        </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn m-auto" data-dismiss="modal">Got it!</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id='why' class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body p-4">
-        <h4 class=''>Didn't get an email?</h4>
-
-        <p class='bold'>
-          Hmm, that's weird. Did you check your junk folder?
-        </p>
-        <hr />
-
-        <p class=''>
-          If it hasn't come through in the next few minutes,<br /> please try again.
-        </p>
-        <form id='form-resend-email' action='' method='post'>
-          <input name='returl' type='hidden' value='/thanks'>
-          <input id='user-email' class='form-control' name='email' type='email' placeholder='you@business.email.com'>
-          <input id='email-resend' class='button btn btn-primary mt-4' type='submit' value='Resend Email' />
-        </form>
-      </div>
-      <div class="modal-footer">
-        <!-- <button id='send-again' type="button" class="btn m-auto" data-dismiss="modal">Close this window</button> -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id='whylink-modal' class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body p-4">
-        <h4 class=''>Why we need a business email...</h4>
-        <hr />
-        <p>
-          Think of your business’s domain as an ID card. All the technology choices
-          that your company has made in its history are left as fingerprints connected
-          to your unique business ID. We evaluate your risk by collecting all of those
-          fingerprints and analyzing them. But we need your ID to do all of that!
-        </p>
-        <p>
-          <a href='/privacy/' class='icon-r'>Check out our Privacy Policy <i class="fas fa-chevron-right"></i></a>
-        </p>
-      </div>
-      <div class="modal-footer">
-        <button id='send-again' type="button" class="btn m-auto" data-dismiss="modal">Got it</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id='whatlink-modal' class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body p-4">
-        <h4 class=''>What is downtime risk?</h4>
-        <hr />
-        <p>
-          <span class='bold'>Downtime</span> is our term for periods when you are unable to collect revenue from digital or online sources like your website or billing software. If you can’t collect revenue, your business is down! </p>
-        <p>
-          <a href='/downtime/' class='icon-r'>Learn More about Downtime <i class="fas fa-chevron-right"></i></a>
-        </p>
-      </div>
-      <div class="modal-footer">
-        <button id='send-again' type="button" class="btn m-auto" data-dismiss="modal">Got it</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+{{ define "addscripts" }}
+<script src='/scripts/downtimepage.js'></script>
 {{ end }}

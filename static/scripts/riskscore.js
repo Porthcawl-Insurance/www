@@ -2,26 +2,67 @@
 
 $(function() {
 
+  // Retrieve a specific URL parameter.
+
+  function getURLParameter(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) {
+      var sParameterName = sURLVariables[i].split('=');
+      if (sParameterName[0] == sParam) {
+        return sParameterName[1];
+      }
+    }
+  };
+
+  // Attempt to read the "id" parameter.
+  // If it is available, update Local Storage and call the API function to populate the RS data.
+  // If not, attempt to read from Local Storage.
+  // If still unavailable, present the user with an error.
+
+  var _domain_id = getURLParameter('id');
+  console.log(_domain_id);
+
+  if (_domain_id) {
+    // Call API function to populate RS data with id = _domain_id
+    localStorage.setItem('_domain_id', _domain_id);
+    var data = { id: _domain_id }
+    getData(data);
+  } else {
+    var _domain_id = localStorage.getItem('_domain_id')
+    if (_domain_id) {
+      // TODO: Call API function to populate RS data with id = _domain_id
+      var data = { id: _domain_id }
+      getData(data);
+      ;
+    } else {
+      // TODO: Display an error stating that no RS data is available ... Same error as when the API call returns a 404.
+      alert('OH NO! 404!');
+      ;
+    }
+  }
+
   var data = {
-    id: 'f58f0b44-7b20-5fed-b0aa-dc353b89c630', //CyberFortress
+    // id: 'f58f0b44-7b20-5fed-b0aa-dc353b89c630', //CyberFortress
     // id: 'b1049048-ef36-5d15-85e3-33f1c6dd3518' //Codeup
   }
 
   var results;
 
-  // Post for score information
-  $.ajax({
-    method: "POST",
-    url: "https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs",
-    contentType: "application/json",
-    data: JSON.stringify(data),
-  }).done(function(response) {
-    console.log(response);
-    results = response;
-    populate(results);
-  }).fail(function(e) {
-    console.log(e)
-  });
+  function getData(data) {
+    $.ajax({
+      method: "POST",
+      url: "https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs",
+      contentType: "application/json",
+      data: JSON.stringify(data),
+    }).done(function(response) {
+      console.log(response);
+      results = response;
+      populate(results);
+    }).fail(function(e) {
+      console.log(e)
+    });
+  }
 
   // populate fields with info from json obj
   function populate(result) {
@@ -35,107 +76,50 @@ $(function() {
     $('#score').html('<span>' + score + '</span> / 10 ');
     $('#score-message').text('as of ' + date.toLocaleDateString());
 
-    // fillRook(score);
+    fillRook(score);
     // d3FillRook(score);
     topFactors(conts);
     categorizeFactors(conts);
     popFactorSummary(conts);
     popSummary(conts);
 
-      // Post for 'What is Good?' information
-      $.ajax({
-        type: 'POST',
-        url: 'https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs_contributions',
-        contentType: 'application/json',
-        data: JSON.stringify({'id' : result.model.ts})
-      }).done(function(response) {
-        console.log(response);
-      });
+    // Post for 'What is Good?' information
+    $.ajax({
+      type: 'POST',
+      url: 'https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs_contributions',
+      contentType: 'application/json',
+      data: JSON.stringify({
+        'id': result.model.ts
+      })
+    }).done(function(response) {
+      console.log(response);
+    });
 
   }
 
-  // function d3FillRook(score){
-  //   var rook = $('#rook-svg');
-  //
-  //   var colors = d3.scaleLinear()
-  //                   .domain([0, d3.max(score)])
-  //                   .range(['#CC444B', '#D8774F', '#DE9151', '#E9B15D', '#FFF275', '#D3E468', '#7AC74F']))
-  //
-  //   rook.transition()
-  //     .css('fill', function(d) {
-  //       return colors(d);
-  //     })
-  //
-  // }
-
   // color rook based on score
   function fillRook(score) {
-    var colors = ['#CC444B',
-                  '#D8774F',
-                  '#DE9151',
-                  '#E9B15D',
-                  '#FFF275',
-                  '#D3E468',
-                  '#7AC74F'];
-    var color;
-    switch (true) {
-      case (score <= 1.42):
-        color = '#cc444b';
-        $('.r1').css('fill', color);
-        $('.r1').css({fill: color, transition: "2.0s"});
-        break;
-      case (score <= 2.83):
-        color = '#d8774f';
-        $('.r1, .r2').css('fill', color);
-        $('.r1').css({fill: color, transition: "2.0s"});
-        $('.r2').css({fill: color, transition: "2.0s"});
-        break;
-      case (score <= 4.28):
-        color = '#de9151';
-        $('.r1, .r2, .r3').css('fill', color);
-        $('.r1').css({fill: color, transition: "2.0s"});
-        $('.r2').css({fill: color, transition: "2.0s"});
-        $('.r3').css({fill: color, transition: "2.0s"});
-        break;
-      case (score <= 5.71):
-        color = '#e9b15d';
-        $('.r1, .r2, .r3, .r4').css('fill', color);
-        $('.r1').css({fill: color, transition: "2.0s"});
-        $('.r2').css({fill: color, transition: "2.0s"});
-        $('.r3').css({fill: color, transition: "2.0s"});
-        $('.r4').css({fill: color, transition: "2.0s"});
-        break;
-      case (score <= 7.14):
-        color = '#fff275';
-        $('.r1, .r2, .r3, .r4, .r5').css('fill', color);
-        $('.r1').css({fill: color, transition: "2.0s"});
-        $('.r2').css({fill: color, transition: "2.0s"});
-        $('.r3').css({fill: color, transition: "2.0s"});
-        $('.r4').css({fill: color, transition: "2.0s"});
-        $('.r5').css({fill: color, transition: "2.0s"});
-        break;
-      case (score <= 8.57):
-        color = '#d3e468';
-        $('.r1, .r2, .r3, .r4, .r5, .r6').css('fill', color);
-        $('.r1').css({fill: color, transition: "2.0s"});
-        $('.r2').css({fill: color, transition: "2.0s"});
-        $('.r3').css({fill: color, transition: "2.0s"});
-        $('.r4').css({fill: color, transition: "2.0s"});
-        $('.r5').css({fill: color, transition: "2.0s"});
-        $('.r6').css({fill: color, transition: "2.0s"});
-        break;
-      case (score <= 10):
-        color = '#7ac74f';
-        $('.r1, .r2, .r3, .r4, .r5, .r6, .r7').css('fill', color);
-        $('.r1').css({fill: color, transition: "2.0s"});
-        $('.r2').css({fill: color, transition: "2.0s"});
-        $('.r3').css({fill: color, transition: "2.0s"});
-        $('.r4').css({fill: color, transition: "2.0s"});
-        $('.r5').css({fill: color, transition: "2.0s"});
-        $('.r6').css({fill: color, transition: "2.0s"});
-        $('.r7').css({fill: color, transition: "2.0s"});
-        break;
-    }
+
+    var getScoreColor = d3.scaleQuantize()
+      .domain([0, 6])
+      .range(['#CC444B', '#D8774F', '#DE9151', '#E9B15D', '#FFF275', '#D3E468', '#7AC74F']);
+
+    var getScoreRow = d3.scaleLinear()
+      .domain([0, 10])
+      .range([0, 6]);
+
+    // Note that the group or <g> elements in the rook's svg are ordered backwards
+    d3.select("#rook-svg").selectAll(".row")
+      .transition()
+      .delay(function(d, i) {
+        return i * 100
+      })
+      .duration(2000)
+      .style('fill', function(d, i) {
+        if (i < getScoreRow(score)) {
+          return getScoreColor(getScoreRow(score));
+        }
+      });
   }
 
   // get top & bottom factors
@@ -156,7 +140,7 @@ $(function() {
       $('#top-factors').append(
         '<div class="d-flex flex-row flex-nowrap align-items-start">' +
         '<div class="icon-div pt-2">' +
-        '<p class="icon ' + color +' text-center">' +
+        '<p class="icon ' + color + ' text-center">' +
         '<span class="fa-stack">' +
         '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
         '<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
@@ -183,7 +167,7 @@ $(function() {
       $('#bottom-factors').append(
         '<div class="d-flex flex-row flex-nowrap align-items-start">' +
         '<div class="icon-div pt-2">' +
-        '<p class="icon ' + color +' text-center">' +
+        '<p class="icon ' + color + ' text-center">' +
         '<span class="fa-stack">' +
         '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
         '<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
@@ -401,8 +385,8 @@ $(function() {
         icon = 'fal fa-server';
         break;
       case 'web-server':
-      icon = 'fal fa-server';
-      break;
+        icon = 'fal fa-server';
+        break;
       case 'payment':
         icon = 'fal fa-money-bill-wave'
         break;

@@ -12,7 +12,7 @@ draft: true
     <div class='d-flex flex-column flex-md-row justify-content-between algin-items-end'>
       <div>
         <h2 class='jumbotron-heading bold' id='domain'>
-          
+
         </h2>
       </div>
       <div>
@@ -34,13 +34,13 @@ draft: true
       <div id='factors-row' class='d-flex flex-column flex-md-row justify-content-center'>
         <div class='p-3'>
           <div id='top-factors' class='factor top'>
-            <p class='header'>Top contributing factors</p>
+            <p class='header'>Positive contributing factors</p>
             <!-- populated from js -->
           </div>
         </div>
         <div class='p-3'>
           <div id='bottom-factors' class='factor bottom'>
-            <p class='header'>Bottom contributing factors</p>
+            <p class='header'>Negative contributing factors</p>
             <!-- populated from js -->
           </div>
         </div>
@@ -67,5 +67,7 @@ draft: true
   </div>
 </div>
 
-
-{{< factor-modal >}}
+{{ define "addscripts" }}
+<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+<script src='/scripts/riskscore.js'></script>
+{{ end }}

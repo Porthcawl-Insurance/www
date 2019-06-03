@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Thanks!"
 description: "Check your Email for your downtime risk score"
 slug: "/thanks"
 date: 2018-04-15T19:53:19-05:00
@@ -8,17 +8,23 @@ draft: true
 
 {{< block >}}
 
-<h1 id='invalid-h1'><span class='bold'>Your Downtime Risk Assessment <br />has been generated! </span></h1>
-<img id='mail-knight' class='img-fluid mt-4' src='/images/mail-knight.svg' />
-<h2>Last step: Go check your email!</h2>
-<p class='col-12 col-md-10 offset-md-1'>
-  We've sent you an email containing link that will redirect you to your downtime risk score and assesment. By clicking the link, you are confirming your email address.
-  This is required to recieve your downtime risk score.
-</p>
 
-<a class='icon-l' data-toggle="modal" data-target="#no-email">
-  <i class="fas fa-chevron-right"></i> Didn't get an email?
-</a>
+<div class='header'>
+  <h1>Your Downtime Risk Assessment has been generated!</h1>
+  <img id='mail-knight' class='img-fluid' src='/images/mail-knight.svg' />
+</div>
+<div class='body'>
+  <h2 class='bold'>Last step: Go check your email!</h2>
+  <p>
+    We've sent you an email containing link that will redirect you to your
+    downtime risk score and assesment. By clicking the link, you are confirming
+    your email address. This is required to recieve your downtime risk score.
+  </p>
+  <a class='' data-toggle="modal" data-target="#no-email">
+    Didn't get an email?
+  </a>
+</div>
+
 
 {{</ block >}}
 
