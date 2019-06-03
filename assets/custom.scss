@@ -149,7 +149,7 @@ body {
 }
 
 h1, h2, h3 {
-  color: #ffffff !important;
+  color: $lightest !important;
   font-weight: 300 !important;
   font-size: 1.4rem !important;
 
@@ -163,6 +163,10 @@ h1, h2, h3 {
 
   @include lg {
     font-size: 2.4rem !important;
+  }
+
+  span.smaller {
+    font-size: .75em;
   }
 }
 
@@ -187,6 +191,7 @@ hr {
 p, li {
   color: $very-dark;
   font-size: 1em !important;
+  font-weight: 300 !important;
 
   @include sm {
     text-align: left;
@@ -202,6 +207,10 @@ p, li {
 
   &.right {
     text-align: right;
+  }
+
+  &.muted {
+
   }
 }
 
@@ -269,12 +278,15 @@ input {
 }
 
 .container-fluid {
+  padding: 2rem;
 
-  padding: 4rem !important;
+  @include sm {
+    padding: 4rem !important;
+  }
 
   &.hero {
     padding: 4em 1em;
-    height: 40vh;
+    height: 30vh;
     h1 {
       text-align: center;
     }
@@ -352,7 +364,7 @@ input {
 }
 
 .background-img {
-  background-image: url('/images/landscape-01.png');
+  background-image: url('/images/split-background.svg');
   background-size: cover;
   background-position: bottom;
 }
@@ -406,10 +418,17 @@ input {
 /****************************** Forms */
 
 .downtime-form {
+  margin-left: 1.5rem;
 
   label {
-    font-size: 1.4em;
-    margin-bottom: 1em;
+    font-weight: 300 !important;
+    font-size: 1.2em !important;
+    margin-bottom: 1rem;
+
+    @include sm {
+      font-size: 1.4rem;
+      // margin-bottom: 1em;
+    }
 
     &.smaller {
       font-size: 1.2em;
@@ -423,7 +442,8 @@ input {
 
   input[type='email'] {
     max-width: 500px;
-    margin: 0 auto;
+    font-size: 1.4em !important;
+    // margin: 0 auto;
   }
 
   .invalid-feedback {
@@ -434,7 +454,7 @@ input {
   &.small {
     width: 100%;
     max-width: 700px;
-    margin: 0 auto;
+    // margin: 0 auto;
   }
 }
 
@@ -535,6 +555,11 @@ input {
   }
 }
 
+/* Featured On section logos */
+.featured-div {
+
+}
+
 .cat {
   padding: 1em;
   margin: 1em;
@@ -579,22 +604,35 @@ input {
 
   /* Used on landing page */
   &.min {
-    max-width: 180px;
+    padding: 0;
+    @include sm {
+      max-width: 180px;
+    }
 
     .icon {
       color: $r7 !important;
       text-shadow: 0px 2px 3px rgba($dark-purple, .5);
-      font-size: 2.5em !important;
+      font-size: 2em !important;
       margin: 0 auto !important;
+      padding-bottom: 0;
+
+      @include sm {
+        font-size: 2.5em !important;
+
+      }
     }
 
     .c-title {
       color: $lightest !important;
-      margin-bottom: 5px !important;
       font-size: 1.25em !important;
-      border-bottom: 1px solid rgba($lightest, .2);
       text-shadow: 0px 2px 3px rgba($dark-purple, .5);
-      padding-bottom: 5px;
+      margin-bottom: .2em;
+
+      @include sm {
+        border-bottom: 1px solid rgba($lightest, .2)
+        // padding-bottom: 5px !important;
+        // margin-bottom: 5px !important;
+      }
     }
 
     .desc {
@@ -1094,11 +1132,12 @@ input {
 
 /**************************** Images */
 
+/* Featured on logos */
 .img-link {
 
   img {
     max-width: 120px;
-    margin-top: 2em;
+    margin: 1em .5em;
     padding: .4em;
   }
 
@@ -1203,36 +1242,49 @@ table.table {
 }
 
 #home-hero {
-  background-image: url('/images/landscape-01.png');
+  background-image: url('/images/revenue-background.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
-  min-height: 80vh;
+  padding-bottom: 2em;
+
+  @include sm {
+    min-height: 85vh;
+  }
 
   h1 {
-    font-size: 4em !important;
+    font-size: 2.5em !important;
     font-weight: 400 !important;
-    padding: 1em;
-    padding-bottom: .2em;
+    padding: 1.25rem .5rem .5rem 2.5rem;
+
+    @include sm {
+      font-size: 4em !important;
+      padding-bottom: .2em;
+    }
   }
   h2 {
-    font-size: 1.2em !important;
+    font-size: 1.5em !important;
+    font-weight: 300 !important;
+    padding-left: 2.5rem;
   }
   p, h2 {
-    text-align: center !important;
+    // text-align: center !important;
   }
   p {
     color: $lightest;
     font-weight: 300;
-    font-size: 1.2em !important;
+    font-size: 1.25em !important;
+    padding-left: 2.5rem;
   }
 
   .downtime-form {
-    margin-top: 4rem;
+    margin-top: 6em;
+    padding: 1em;
     label[for='user-email'] {
       color: $lightest;
-      font-size: 1.75em;
+      font-size: 1.75em !important;
+      font-weight: 300;
     }
   }
 }
@@ -1242,17 +1294,32 @@ table.table {
     color: rgba($dark-purple, .75);
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.25em !important;
-    margin-bottom: 0;
+    font-size: 1em !important;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgba($dark-purple, .2);
+    @include sm {
+      margin-bottom: 0;
+      font-size: 1.25em !important;
+      border-bottom: none;
+    }
   }
 }
-// 
-// #form-get_notified,
-// #form-email-testing,
-// #form-resend-email {
-//   margin: 0 auto;
-//
-// }
+
+#downtime-effects {
+  h3 {
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
+  .container {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+
+#rev-knight {
+  min-width: 550px;
+}
 
 #email-resend {
   display: block;

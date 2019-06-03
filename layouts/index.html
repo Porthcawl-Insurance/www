@@ -5,17 +5,19 @@
 {{ define "main" }}
 <section id='home-content'>
   <!-- ---------------------------- HERO SECTION ---- -->
-  <div id='home-hero' class='container-fluid d-flex flex-column text-center align-items-center'>
+  <div id='home-hero' class='container-fluid d-flex flex-column background-gradient colorful'>
+    <div>
     <h1 class='t-shadow-dark mt-4'>Digital means vulnerable.</h1>
     <h2 class=''>Are you vulnerable to a cyber attack that could shut down your business?</h2>
     <p class=''>Find out in seconds.</p>
+  </div>
 
     <!-- DOWNTIME RISK FORM -->
     <div class='downtime-form small minimal'>
       <form action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
         <input type='hidden' name='returl' value='https://cyberfortress-www-sandbox.appspot.com/thanks/'>
         <div class='form-group'>
-          <label for='user-email' class='t-shadow'>Enter your business email below for a downtime risk assessment</label>
+          <label for='user-email' class=''>Enter your business email below for a downtime risk assessment</label>
           <input id='user-email' class='form-control minimal' type='email' name='email' placeholder='your.name@yourbusiness.com'>
           <div class='invalid-feedback'>
             Sorry, this isn't a valid email address.
@@ -35,7 +37,7 @@
   <!-- ---------------------------- FEATURED -------- -->
   <div id='featured-on' class='container-fluid'>
     <p class='text-center'>Featured on</p>
-    <div class='container d-flex flex-row flex-wrap justify-content-between align-items-center'>
+    <div class='container d-flex flex-row flex-wrap justify-content-around align-items-center'>
       <div class='featured-div'>
         <a class='img-link' target='_blank' href='https://www.prnewswire.com/news-releases/plug-and-play-selects-150-startups-for-their-summer-batches-300821308.html'>
           <img src='/images/pnp_logo.png' alt='Plug and Play' />
@@ -66,7 +68,7 @@
   </div>
   <!--end of #featured-on-->
 
-  <div id='downtime-effects' class='container-fluid text-center background-gradient grays'>
+  <div id='downtime-effects' class='container-fluid text-center background-gradient colorful'>
     <h3 class=''>What effects downtime risk?</h3>
     <div id='what-effects' class='container d-flex flex-row flex-wrap justify-content-center align-items-center'>
 
