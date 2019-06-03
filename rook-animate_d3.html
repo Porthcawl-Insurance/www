@@ -60,23 +60,23 @@
 
 <script>
 (function () {
-	var score = 8.8
+	var score = 9.9
 
 	var getScoreColor = d3.scaleQuantize ()
 		.domain ([0, 6])
 		.range (['#CC444B', '#D8774F', '#DE9151', '#E9B15D', '#FFF275', '#D3E468', '#7AC74F']);
 
-	var getScoreRow = d3.scaleLinear ()
+	var getScoreRow = d3.scaleQuantize ()
 		.domain ([0, 10])
-		.range([0, 6]);
+		.range ([0, 1, 2, 3, 4, 5, 6]);
 
 	// Note that the group or <g> elements in the rook's svg are ordered backwards
 	d3.select ("#rook-svg").selectAll (".row")
 		.transition ()
-		.delay (function (d, i) { return i * 100})
+		.delay (function (d, i) { return i * 200})
 		.duration (1000)
 		.style ('fill', function (d, i) {
-			if (i < getScoreRow (score)) {
+			if (i <= getScoreRow (score)) {
 				return getScoreColor (getScoreRow (score));
 			}
 		});
