@@ -77,7 +77,6 @@ $(function() {
     $('#score-message').text('as of ' + date.toLocaleDateString());
 
     fillRook(score);
-    // d3FillRook(score);
     topFactors(conts);
     categorizeFactors(conts);
     popFactorSummary(conts);
@@ -92,7 +91,7 @@ $(function() {
         'id': result.model.ts
       })
     }).done(function(response) {
-      console.log(response);
+      // console.log(response);
     });
 
   }
@@ -243,9 +242,8 @@ $(function() {
           "<i class='fa fa-circle fa-stack-2x icon-background'></i>" +
           "<i class='" + icon + " fa-stack-1x'></i>" +
           "</span></p>" +
-          // "<p class='c-tag'>" + tag + "</p>" +
           "</div>" +
-          "<div class='text-div d-flex flex-column'>" +
+          "<div class='text-div d-flex flex-column " + color + "'>" +
           "<div class='name-div'>" +
           "<p class='f-title'>" + name + " <span class='f-tag'>[ " + tag + " ]</span></p>" +
           "</div>" +

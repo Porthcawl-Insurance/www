@@ -359,7 +359,10 @@ input {
     @include linear-gradient($dark-gray, $mid-gray);
   }
   &.colorful {
-    @include linear-gradient(rgba($dark-purple, .8), $teal);
+    @include linear-gradient(rgba($dark-purple, .9), $teal);
+  }
+  &.purples {
+    @include linear-gradient(rgba($dark-purple, .8), rgba($purple,.8));
   }
 }
 
@@ -794,8 +797,8 @@ input {
     &.header {
       color: $lightest;
       font-size: 1.1em !important;
-      background-color: rgba($dark-gray, .6);
-      padding:.2em .5em;
+      background-color: rgba($dark-gray, .5);
+      padding:.4em .5em;
       text-align: center !important;
       margin-bottom :.2em;
     }
@@ -844,11 +847,11 @@ input {
   }
 
   .text-div {
-    padding: .3em;
+    padding: .3em .4em;
   }
 
   .f-name {
-    font-weight: bold;
+    font-weight: 400 !important;
     span {
       font-size: .8em;
       color: $mid-gray;
@@ -899,15 +902,22 @@ input {
 }
 
 .factor-sum {
-  // background-color: $lightest;
-  margin: .1em;
+  background-color: rgba($very-dark, .1);
+  margin: .2em;
+  padding: 0 .3em;
 
   .icon-div {
     min-width: 50px;
-    padding-top:.5em;
+    padding:.5em .3em .5em 0;
 
     p.icon {
       font-size: 1.5em !important;
+      text-shadow: 0px 1px 2px rgba($dark-purple, .5);
+
+      .icon-background {
+        text-shadow: 0px 2px 4px rgba($dark-purple, .5);
+      }
+
       &.r7 {
         .icon-background{
           color: $r7;
@@ -946,9 +956,17 @@ input {
     }
   }
 
-  .f-tag, .f-desc {
+  .f-desc {
     font-size: .8em !important;
     color: rgba($light-gray, .8);
+  }
+
+  .f-tag {
+    font-size: .8em !important;
+    // color: $orange;
+    color: rgba($light-gray, .8);
+
+    padding-left: .4em;
   }
 
   .f-title {
@@ -957,9 +975,34 @@ input {
     font-weight: bold;
   }
 
-  .text-div {
-    padding: .5em;
+  .f-sum {
+    color: $lightest;
+    font-weight: 400 !important;
+  }
 
+  .text-div {
+    padding: .5em 1em;
+    // &.r7 {
+    //   border-left: 1px solid $r7;
+    // }
+    // &.r6 {
+    //   border-left: 1px solid $r6;
+    // }
+    // &.r5 {
+    //   border-left: 1px solid $r5;
+    // }
+    // &.r4 {
+    //   border-left: 1px solid $r4;
+    // }
+    // &.r3 {
+    //   border-left: 1px solid $r3;
+    // }
+    // &.r2 {
+    //   border-left: 1px solid $r2;
+    // }
+    // &.r1 {
+    //   border-left: 1px solid $r1;
+    // }
     p {
       margin-bottom: .2em;
     }
@@ -1333,48 +1376,37 @@ table.table {
 }
 
 #jumbotron-score {
-  padding-top: 3em;
-  padding-bottom: 3em;
+  // background-color: $dark-gray !important;
+  // background-image: url('/images/split-background.svg');
+  // padding-top: 3em;
+  // padding-bottom: 3em;
 
-  #score-heading {
+  .container {
+    background-color: rgba($lightest, .9);
+    padding: 1.5em;
+
+    @include sm {
+      padding: 0;
+    }
+  }
+
+  h1 {
   text-align: center !important;
+  color: $dark-gray !important;
+  font-size: 1.5em !important;
 
     @include md {
-      text-align: left !important;
       margin-bottom: .1em!important;
     }
-  }
 
-  #score {
-    font-size: 2.5em !important;
-    margin-bottom: 0 !important;
-    span {
-      font-size: 2.8em !important;
+    @include lg {
+      text-align: left !important;
     }
   }
 
-  #score-message {
+  h2 {
     text-align: center !important;
-
-    font-size: 1em !important;
-    color: $mid-gray !important;
-
-    @include md {
-      text-align: right !important;
-    }
-  }
-
-  #rook-svg {
-    display: block;
-    margin: 0 auto !important;
-    height: 100%;
-    width: 100%;
-    max-height: 200px;
-    max-width: 150px;
-  }
-
-  #domain {
-    text-align: center !important;
+    font-weight: 400 !important;
     font-size: 3em !important;
     color: $purple !important;
 
@@ -1383,17 +1415,95 @@ table.table {
     }
 
     @include md {
-      text-align: left !important;
+      text-align: center !important;
       // font-size: 3em !important;
 
     }
   }
 
+  hr {
+    margin-top: .2em !important;
+    margin-bottom: .2em !important;
+  }
+
+  #score-row {
+    padding: 2em;
+    padding-top: 1em;
+    >div:first-child {
+      padding: 2em;
+    }
+
+    @include md {
+      padding: .5em;
+    }
+
+
+  }
+
+  #factors-row {
+    // background-color: $lightest;
+  }
+  #score {
+    font-size: 2em !important;
+    margin-bottom: 0 !important;
+    font-weight: 400 !important;
+    span {
+      font-size: 2em !important;
+
+      @include sm {
+        font-size: 2.5em !important;;
+      }
+
+      @include md {
+        font-size: 2.8em !important;
+      }
+    }
+
+    @include md {
+      font-size: 2.5em !important;
+    }
+  }
+
+  #score-message {
+    text-align: center !important;
+
+    font-size: 1em !important;
+    color: rgba($dark-gray, .75) !important;
+
+    @include lg {
+      text-align: right !important;
+    }
+
+  }
+
+  #rook-svg {
+    display: block;
+    margin: 0 auto !important;
+    height: 100%;
+    width: 100%;
+    max-height: 250px;
+    max-width: 150px;
+  }
+
+
+
   #full-summary.btn {
-      font-size: 1.5em;
+      font-size: 1.4em;
+      font-weight: 400 !important;
+      color: $orange !important;
     i {
-      font-size: 1.5em;
-      padding-top: .2em;
+      // font-size: 1.5em;
+      padding-left: .3em;
+    }
+  }
+
+  #share-score.btn {
+    padding-top:0;
+    font-size: 1em;
+    font-weight: 400 !important;
+    color: rgba($purple, .8) !important;
+    i {
+      padding-left: .3em;
     }
   }
 }

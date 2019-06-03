@@ -9,17 +9,16 @@ draft: true
 <!-- TOP MAIN SECTION -->
 <div id='jumbotron-score' class='jumbotron'>
   <div class='container'>
-    <div class='d-flex flex-column flex-md-row justify-content-between algin-items-end'>
-      <div>
-        <h2 class='jumbotron-heading bold' id='domain'>
-
-        </h2>
+    <div class='d-flex flex-column flex-lg-row justify-content-between algin-items-end'>
+      <div class=''>
+        <h2 class='jumbotron-heading' id='domain'></h2>
       </div>
       <div>
         <h1 id='score-heading' class=''>Downtime Risk Assessment</h1>
-        <p id='score-message' class='text-right'></p>
+        <p id='score-message' class=''></p><!--Time Stamp-->
       </div>
     </div>
+
     <hr class='dark' />
     <div id='score-row' class='d-flex flex-column'>
       <div class='d-flex flex-row flex-nowrap justify-content-center align-items-center '>
@@ -30,8 +29,9 @@ draft: true
           <p id='score'>-</p>
         </div>
       </div>
+      <a id='share-score' class='btn center text-center icon-l'>Share this score <i class="fal fa-share-square"></i></a>
 
-      <div id='factors-row' class='d-flex flex-column flex-md-row justify-content-center'>
+      <div id='factors-row' class='d-flex flex-column flex-md-row justify-content-around'>
         <div class='p-3'>
           <div id='top-factors' class='factor top'>
             <p class='header'>Positive contributing factors</p>
@@ -47,7 +47,7 @@ draft: true
       </div>
     </div>
     <!--end of .flex-row-->
-    <hr class='dark' />
+    <!-- <hr class='dark' /> -->
     <a id='full-summary' class='btn center text-center icon-b'>Full Summary<br /><i class="fas fa-chevron-circle-down"></i></a>
   </div>
   <!--end of .container-->
@@ -55,7 +55,7 @@ draft: true
 <!-- end of .jumbotron -->
 
 
-<div id='summary-div' class='container-fluid p-5 background-gradient'>
+<div id='summary-div' class='container-fluid p-5 background-gradient colorful'>
   <div class='container'>
     <h3 class='text-center p-3'>Your downtime risk explained...</h3>
     <div class='d-flex flex-row flex-nowrap justify-content-center'>
@@ -67,7 +67,7 @@ draft: true
   </div>
 </div>
 
-{{ define "addscripts" }}
+<!-- {{ define "addscripts" }} -->
 <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
 <script src='/scripts/riskscore.js'></script>
-{{ end }}
+<!-- {{ end }} -->
