@@ -2,26 +2,67 @@
 
 $(function() {
 
+  // Retrieve a specific URL parameter.
+
+  function getURLParameter(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) {
+      var sParameterName = sURLVariables[i].split('=');
+      if (sParameterName[0] == sParam) {
+        return sParameterName[1];
+      }
+    }
+  };
+
+  // Attempt to read the "id" parameter.
+  // If it is available, update Local Storage and call the API function to populate the RS data.
+  // If not, attempt to read from Local Storage.
+  // If still unavailable, present the user with an error.
+
+  var _domain_id = getURLParameter('id');
+  console.log(_domain_id);
+
+  if (_domain_id) {
+    // Call API function to populate RS data with id = _domain_id
+    localStorage.setItem('_domain_id', _domain_id);
+    var data = { id: _domain_id }
+    getData(data);
+  } else {
+    var _domain_id = localStorage.getItem('_domain_id')
+    if (_domain_id) {
+      // TODO: Call API function to populate RS data with id = _domain_id
+      var data = { id: _domain_id }
+      getData(data);
+      ;
+    } else {
+      // TODO: Display an error stating that no RS data is available ... Same error as when the API call returns a 404.
+      alert('OH NO! 404!');
+      ;
+    }
+  }
+
   var data = {
-    id: 'f58f0b44-7b20-5fed-b0aa-dc353b89c630', //CyberFortress
+    // id: 'f58f0b44-7b20-5fed-b0aa-dc353b89c630', //CyberFortress
     // id: 'b1049048-ef36-5d15-85e3-33f1c6dd3518' //Codeup
   }
 
   var results;
 
-  // Post for score information
-  $.ajax({
-    method: "POST",
-    url: "https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs",
-    contentType: "application/json",
-    data: JSON.stringify(data),
-  }).done(function(response) {
-    console.log(response);
-    results = response;
-    populate(results);
-  }).fail(function(e) {
-    console.log(e)
-  });
+  function getData(data) {
+    $.ajax({
+      method: "POST",
+      url: "https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs",
+      contentType: "application/json",
+      data: JSON.stringify(data),
+    }).done(function(response) {
+      console.log(response);
+      results = response;
+      populate(results);
+    }).fail(function(e) {
+      console.log(e)
+    });
+  }
 
   // populate fields with info from json obj
   function populate(result) {
