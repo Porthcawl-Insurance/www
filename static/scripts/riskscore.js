@@ -3,7 +3,6 @@
 $(function() {
 
   // Retrieve a specific URL parameter.
-
   function getURLParameter(sParam) {
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
@@ -19,7 +18,6 @@ $(function() {
   // If it is available, update Local Storage and call the API function to populate the RS data.
   // If not, attempt to read from Local Storage.
   // If still unavailable, present the user with an error.
-
   var _domain_id = getURLParameter('id');
   console.log(_domain_id);
 
@@ -70,11 +68,14 @@ $(function() {
     var domain = result.domain,
       score = result.score,
       date = new Date(result.model.ts * 1000),
-      conts = result.top_contributions;
+      conts = result.top_contributions,
+      url = $(location).attr('href');
 
     $('#domain').text(domain);
     $('#score').html('<span>' + score + '</span> / 10 ');
     $('#score-message').text('as of ' + date.toLocaleDateString());
+    $('#copy-url').val(url);
+
 
     fillRook(score);
     topFactors(conts);
@@ -83,17 +84,16 @@ $(function() {
     popSummary(conts);
 
     // Post for 'What is Good?' information
-    $.ajax({
-      type: 'POST',
-      url: 'https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs_contributions',
-      contentType: 'application/json',
-      data: JSON.stringify({
-        'id': result.model.ts
-      })
-    }).done(function(response) {
-      // console.log(response);
-    });
-
+    // $.ajax({
+    //   type: 'POST',
+    //   url: 'https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs_contributions',
+    //   contentType: 'application/json',
+    //   data: JSON.stringify({
+    //     'id': result.model.ts
+    //   })
+    // }).done(function(response) {
+    //   // console.log(response);
+    // });
   }
 
   // color rook based on score
@@ -424,6 +424,16 @@ $(function() {
 
     return color;
   }
+
+  //share score link
+  $('#share-score').click(function(e) {
+    e.preventDefault;
+    var urlField = $('#copy-url');
+    urlField.select();
+    document.execCommand("copy");
+    console.log(urlField.val());
+    // alert("Copied the text: " + urlField.val());
+  });
 
   // scroll to full summary btn function
   $('#full-summary').click(function() {

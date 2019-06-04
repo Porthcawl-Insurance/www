@@ -982,27 +982,6 @@ input {
 
   .text-div {
     padding: .5em 1em;
-    // &.r7 {
-    //   border-left: 1px solid $r7;
-    // }
-    // &.r6 {
-    //   border-left: 1px solid $r6;
-    // }
-    // &.r5 {
-    //   border-left: 1px solid $r5;
-    // }
-    // &.r4 {
-    //   border-left: 1px solid $r4;
-    // }
-    // &.r3 {
-    //   border-left: 1px solid $r3;
-    // }
-    // &.r2 {
-    //   border-left: 1px solid $r2;
-    // }
-    // &.r1 {
-    //   border-left: 1px solid $r1;
-    // }
     p {
       margin-bottom: .2em;
     }
@@ -1153,6 +1132,11 @@ input {
     color: $orange !important;
     font-size: 1.1em !important;
   }
+
+  p.icon {
+    font-size: 2.5em !important;
+  }
+
   #m-icon {
     font-size: 4em !important;
     color: $purple;
@@ -1376,10 +1360,6 @@ table.table {
 }
 
 #jumbotron-score {
-  // background-color: $dark-gray !important;
-  // background-image: url('/images/split-background.svg');
-  // padding-top: 3em;
-  // padding-bottom: 3em;
 
   .container {
     background-color: rgba($lightest, .9);
@@ -1416,14 +1396,18 @@ table.table {
 
     @include md {
       text-align: center !important;
-      // font-size: 3em !important;
-
     }
   }
 
   hr {
     margin-top: .2em !important;
     margin-bottom: .2em !important;
+  }
+
+  #copy-url {
+    max-width: 400px;
+    margin: 0 auto;
+    // display: none;
   }
 
   #score-row {
@@ -1437,12 +1421,12 @@ table.table {
       padding: .5em;
     }
 
-
   }
 
   #factors-row {
     // background-color: $lightest;
   }
+
   #score {
     font-size: 2em !important;
     margin-bottom: 0 !important;
@@ -1485,14 +1469,11 @@ table.table {
     max-width: 150px;
   }
 
-
-
   #full-summary.btn {
       font-size: 1.4em;
       font-weight: 400 !important;
       color: $orange !important;
     i {
-      // font-size: 1.5em;
       padding-left: .3em;
     }
   }

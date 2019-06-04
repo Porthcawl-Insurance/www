@@ -9,18 +9,23 @@ draft: true
 <!-- TOP MAIN SECTION -->
 <div id='jumbotron-score' class='jumbotron'>
   <div class='container'>
+    <!-- Heading -->
     <div class='d-flex flex-column flex-lg-row justify-content-between algin-items-end'>
       <div class=''>
         <h2 class='jumbotron-heading' id='domain'></h2>
       </div>
       <div>
         <h1 id='score-heading' class=''>Downtime Risk Assessment</h1>
-        <p id='score-message' class=''></p><!--Time Stamp-->
+        <p id='score-message' class=''></p>
+        <!--Time Stamp-->
       </div>
     </div>
 
     <hr class='dark' />
+
+    <!-- Score section -->
     <div id='score-row' class='d-flex flex-column'>
+
       <div class='d-flex flex-row flex-nowrap justify-content-center align-items-center '>
         <div id='rook-div' class='p-3 mr-5'>
           {{< rook >}}
@@ -29,7 +34,12 @@ draft: true
           <p id='score'>-</p>
         </div>
       </div>
-      <a id='share-score' class='btn center text-center icon-l'>Share this score <i class="fal fa-share-square"></i></a>
+
+      <!--Share Score Link -->
+      <div class='d-flex flex-column justify-content-center'>
+        <input id='copy-url' type='text' />
+        <a id='share-score' class='btn center text-center icon-l'>Share this score <i class="fal fa-share-square"></i></a>
+      </div>
 
       <div id='factors-row' class='d-flex flex-column flex-md-row justify-content-around'>
         <div class='p-3'>
@@ -47,8 +57,9 @@ draft: true
       </div>
     </div>
     <!--end of .flex-row-->
-    <!-- <hr class='dark' /> -->
+
     <a id='full-summary' class='btn center text-center icon-b'>Full Summary<br /><i class="fas fa-chevron-circle-down"></i></a>
+
   </div>
   <!--end of .container-->
 </div>
@@ -66,6 +77,8 @@ draft: true
     <!--end of .flex-row-->
   </div>
 </div>
+
+{{< share-modal >}}
 
 <!-- {{ define "addscripts" }} -->
 <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
