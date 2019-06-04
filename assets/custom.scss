@@ -1048,22 +1048,34 @@ input {
 
   &.career {
     max-width: 200px;
+    background-color: transparent;
+    border: none;
 
     img.card-img-top {
       max-width: 200px;
+      border-radius: 50%;
+      box-shadow: 0px 4px 6px rgba($dark-purple, .75);
     }
     .card-body {
       padding: 0 !important;
     }
     .card-title {
-      background-color: $dark-purple;
-      padding: .7em;
+      background-color: rgba($dark-purple, .95);
+      padding: .3em .5em;
       color: $lightest;
+      margin-top: -1em;
+      margin-bottom: .5em;
+      text-align: center;
+      font-size: 1.2em !important;
+      border-radius: 2px;
+      // font-weight: 400 !important;
+      // text-shadow: 0px 1px 1px rgba($dark-purple, .6);
     }
     .card-text {
       padding-left: .7em;
       padding-right: .7em;
       padding-bottom: .7em;
+      text-align: center;
     }
   }
 

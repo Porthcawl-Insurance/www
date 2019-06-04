@@ -1,10 +1,9 @@
 {{ range sort $.Site.Data.team.founders ".nam" }}
-<div class='career card m-2'>
+<div class='career card mx-3 my-2'>
 	<img class='card-img-top' src='{{ .img }}' alt='{{ .nam }}' />
 	<div class='card-body'>
 		<p class='card-title'>{{ .nam }}</p>
 		<p class='card-text'>{{ .tit }}</p>
-
 	</div>
 </div>
 {{ end }}
