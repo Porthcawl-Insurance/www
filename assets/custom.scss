@@ -17,7 +17,7 @@ $teal: #5CB0BC;
 
 /* Link Colors */
 $l-link: $light;
-$link: #52D8F9;
+$link: #0EBBF4;
 
 /* Risk Level Colors */
 $r1: #cc444b;
@@ -225,6 +225,12 @@ a {
 
   &.center {
     text-align: center !important;
+  }
+
+  &.no-email {
+    text-decoration: none !important;
+    font-size: 1.25em;
+    font-weight: 300;
   }
 
   &.icon-l {
@@ -495,12 +501,16 @@ input {
     padding: 1em;
   }
   a {
-    text-decoration: underline !important;
+    font-weight: 400;
   }
   hr {
     border-top: solid 1px $mid-gray !important;
     margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important;
+  }
+
+  input[type="email"] {
+    margin: 0 auto;
   }
 
   .header, .body {
@@ -535,10 +545,8 @@ input {
   }
 
   .email-examples {
-
     p {
       padding: 0;
-
       &.good {
         font-size: 1.25em !important;
         font-weight: bold;
@@ -547,7 +555,6 @@ input {
           color: $r7;
         }
       }
-
       &.bad {
 
         i {
@@ -555,6 +562,10 @@ input {
         }
       }
     }
+  }
+
+  .downtime-form {
+    margin-left: 0;
   }
 }
 
@@ -1492,6 +1503,28 @@ table.table {
 #summary-div {
   h3{
     font-size: 1.5em !important;
+  }
+}
+
+/* modal on thanks page */
+#no-email {
+  label {
+    text-align: center !important;
+    font-size: .9em;
+  }
+
+  .icon {
+    margin-bottom: .5em;
+    i.fa-stack-1x {
+      font-size: .6em;
+      color: $orange;
+      text-shadow: 0px 1px 1px rgba($dark-purple, .8);
+    }
+    i.fa-stack-2x {
+      font-size: 1.8em !important;
+      color: rgba($dark-purple, .75);
+      padding-top: .1em;
+    }
   }
 }
 
