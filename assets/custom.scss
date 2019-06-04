@@ -6,6 +6,7 @@ $very-dark: #031927;
 $dark-gray: #2D3047; //purpler hue
 $mid-gray: #8693AB;
 $light-gray: #CEDBE5;
+$lighter-gray: #E3E9F2;
 $light: #F0F8FF;
 $lightest: #F3F3FF;
 
@@ -144,8 +145,7 @@ body {
   position: relative;
   min-height: 100vh !important;
   padding-bottom: 70px;
-
-  @include linear-gradient($mid-gray, $light-gray);
+  @include linear-gradient($light-gray, $lighter-gray);
 }
 
 h1, h2, h3 {
@@ -216,23 +216,26 @@ p, li {
 
 a {
   color: $link !important;
-  text-decoration: underline;
-
+  font-weight: 300 !important;
+  &.underline {
+    text-decoration: underline !important;
+    font-weight: 400 !important;
+  }
+  &.orange {
+    color: $orange !important;
+  }
   &.block {
       display: block;
       margin: 10px auto;
   }
-
   &.center {
     text-align: center !important;
   }
-
   &.no-email {
     text-decoration: none !important;
     font-size: 1.25em;
     font-weight: 300;
   }
-
   &.icon-l {
     display: block;
     margin-bottom: 1em !important;
@@ -261,6 +264,10 @@ a {
       padding-right: .5em;
     }
   }
+  &.resources {
+    font-weight: 400 !important;
+    color: $purple !important;
+  }
 }
 
 img {
@@ -283,38 +290,7 @@ input {
   }
 }
 
-.container-fluid {
-  padding: 2rem;
 
-  @include sm {
-    padding: 4rem !important;
-  }
-
-  &.hero {
-    padding: 4em 1em;
-    height: 30vh;
-    h1 {
-      text-align: center;
-    }
-    h2 {
-      text-align: center;
-      color: $lightest !important;
-      font-size: 1.3em !important;
-    }
-    a {
-      text-align: center;
-      // color: $orange !important;
-      margin-top: 1.2em !important;
-    }
-    &.background-img {
-      background-position: center;
-    }
-  }
-
-  &.full-height {
-    height: 100%;
-  }
-}
 
 /********************************** Fonts */
 
@@ -331,7 +307,7 @@ input {
 }
 
 .t-mid {
-  color: $light !important;
+  color: $light-gray !important;
 }
 
 .t-light {
@@ -475,6 +451,50 @@ input {
   background-color: $lightest !important;
 }
 
+.container-fluid {
+  padding: 2rem;
+
+
+  @include sm {
+    padding: 4rem !important;
+  }
+
+  &.page-header {
+    padding-bottom: 2rem !important;
+    h1, h2, p {
+      text-align: center;
+      color: $dark-gray !important;
+    }
+    a {
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+
+  &.hero {
+    padding: 4em 1em;
+    height: 30vh;
+
+    h2 {
+      text-align: center;
+      color: $lightest !important;
+      font-size: 1.3em !important;
+    }
+    a {
+      text-align: center;
+      // color: $orange !important;
+      margin-top: 1.2em !important;
+    }
+    &.background-img {
+      background-position: center;
+    }
+  }
+
+  &.full-height {
+    height: 100%;
+  }
+}
+
 /* Thanks & Invalid Pages */
 .block {
   max-width: 800px;
@@ -567,11 +587,6 @@ input {
   .downtime-form {
     margin-left: 0;
   }
-}
-
-/* Featured On section logos */
-.featured-div {
-
 }
 
 .cat {
@@ -870,20 +885,7 @@ input {
   }
   .f-desc {
     font-size: .8em !important;
-    // display: none;
   }
-
-  // &.top {
-  //   .header {
-  //     color: $r7;
-  //   }
-  // }
-  //
-  // &.bottom{
-  //   .header {
-  //     color: $r1;
-  //   }
-  // }
 }
 
 .factor-grp {
@@ -1068,8 +1070,6 @@ input {
       text-align: center;
       font-size: 1.2em !important;
       border-radius: 2px;
-      // font-weight: 400 !important;
-      // text-shadow: 0px 1px 1px rgba($dark-purple, .6);
     }
     .card-text {
       padding-left: .7em;
@@ -1109,32 +1109,32 @@ input {
 
 /*************************** Popovers */
 
-.popover {
-  background-color: $dark-gray !important;
-
-  .arrow {
-    &:after {
-      border-right-color: $dark-gray !important;
-    }
-  }
-}
-
-#emailEx {
-  padding: .5em;
-  p {
-    margin-bottom: 0 !important;
-    color: rgba($lightest, .9) !important;
-  }
-  i {
-    padding-right: .5em;
-  }
-  .yes {
-    color: $r7 !important;
-  }
-  .no {
-    color: $r1 !important;
-  }
-}
+// .popover {
+//   background-color: $dark-gray !important;
+//
+//   .arrow {
+//     &:after {
+//       border-right-color: $dark-gray !important;
+//     }
+//   }
+// }
+//
+// #emailEx {
+//   padding: .5em;
+//   p {
+//     margin-bottom: 0 !important;
+//     color: rgba($lightest, .9) !important;
+//   }
+//   i {
+//     padding-right: .5em;
+//   }
+//   .yes {
+//     color: $r7 !important;
+//   }
+//   .no {
+//     color: $r1 !important;
+//   }
+// }
 
 /***************************** Modals */
 
@@ -1246,6 +1246,28 @@ input {
 
     i.fas {
       padding-left: 9px;
+    }
+  }
+}
+
+section.single-career {
+  padding-bottom: 4em;
+  h1, h2, h3 {
+    color: $dark-gray !important;
+    padding: .3em 0;
+  }
+}
+
+section.single-resource {
+  h1 {
+    color: $dark-gray !important;
+  }
+  a.icon-l {
+    color: $purple !important;
+    font-weight: 400 !important;
+    i {
+      padding-right: .3em;
+      font-weight: bold;
     }
   }
 }

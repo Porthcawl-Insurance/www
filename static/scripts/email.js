@@ -14,7 +14,6 @@ $(function() {
 
     if (domain.indexOf('gmail') >= 0) { // if invalid email
 
-      // $('#invalid').modal('show');
       window.location.replace("/invalid/");
 
     } else { // if valid email

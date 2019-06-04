@@ -1,34 +1,34 @@
 {{ define "main" }}
 
-<div class='container-fluid hero'>
+<div class='container-fluid page-header'>
 	<div class='row align-items-center'>
 		<div class='col'>
-			<h1>Join Us</h1>
-			<h2 class='pb-4'>We believe that small business insurance should be easy to understand, easy to buy, and easy to file a claim. </h2>
-			<a href='/culture/' class='icon-r'> Read our Culture Blueprint <i class="fas fa-chevron-right"></i> </a>
+			<h1 class='pb-4'>Join Us</h1>
+			<p class='larger'>We believe that small business insurance should be easy to understand, easy to buy, and easy to file a claim. </p>
+			<p class=''>Interested in joining? Check out our <a href='/culture/' class=''>Culture Blueprint</a>.
+			<!-- <a href='/culture/' class='icon-r'> Read our Culture Blueprint <i class="fas fa-chevron-right"></i> </a> -->
 		</div>
 	</div>
 </div>
-
 <section class='pb-5'>
 
-  <div class='container'>
+	<div class='container p-5'>
 
-    {{ range $i, $e := .Data.Pages }}
-    <div class='row'>
-      <div class='col'>
-        {{ if eq $i 0 }}
-        <h2 class='text-center'>Careers</h2>
-        {{ end }}
-        <div class='mb-2 mt-3 pl-4'>
-          <a class='link career' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a>
-        </div>
-      </div>
-    </div>
+		{{ range $i, $e := .Data.Pages }}
+		<div class='row'>
+			<div class='col'>
+				{{ if eq $i 0 }}
+				<h2 class='text-center t-dark'>Careers</h2>
+				{{ end }}
+				<div class='mb-2 mt-3 pl-4'>
+					<a class='link career' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a>
+				</div>
+			</div>
+		</div>
 
-    {{ end }}
+		{{ end }}
 
-  </div>
+	</div>
 
 </section>
 
