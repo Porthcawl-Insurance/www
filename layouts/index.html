@@ -14,7 +14,7 @@
 
     <!-- DOWNTIME RISK FORM -->
     <div class='downtime-form small minimal'>
-      <form action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
+      <form action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate onsubmit = 'return blacklistCheck (this)'>
         <input type='hidden' name='returl' value='https://cyberfortress-www-sandbox.appspot.com/thanks/'>
         <div class='form-group'>
           <label for='user-email' class=''>Enter your business email below for a downtime risk assessment</label>
@@ -78,8 +78,31 @@
   </div>
   <!-- end of #downtime-effects-->
 </section>
+
 {{ end }}
 
 {{ define "addscripts" }}
 <script src='/scripts/downtimepage.js'></script>
+<script src = "https://d3js.org/d3.v5.min.js"></script>
+<script>
+blacklistCheck = function (el) {
+  var form_domain = el.email.value;
+  if (!form_domain) {
+		return false;
+	} else {
+		d3.csv ("/domains-blacklist.csv").then (function (d) {
+			d.forEach (function (d) {
+				if (d.domain == form_domain) {
+					document.location.href = '/invalid/';
+				} else {
+					;
+				}
+			});
+		});
+
+		return true;
+  }
+}
+
+</script>
 {{ end }}
