@@ -8,7 +8,6 @@ draft: true
 
 {{< block >}}
 
-
 <div class='header'>
   <h1>Your Downtime Risk Assessment has been generated!</h1>
   <img id='mail-knight' class='img-fluid' src='/images/mail-knight.svg' />
@@ -20,11 +19,10 @@ draft: true
     downtime risk score and assesment. By clicking the link, you are confirming
     your email address. This is required to recieve your downtime risk score.
   </p>
-  <a class='no-email' data-toggle="modal" data-target="#no-email">
+  <a class='no-email' data-toggle="modal" data-target="#no-email" style="cursor:pointer;">
     Didn't get an email?
   </a>
 </div>
-
 
 {{</ block >}}
 
@@ -53,11 +51,10 @@ draft: true
           Hmm, that's weird. Did you check your junk folder?<br />If it hasn't come through in the next few minutes, please try again by entering your <span class='bold'>business email</span> below.
         </p>
         <hr />
-        <form action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
-          <input type='hidden' name='returl' value='https://cyberfortress-www-sandbox.appspot.com/thanks/'>
+        <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
           <div class='form-group'>
             <!-- <label for='user-email' class=''>Enter your business email below for a downtime risk assessment</label> -->
-            <input id='user-email' class='form-control' type='email' name='email' placeholder='your.name@yourbusiness.com'>
+            <input id='user-email' class='form-control' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
             <div class='invalid-feedback'>
               Sorry, this isn't a valid email address.
             </div>
@@ -75,3 +72,12 @@ draft: true
     </div>
   </div>
 </div>
+
+<script src='/scripts/clearbit-check_if_email_provider.js'></script>
+<script>
+el = document.getElementById ('get_downtime_risk');
+if (el) {
+	el.addEventListener ('submit', submitIfEmailNotProvider);
+}
+
+</script>
