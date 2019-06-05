@@ -1404,6 +1404,16 @@ table.table {
   }
 }
 
+#jumbotron-error {
+  h1, h2, h3 {
+    color: $dark-gray !important;
+  }
+
+  h2 {
+    font-size: 1.5em !important;
+  }
+}
+
 #jumbotron-score {
 
   .container {

@@ -5,12 +5,33 @@ slug: "/score"
 date: 2019-04-30T19:53:19-05:00
 draft: true
 ---
-<div id='jumbotron-loading' class='jumbotron'>
-<p>Loading ...</p>
+<div id='jumbotron-loading' class='jumbotron text-center'>
+  <div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
 </div>
 
 <div id='jumbotron-error' class='jumbotron d-none'>
-<p>Errors! Oh No!</p>
+  <div class='container'>
+    <h1 class='text-center pb-4'>Sorry, we couldn’t find your downtime risk assessment! </h1>
+    <div class='d-flex flew-row flex-nowrap'>
+      <div class=''>
+        IMAGE HERE
+      </div>
+      <div class=''>
+        <h2>Wait a minute and then refresh the page.</h2>
+        <p>
+          Each domain has a unique URL, so if you have lost yours, then we are happy
+          to send you another if the refresh doesn’t work.
+          If problems persist, contact us at <a href='mailto:info@cyberfortress.com'>info@cyberfortress.com</a>.
+        </p>
+        <div class='spinner-border' role='status'>
+          <!-- <span class="sr-only">Loakding...</span> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- TOP MAIN SECTION -->
@@ -44,7 +65,7 @@ draft: true
 
       <!--Share Score Link -->
       <div class='d-flex flex-column justify-content-center'>
-        <a id='share-score' class='btn center text-center icon-l' href = "#Copied">Share this score <i class="fal fa-share-square"></i></a>
+        <a id='share-score' class='btn center text-center icon-l' href="#Copied">Share this score <i class="fal fa-share-square"></i></a>
       </div>
 
       <div id='factors-row' class='d-flex flex-column flex-md-row justify-content-around'>
@@ -64,7 +85,7 @@ draft: true
     </div>
     <!--end of .flex-row-->
 
-    <a id='full-summary' class='btn center text-center icon-b' style = 'cursor:pointer;'>Full Summary<br /><i class="fas fa-chevron-circle-down"></i></a>
+    <a id='full-summary' class='btn center text-center icon-b' style='cursor:pointer;'>Full Summary<br /><i class="fas fa-chevron-circle-down"></i></a>
 
   </div>
   <!--end of .container-->
