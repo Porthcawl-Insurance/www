@@ -1,3 +1,14 @@
+/*
+Sample URL parameters
+
+CyberFortress:
+?id=f58f0b44-7b20-5fed-b0aa-dc353b89c630
+
+Codeup:
+?id=b1049048-ef36-5d15-85e3-33f1c6dd3518
+
+*/
+
 'use strict';
 
 $(function() {
@@ -18,34 +29,24 @@ $(function() {
   // If it is available, update Local Storage and call the API function to populate the RS data.
   // If not, attempt to read from Local Storage.
   // If still unavailable, present the user with an error.
-  var _domain_id = getURLParameter('id');
-  console.log(_domain_id);
-
+  var _domain_id = getURLParameter ('id');
   if (_domain_id) {
     // Call API function to populate RS data with id = _domain_id
-    localStorage.setItem('_domain_id', _domain_id);
+    localStorage.setItem ('_domain_id', _domain_id);
     var data = { id: _domain_id }
-    getData(data);
+    getData (data);
   } else {
-    var _domain_id = localStorage.getItem('_domain_id')
+    var _domain_id = localStorage.getItem ('_domain_id')
     if (_domain_id) {
       // TODO: Call API function to populate RS data with id = _domain_id
       var data = { id: _domain_id }
       getData(data);
-      ;
     } else {
       // TODO: Display an error stating that no RS data is available ... Same error as when the API call returns a 404.
-      alert('OH NO! 404!');
-      ;
+      $('#jumbotron-loading').addClass ('d-none');
+      $('#jumbotron-error').removeClass ('d-none');
     }
   }
-
-  var data = {
-    // id: 'f58f0b44-7b20-5fed-b0aa-dc353b89c630', //CyberFortress
-    // id: 'b1049048-ef36-5d15-85e3-33f1c6dd3518' //Codeup
-  }
-
-  var results;
 
   function getData(data) {
     $.ajax({
@@ -54,17 +55,19 @@ $(function() {
       contentType: "application/json",
       data: JSON.stringify(data),
     }).done(function(response) {
-      console.log(response);
-      results = response;
-      populate(results);
+      populate(response);
+			$('#jumbotron-loading').addClass ('d-none');
+			$('#jumbotron-score').removeClass ('d-none');
+			$('#summary-div').removeClass ('d-none');
     }).fail(function(e) {
       console.log(e)
+			$('#jumbotron-loading').addClass ('d-none');
+			$('#jumbotron-error').removeClass ('d-none');
     });
   }
 
   // populate fields with info from json obj
   function populate(result) {
-
     var domain = result.domain,
       score = result.score,
       date = new Date(result.model.ts * 1000),
@@ -76,29 +79,15 @@ $(function() {
     $('#score-message').text('as of ' + date.toLocaleDateString());
     $('#copy-url').val(url);
 
-
     fillRook(score);
     topFactors(conts);
     categorizeFactors(conts);
     popFactorSummary(conts);
     popSummary(conts);
-
-    // Post for 'What is Good?' information
-    // $.ajax({
-    //   type: 'POST',
-    //   url: 'https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs_contributions',
-    //   contentType: 'application/json',
-    //   data: JSON.stringify({
-    //     'id': result.model.ts
-    //   })
-    // }).done(function(response) {
-    //   // console.log(response);
-    // });
   }
 
   // color rook based on score
   function fillRook(score) {
-
     var getScoreColor = d3.scaleQuantize()
       .domain([0, 6])
       .range(['#CC444B', '#D8774F', '#DE9151', '#E9B15D', '#FFF275', '#D3E468', '#7AC74F']);
@@ -113,7 +102,7 @@ $(function() {
       .delay(function(d, i) {
         return i * 100
       })
-      .duration(2000)
+      .duration(1500)
       .style('fill', function(d, i) {
         if (i < getScoreRow(score)) {
           return getScoreColor(getScoreRow(score));
@@ -189,7 +178,6 @@ $(function() {
         clone.pop(lCont);
       }
 
-      // console.log(lastConts);
       return lastConts;
     }
 
@@ -222,9 +210,7 @@ $(function() {
   }
 
   function popFactorSummary(conts) {
-
     $(conts).each(function() {
-
       var desc = this.description,
         name = this.name,
         summary = this.summary,
@@ -441,7 +427,5 @@ $(function() {
       scrollTop: $("#summary-div").offset().top
     }, 1000);
   });
-
-
 
 });

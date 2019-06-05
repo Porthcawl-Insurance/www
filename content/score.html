@@ -5,11 +5,16 @@ slug: "/score"
 date: 2019-04-30T19:53:19-05:00
 draft: true
 ---
-<!-- <div id='jumbotron-error' class='jumbotron'>
+<div id='jumbotron-loading' class='jumbotron'>
+<p>Loading ...</p>
+</div>
 
-</div> -->
+<div id='jumbotron-error' class='jumbotron d-none'>
+<p>Errors! Oh No!</p>
+</div>
+
 <!-- TOP MAIN SECTION -->
-<div id='jumbotron-score' class='jumbotron'>
+<div id='jumbotron-score' class='jumbotron d-none'>
   <div class='container'>
     <!-- Heading -->
     <div class='d-flex flex-column flex-lg-row justify-content-between algin-items-end'>
@@ -66,8 +71,7 @@ draft: true
 </div>
 <!-- end of .jumbotron -->
 
-
-<div id='summary-div' class='container-fluid p-5 background-gradient colorful'>
+<div id='summary-div' class='container-fluid p-5 background-gradient colorful d-none'>
   <div class='container'>
     <h3 class='text-center p-3'>Your downtime risk explained...</h3>
     <div class='d-flex flex-row flex-nowrap justify-content-center'>
