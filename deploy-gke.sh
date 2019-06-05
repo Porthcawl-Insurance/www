@@ -6,16 +6,25 @@ gcloud config configurations activate default
 GCP_PROJECT=cyberfortress-www
 gcloud config set project $GCP_PROJECT
 
+# Tag
+if [[ $(git branch | grep \* | cut -d ' ' -f2) == "master" ]]; then
+TAG=latest
+else
+TAG=sandbox
+fi
+
 IMAGE_NAME=cf-www
-IMAGE_PATH=gcr.io/$GCP_PROJECT/$IMAGE_NAME
+IMAGE_PATH=gcr.io/$GCP_PROJECT/$IMAGE_NAME:$TAG
+
+DEPLOYMENT_NAME=${IMAGE_NAME}-${TAG}
 
 # Rebuild site
 hugo -D
 
 # Docker
-docker build -t ${IMAGE_NAME}:latest .
-docker tag ${IMAGE_NAME}:latest ${IMAGE_PATH}:latest
-docker push ${IMAGE_PATH}:latest
+docker build -t ${IMAGE_NAME}:${TAG} .
+docker tag ${IMAGE_NAME}:${TAG} $IMAGE_PATH
+docker push ${IMAGE_PATH}
 
 # Remove dangling images if necessary
 # docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
@@ -24,50 +33,50 @@ docker push ${IMAGE_PATH}:latest
 gcloud container clusters get-credentials www --region us-central1-a
 
 # Create deployment
-# cat << EOF | kubectl apply -f -
-# apiVersion: apps/v1
-# kind: Deployment
-# metadata:
-#   name: $IMAGE_NAME
-#   labels:
-#     app: $IMAGE_NAME
-# spec:
-#   replicas: 2
-#   selector:
-#     matchLabels:
-#       app: $IMAGE_NAME
-#   template:
-#     metadata:
-#       labels:
-#         app: $IMAGE_NAME
-#     spec:
-#       containers:
-#       - name: $IMAGE_NAME
-#         image: $IMAGE_PATH
-#         ports:
-#         - containerPort: 80
-# 
-# EOF
+cat << EOF | kubectl apply -f -
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $DEPLOYMENT_NAME
+  labels:
+    app: $DEPLOYMENT_NAME
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: $DEPLOYMENT_NAME
+  template:
+    metadata:
+      labels:
+        app: $DEPLOYMENT_NAME
+    spec:
+      containers:
+      - name: $DEPLOYMENT_NAME
+        image: $IMAGE_PATH
+        ports:
+        - containerPort: 80
+
+EOF
 
 # Create service
-# kubectl expose deployment $IMAGE_NAME --target-port=80 --type=NodePort
+# kubectl expose deployment $DEPLOYMENT_NAME --target-port=80 --type=NodePort
 
-# Create ingress ... note the hard-coded "www-static" address - this must exist
+# Create ingress ... note the hard-coded "www-X" address - this must exist
 # cat << EOF | kubectl apply -f -
 # apiVersion: extensions/v1beta1
 # kind: Ingress
 # metadata:
-#   name: ${IMAGE_NAME}-ingress
+#   name: ${DEPLOYMENT_NAME}-ingress
 #   annotations:
-#     kubernetes.io/ingress.global-static-ip-name: "www-static"
+#     kubernetes.io/ingress.global-static-ip-name: "www-sandbox"
 # spec:
 #   backend:
-#     serviceName: cf-www
+#     serviceName: $DEPLOYMENT_NAME
 #     servicePort: 80
 # 
 # EOF
 
 # Scale
-kubectl scale --replicas=0 deployment/$IMAGE_NAME
-kubectl scale --replicas=2 deployment/$IMAGE_NAME
+kubectl scale --replicas=0 deployment/$DEPLOYMENT_NAME
+kubectl scale --replicas=2 deployment/$DEPLOYMENT_NAME
 
