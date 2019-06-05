@@ -61,7 +61,7 @@ $(function() {
     {
       name: 'Web Server',
       icon: 'fal fa-server',
-      desc: 'Something about servers',
+      desc: 'Software that routes & renders websites',
       modId: 'server'
     }
   ];

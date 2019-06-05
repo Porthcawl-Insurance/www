@@ -4,7 +4,7 @@ $(function() {
 
 
   // Intercom Chat //
-  $('.intercom-launcher-open-icon').css('backgroundColor', 'black');
+  // $('.intercom-launcher-open-icon').css('backgroundColor', 'black');
 
   // Team Photos //
   $('.figure-img').click(function() {
