@@ -15,7 +15,7 @@
     <!-- DOWNTIME RISK FORM -->
     <div class='downtime-form small minimal'>
       <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
-        <input type='hidden' name='returl' value='https://cyberfortress-www-sandbox.appspot.com/thanks/'>
+        <input type='hidden' name='returl' value=''>
         <div class='form-group'>
           <label for='user-email' class=''>Enter your business email below for a downtime risk assessment</label>
           <input id='user-email' class='form-control minimal' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
@@ -86,8 +86,9 @@
 <script src='/scripts/clearbit-risk.js'></script>
 
 <script>
-submitIfEmailNotProvider = function (el) {
-	email = el.target.email.value;
+submitIfEmailNotProvider = function (e) {
+  e.preventDefault ();
+	email = e.target.email.value;
 	if (!email) {
 		return false;
 	} else {
@@ -99,7 +100,7 @@ submitIfEmailNotProvider = function (el) {
 
 		}).done (function (resp) {
 			if (resp.hasOwnProperty ('is_email_provider') && !resp['is_email_provider']) {
-				el.submit ();
+				e.target.submit ();
 			}
 
 		}).fail (function (e) {
