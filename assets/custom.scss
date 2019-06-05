@@ -137,6 +137,7 @@ $screen-xl-min: 1200px;
 html {
   position: relative;
   min-height: 100vh !important;
+  overflow-x: hidden;
 }
 
 /* Body */
@@ -145,6 +146,8 @@ body {
   position: relative;
   min-height: 100vh !important;
   padding-bottom: 70px;
+  overflow-x: hidden;
+  
   @include linear-gradient($light-gray, $lighter-gray);
 }
 
