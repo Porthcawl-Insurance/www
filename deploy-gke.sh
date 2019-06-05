@@ -53,6 +53,7 @@ spec:
       containers:
       - name: $DEPLOYMENT_NAME
         image: $IMAGE_PATH
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
 
