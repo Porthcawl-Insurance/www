@@ -83,32 +83,8 @@
 
 {{ define "addscripts" }}
 <script src='/scripts/downtimepage.js'></script>
-<script src='/scripts/clearbit-risk.js'></script>
-
+<script src='/scripts/clearbit-check_if_email_provider.js'></script>
 <script>
-submitIfEmailNotProvider = function (e) {
-  e.preventDefault ();
-	email = e.target.email.value;
-	if (!email) {
-		return false;
-	} else {
-		$.ajax ({
-			method: "POST",
-			url: "https://us-central1-cyberfortress-sandbox.cloudfunctions.net/is_email_provider",
-			contentType: "application/json",
-			data: JSON.stringify ({"email": email}),
-
-		}).done (function (resp) {
-			if (resp.hasOwnProperty ('is_email_provider') && !resp['is_email_provider']) {
-				e.target.submit ();
-			}
-
-		}).fail (function (e) {
-			console.log (e);
-		});
-	}
-};
-
 !function () {
 	$('#get_downtime_risk').submit (submitIfEmailNotProvider);
 }();
