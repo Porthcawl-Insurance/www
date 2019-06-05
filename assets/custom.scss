@@ -275,6 +275,11 @@ img {
     max-width: 250px !important;
     max-height: 200px !important;
   }
+
+  &.medium {
+    max-width: 400px !important;
+    max-height: 400px !important;
+  }
 }
 
 input {
@@ -501,19 +506,14 @@ input {
   margin: 0 auto;
 
     p, h1, h2 {
-      // text-align: center !important;
       color: $dark-gray !important;
     }
 
   h1 {
-    // font-size: 1.25em !important;
-    // margin-bottom: 1.5em !important;
     span {
-      // font-size: 1.75em;
     }
   }
   h2 {
-    // font-size: 1.75em !important;
   }
   p {
     max-width: 650px;
@@ -562,6 +562,9 @@ input {
     p {
       text-align: center;
     }
+    &.404 {
+        padding-top: 0 !important;
+    }
   }
 
   .email-examples {
@@ -587,6 +590,8 @@ input {
   .downtime-form {
     margin-left: 0;
   }
+
+
 }
 
 .cat {
@@ -1588,6 +1593,7 @@ table.table {
     }
   }
 }
+
 
 /* Nav */
 nav {
