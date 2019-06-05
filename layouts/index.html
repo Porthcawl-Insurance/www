@@ -14,11 +14,11 @@
 
     <!-- DOWNTIME RISK FORM -->
     <div class='downtime-form small minimal'>
-      <form action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate onsubmit = 'return blacklistCheck (this)'>
+      <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
         <input type='hidden' name='returl' value='https://cyberfortress-www-sandbox.appspot.com/thanks/'>
         <div class='form-group'>
           <label for='user-email' class=''>Enter your business email below for a downtime risk assessment</label>
-          <input id='user-email' class='form-control minimal' type='email' name='email' placeholder='your.name@yourbusiness.com'>
+          <input id='user-email' class='form-control minimal' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
           <div class='invalid-feedback'>
             Sorry, this isn't a valid email address.
           </div>
@@ -83,26 +83,35 @@
 
 {{ define "addscripts" }}
 <script src='/scripts/downtimepage.js'></script>
-<script src = "https://d3js.org/d3.v5.min.js"></script>
+<script src='/scripts/clearbit-risk.js'></script>
+
 <script>
-blacklistCheck = function (el) {
-  var form_domain = el.email.value;
-  if (!form_domain) {
+submitIfEmailNotProvider = function (el) {
+	email = el.target.email.value;
+	if (!email) {
 		return false;
 	} else {
-		d3.csv ("/domains-blacklist.csv").then (function (d) {
-			d.forEach (function (d) {
-				if (d.domain == form_domain) {
-					document.location.href = '/invalid/';
-				} else {
-					;
-				}
-			});
-		});
+		$.ajax ({
+			method: "POST",
+			url: "https://us-central1-cyberfortress-sandbox.cloudfunctions.net/is_email_provider",
+			contentType: "application/json",
+			data: JSON.stringify ({"email": email}),
 
-		return true;
-  }
-}
+		}).done (function (resp) {
+			if (resp.hasOwnProperty ('is_email_provider') && !resp['is_email_provider']) {
+				el.submit ();
+			}
+
+		}).fail (function (e) {
+			console.log (e);
+		});
+	}
+};
+
+!function () {
+	$('#get_downtime_risk').submit (submitIfEmailNotProvider);
+}();
 
 </script>
+
 {{ end }}
