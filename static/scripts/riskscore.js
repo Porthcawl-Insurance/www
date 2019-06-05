@@ -104,7 +104,7 @@ $(function() {
       })
       .duration(1500)
       .style('fill', function(d, i) {
-        if (i < getScoreRow(score)) {
+        if (i <= getScoreRow(score)) {
           return getScoreColor(getScoreRow(score));
         }
       });
