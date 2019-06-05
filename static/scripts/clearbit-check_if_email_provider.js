@@ -7,10 +7,11 @@
 }();
 
 submitIfEmailNotProvider = function (e) {
+	e.preventDefault ();
+	e.stopPropagation ();
+
 	tg = e.target;
 	if (tg.checkValidity() === false) {
-		e.preventDefault ();
-		e.stopPropagation ();
 		return false;
 	} else {
 		var bt = tg.getElementsByTagName ('button')[0];
@@ -31,6 +32,8 @@ submitIfEmailNotProvider = function (e) {
 			}).done (function (resp) {
 				if (resp.hasOwnProperty ('is_email_provider') && !resp['is_email_provider']) {
 					tg.submit ();
+				} else {
+					document.location.pathname = '/invalid/';
 				}
 
 			}).fail (function (e) {
