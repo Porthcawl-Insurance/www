@@ -6,28 +6,36 @@ date: 2019-04-30T19:53:19-05:00
 draft: true
 ---
 <div id='jumbotron-loading' class='jumbotron text-center'>
-  <div class="spinner-border text-primary" role="status">
+  <p class='larger text-center'>
+    Loading your Downtime Risk Assessment
+  </p>
+  <p class='text-center'>
+    This may take a few seconds...
+    </p>
+  <div class="spinner-grow text-secondary" role="status">
     <span class="sr-only">Loading...</span>
   </div>
+
 </div>
 
 <div id='jumbotron-error' class='jumbotron d-none'>
   <div class='container'>
     <h1 class='text-center pb-4'>Sorry, we couldn’t find your downtime risk assessment! </h1>
-    <div class='d-flex flew-row flex-nowrap'>
+    <div class='d-flex flew-row flex-nowrap justify-content-around align-items-start'>
       <div class=''>
-        IMAGE HERE
+        <img id='shrug-knight' class='img-fluid' src='/images/shrugknight.svg' />
       </div>
-      <div class=''>
-        <h2>Wait a minute and then refresh the page.</h2>
-        <p>
+      <div class='text-div px-4 py-5'>
+        <h2 class='pb-4'>Wait a minute and then refresh the page.</h2>
+        <p class='pb-4'>
           Each domain has a unique URL, so if you have lost yours, then we are happy
           to send you another if the refresh doesn’t work.
           If problems persist, contact us at <a href='mailto:info@cyberfortress.com'>info@cyberfortress.com</a>.
         </p>
-        <div class='spinner-border' role='status'>
-          <!-- <span class="sr-only">Loakding...</span> -->
-        </div>
+        <p class='text-center'>
+          <a class='btn btn-primary' href='/'>Get Another Risk Assessment</a>
+
+          </p>
       </div>
     </div>
   </div>

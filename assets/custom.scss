@@ -1404,6 +1404,10 @@ table.table {
   }
 }
 
+#jumbotron-loading {
+  background-color: transparent !important;
+}
+
 #jumbotron-error {
   h1, h2, h3 {
     color: $dark-gray !important;
@@ -1411,6 +1415,19 @@ table.table {
 
   h2 {
     font-size: 1.5em !important;
+  }
+
+  .text-div {
+    max-width: 500px;
+    h2, p {
+      // text-align: center;
+    }
+  }
+
+  #shrug-knight {
+    height: 100%;
+    min-height: 300px;
+    min-width: 400px;
   }
 }
 
