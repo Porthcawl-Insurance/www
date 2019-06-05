@@ -54,14 +54,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <!-- D3.js -->
+  <!-- D3.js
   <script src="https://d3js.org/d3.v5.min.js"></script>
+	-->
 
   <script src='/scripts/main.js'></script>
   <script src='/scripts/poppers.js'></script>
-  <script src='/scripts/email.js'></script>
-  <!-- <script src='/scripts/riskscore.js'></script> -->
-  <!-- <script src='/scripts/downtimepage.js'></script> -->
+  <!-- <script src='/scripts/email.js'></script> -->
+
   {{ block "addscripts" . }}
   {{ end }}
 
@@ -77,17 +77,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         // Loop over them and prevent submission
         var validation = Array.prototype.filter.call(forms, function(form) {
           form.addEventListener('submit', function(event) {
-            // Get Email from input
-            var email = document.getElementById('user-email').value;
-
             if (form.checkValidity() === false) {
               event.preventDefault();
               event.stopPropagation();
-            }
-            if (email.includes('gmail')) {
-              event.preventDefault();
-              event.stopPropagation();
-              window.location.replace("/invalid/");
             }
             form.classList.add('was-validated');
           }, false);

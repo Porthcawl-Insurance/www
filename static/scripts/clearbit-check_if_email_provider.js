@@ -7,29 +7,35 @@
 }();
 
 submitIfEmailNotProvider = function (e) {
-  e.preventDefault ();
-	var button = e.target.getElementsByTagName ('button')[0];
-	if (button) {
-		button.disabled = true;
-	}
-
-	var email = e.target.email.value;
-	if (!email) {
+	tg = e.target;
+	if (tg.checkValidity() === false) {
+		e.preventDefault ();
+		e.stopPropagation ();
 		return false;
 	} else {
-		$.ajax ({
-			method: "POST",
-			url: "https://us-central1-cyberfortress-sandbox.cloudfunctions.net/is_email_provider",
-			contentType: "application/json",
-			data: JSON.stringify ({"email": email}),
+		var bt = tg.getElementsByTagName ('button')[0];
+		if (bt) {
+			bt.disabled = true;
+		}
 
-		}).done (function (resp) {
-			if (resp.hasOwnProperty ('is_email_provider') && !resp['is_email_provider']) {
-				e.target.submit ();
-			}
+		var email = tg.email.value;
+		if (!email) {
+			return false;
+		} else {
+			$.ajax ({
+				method: "POST",
+				url: "https://us-central1-cyberfortress-sandbox.cloudfunctions.net/is_email_provider",
+				contentType: "application/json",
+				data: JSON.stringify ({"email": email}),
 
-		}).fail (function (e) {
-			console.log (e);
-		});
+			}).done (function (resp) {
+				if (resp.hasOwnProperty ('is_email_provider') && !resp['is_email_provider']) {
+					tg.submit ();
+				}
+
+			}).fail (function (e) {
+				console.log (e);
+			});
+		}
 	}
 };
