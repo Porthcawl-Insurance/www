@@ -7,7 +7,6 @@ slug: "/invalid"
 
 {{< block >}}
 
-
 <div class='header'>
   <h1><span>Whoops!</span><br />Sorry, that's not a business email.</h1>
 </div>
@@ -23,11 +22,10 @@ slug: "/invalid"
   </div>
   <!-- DOWNTIME RISK FORM -->
   <div class='text-center downtime-form small p-4'>
-    <form action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
-      <input type='hidden' name='returl' value='https://cyberfortress-www-sandbox.appspot.com/thanks/'>
+    <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
       <div class='form-group'>
         <label for='user-email'>Enter your business email below for a downtime risk assessment</label>
-        <input id='user-email' class='form-control' type='email' name='email' placeholder='your.name@yourbusiness.com'>
+        <input id='user-email' class='form-control' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
         <div class='invalid-feedback'>
           <i class="far fa-exclamation-circle"></i> Sorry, this isn't a valid email address.
         </div>
@@ -43,6 +41,13 @@ slug: "/invalid"
 </div>
 <!--end of .body-->
 
-
-
 {{</ block >}}
+
+<script src='/scripts/clearbit-check_if_email_provider.js'></script>
+<script>
+el = document.getElementById ('get_downtime_risk');
+if (el) {
+	el.addEventListener ('submit', submitIfEmailNotProvider);
+}
+
+</script>
