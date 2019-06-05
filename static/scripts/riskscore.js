@@ -412,14 +412,26 @@ $(function() {
   }
 
   //share score link
-  $('#share-score').click(function(e) {
-    e.preventDefault;
-    var urlField = $('#copy-url');
-    urlField.select();
-    document.execCommand("copy");
-    console.log(urlField.val());
-    // alert("Copied the text: " + urlField.val());
-  });
+	$('#share-score').click (function (e) {
+		_domain_id = getURLParameter ('id') || localStorage.getItem ('_domain_id');
+		if (!_domain_id) {
+			console.error ('Error. Unable to find a _domain_id to share.')
+		} else {
+			var _sl = document.location.host + document.location.pathname + '?id=' + _domain_id;
+			var par = e.target
+			var el = document.createElement ("textarea");
+			el.value = _sl;
+			par.appendChild (el);
+			el.focus ();
+			el.select ();
+			try {
+				var ok = document.execCommand ("copy");
+			} catch (err) {
+				console.error (err);
+			}
+			par.removeChild (el);
+		}
+	});
 
   // scroll to full summary btn function
   $('#full-summary').click(function() {

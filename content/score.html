@@ -44,7 +44,7 @@ draft: true
 
       <!--Share Score Link -->
       <div class='d-flex flex-column justify-content-center'>
-        <a id='share-score' class='btn center text-center icon-l' onclick = 'return loc2clipboard (this);' href = "#Copied">Share this score <i class="fal fa-share-square"></i></a>
+        <a id='share-score' class='btn center text-center icon-l' href = "#Copied">Share this score <i class="fal fa-share-square"></i></a>
       </div>
 
       <div id='factors-row' class='d-flex flex-column flex-md-row justify-content-around'>
@@ -64,7 +64,7 @@ draft: true
     </div>
     <!--end of .flex-row-->
 
-    <a id='full-summary' class='btn center text-center icon-b'>Full Summary<br /><i class="fas fa-chevron-circle-down"></i></a>
+    <a id='full-summary' class='btn center text-center icon-b' style = 'cursor:pointer;'>Full Summary<br /><i class="fas fa-chevron-circle-down"></i></a>
 
   </div>
   <!--end of .container-->
@@ -88,25 +88,5 @@ draft: true
 <!-- {{ define "addscripts" }} -->
 <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
 <script src='/scripts/riskscore.js'></script>
-
-<script>
-loc2clipboard = function (parent) {
-	console.log (el);
-  var el = document.createElement ("textarea");
-  el.value = document.location.href;
-  parent.appendChild (el);
-  el.focus ();
-  el.select ();
-  try {
-    var ok = document.execCommand ("copy");
-  } catch (err) {
-    console.error (err);
-  }
-
-  parent.removeChild (el);
-}
-
-</script>
-
 
 <!-- {{ end }} -->
