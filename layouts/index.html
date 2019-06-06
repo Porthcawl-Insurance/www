@@ -86,8 +86,12 @@
 {{ end }}
 
 {{ define "addscripts" }}
-<script src='/scripts/downtimepage.js'></script>
-<script src='/scripts/clearbit-check_if_email_provider.js'></script>
+{{ $script := resources.Get "/scripts/clearbit-check_if_email_provider.js" | resources.Minify }}
+<script src='{{ $script.RelPermalink }}'></script>
+
+{{ $script := resources.Get "/scripts/downtimepage.js" | resources.Minify }}
+<script src='{{ $script.RelPermalink }}'></script>
+
 <script>
 !function () {
 	$('#get_downtime_risk').submit (submitIfEmailNotProvider);

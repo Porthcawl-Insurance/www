@@ -9,9 +9,17 @@ Codeup:
 
 */
 
-'use strict';
+// Append script to the bottom of the body to call genRiskscore after the document is ready
+/*
+(function () {
+	var s = document.createElement ('script');
+	s.text = 'genRiskscore ();';
+	document.getElementsByTagName ("body")[0].append (s);
+})();
+*/
 
-$(function() {
+(function() {
+	'use strict';
 
   // Retrieve a specific URL parameter.
   function getURLParameter(sParam) {
@@ -38,11 +46,9 @@ $(function() {
   } else {
     var _domain_id = localStorage.getItem ('_domain_id')
     if (_domain_id) {
-      // TODO: Call API function to populate RS data with id = _domain_id
       var data = { id: _domain_id }
       getData(data);
     } else {
-      // TODO: Display an error stating that no RS data is available ... Same error as when the API call returns a 404.
       $('#jumbotron-loading').addClass ('d-none');
       $('#jumbotron-error').removeClass ('d-none');
     }
@@ -322,7 +328,6 @@ $(function() {
           "<i class='fa fa-circle fa-stack-2x icon-background'></i>" +
           "<i class='" + icon + " fa-stack-1x'></i>" +
           "</span></p>" +
-          // "<p class='c-tag'>" + tag + "</p>" +
           "</div>" +
           "<div class='text-div'>" +
           "<p class='c-title'>" + name + "</p>" +
@@ -440,4 +445,4 @@ $(function() {
     }, 1000);
   });
 
-});
+})();
