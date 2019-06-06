@@ -147,7 +147,7 @@ body {
   min-height: 100vh !important;
   padding-bottom: 70px;
   overflow-x: hidden;
-  
+
   @include linear-gradient($light-gray, $lighter-gray);
 }
 
@@ -505,20 +505,41 @@ input {
   max-width: 800px;
   margin: 0 auto;
 
-    p, h1, h2 {
-      color: $dark-gray !important;
-    }
+  p, h1, h2 {
+    color: $dark-gray !important;
+  }
 
   h1 {
+    color: $dark-gray !important;
+    margin-bottom: 1em !important;
+    font-size: 1.25em !important;
+
+    @include sm {
+      margin-bottom: 1.5em !important;
+      font-size: 1.7em !important;
+    }
+
     span {
+      font-weight: bold !important;
+      font-size: 1.75em;
+
+      @include sm {
+        font-size: 1.25em !important;
+      }
     }
   }
   h2 {
+    font-size: 1.5em !important;
   }
   p {
     max-width: 650px;
     margin: 0 auto;
-    padding: 1em;
+    padding: 1em 0em;
+
+    @include sm {
+      padding: 1em;
+
+    }
   }
   a {
     font-weight: 400;
@@ -535,30 +556,40 @@ input {
 
   .header, .body {
     width: 100%;
+    padding: 2rem;
+
+    @include sm {
+      padding: 2.5rem;
+    }
   }
 
   .header {
-    padding: 2.5rem;
-    padding-bottom: 1rem;
-    h1 {
-      color: $dark-gray !important;
-      margin-bottom: 1.5em !important;
-      font-size: 1.7em !important;
-      span {
-        font-weight: bold !important;
-      }
+    padding-bottom: .5rem;
+
+    @include sm {
+      padding-bottom: 1rem;
     }
+
+    // h1 {
+    //   color: $dark-gray !important;
+    //   margin-bottom: 1.5em !important;
+    //   font-size: 1.7em !important;
+    //   span {
+    //     font-weight: bold !important;
+    //   }
+    // }
     img {
       max-width: 400px;
     }
   }
 
   .body {
-    padding: 2.5rem;
-    padding-top: 1rem;
-    h2 {
-      font-size: 1.5em !important;
+    padding-top: .5rem;
+
+    @include sm {
+      padding-top: 1rem;
     }
+
     p {
       text-align: center;
     }
@@ -1321,11 +1352,18 @@ table.table {
   padding-bottom: 2em;
 
   @include sm {
-    min-height: 85vh;
-    background-image: url('/images/revenue-background.svg');
-    background-position: center;
+    background-image: url('/images/tablet-revenue-background.svg');
+    min-height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  @include md {
+    background-image: url('/images/revenue-background.svg');
+    padding-left: 2em;
+
+    // background-position: right;
+
   }
 
   h1 {
@@ -1334,10 +1372,19 @@ table.table {
     padding: .5em;
 
     @include sm {
-      font-size: 2.5em !important;
-      font-size: 4em !important;
+      font-size: 2em !important;
       padding-bottom: .2em;
-      padding: 1.25rem .5rem .5rem 2.5rem;
+      padding: 1rem .5rem .5rem 2.5rem;
+    }
+
+    @include md {
+      font-size: 2.5em !important;
+      text-align: left;
+      padding-left: 0;
+    }
+
+    @include lg {
+      padding-left: 4rem;
     }
   }
 
@@ -1347,19 +1394,43 @@ table.table {
     padding-bottom: .4em;
 
     @include sm {
-      font-size: 1.5em !important;
-      padding-left: 2.5rem;
+      font-size: 1.25em !important;
+      // padding-left: 2.5rem;
     }
+
+    @include md {
+      font-size: 1.5em !important;
+      // padding-left: 2.25rem;
+      text-align: left;
+      }
+
+      @include lg {
+        padding-left: 4rem;
+      }
   }
 
   p {
     color: $lightest;
     font-size: 1em !important;
+    text-align: center;
 
     @include sm {
-      padding-left: 2.5rem;
-      font-size: 1.25em !important;
+      // padding-left: 2rem;
     }
+
+    @include md {
+      padding-left: 2.5rem;
+      font-size: 1.25 em !important;
+      text-align: left;
+      padding-left: 0;
+
+    }
+
+    @include lg {
+      padding-left: 4rem;
+    }
+
+
   }
 
   .downtime-form {
@@ -1370,6 +1441,16 @@ table.table {
       padding: 1em;
     }
 
+    @include md {
+      margin-top: 2em;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    @include lg {
+      padding-left: 4rem;
+    }
+
     label[for='user-email'] {
       color: $lightest;
       font-size: 1.25em !important;
@@ -1378,14 +1459,41 @@ table.table {
       @include sm {
         font-size: 1.75em !important;
       }
+
+      @include md {
+        padding-left: 0;
+        font-size: 1.45em !important;
+      }
+
+    }
+
+    #user-email {
+      margin: 0 auto;
+
+      @include md {
+        margin-left: 0 !important;
+      }
     }
 
     .form-check-label {
       font-size: 1.1em !important;
+
+
     }
 
     .form-check {
       margin-bottom: 0;
+
+      @include sm {
+        display: block;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+      }
+
+      @include md {
+        // padding-left: 0 !important;
+        margin-left: 0 !important;
+      }
     }
 
     #landing-btn {
@@ -1393,6 +1501,10 @@ table.table {
       margin: 0 auto !important;
       font-size: 1.2em !important;
       padding: 8px 20px;
+
+      @include md {
+        margin-left: 0 !important;
+      }
     }
 
   }
