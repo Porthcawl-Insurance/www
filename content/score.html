@@ -5,6 +5,8 @@ slug: "/score"
 date: 2019-04-30T19:53:19-05:00
 draft: true
 ---
+
+<!-- LOADING -->
 <div id='jumbotron-loading' class='jumbotron text-center'>
   <p class='larger text-center'>
     Calculating your Downtime Risk Assessment
@@ -18,6 +20,7 @@ draft: true
 
 </div>
 
+<!-- ERROR SECTION -->
 <div id='jumbotron-error' class='jumbotron d-none'>
   <div class='container'>
     <h1 class='text-center pb-4'>Sorry, we couldn’t find your downtime risk assessment! </h1>
@@ -76,14 +79,15 @@ draft: true
         <a id='share-score' class='btn center text-center icon-l' href="#Copied">Share this score <i class="fal fa-share-square"></i></a>
       </div>
 
+      <!-- Positive / Negative -->
       <div id='factors-row' class='d-flex flex-column flex-md-row justify-content-around'>
-        <div class='p-3'>
+        <div class=''>
           <div id='top-factors' class='factor top'>
             <p class='header'>Positive contributing factors</p>
             <!-- populated from js -->
           </div>
         </div>
-        <div class='p-3'>
+        <div class=''>
           <div id='bottom-factors' class='factor bottom'>
             <p class='header'>Negative contributing factors</p>
             <!-- populated from js -->
@@ -100,9 +104,10 @@ draft: true
 </div>
 <!-- end of .jumbotron -->
 
-<div id='summary-div' class='container-fluid p-5 background-gradient colorful d-none'>
+<!-- FULL SUMMARY -->
+<div id='summary-div' class='container-fluid background-gradient colorful d-none'>
   <div class='container'>
-    <h3 class='text-center p-3'>Your downtime risk explained...</h3>
+    <h3 class='text-center p-3 pb-5'>Your downtime risk explained...</h3>
     <div class='d-flex flex-row flex-nowrap justify-content-center'>
       <div id='factor-info' class='d-flex flex-column flex-nowrap'>
         <!-- populated from js / popFactorSummary() -->

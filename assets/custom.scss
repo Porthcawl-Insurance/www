@@ -974,10 +974,13 @@ input {
 }
 
 .factor-sum {
-  background-color: rgba($very-dark, .1);
+  background-color: rgba($very-dark, .25);
   margin: .2em;
   padding: 0 .3em;
 
+  p {
+    text-align: left !important;
+  }
   .icon-div {
     min-width: 50px;
     padding:.5em .3em .5em 0;
@@ -1635,9 +1638,9 @@ table.table {
   }
 
   h1 {
-  text-align: center !important;
-  color: $dark-gray !important;
-  font-size: 1.5em !important;
+    text-align: center !important;
+    color: $dark-gray !important;
+    font-size: 1.5em !important;
 
     @include md {
       margin-bottom: .1em!important;
@@ -1668,27 +1671,22 @@ table.table {
     margin-bottom: .2em !important;
   }
 
-  #copy-url {
-    max-width: 400px;
-    margin: 0 auto;
-    // display: none;
-  }
-
   #score-row {
-    padding: 2em;
-    padding-top: 1em;
-    >div:first-child {
+    padding: 1em;
+    padding-top: 1.5em;
+
+    @include sm {
       padding: 2em;
+      padding-top: 1em;
+      >div:first-child {
+        padding: 2em;
+      }
     }
 
     @include md {
       padding: .5em;
     }
 
-  }
-
-  #factors-row {
-    // background-color: $lightest;
   }
 
   #score {
@@ -1733,6 +1731,12 @@ table.table {
     max-width: 150px;
   }
 
+  #factors-row {
+    >div {
+      padding: 1em 0;
+    }
+  }
+
   #full-summary.btn {
       font-size: 1.4em;
       font-weight: 400 !important;
@@ -1743,12 +1747,17 @@ table.table {
   }
 
   #share-score.btn {
-    padding-top:0;
+    padding-top: 1em;
     font-size: 1em;
     font-weight: 400 !important;
     color: rgba($purple, .8) !important;
     i {
       padding-left: .3em;
+    }
+
+    @include sm {
+      padding-top:0;
+
     }
   }
 }
