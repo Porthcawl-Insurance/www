@@ -1,30 +1,28 @@
 {{ define "main" }}
 
 <div class='container-fluid page-header'>
-	<div class='row align-items-center'>
-		<div class='col'>
+	<div class='container'>
 			<h1 class='pb-4'>Join Us</h1>
 			<p class='larger'>We believe that small business insurance should be easy to understand, easy to buy, and easy to file a claim. </p>
 			<p class=''>Interested in joining? Check out our <a href='/about/culture/' class=''>Culture Blueprint</a>.
-			<!-- <a href='/culture/' class='icon-r'> Read our Culture Blueprint <i class="fas fa-chevron-right"></i> </a> -->
-		</div>
+
+				<hr class='dark'/>
 	</div>
 </div>
 <section class='pb-5'>
 
-	<div class='container p-5'>
+	<div class='container pb-5'>
 
 		{{ range $i, $e := .Data.Pages }}
-		<div class='row'>
-			<div class='col'>
+			<div class='d-flex flex-column'>
 				{{ if eq $i 0 }}
 				<h2 class='text-center t-dark'>Careers</h2>
+				<hr />
 				{{ end }}
-				<div class='mb-2 mt-3 pl-4'>
-					<a class='link career' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a>
-				</div>
+				<!-- <div class='mb-2 mt-3 pl-4'> -->
+					<a class='link career text-center pb-4' href='{{ .RelPermalink }}'><i class="far fa-angle-right"></i> {{ .Title }}</a>
+				<!-- </div> -->
 			</div>
-		</div>
 
 		{{ end }}
 
