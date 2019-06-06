@@ -351,9 +351,9 @@ input {
   }
   &.colorful {
     @include linear-gradient(rgba($dark-purple, .9), $teal);
-    p {
-      color: $lightest;
-    }
+    // p {
+    //   color: $lightest;
+    // }
   }
   &.purples {
     @include linear-gradient(rgba($dark-purple, .8), rgba($purple,.8));
@@ -1305,6 +1305,10 @@ input {
   &.career {
     color: $dark-gray !important;
     font-size: 1.3rem;
+    i{
+      color: $orange;
+      padding-right: .1em;
+    }
   }
 
   .img {
@@ -1332,6 +1336,22 @@ section.single-career {
   h1, h2, h3 {
     color: $dark-gray !important;
     padding: .3em 0;
+    text-align: center;
+    @include sm {
+      text-align: left;
+
+    }
+  }
+  a.icon-l {
+    color: $purple !important;
+    font-weight: 400 !important;
+    i {
+      padding-right: .3em;
+      font-weight: bold;
+    }
+  }
+  li {
+    text-align: left;
   }
 }
 
@@ -1628,12 +1648,26 @@ table.table {
 }
 
 #jumbotron-error {
+  background-color: transparent !important;
+  padding-top: 1rem;
+  @include md {
+    padding-top: 2rem;
+  }
   h1, h2, h3 {
     color: $dark-gray !important;
   }
 
   h2 {
     font-size: 1.5em !important;
+  }
+
+  .container {
+    background-color: $lightest;
+    padding: 3em .5em;
+    box-shadow: 0px 5px 8px rgba($dark-purple, .1);
+    @include sm {
+      padding: 3em;
+    }
   }
 
   .text-div {
