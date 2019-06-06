@@ -1,6 +1,3 @@
-{{ $options := (dict "targetPath" "static/css/style.css" "outputStyle" "compressed" "enableSourceMap" false) }}
-{{ $style := resources.Get "custom.scss" | resources.ToCSS $options }}
-
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -27,9 +24,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <link type='text/css' rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto:100,300,400'>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
-  <!-- <link type='text/css' rel='stylesheet' href='https://cyberfortress-www-sandbox.appspot.com/static/css/style.css'> -->
-  <!-- <link type='text/css' rel='stylesheet' href='{{ $style.RelPermalink }}'> -->
-  <link type='text/css' rel='stylesheet' href='/static/css/style.css'>
+
+	{{ $options := (dict "targetPath" "static/css/style.css" "outputStyle" "compressed" "enableSourceMap" false) }}
+	{{ $style := resources.Get "custom.scss" | resources.ToCSS $options }}
+  <link type='text/css' rel='stylesheet' href='{{ $style.RelPermalink }}'>
   <link rel='icon' type='image/png' href='/images/favicon-32x32.png' sizes='32x32'>
   <link rel='icon' type='image/png' href='/images/favicon-96x96.png' sizes='96x96'>
 </head>
@@ -57,37 +55,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- D3.js -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
 
-  <script src='/scripts/main.js'></script>
-  <script src='/scripts/poppers.js'></script>
-  <!-- <script src='/scripts/email.js'></script> -->
+	{{ $script := resources.Get "/scripts/main.js" | resources.Minify }}
+	<script src='{{ $script.RelPermalink }}'></script>
+
+	{{ $script := resources.Get "/scripts/poppers.js" | resources.Minify }}
+  <script src='{{ $script.RelPermalink }}'></script>
 
   {{ block "addscripts" . }}
   {{ end }}
 
-  <script>
-    // Form validation - with Bootstrap 4//
-    (function() {
-      'use strict';
-
-      window.addEventListener('load', function() {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-          form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-
-  </script>
-
 </body>
-
 </html>
