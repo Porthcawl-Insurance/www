@@ -589,7 +589,7 @@ input {
     }
   }
   h2 {
-    font-size: 1.25em !important;
+    font-size: 1.1em !important;
 
     @include sm {
       font-size: 1.5em !important;
@@ -598,7 +598,7 @@ input {
   p {
     max-width: 650px;
     margin: 0 auto;
-    padding: 1em 0em;
+    padding: 1em 0em 1em 0em;
 
     @include sm {
       padding: 1em;
@@ -606,7 +606,13 @@ input {
     }
   }
   a {
-    font-weight: 400;
+    font-size: 1.1em;
+    font-weight: 400 !important;
+    text-decoration: underline !important;
+    padding: 1em;
+    @include sm {
+
+    }
   }
   hr {
     border-top: solid 1px $mid-gray !important;
@@ -634,16 +640,16 @@ input {
       padding-bottom: 1rem;
     }
 
-    // h1 {
-    //   color: $dark-gray !important;
-    //   margin-bottom: 1.5em !important;
-    //   font-size: 1.7em !important;
-    //   span {
-    //     font-weight: bold !important;
-    //   }
-    // }
     img {
-      max-width: 400px;
+      max-width: 250px;
+
+      @include sm {
+        max-width: 350px;
+      }
+
+      @include md {
+        max-width: 400px;
+      }
     }
   }
 
@@ -662,15 +668,26 @@ input {
     }
   }
 
+  hr {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    border-top: 1px solid rgba($dark-gray, .25) !important;
+  }
+
   .email-examples {
     p {
       padding: 0;
+
       &.good {
-        font-size: 1.25em !important;
-        font-weight: bold;
-        padding-bottom: .75em;
+        font-size: 1em !important;
+        // font-weight: 400 !important;
+        padding-bottom: .5em;
         i {
           color: $r7;
+        }
+
+        @include sm {
+          font-size: 1.25em !important;
         }
       }
       &.bad {
