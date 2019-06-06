@@ -1649,7 +1649,8 @@ table.table {
 
 #jumbotron-error {
   background-color: transparent !important;
-  padding-top: 1rem;
+  padding: 1rem;
+  padding-bottom: 2rem;
   @include md {
     padding-top: 2rem;
   }
@@ -1663,7 +1664,8 @@ table.table {
 
   .container {
     background-color: $lightest;
-    padding: 3em .5em;
+    padding: 3em 1em;
+    margin-bottom: 1em;
     box-shadow: 0px 5px 8px rgba($dark-purple, .1);
     @include sm {
       padding: 3em;
