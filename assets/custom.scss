@@ -475,6 +475,35 @@ input {
   background-color: $lightest !important;
 }
 
+.md-container {
+  h1, h2, h3, h4, h5, h6 {
+    color: $dark-gray !important;
+  }
+
+h1 {
+  padding: 1em .5em;
+  font-weight: 400 !important;
+}
+
+  h3 {
+    font-size: 2em !important;
+    padding: 2em .5em 1em .5em;
+  }
+
+  hr {
+    border-top: 1px solid rgba($dark-gray, .2) !important;
+  }
+
+  a {
+    color: $purple !important;
+    font-weight: 400 !important;
+  }
+
+  ul {
+    padding-top: 1em;
+  }
+}
+
 .container-fluid {
   padding: 2rem;
 
