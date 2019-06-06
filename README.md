@@ -7,8 +7,8 @@ https://www.cyberfortress.com
 * [Sass](https://sass-lang.com/) to regenerate the site's e.g. via the `gencss.sh` script
 
 ## To deploy
-This site leverages Google App engine. To deploy, simply run the shell script `deploy.sh` - first ensuring that the dependencies listed above have are installed on your computer and that you have appropriate permissions to the GCP project referenced in the `deploy.sh` script
+This site leverages Google Container Engine. To deploy, simply run the shell script `deploy-gke.sh` - first ensuring that the dependencies listed above have are installed on your computer and that you have appropriate permissions to the GCP project referenced in the script
 
 ```
-$ sh deploy.sh
+$ sh deploy-gke.sh
 ```
