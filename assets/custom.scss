@@ -1343,7 +1343,9 @@ table.table {
 }
 
 #home-hero {
-  background-image: url('/images/mobile-revenue-background.svg');
+  // background-image: url('/images/mobile-revenue-background.svg');
+  background-image: url('/images/tablet-background.svg');
+
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1352,7 +1354,7 @@ table.table {
   padding-bottom: 2em;
 
   @include sm {
-    background-image: url('/images/tablet-revenue-background.svg');
+    // background-image: url('/images/tablet-background.svg');
     min-height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1361,9 +1363,6 @@ table.table {
   @include md {
     background-image: url('/images/revenue-background.svg');
     padding-left: 2em;
-
-    // background-position: right;
-
   }
 
   h1 {
@@ -1420,7 +1419,7 @@ table.table {
 
     @include md {
       padding-left: 2.5rem;
-      font-size: 1.25 em !important;
+      font-size: 1.25em !important;
       text-align: left;
       padding-left: 0;
 
@@ -1432,6 +1431,13 @@ table.table {
 
 
   }
+
+img {
+  max-width: 500px;
+  padding-top: 3em;
+  display: block;
+  margin: 0 auto !important;
+}
 
   .downtime-form {
     margin-top: 3em;
@@ -1455,14 +1461,16 @@ table.table {
       color: $lightest;
       font-size: 1.25em !important;
       font-weight: 400 !important;
+      display: block;
 
       @include sm {
-        font-size: 1.75em !important;
+        font-size: 1.5em !important;
       }
 
       @include md {
         padding-left: 0;
         font-size: 1.45em !important;
+        display: inline-block;
       }
 
     }
@@ -1484,11 +1492,11 @@ table.table {
     .form-check {
       margin-bottom: 0;
 
-      @include sm {
+      // @include sm {
         display: block;
         max-width: 400px !important;
         margin: 0 auto !important;
-      }
+      // }
 
       @include md {
         // padding-left: 0 !important;
@@ -1577,6 +1585,10 @@ table.table {
     height: 100%;
     min-height: 300px;
     min-width: 400px;
+
+    @include sm {
+      max-width: 200px !important;
+    }
   }
 }
 
