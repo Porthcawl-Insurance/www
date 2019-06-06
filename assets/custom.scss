@@ -154,7 +154,7 @@ body {
 h1, h2, h3 {
   color: $lightest !important;
   font-weight: 300 !important;
-  font-size: 1.4rem !important;
+  font-size: 1.75rem !important;
   text-align: center;
 
   @include sm {
@@ -291,8 +291,12 @@ input {
     border: none;
     border-bottom: 2px solid $lightest;
     &::placeholder {
-      // font-weight: 200;
+      font-weight: 300;
       color: $lightest;
+    }
+    &:focus {
+      background-color: rgba($dark-purple,.5);
+
     }
   }
 }
@@ -347,6 +351,9 @@ input {
   }
   &.colorful {
     @include linear-gradient(rgba($dark-purple, .9), $teal);
+    p {
+      color: $lightest;
+    }
   }
   &.purples {
     @include linear-gradient(rgba($dark-purple, .8), rgba($purple,.8));
@@ -480,10 +487,10 @@ input {
     color: $dark-gray !important;
   }
 
-h1 {
-  padding: 1em .5em;
-  font-weight: 400 !important;
-}
+  h1 {
+    padding: 1em .5em;
+    font-weight: 400 !important;
+  }
 
   h3 {
     font-size: 2em !important;
@@ -501,6 +508,10 @@ h1 {
 
   ul {
     padding-top: 1em;
+  }
+
+  li {
+    text-align: left !important;
   }
 }
 
@@ -544,7 +555,8 @@ h1 {
   }
 
   &.full-height {
-    height: 100%;
+    min-height: 80vh !important;
+
   }
 }
 
@@ -1200,32 +1212,6 @@ h1 {
 
 /*************************** Popovers */
 
-// .popover {
-//   background-color: $dark-gray !important;
-//
-//   .arrow {
-//     &:after {
-//       border-right-color: $dark-gray !important;
-//     }
-//   }
-// }
-//
-// #emailEx {
-//   padding: .5em;
-//   p {
-//     margin-bottom: 0 !important;
-//     color: rgba($lightest, .9) !important;
-//   }
-//   i {
-//     padding-right: .5em;
-//   }
-//   .yes {
-//     color: $r7 !important;
-//   }
-//   .no {
-//     color: $r1 !important;
-//   }
-// }
 
 /***************************** Modals */
 
@@ -1273,7 +1259,7 @@ h1 {
 
 /**************************** Images */
 
-/* Featured on logos */
+/* 'Featured On' logos */
 .img-link {
 
   img {
@@ -1383,6 +1369,7 @@ section.single-resource {
 table.table {
   thead {
     background-color: rgba($dark-gray, .5) !important;
+    color: $lightest;
     th {
       font-weight: 100 !important;
     }
@@ -1405,6 +1392,7 @@ table.table {
   background-repeat: no-repeat;
 
   min-height: 100vh;
+  max0height: 1200px;
   padding-bottom: 2em;
 
   @include sm {
@@ -1419,9 +1407,10 @@ table.table {
   }
 
   h1 {
-    font-size: 1.75em !important;
+    font-size: 2em !important;
     font-weight: 400 !important;
     padding: .5em;
+    padding-top: 1.5em;
 
     @include sm {
       font-size: 2em !important;
@@ -1515,6 +1504,7 @@ table.table {
       font-size: 1.25em !important;
       font-weight: 400 !important;
       display: block;
+      padding-top: 1.5em;
 
       @include sm {
         font-size: 1.5em !important;
@@ -1847,7 +1837,8 @@ nav {
     color: $light !important;
     text-transform: none;
     padding: 8px 0px 8px 40px !important;
-    @include sm{
+    text-align: right !important;
+    @include md {
       // margin-top: 30px;
     }
   }
