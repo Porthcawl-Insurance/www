@@ -1584,6 +1584,15 @@ table.table {
   min-width: 550px;
 }
 
+#piggy-knight {
+  display: block;
+  margin: 0 auto;
+  padding-top: 2em;
+  // max-width: 500px;
+  height: 100%;
+  min-height: 400px;
+}
+
 #email-resend {
   display: block;
   margin: 1em auto !important;
@@ -1790,6 +1799,15 @@ table.table {
   }
 }
 
+#about-hero {
+  p.larger {
+    font-size: 1.1em !important;
+
+    @include md {
+      font-size: larger !important;
+    }
+  }
+}
 
 /* Nav */
 nav {
