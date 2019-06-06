@@ -1615,10 +1615,10 @@ table.table {
   #shrug-knight {
     height: 100%;
     min-height: 300px;
-    min-width: 400px;
+    min-width: 300px;
 
     @include sm {
-      max-width: 200px !important;
+      min-width: 400px;
     }
   }
 }
