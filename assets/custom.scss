@@ -1200,32 +1200,6 @@ h1 {
 
 /*************************** Popovers */
 
-// .popover {
-//   background-color: $dark-gray !important;
-//
-//   .arrow {
-//     &:after {
-//       border-right-color: $dark-gray !important;
-//     }
-//   }
-// }
-//
-// #emailEx {
-//   padding: .5em;
-//   p {
-//     margin-bottom: 0 !important;
-//     color: rgba($lightest, .9) !important;
-//   }
-//   i {
-//     padding-right: .5em;
-//   }
-//   .yes {
-//     color: $r7 !important;
-//   }
-//   .no {
-//     color: $r1 !important;
-//   }
-// }
 
 /***************************** Modals */
 
@@ -1273,7 +1247,7 @@ h1 {
 
 /**************************** Images */
 
-/* Featured on logos */
+/* 'Featured On' logos */
 .img-link {
 
   img {
@@ -1847,7 +1821,8 @@ nav {
     color: $light !important;
     text-transform: none;
     padding: 8px 0px 8px 40px !important;
-    @include sm{
+    text-align: right !important;
+    @include md {
       // margin-top: 30px;
     }
   }
