@@ -448,6 +448,25 @@ input {
   }
 }
 
+.invalid-feedback {
+  color: $r1 !important;
+}
+
+.form-check {
+  margin-bottom: 0;
+
+  // @include sm {
+    display: block;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  // }
+
+  @include md {
+    // padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
 /************************* Containers */
 
 .jumbotron {
@@ -529,7 +548,11 @@ input {
     }
   }
   h2 {
-    font-size: 1.5em !important;
+    font-size: 1.25em !important;
+
+    @include sm {
+      font-size: 1.5em !important;
+    }
   }
   p {
     max-width: 650px;
@@ -1343,7 +1366,6 @@ table.table {
 }
 
 #home-hero {
-  // background-image: url('/images/mobile-revenue-background.svg');
   background-image: url('/images/tablet-background.svg');
 
   background-position: bottom;
@@ -1354,7 +1376,6 @@ table.table {
   padding-bottom: 2em;
 
   @include sm {
-    // background-image: url('/images/tablet-background.svg');
     min-height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1432,12 +1453,12 @@ table.table {
 
   }
 
-img {
-  max-width: 500px;
-  padding-top: 3em;
-  display: block;
-  margin: 0 auto !important;
-}
+  img {
+    max-width: 500px;
+    padding-top: 3em;
+    display: block;
+    margin: 0 auto !important;
+  }
 
   .downtime-form {
     margin-top: 3em;
@@ -1504,6 +1525,16 @@ img {
       }
     }
 
+    .invalid-feedback {
+      margin: 0 auto;
+      text-align: center;
+      margin-top: .3em !important;
+
+      @include md {
+        text-align: left;
+      }
+    }
+
     #landing-btn {
       display: block;
       margin: 0 auto !important;
@@ -1516,7 +1547,7 @@ img {
     }
 
   }
-}
+} /* end of #home-hero */
 
 #featured-on {
   p {
