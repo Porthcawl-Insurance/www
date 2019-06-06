@@ -291,8 +291,12 @@ input {
     border: none;
     border-bottom: 2px solid $lightest;
     &::placeholder {
-      // font-weight: 200;
+      font-weight: 300;
       color: $lightest;
+    }
+    &:focus {
+      background-color: rgba($dark-purple,.5);
+
     }
   }
 }
@@ -504,6 +508,10 @@ input {
 
   ul {
     padding-top: 1em;
+  }
+
+  li {
+    text-align: left !important;
   }
 }
 
