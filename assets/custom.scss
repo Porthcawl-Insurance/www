@@ -1731,7 +1731,7 @@ table.table {
   h1 {
     text-align: center !important;
     color: $dark-gray !important;
-    font-size: 1.25em !important;
+    font-size: 1.1em !important;
 
     @include md {
       margin-bottom: .1em!important;
@@ -1745,9 +1745,9 @@ table.table {
   h2 {
     text-align: center !important;
     font-weight: 400 !important;
-    font-size: 2.6em !important;
+    font-size: 1.75em !important;
     color: $purple !important;
-    max-width: 100%;
+    max-width: 100% !important;
 
     @include sm {
       font-size: 2.5em !important;
@@ -1783,10 +1783,19 @@ table.table {
   }
 
   #score {
-    font-size: 2em !important;
+    font-size: 1.5em !important;
     margin-bottom: 0 !important;
     font-weight: 400 !important;
     white-space: nowrap;
+
+    @include sm {
+      font-size: 2em !important;
+    }
+
+    @include md {
+      font-size: 2.5em !important;
+    }
+
     span {
       font-size: 2em !important;
 
@@ -1799,16 +1808,17 @@ table.table {
       }
     }
 
-    @include md {
-      font-size: 2.5em !important;
-    }
   }
 
   #score-message {
     text-align: center !important;
 
-    font-size: 1em !important;
+    font-size: .8em !important;
     color: rgba($dark-gray, .75) !important;
+
+    @include sm {
+      font-size: 1em !important;
+    }
 
     @include lg {
       text-align: right !important;
@@ -1821,9 +1831,10 @@ table.table {
     margin: 0 auto !important;
     height: 100%;
     width: 100%;
+    min-width: 80px;
     max-height: 250px;
     max-width: 150px;
-    padding: .5em;
+    // padding: .5em;
 
     @include sm {
     }
@@ -1845,17 +1856,18 @@ table.table {
   }
 
   #share-score.btn {
-    padding-top: 1em;
-    font-size: 1em;
+    padding-top: 2em;
+    font-size: 1em !important;
     font-weight: 400 !important;
     color: rgba($purple, .8) !important;
+    margin-bottom: 0 !important;
     i {
       padding-left: .3em;
     }
 
     @include sm {
       padding-top:0;
-
+      font-size: 1em;
     }
   }
 }
