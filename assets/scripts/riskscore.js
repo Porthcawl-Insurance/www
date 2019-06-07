@@ -78,12 +78,12 @@ Codeup:
       score = result.score,
       date = new Date(result.model.ts * 1000),
       conts = result.top_contributions,
-      url = $(location).attr('href');
+      url = document.location.host + document.location.pathname + '?id=' + _domain_id;
 
     $('#domain').text(domain);
     $('#score').html('<span>' + score + '</span> / 10 ');
     $('#score-message').text('as of ' + date.toLocaleDateString());
-    $('#copy-url').val(url);
+    $('#copy-url').text(url);
 
     fillRook(score);
     topFactors(conts);
