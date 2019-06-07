@@ -1,41 +1,27 @@
 {{ define "main" }}
 
-<div class='container-fluid page-header'>
-  <div class='row align-items-center'>
-    <div class='col'>
-      <h1>Resources</h1>
-    </div>
-  </div>
-</div>
-
-<div class='container-fluid'>
-
+<div class='my-5 md-container'>
+	<div>
+		<h1 class = 't-dark'>Resources</h1>
+	</div>
 
   <div class='container d-flex flex-column justify-content-center'>
-    <div class=''>
+    <div class='mb-4'>
       <p class='larger text-center'>We know that technology is complicated and insurance is boring (to most people...but not to us!).
         To help make things less
         confusing, we have put together a list of resources that we hope you enjoy. If you ever have a question, don’t hesitate to <a href='mailto:info@cyberfortress.com' class='underline orange'>contact us</a>.
 			</p>
-      <hr class='dark' />
     </div>
 
     <div class='d-flex flex-column p-3'>
-
       {{ range $i, $e := .Data.Pages }}
-      <div class='p-3 resource-div'>
-
+      <div class='resource-div'>
         <a class='link career bold' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a>
-
         {{ truncate 140 .Content }}
       </div>
-
-
       {{ end }}
-    </div>
-    <!-- end of .flex-column -->
-  </div>
-  <!-- end of .container-->
+		</div>
+	</div>
 </div>
 
 {{ end }}
