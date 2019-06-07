@@ -290,8 +290,10 @@ input {
     background-color: rgba($dark-purple,.25);
     border: none;
     border-bottom: 2px solid $lightest;
+    color: $lightest !important;
+    font-weight: 300 !important;
+
     &::placeholder {
-      font-weight: 300;
       color: $lightest;
     }
     &:focus {
