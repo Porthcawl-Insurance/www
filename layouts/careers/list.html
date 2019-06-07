@@ -1,16 +1,14 @@
 {{ define "main" }}
 
-<div class='my-5'>
+<div class='my-5 list-container'>
 	<div>
 		<h1>Careers at CyberFortress</h1>
 	</div>
-</div>
-<section class='pb-5'>
 
   <div class='container d-flex flex-column justify-content-center'>
     <div class='mb-4'>
       <p class='larger text-center'>
-				We believe that small business insurance should be easy to understand, easy to buy, and easy to file a claim. Interested in joining? Check out our <a href='/about/culture/' class=''>Culture Blueprint</a>.
+				We believe that small business insurance should be easy to understand, easy to buy, and easy to file a claim. <br /> Interested in joining? Check out our <a href='/about/culture/' class=''>Culture Blueprint</a>.
 			</p>
     </div>
 
@@ -18,15 +16,10 @@
       {{ range $i, $e := .Data.Pages }}
       <div class='resource-div'>
         <a class='link career bold' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a>
-        <!-- {{ truncate 40 .Content }} -->
       </div>
       {{ end }}
 		</div>
-
-		{{ end }}
-
 	</div>
-
-</section>
+</div>
 
 {{ end }}

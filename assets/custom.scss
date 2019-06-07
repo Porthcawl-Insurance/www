@@ -522,14 +522,14 @@ input {
     font-weight: 400 !important;
   }
 
-p {
-  text-align: left !important;
-  padding: .5em;
+  p {
+    text-align: left !important;
+    padding: .5em;
 
-  @include md {
-    padding-left: 0 !important;
+    @include md {
+      padding-left: 0 !important;
+    }
   }
-}
 
   ul {
     padding-top: 1em;
@@ -537,6 +537,13 @@ p {
 
   li {
     text-align: left !important;
+  }
+}
+
+.list-container {
+  h1 {
+    color: $dark-gray !important;
+    padding-bottom: 1em;
   }
 }
 
