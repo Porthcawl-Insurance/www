@@ -19,6 +19,22 @@
 	}, false);
 })();
 
+// Clear the email input placeholder text when focused 
+(function () {
+	'use strict';
+	var el = document.getElementById ('user-email');
+	if (el) {
+		el.addEventListener ('focus', function (e) {
+			el = e.target;
+			el.setAttribute ('placeholder', '');
+		});
+		el.addEventListener ('blur', function (e) {
+			el = e.target
+			el.setAttribute ('placeholder', 'your.name@yourbusiness.com');
+		});
+	}
+})();
+
 /*
 // Team Photos
 $(function() {
