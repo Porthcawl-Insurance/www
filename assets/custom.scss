@@ -493,7 +493,7 @@ input {
 
   h1 {
     padding: 1em .5em;
-    font-weight: 400 !important;
+    font-weight: 300 !important;
     text-align: center !important;
 
   }
@@ -516,8 +516,8 @@ input {
   }
 
   a {
-    // color: $purple !important;
-    color: $orange !important;
+    color: $purple !important;
+    // color: $orange !important;
     text-shadow: 0px 1px 0px rgba($very-dark, .01);
     font-weight: 400 !important;
   }
