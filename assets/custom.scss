@@ -148,7 +148,7 @@ body {
   padding-bottom: 70px;
   overflow-x: hidden;
 
-  @include linear-gradient($lighter-gray, $light-gray);
+  @include linear-gradient($light-gray, $lighter-gray);
 }
 
 h1, h2, h3 {
@@ -180,8 +180,8 @@ h4, h5, h6 {
 
 hr {
   border-top: solid 1px $lightest !important;
-  margin-top: 1.5rem !important;
-  margin-bottom: 1.5rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 
   &.dark {
     border-top: solid rgba($mid-gray, .5) 1px !important;
@@ -485,9 +485,10 @@ input {
 }
 
 .md-container {
+
   h1, h2, h3, h4, h5, h6 {
     color: $dark-gray !important;
-    padding: 1em .5em;
+    padding: .5em;
   }
 
   h1 {
@@ -498,25 +499,26 @@ input {
   }
 
   h2, h3, h4, h5, h6 {
-    text-align: center !important;
+    text-align: left !important;
 
     @include md {
-      text-align: left !important;
       padding-left: 0 !important;
     }
   }
 
   h3 {
     font-size: 2em !important;
-    padding: 2em .5em 1em .5em;
+    // padding: 2em .5em 1em .5em;
   }
 
   hr {
-    border-top: 1px solid rgba($dark-gray, .2) !important;
+    border-top: 1px solid rgba($purple, .25) !important;
   }
 
   a {
-    color: $purple !important;
+    // color: $purple !important;
+    color: $orange !important;
+    text-shadow: 0px 1px 0px rgba($very-dark, .01);
     font-weight: 400 !important;
   }
 
