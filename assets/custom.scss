@@ -148,7 +148,7 @@ body {
   padding-bottom: 70px;
   overflow-x: hidden;
 
-  @include linear-gradient($light-gray, $lighter-gray);
+  @include linear-gradient($light-gray, $mid-gray);
 }
 
 h1, h2, h3 {
@@ -1621,8 +1621,11 @@ table.table {
 } /* end of #home-hero */
 
 #featured-on {
+  background-color: rgba($dark-gray, .25);
+  @include linear-gradient(rgba($mid-gray, .4 ), rgba($dark-gray, .5));
+
   p {
-    color: rgba($dark-purple, .75);
+    color: rgba($lightest, .9);
     text-align: center;
     text-transform: uppercase;
     font-size: 1em !important;
