@@ -296,7 +296,7 @@ input {
     }
     &:focus {
       background-color: rgba($dark-purple,.5);
-
+      color: $lightest;
     }
   }
 }
