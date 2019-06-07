@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div class='my-5 md-container'>
+<div class='my-5'>
 	<div>
 		<h1>Careers at CyberFortress</h1>
 	</div>
@@ -16,7 +16,7 @@
       {{ range $i, $e := .Data.Pages }}
       <div class='resource-div'>
         <a class='link career bold' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a>
-        {{ truncate 40 .Content }}
+        <!-- {{ truncate 40 .Content }} -->
       </div>
       {{ end }}
 		</div>
