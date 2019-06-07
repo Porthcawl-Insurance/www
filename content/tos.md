@@ -40,7 +40,7 @@ These terms constitute a binding agreement between you and us if you:
 
 ### 3. Privacy & Confidentiality
 
-1. The Privacy Policy located at [https://www.cyberfortress.com/about/privacy/](/about/privacy) (the "Privacy Policy") is hereby incorporated by reference into these Terms.
+1. The Privacy Policy located at [https://www.cyberfortress.com/privacy/](/privacy/) (the "Privacy Policy") is hereby incorporated by reference into these Terms.
 2. We agree to comply with the Privacy Policy with regard to the use of any of your Confidential or Personal Information as defined therein.
 
 ### 4. Unauthorized Use
