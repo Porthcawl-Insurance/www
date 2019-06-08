@@ -285,6 +285,7 @@ img {
 }
 
 input {
+
   border-radius: .1rem .1rem 0 0  !important;
   &.minimal {
     background-color: rgba($dark-purple,.25);
@@ -293,8 +294,14 @@ input {
     color: $lightest !important;
     font-weight: 300 !important;
 
+
     &::placeholder {
-      color: $lightest;
+      color: rgba($lightest, .8);
+      font-size: .8em;
+
+      @include sm {
+        font-size: 1em;
+      }
     }
     &:focus {
       background-color: rgba($dark-purple,.5);
@@ -371,13 +378,14 @@ input {
 /***************************** Buttons */
 
 .btn {
-  border-radius: .1rem !important;
+  border-radius: .2em !important;
   font-weight: 300 !important;
 
   &.btn-primary {
     background-color: $orange !important;
     color: $very-dark !important;
-    border: rgba($r2, .5) 1px solid !important;
+    border: none;
+    // border: rgba($r2, .5) 1px solid !important;
     box-shadow: 0px 3px 3px rgba($very-dark, .25);
   }
 
@@ -1474,7 +1482,7 @@ table.table {
   background-repeat: no-repeat;
 
   min-height: 100vh;
-  max0height: 1200px;
+  max-height: 1200px;
   padding-bottom: 2em;
 
   @include sm {
@@ -1489,10 +1497,10 @@ table.table {
   }
 
   h1 {
-    font-size: 2em !important;
+    font-size: 1.55em !important;
     font-weight: 400 !important;
-    padding: .5em;
-    padding-top: 1.5em;
+    padding: .2em;
+    padding-top: 1em;
 
     @include sm {
       font-size: 2em !important;
@@ -1512,9 +1520,9 @@ table.table {
   }
 
   h2 {
-    font-size: 1.1em !important;
+    font-size: 1em !important;
     font-weight: 300 !important;
-    padding-bottom: .4em;
+    // padding-bottom: .4em;
 
     @include sm {
       font-size: 1.25em !important;
@@ -1557,14 +1565,19 @@ table.table {
   }
 
   img {
-    max-width: 500px;
+    max-width: 350px !important;
     padding-top: 3em;
     display: block;
     margin: 0 auto !important;
+
+    @include sm{
+      max-width: 500px;
+    }
   }
 
   .downtime-form {
-    margin-top: 3em;
+    margin-top: 1.5em;
+    padding: .75em;
 
     @include sm {
       margin-top: 6em;
@@ -1582,11 +1595,12 @@ table.table {
     }
 
     label[for='user-email'] {
-      color: $lightest;
-      font-size: 1.25em !important;
-      font-weight: 400 !important;
+      color: #fff;
+      font-size: 1.35em !important;
+      font-weight: 300 !important;
       display: block;
       padding-top: 1.5em;
+      margin-bottom: .5em;
 
       @include sm {
         font-size: 1.5em !important;
@@ -1609,9 +1623,8 @@ table.table {
     }
 
     .form-check-label {
-      font-size: 1.1em !important;
-
-
+      font-size: .9em !important;
+      text-align: left;
     }
 
     .form-check {
@@ -1650,6 +1663,7 @@ table.table {
       }
     }
 
+
   }
 } /* end of #home-hero */
 
@@ -1661,7 +1675,7 @@ table.table {
     color: rgba($lightest, .9);
     text-align: center;
     text-transform: uppercase;
-    font-size: 1em !important;
+    font-size: 1.25em !important;
     margin-bottom: 1em;
     padding-bottom: 1em;
     border-bottom: 1px solid rgba($dark-purple, .2);
