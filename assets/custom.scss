@@ -1062,6 +1062,9 @@ input {
       }
     }
     &.none {
+      .fa-stack-1x {
+        color: rgba($very-dark, .6);
+      }
       .icon-background{
         color: rgba($dark-gray, .25);
       }

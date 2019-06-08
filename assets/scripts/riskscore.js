@@ -166,7 +166,7 @@ Codeup:
 				'<p class="icon none text-center">' +
 				'<span class="fa-stack">' +
 				'<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
-				'<i class="fal fa-thumbs-down fa-stack-1x"></i></span></p></div>' +
+				'<i class="fal fa-times fa-stack-1x"></i></span></p></div>' +
 				'<div class="text-div">' +
 				'<p class="f-name">None</p>' +
 				'<p class="f-desc">When calculating your score, no significant positive contributions were included.</p>' +
@@ -207,7 +207,7 @@ Codeup:
 				'<p class="icon none text-center">' +
 				'<span class="fa-stack">' +
 				'<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
-				'<i class="fal fa-thumbs-up fa-stack-1x"></i></span></p></div>' +
+				'<i class="fal fa-times fa-stack-1x"></i></span></p></div>' +
 				'<div class="text-div">' +
 				'<p class="f-name">None</p>' +
 				'<p class="f-desc">When calculating your score, no significant negative contributions were included.</p>' +
