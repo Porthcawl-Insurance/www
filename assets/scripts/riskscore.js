@@ -79,7 +79,7 @@ Codeup:
       date = new Date(result.model.ts * 1000),
       conts = result.top_contributions,
       url = document.location.host + document.location.pathname + '?id=' + _domain_id;
-
+			
     $('#domain').text(domain);
     $('#score').html('<span>' + score + '</span> / 10 ');
     $('#score-message').text('as of ' + date.toLocaleDateString());
