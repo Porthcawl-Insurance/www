@@ -76,7 +76,7 @@ Codeup:
   function populate(result) {
     var domain = result.domain,
       score = result.score,
-      date = new Date(result.model.ts * 1000),
+      date = new Date(result.ts_p * 1000),
       conts = result.top_contributions,
       url = document.location.host + document.location.pathname + '?id=' + _domain_id;
 			
