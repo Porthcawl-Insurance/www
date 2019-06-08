@@ -996,8 +996,11 @@ input {
 }
 
 .factor {
-  width: 100%;
-  max-width: 450px;
+
+  @include md {
+    padding: .3em;
+    min-width: 400px;
+  }
 
   p {
     margin-bottom: 0;
