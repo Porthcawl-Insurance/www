@@ -79,7 +79,7 @@ Codeup:
       date = new Date(result.ts_p * 1000),
       conts = result.top_contributions,
       url = document.location.host + document.location.pathname + '?id=' + _domain_id;
-			
+
     $('#domain').text(domain);
     $('#score').html('<span>' + score + '</span> / 10 ');
     $('#score-message').text('as of ' + date.toLocaleDateString());
@@ -162,8 +162,14 @@ Codeup:
 		} else {
 			$('#top-factors').append(
 				'<div class="d-flex flex-row flex-nowrap align-items-start">' +
+				'<div class="icon-div pt-2">' +
+				'<p class="icon none text-center">' +
+				'<span class="fa-stack">' +
+				'<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
+				'<i class="fal fa-thumbs-down fa-stack-1x"></i></span></p></div>' +
 				'<div class="text-div">' +
 				'<p class="f-name">None</p>' +
+				'<p class="f-desc">When calculating your score, no significant positive contributions were included.</p>' +
 				'</div>' +
 				'</div>'
 			);
@@ -197,8 +203,15 @@ Codeup:
 		} else {
 			$('#bottom-factors').append(
 				'<div class="d-flex flex-row flex-nowrap align-items-start">' +
+				'<div class="icon-div pt-2">' +
+				'<p class="icon none text-center">' +
+				'<span class="fa-stack">' +
+				'<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
+				'<i class="fal fa-thumbs-up fa-stack-1x"></i></span></p></div>' +
 				'<div class="text-div">' +
 				'<p class="f-name">None</p>' +
+				'<p class="f-desc">When calculating your score, no significant negative contributions were included.</p>' +
+
 				'</div>' +
 				'</div>'
 			);

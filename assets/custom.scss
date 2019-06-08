@@ -956,6 +956,11 @@ input {
             color: $r1;
           }
         }
+        &.none {
+          .icon-background{
+            color: rgba($light-gray, .3);
+          }
+        }
       }
       .c-tag {
         font-size: .8em !important;
@@ -1054,6 +1059,11 @@ input {
     &.r1 {
       .icon-background{
         color: $r1;
+      }
+    }
+    &.none {
+      .icon-background{
+        color: rgba($dark-gray, .25);
       }
     }
   }
@@ -1731,14 +1741,6 @@ table.table {
   min-width: 550px;
 }
 
-#piggy-knight {
-  display: block;
-  margin: 0 auto;
-  padding-top: 2em;
-  // max-width: 500px;
-  height: 100%;
-  min-height: 400px;
-}
 
 #email-resend {
   display: block;
@@ -1987,11 +1989,38 @@ table.table {
 }
 
 #about-hero {
+
+  h1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 1.25em !important;
+
+    @include sm {
+
+    }
+  }
+
+  .container {
+    padding: 0 .2em 0 .2em;
+  }
+
   p.larger {
-    font-size: 1.1em !important;
+    font-size: 1em !important;
 
     @include md {
       font-size: larger !important;
+    }
+  }
+
+  #piggy-knight {
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    min-height: 400px;
+
+    @include sm {
+      padding-top: 2em;
+
     }
   }
 }
@@ -2037,7 +2066,6 @@ nav {
 }
 
 /* Footer */
-
 footer {
   position: absolute;
   bottom: 0;
