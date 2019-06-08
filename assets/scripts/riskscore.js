@@ -116,77 +116,93 @@ Codeup:
       });
   }
 
-  // get top & bottom factors
+  // get top positively and negatively contributing factors
   function topFactors(conts) {
-    var top = [conts[0], conts[1], conts[2]];
-    var bottom = getBottomFactors(conts);
+		var positiveFactors = Array ();
+		var negativeFactors = Array ();
 
-    $(top).each(function(i) {
-      var name = this.name,
-        tag = this.tag,
-        desc = this.description,
-        summary = this.summary,
-        weight = this.weight_normalized,
-        icon = getIcon(tag),
-        color = getColor(weight),
-        collapseId = i + 't-collapse';
+		conts.forEach (function (item) {
+			if (item.weight <= 0) {
+				positiveFactors.push (item);
+			} else {
+				negativeFactors.push (item);
+			}
+		});
 
-      $('#top-factors').append(
-        '<div class="d-flex flex-row flex-nowrap align-items-start">' +
-        '<div class="icon-div pt-2">' +
-        '<p class="icon ' + color + ' text-center">' +
-        '<span class="fa-stack">' +
-        '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
-        '<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
-        '<div class="text-div">' +
-        '<p class="f-name">' + name + ' <span>[ ' + tag + ' ]</span>' +
-        '</p>' +
-        '<p class="f-desc">' + summary + '</p>' +
-        '</div></div>'
-      );
-    });
+		// Sort & slice appropriately
+		var limit = 3;
+		positiveFactors = positiveFactors.sort (function (a, b) { return a.weight - b.weight }).slice (0, 3);
+		negativeFactors = negativeFactors.sort (function (a, b) { return b.weight - a.weight }).slice (0, 3);
 
-    $(bottom).each(function(i) {
+		if (positiveFactors.length) {
+			$(positiveFactors).each (function (i) {
+				var name = this.name,
+					tag = this.tag,
+					desc = this.description,
+					summary = this.summary,
+					weight = this.weight_normalized,
+					icon = getIcon(tag),
+					color = getColor(weight),
+					collapseId = i + 't-collapse';
 
-      var name = this[0].name,
-        tag = this[0].tag,
-        desc = this[0].description,
-        summary = this[0].summary,
-        weight = this[0].weight_normalized,
-        icon = getIcon(tag),
-        color = getColor(weight),
-        collapseId = i + 'b-collapse';
+				$('#top-factors').append(
+					'<div class="d-flex flex-row flex-nowrap align-items-start">' +
+					'<div class="icon-div pt-2">' +
+					'<p class="icon ' + color + ' text-center">' +
+					'<span class="fa-stack">' +
+					'<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
+					'<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
+					'<div class="text-div">' +
+					'<p class="f-name">' + name + ' <span>[ ' + tag + ' ]</span>' +
+					'</p>' +
+					'<p class="f-desc">' + summary + '</p>' +
+					'</div></div>'
+				);
+			});
+		} else {
+			$('#top-factors').append(
+				'<div class="d-flex flex-row flex-nowrap align-items-start">' +
+				'<div class="text-div">' +
+				'<p class="f-name">None</p>' +
+				'</div>' +
+				'</div>'
+			);
+		}
 
+		if (negativeFactors.length) {
+			$(negativeFactors).each (function (i) {
+				var name = this.name,
+					tag = this.tag,
+					desc = this.description,
+					summary = this.summary,
+					weight = this.weight_normalized,
+					icon = getIcon(tag),
+					color = getColor(weight),
+					collapseId = i + 't-collapse';
 
-      $('#bottom-factors').append(
-        '<div class="d-flex flex-row flex-nowrap align-items-start">' +
-        '<div class="icon-div pt-2">' +
-        '<p class="icon ' + color + ' text-center">' +
-        '<span class="fa-stack">' +
-        '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
-        '<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
-        '<div class="text-div">' +
-        '<p class="f-name">' + name + ' <span>[ ' + tag + ' ]</span>' +
-        '</p>' +
-        '<p class="f-desc">' + summary + '</p>' +
-        '</div></div>'
-      );
-    });
-
-    function getBottomFactors(conts) {
-      var clone = conts.slice(0), //clone array as to not change orignal conts[]
-        lastConts = [],
-        step;
-
-      for (step = 0; step < 3; step++) { // get .last(), then .pop() from clone, 3x
-        var lCont = $(clone).last();
-        lastConts.push(lCont);
-        clone.pop(lCont);
-      }
-
-      return lastConts;
-    }
-
+				$('#bottom-factors').append(
+					'<div class="d-flex flex-row flex-nowrap align-items-start">' +
+					'<div class="icon-div pt-2">' +
+					'<p class="icon ' + color + ' text-center">' +
+					'<span class="fa-stack">' +
+					'<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
+					'<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
+					'<div class="text-div">' +
+					'<p class="f-name">' + name + ' <span>[ ' + tag + ' ]</span>' +
+					'</p>' +
+					'<p class="f-desc">' + summary + '</p>' +
+					'</div></div>'
+				);
+			});
+		} else {
+			$('#bottom-factors').append(
+				'<div class="d-flex flex-row flex-nowrap align-items-start">' +
+				'<div class="text-div">' +
+				'<p class="f-name">None</p>' +
+				'</div>' +
+				'</div>'
+			);
+		}
   }
 
   // categorize factors by tag
