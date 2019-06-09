@@ -153,10 +153,15 @@ body {
 }
 
 h1, h2, h3 {
-  color: $lightest !important;
+  // color: $lightest !important;
+  color: $dark-gray !important;
+
   font-weight: 300 !important;
-  font-size: 1.75rem !important;
   text-align: center;
+}
+
+h1 {
+  font-size: 1.75rem !important;
 
   @include sm {
     font-size: 1.8rem !important;
@@ -168,6 +173,46 @@ h1, h2, h3 {
 
   @include lg {
     font-size: 2.4rem !important;
+  }
+
+  span.smaller {
+    font-size: .75em;
+  }
+}
+
+h2 {
+  font-size: 1.5rem !important;
+
+  @include sm {
+    font-size: 1.25rem !important;
+  }
+
+  @include md {
+    font-size: 1.5rem !important;
+  }
+
+  @include lg {
+    font-size: 2rem !important;
+  }
+
+  span.smaller {
+    font-size: .75em;
+  }
+}
+
+h3 {
+  font-size: 1.25rem !important;
+
+  @include sm {
+    font-size: 1rem !important;
+  }
+
+  @include md {
+    font-size: 1.5rem !important;
+  }
+
+  @include lg {
+    font-size: 2rem !important;
   }
 
   span.smaller {
@@ -1560,6 +1605,10 @@ table.table {
     padding-left: 2em;
   }
 
+  h1, h2, h3 {
+    color: $lightest !important;
+  }
+
   h1 {
     font-size: 1.55em !important;
     font-weight: 400 !important;
@@ -2016,15 +2065,15 @@ table.table {
 
 #about-hero {
 
-  h1 {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    font-size: 1.25em !important;
-
-    @include sm {
-
-    }
-  }
+  // h1 {
+  //   padding-top: 1em;
+  //   padding-bottom: 1em;
+  //   font-size: 1.4em !important;
+  //   font-weight: 400 !important;
+  //   @include sm {
+  //
+  //   }
+  // }
 
   .container {
     padding: 0 .2em 0 .2em;
@@ -2042,11 +2091,15 @@ table.table {
     display: block;
     margin: 0 auto;
     height: 100%;
-    min-height: 400px;
+    min-height: 250px;
 
     @include sm {
       padding-top: 2em;
+      min-height: 300px;
+    }
 
+    @include md {
+      min-height: 400px;
     }
   }
 }
