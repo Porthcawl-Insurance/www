@@ -23,13 +23,18 @@ draft: true
 <!-- ERROR SECTION -->
 <div id='jumbotron-error' class='jumbotron d-none'>
   <div class='container'>
-    <h1 class='text-center pb-4'>Sorry, we couldn’t find your downtime risk assessment! </h1>
+    <h1 class='text-center pb-4'>Sorry, we don't have a risk assessment yet for your domain. </h1>
     <div class='d-flex flex-column flex-lg-row flex-nowrap justify-content-md-center justify-content-lg-between justify-content-xl-around align-items-center align-items-lg-start'>
       <div class=''>
         <img id='shrug-knight' class='img-fluid' src='/images/shrugknight.svg' />
       </div>
       <div class='text-div px-4 py-5'>
-        <h2 class='pb-4'>Wait a minute and then refresh the page.</h2>
+        <p class='larger'>If your domain points to an ecommerce website and you've
+          clicked a link in your email to reach this,
+          please wait a minute and refresh this page.</p>
+          <p class='larger pb-3'>
+            Check out our <a href='/faq/'>FAQ</a> for more info.
+            </p>
         <p class='pb-4'>
           Each domain has a unique URL, so if you have lost yours, then we are happy
           to send you another if the refresh doesn’t work.
@@ -109,7 +114,7 @@ draft: true
 <!-- FULL SUMMARY -->
 <div id='summary-div' class='container-fluid background-gradient colorful d-none'>
   <div class='container'>
-    <h3 class='text-center p-3 pb-5'>All Contributing Factors</h3>
+    <h3 class='text-center p-3 pb-5 t-light'>All Contributing Factors</h3>
     <div class='d-flex flex-row flex-nowrap justify-content-center'>
       <div id='factor-info' class='d-flex flex-column flex-nowrap'>
         <!-- populated from js / popFactorSummary() -->
