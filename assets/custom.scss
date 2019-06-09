@@ -14,6 +14,7 @@ $lightest: #F3F3FF;
 $orange: #FF934F;
 $purple: #4B296B;
 $dark-purple: #26193B;
+$bright-purple: #632999;
 $teal: #5CB0BC;
 
 /* Link Colors */
@@ -217,7 +218,8 @@ p, li {
 }
 
 a {
-  color: $link !important;
+  // color: $link !important;
+  color: $bright-purple !important;
   font-weight: 300 !important;
   &.underline {
     text-decoration: underline !important;
@@ -225,6 +227,10 @@ a {
   }
   &.orange {
     color: $orange !important;
+  }
+  &.purple {
+    color: $bright-purple !important;
+    font-weight: 400 !important;
   }
   &.block {
       display: block;
@@ -524,7 +530,7 @@ input {
   }
 
   a {
-    color: $purple !important;
+    // color: $bright-purple !important;
     // color: $orange !important;
     text-shadow: 0px 1px 0px rgba($very-dark, .01);
     font-weight: 400 !important;
@@ -552,6 +558,11 @@ input {
   h1 {
     color: $dark-gray !important;
     padding-bottom: 1em;
+  }
+
+  .list-div {
+    max-width: 500px;
+    padding: 2em;
   }
 }
 
@@ -1413,9 +1424,11 @@ input {
     font-size: 1.3rem;
   }
 
-  &.career {
+  &.big {
     color: $dark-gray !important;
-    font-size: 1.3rem;
+    font-size: 1.5em;
+    padding: .5em !important;
+    padding-left: 0 !important;
     i{
       color: $orange;
       padding-right: .1em;
@@ -1434,7 +1447,7 @@ input {
   &:hover {
     color: $very-dark !important;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 300 !important;
 
     i.fas {
       padding-left: 9px;
@@ -1444,17 +1457,17 @@ input {
 
 section.single-career {
   padding-bottom: 4em;
-  h1, h2, h3 {
+  h1, h2, h3, p {
     color: $dark-gray !important;
     padding: .3em 0;
-    text-align: center;
-    @include sm {
+    // text-align: center;
+    // @include sm {
       text-align: left;
-
-    }
+    //
+    // }
   }
   a.icon-l {
-    color: $purple !important;
+    // color: $purple !important;
     font-weight: 400 !important;
     i {
       padding-right: .3em;
@@ -1469,20 +1482,30 @@ section.single-career {
 section.single-resource {
   h1 {
     color: $dark-gray !important;
+    text-align: left;
   }
   a.icon-l {
-    color: $purple !important;
+    // color: $purple !important;
     font-weight: 400 !important;
     i {
       padding-right: .3em;
       font-weight: bold;
     }
   }
+  p {
+    text-align: left !important;
+  }
 }
 
 .resource-div {
+padding-bottom: 1em;
+
   p {
     opacity: .6 !important;
+    text-align: left !important;
+  }
+  a {
+    padding-left: 0 !important;
   }
 }
 

@@ -2,21 +2,21 @@
 
 <div class='my-5 list-container'>
 	<div>
-		<h1 class = 't-dark'>Resources</h1>
+		<h1>Resources</h1>
 	</div>
 
   <div class='container d-flex flex-column justify-content-center'>
     <div class='mb-4'>
       <p class='larger text-center'>We know that technology is complicated and insurance is boring (to most people...but not to us!).
         To help make things less
-        confusing, we have put together a list of resources that we hope you enjoy. If you ever have a question, don’t hesitate to <a href='mailto:info@cyberfortress.com' class='underline orange'>contact us</a>.
+        confusing, we have put together a list of resources that we hope you enjoy. If you ever have a question, don’t hesitate to <a href='mailto:info@cyberfortress.com' class='purple'>contact us</a>.
 			</p>
     </div>
 
     <div class='d-flex flex-column p-3'>
       {{ range $i, $e := .Data.Pages }}
       <div class='resource-div'>
-        <a class='link career bold' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a>
+        <a class='link big' href='{{ .RelPermalink }}'><i class="far fa-angle-right"></i> {{ .Title }} </a>
         {{ truncate 140 .Content }}
       </div>
       {{ end }}

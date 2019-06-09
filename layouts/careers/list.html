@@ -5,19 +5,19 @@
 		<h1>Careers at CyberFortress</h1>
 	</div>
 
-  <div class='container d-flex flex-column justify-content-center'>
-    <div class='mb-4'>
-      <p class='larger text-center'>
-				We believe that small business insurance should be easy to understand, easy to buy, and easy to file a claim. <br /> Interested in joining? Check out our <a href='/about/culture/' class=''>Culture Blueprint</a>.
+	<div class='container d-flex flex-column justify-content-center'>
+		<div class='mb-4'>
+			<p class='larger text-center'>
+				We believe that small business insurance should be easy to understand, easy to buy, and easy to file a claim. <br /> Interested in joining? Check out our <a href='/about/culture/' class='purple'>Culture Blueprint</a>.
 			</p>
-    </div>
-
-    <div class='d-flex flex-column p-3'>
-      {{ range $i, $e := .Data.Pages }}
-      <div class='resource-div'>
-        <a class='link career bold' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a>
-      </div>
-      {{ end }}
+		</div>
+		<div class='d-flex flex-column list-div mx-auto'>
+			{{ range $i, $e := .Data.Pages }}
+			<!-- <div class=''> -->
+				<a class='link big ' href='{{ .RelPermalink }}'> <i class="far fa-angle-right"></i> {{ .Title }} </a>
+				<!-- {{ truncate 140 .Content }} -->
+			<!-- </div> -->
+			{{ end }}
 		</div>
 	</div>
 </div>
