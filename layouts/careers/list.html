@@ -1,37 +1,25 @@
 {{ define "main" }}
 
-<section>
-  <div class='container pb-4'>
+<div class='my-5 list-container'>
+	<div>
+		<h1>Careers at CyberFortress</h1>
+	</div>
 
-    <div class='row'>
-      <div class='col'>
-        <h1 class='p-4'>Join Us</h1>
-      </div>
-    </div>
-
-    <div class='row mb-5 p-4'>
-      <div class='col'>
-        <p class='bold larger'>We believe that small business insurance should be easy to understand, easy to buy, and easy to file a claim. </p>
-        <p>Interested in joining us? Read our <a href='/about/culture/'>culture blueprint</a> and let us know what you think!</p>
-      </div>
-    </div>
-
-    {{ range $i, $e := .Data.Pages }}
-    <div class='row '>
-      <div class='col-md-8 offset-md-0'>
-        {{ if eq $i 0 }}
-        <h2 class='pl-4'>Careers</h2>
-        {{ end }}
-        <div class='mb-2 mt-3 pl-4'>
-          <a class='link career' href='{{ .RelPermalink }}'>{{ .Title }} <i class="fas fa-angle-right"></i></a>
-        </div>
-      </div>
-    </div>
-
-    {{ end }}
-
-  </div>
-
-</section>
+	<div class='container d-flex flex-column justify-content-center'>
+		<div class='mb-4'>
+			<p class='larger text-center'>
+				We believe that small business insurance should be easy to understand, easy to buy, and easy to file a claim. <br /> Interested in joining? Check out our <a href='/about/culture/' class='purple'>Culture Blueprint</a>.
+			</p>
+		</div>
+		<div class='d-flex flex-column list-div mx-auto'>
+			{{ range $i, $e := .Data.Pages }}
+			<!-- <div class=''> -->
+				<a class='link big ' href='{{ .RelPermalink }}'> <i class="far fa-angle-right"></i> {{ .Title }} </a>
+				<!-- {{ truncate 140 .Content }} -->
+			<!-- </div> -->
+			{{ end }}
+		</div>
+	</div>
+</div>
 
 {{ end }}

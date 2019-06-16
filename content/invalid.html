@@ -1,0 +1,56 @@
+---
+title: "Invalid Email"
+date: 2019-03-03T13:42:47-06:00
+draft: true
+slug: "/invalid/"
+---
+
+{{< block >}}
+
+<div class='header'>
+  <h1><span>Whoops!</span><br />Sorry, that's not a business email.</h1>
+</div>
+<div class='body'>
+  <p>
+    In order to determine your business’s downtime risk we need your business email
+    so that our risk model can run its analysis on the business domain as opposed to <span class='bold'>gmail.com</span> or <span class='bold'>yahoo.com</span>.
+  </p>
+  <!-- <hr class='dark'/> -->
+  <div class='email-examples'>
+    <p class='good'><i class="fas fa-check-circle"></i> your.name@yourbusiness.com</p>
+    <p class='bad'><i class="fas fa-times-circle"></i> your.name@gmail.com</p>
+  </div>
+  <hr class='dark'/>
+
+  <!-- DOWNTIME RISK FORM -->
+  <div class='text-center downtime-form small p-4'>
+    <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
+      <div class='form-group'>
+        <label for='user-email'>Enter your business email below for a downtime risk assessment</label>
+        <input id='user-email' class='form-control' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
+        <div class='invalid-feedback'>
+          <i class="far fa-exclamation-circle"></i> Sorry, this isn't a valid email address.
+        </div>
+      </div>
+      <div class='custom-control custom-checkbox'>
+        <input id='notifications_option' class='custom-control-input' type='checkbox' name='notifications_option' checked>
+        <label class='custom-control-label smaller' for='notifications_option'>Yes, I'd like to recieve future CyberFortress updates.</label>
+      </div>
+      <button class='btn btn-primary' type='submit'>Get Assessment</button>
+    </form>
+  </div>
+  <!-- end of DOWNTIME RISK FORM -->
+
+</div>
+<!--end of .body-->
+
+{{</ block >}}
+
+<script src='/scripts/clearbit-check_if_email_provider.js'></script>
+<script>
+el = document.getElementById ('get_downtime_risk');
+if (el) {
+	el.addEventListener ('submit', submitIfEmailNotProvider);
+}
+
+</script>
