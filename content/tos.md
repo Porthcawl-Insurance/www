@@ -1,14 +1,16 @@
 ---
 title: "Terms of Service"
 description: "Porthcawl Insurance Services Terms of Service"
-slug: "/about/tos/"
+slug: "/tos/"
 date: 2018-04-10T15:45:32-05:00
 draft: true
 ---
 
-{{% section %}}
+{{% container-section %}}
 
-These Terms of Service (hereinafter the "Terms")  are a legal agreement between you and Porthcawl Insurance Services US, LLC d/b/a CyberFortress (referred to in the Terms as "CyberFortress", "we", us" and "our").  
+# Terms of Service
+
+These Terms of Service (hereinafter the "Terms")  are a legal agreement between you and CyberFortress Insurance Services US, LLC (referred to in the Terms as "CyberFortress", "we", us" and "our").  
 
 IT IS VERY IMPORTANT THAT YOU READ THESE TERM VERY CAREFULLY AS THEY CONSTITUTE A BINDING LEGAL AGREEMENT BETWEEN YOU AND US, AND THEY STATE THE AGREEMENT BETWEEN YOU AND US REGARDING EACH OF OUR LEGAL RIGHTS, REMEDIES AND OBLIGATIONS TO THE OTHER PARTY. **THESE TERMS CONTAIN A CLASS ACTION WAIVER WHICH MEANS THAT IF YOU BRING A CLAIM AGAINST US, YOU WILL ONLY BE ABLE TO DO SO ON AN INDIVIDUAL BASIS. YOU WILL NOT BE ABLE TO PARTICIPATE AS A MEMBER OR PLAINTIFF OF A CLASS OR REPRESENTATIVE ACTION. YOU WILL BE LIMITED TO SEEK ANY LEGAL RELIEF OR TO BRING ANY LEGAL CLAIMS, WHETHER FOR MONETARY DAMAGES, TO OBTAIN AN INJUNCTION OR OBTAIN DECLARATORY RELIEF ON AN INDIVIDUAL BASIS. IF YOU DO NOT AGREE TO THESE TERMS OF SERVICE YOU ARE NOT PERMITTED TO USE OUR SERVICES OR VISIT THIS WEBSITE.**
 
@@ -38,7 +40,7 @@ These terms constitute a binding agreement between you and us if you:
 
 ### 3. Privacy & Confidentiality
 
-1. The Privacy Policy located at [https://www.cyberfortress.com/about/privacy/](/about/privacy) (the "Privacy Policy") is hereby incorporated by reference into these Terms.
+1. The Privacy Policy located at [https://www.cyberfortress.com/privacy/](/privacy/) (the "Privacy Policy") is hereby incorporated by reference into these Terms.
 2. We agree to comply with the Privacy Policy with regard to the use of any of your Confidential or Personal Information as defined therein.
 
 ### 4. Unauthorized Use
@@ -50,7 +52,7 @@ You agree that you will not use our Services in any way that is unlawful or in a
 3. use any bot or other technologies designed to access the services on a remote or automated basis;
 4. purposefully access the Services or send calls to or requests to our servers that exceeds a the reasonable and customary use by a person using or accessing the Services on an individual basis for the purpose for which the Services are provided;
 5. reverse engineer, decompile, disassemble, decipher the website or any Services whether to derive the underlying intellectual property used on the website or to provide the Services or to access any information to which you have not been granted access;
-6. scan, penetrate, or attempt to scan or penetrate the systems used to provide the website or Services for vulnerabilities whether or not you intend to exploit or utilize such vulnerabilities if found; 
+6. scan, penetrate, or attempt to scan or penetrate the systems used to provide the website or Services for vulnerabilities whether or not you intend to exploit or utilize such vulnerabilities if found;
 7. use access to sell or resell the Services, unless authorized to do so under a written agreement;
 8. violate the copyright, including any copyright in the code to the website and to the Services, or  any copyright of content this website nor will you remove any copyright or trademark contained in any of the Services or website content;
 9. you will not use content on this website or data you are provided access to as part of the Services for purposes of creating, operating or selling any competitive service or technology; or
@@ -76,7 +78,7 @@ By using the Services, if you are a legal entity, you allow us to identify you a
 
 ### 9. Intellectual Property
 
-1. We own, or have licensed or obtained approval to use, all intellectual property in and to the Services and to the technology used to provide the Services. Your use of the Services or accessing the website does not grant any right or interest whatsoever in any of the intellectual property except as expressly stated in writing. 
+1. We own, or have licensed or obtained approval to use, all intellectual property in and to the Services and to the technology used to provide the Services. Your use of the Services or accessing the website does not grant any right or interest whatsoever in any of the intellectual property except as expressly stated in writing.
 2. These Terms provide you with a limited and revocable license to access and use our website and Services. This license is not transferable, and is non-exclusive. This license does not transfer any ownership rights to you. Should you use this website or the Services in a way that is inconsistent with, or in violation of these Terms, we may take all steps to terminate such use and you may be legally liable for any damages incurred by us as a result of your actions.
 3. All content on the website and in any Services , including software code, text, images, graphics, company marks, images, video, audio, data compilations, software whether taken individually or together, is our copyrighted property and is protected by United States and international copyright laws. No reproduction or use of the any such copyrighted material is authorized by these Terms unless otherwise expressly stated in a separate written agreement.
 4. Our trademarks and services marks of are our intellectual property. You may not use those marks without our express, prior written agreement. The trademarks of any other parties that may appear on this website or as part of the Services belong to those parties.  You may not use those marks without their express, prior written agreement.
@@ -93,4 +95,4 @@ These Terms are governed by the laws of the State of Texas, exclusive of any cho
 4. The use of the word "including" in the Agreement shall be read to mean "including without limitation."
 5. Sections 3, 4, 5, 7, 9, and 10 of these Terms of Service and all other provisions that by their nature are intended to survive expiration or termination of the these Terms shall survive expiration or termination of the Terms.
 
-{{% /section %}}
+{{% /container-section %}}

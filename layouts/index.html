@@ -3,113 +3,100 @@
 {{ end }}
 
 {{ define "main" }}
-<!-- <div id='background-img'></div> -->
 <section id='home-content'>
-
-  <div id='home-hero' class='container-fluid py-5'>
-    <div class='row py-4'>
-      <div class='col text-light text-center px-3'>
-        <h1 class='t-shadow mt-4'>Digital means vulnerable.</h1>
-        <h2 class='mb-5'>A new way to protect your online revenue. Coming soon.</h2>
-      </div>
-    </div>
-    <!--end of .row-->
-    <div class='row'>
-      <div class='col text-center pt-4'>
-        <p class='text-light center'>Subscribe to get notified on new products &amp; features</p>
-        <form id="form-get_notified" action="https://cyberfortress.us17.list-manage.com/subscribe/post?u=3a610aa079ddfbd87cbbfc849&amp;id=4c86d7d34f" method="post">
-          <input class="form-control" name="EMAIL" placeholder="Email" required>
-          <!-- <small class="form-text text-muted">Subscribe to get notified on new products &amp; features</small> -->
-          <input class="button btn btn-primary mt-4 mb-5 bigger" type="submit" value="Get Notified">
-        </form>
-      </div>
-    </div>
-    <!--end of .row-->
+  <!-- ---------------------------- HERO SECTION ---- -->
+  <div id='home-hero' class='container-fluid d-flex flex-column background-gradient colorful'>
+    <div>
+    <h1 class='t-shadow-dark mt-4'>Digital means vulnerable.</h1>
+    <h2 class=''>Are you vulnerable to a cyber attack that could shut down your business?</h2>
+    <p class=''>Find out in seconds.</p>
   </div>
-  <!--end of .container-->
 
-  <div id='featured-on' class='container-fluid py-5'>
-    <div class='container'>
+    <!-- DOWNTIME RISK FORM -->
+    <div class='downtime-form small minimal'>
+      <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
+        <input type='hidden' name='returl' value=''>
+        <div class='form-group'>
+          <label for='user-email' class='t-shadow-dark'>Enter your business email below for a downtime risk assessment</label>
+          <input id='user-email' class='form-control minimal' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
+          <div class='invalid-feedback'>
+            Sorry, this isn't a valid email address.
+          </div>
+        </div>
+        <div class='form-group form-check'>
+          <input id='notifications_option' class='form-check-input' type='checkbox' name='notifications_option' checked>
+          <label class='form-check-label smaller' for='notifications_option'>Yes, I'd like to receive future CyberFortress updates.</label>
+        </div>
+        <button id='landing-btn' class='btn btn-primary bigger' type='submit'>Get Assessment</button>
+      </form>
+    </div>
+    <!-- end of DOWNTIME RISK FORM -->
 
-      <p class='text-center'>Featured on</p>
-      <div class='row align-items-center'>
-        <div class='col-6 col-lg-2 offset-lg-1 text-center'>
-          <a class='img-link' target='_blank' href='https://www.prnewswire.com/news-releases/plug-and-play-selects-150-startups-for-their-summer-batches-300821308.html'>
-            <img src='/images/pnp_logo.png' alt='Plug and Play' />
-          </a>
-        </div>
-        <div class='col-6 col-lg-2 text-center'>
-          <a class='img-link' target='_blank' href='https://collisionconf.com/'>
-            <img src='/images/collision_logo.png' />
-          </a>
-        </div>
-        <div class='col-6 col-lg-2 text-center'>
-          <a class='img-link' target='_blank' href='https://innoconf.com/'>
-            <img src='/images/inno_logo.png' />
-          </a>
-        </div>
-        <div class='col-6 col-lg-2 text-center'>
-          <a class='img-link' target='_blank' href='https://www.startupssanantonio.com/cyberfortress-delivers-new-kind-of-cyber-insurance/'>
-            <img src='/images/sss_logo.png' />
-          </a>
-        </div>
-        <div class='col col-lg-2 text-center'>
-          <a class='img-link' target='_blank' href='https://xconomy.com/texas/2018/10/16/cyberfortress-plans-2019-launch-as-cyber-insurance-industry-grows/'>
-            <img src='/images/xconomy_logo.png' />
-          </a>
-        </div>
+    <div class='d-xs-block d-md-none'>
+      <img class='' src='/images/revenue.png' />
+    </div>
+  </div>
+  <!--end of #home-hero-->
+
+  <!-- ---------------------------- FEATURED -------- -->
+  <div id='featured-on' class='container-fluid'>
+    <p class='text-center t-shadow'>Featured on</p>
+    <div class='container d-flex flex-row flex-wrap justify-content-around align-items-center'>
+      <div class='featured-div'>
+        <a class='img-link' target='_blank' href='https://www.prnewswire.com/news-releases/plug-and-play-selects-150-startups-for-their-summer-batches-300821308.html'>
+          <img src='/images/pnp_logo.png' alt='Plug and Play' />
+        </a>
       </div>
-      <!-- end of .row-->
+      <div class='featured-div'>
+        <a class='img-link' target='_blank' href='https://collisionconf.com/'>
+          <img src='/images/collision_logo.png' />
+        </a>
+      </div>
+      <div class='featured-div'>
+        <a class='img-link' target='_blank' href='https://innoconf.com/'>
+          <img src='/images/inno_logo.png' />
+        </a>
+      </div>
+      <div class='featured-div'>
+        <a class='img-link' target='_blank' href='https://www.startupssanantonio.com/cyberfortress-delivers-new-kind-of-cyber-insurance/'>
+          <img src='/images/sss_logo.png' />
+        </a>
+      </div>
+      <div class='featured-div'>
+        <a class='img-link' target='_blank' href='https://xconomy.com/texas/2018/10/16/cyberfortress-plans-2019-launch-as-cyber-insurance-industry-grows/'>
+          <img src='/images/xconomy_logo.png' />
+        </a>
+      </div>
     </div>
     <!--end of .container -->
   </div>
-  <!--end of .container-fluid-->
+  <!--end of #featured-on-->
 
-  <div id='why' class='container-fluid background-gradient p-3'>
-    <h3 class='pt-5 pb-4 text-center t-light'>Why business interruption insurance?</h3>
-
-    <div class='row py-5 my-3'>
-
-      <div class='col-xs-12 col-xl-6 align-items-center'>
-        <!-- <h3 class='t-light m-4'>Why business interruption insurance?</h3> -->
-
-        <img class='img-fluid' src='/images/piggy_knight.png' />
-      </div>
-      <div class='col-xs-12 col-md-10 offset-md-1 offset-xl-0 col-xl-5 pt-3'>
-        <!-- <h3 class='mt-5 pb-4 t-light'>Why business interruption insurance?</h3> -->
-
-        <p class='p-3 mt-3'>
-          <span class='bold larger pb-1'>It's pretty simple.</span><br />
-          Small businesses are particularly vulnerable to
-          cyber events as a result of two phenomena.
-        </p>
-        <ul>
-          <li>
-            First, most small businesses, as a result of their size, don’t keep
-            large amounts of cash on hand. They can’t afford to.
-            </li>
-            <li>
-              Second, e-commerce is an increasingly important source of revenue for
-              small businesses.
-              </li>
-          </ul>
-        <p class='p-3'>
-          This is a dangerous combination. If a small business suffers a cyber
-          event that prevents them from digitally collecting revenue, they are
-          faced with the prospect of being unable to make payroll or pay their
-          most critical bills. Their very survival is at stake.
-        </p>
-        <p class='p-3'>
-          <span class='bold larger'>That’s where we come in.</span><br /> We are working on a product that will get cash in your hands as quickly as
-          possible to stop the bleeding until a small business can get back
-          online.
-        </p>
-      </div>
-      <!--end of .col-->
+  <!-- -------------------- DOWNTIME EFFECTS -------- -->
+  <div id='downtime-effects' class='container-fluid text-center background-gradient colorful'>
+    <h3 class='t-light'>What effects downtime risk?</h3>
+    <div id='what-effects' class='container d-flex flex-row flex-wrap justify-content-center align-items-start'>
 
     </div>
+    <!--end of .flew-row-->
   </div>
-  <!--end of .container-fluid-->
+  <!-- end of #downtime-effects-->
 </section>
+
+{{ end }}
+
+{{ define "addscripts" }}
+{{ $script := resources.Get "/scripts/clearbit-check_if_email_provider.js" | resources.Minify }}
+<script src='{{ $script.RelPermalink }}'></script>
+
+{{ $script := resources.Get "/scripts/downtimepage.js" | resources.Minify }}
+<script src='{{ $script.RelPermalink }}'></script>
+
+<script>
+!function () {
+	$('#get_downtime_risk').submit (submitIfEmailNotProvider);
+}();
+
+</script>
 
 {{ end }}

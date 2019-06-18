@@ -1,0 +1,76 @@
+---
+title: "Thanks!"
+description: "Check your Email for your downtime risk score"
+slug: "/thanks/"
+date: 2018-04-15T19:53:19-05:00
+draft: true
+---
+
+{{< block >}}
+
+<div class='header'>
+  <h1>Your Downtime Risk Assessment has been generated!</h1>
+  <img id='mail-knight' class='img-fluid' src='/images/mail-knight.svg' />
+</div>
+<div class='body'>
+  <h2 class='bold'>Last step: Go check your email!</h2>
+  <p>
+    We've sent you an email containing link that will redirect you to your
+    downtime risk score and assesment. By clicking the link, you are confirming
+    your email address. This is required to recieve your downtime risk score.
+  </p>
+  <a class='no-email' data-toggle="modal" data-target="#no-email" style="cursor:pointer;">
+    Didn't get an email?
+  </a>
+</div>
+
+{{</ block >}}
+
+<!-- -------------------------------------------- -->
+<!-- --------------------- DIDN'T GET EMAIL MODAL -->
+<!-- -------------------------------------------- -->
+
+<div id='no-email' class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-4">
+        <p class='icon'>
+          <span class='fa-stack'>
+            <i class='fal fa-envelope-open fa-stack-2x'></i>
+            <i class='fas fa-question fa-stack-1x'></i>
+          </span>
+        </p>
+        <h4 class='pb-3'>Didn't get an email?</h4>
+
+        <p class=''>
+          Hmm, that's weird. Did you check your junk folder?<br />If it hasn't come through in the next few minutes, please try again by entering your <span class='bold'>business email</span> below.
+        </p>
+        <hr />
+        <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
+          <div class='form-group'>
+            <!-- <label for='user-email' class=''>Enter your business email below for a downtime risk assessment</label> -->
+            <input id='user-email' class='form-control' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
+            <div class='invalid-feedback'>
+              Sorry, this isn't a valid email address.
+            </div>
+          </div>
+          <button class='btn btn-primary center' type='submit'>Resend Email</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src='/scripts/clearbit-check_if_email_provider.js'></script>
+<script>
+el = document.getElementById ('get_downtime_risk');
+if (el) {
+	el.addEventListener ('submit', submitIfEmailNotProvider);
+}
+
+</script>

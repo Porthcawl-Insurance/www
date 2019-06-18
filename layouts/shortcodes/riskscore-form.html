@@ -1,0 +1,14 @@
+<div class='text-center downtime-form small dark p-4'>
+  <form action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post'>
+    <input type='hidden' name='returl' value='https://cyberfortress-www-sandbox.appspot.com/thanks/'>
+    <div class='form-group'>
+      <label for='user-email'>Enter your business email below for a downtime risk assessment</label>
+      <input id='user-email' class='form-control' type='email' name='email' placeholder='your.name@yourbusiness.com'>
+    </div>
+    <div class='custom-control custom-checkbox'>
+      <input id='notifications_option' class='custom-control-input' type='checkbox' name='notifications_option' checked>
+      <label class='custom-control-label smaller' for='notifications_option'>Yes, I'd like to recieve future CyberFortress updates.</label>
+    </div>
+    <button class='btn btn-primary' type='submit'>Get Downtime Risk</button>
+  </form>
+</div>
