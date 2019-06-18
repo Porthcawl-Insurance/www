@@ -1315,11 +1315,27 @@ input {
     max-width: 200px;
     background-color: transparent;
     border: none;
+    position: relative !important;
 
     img.card-img-top {
       max-width: 200px;
       border-radius: 50%;
       box-shadow: 0px 4px 6px rgba($dark-purple, .75);
+    }
+    .links {
+      display: block;
+      position: absolute;
+      bottom: 35%;
+      right: 0;
+      a {
+        color: rgba($orange, .8) !important;
+        text-shadow: 0px 3px 6px $dark-purple;
+        font-size: 2em;
+        &:hover {
+          color: $orange !important;
+        }
+      }
+
     }
     .card-body {
       padding: 0 !important;
@@ -1337,8 +1353,9 @@ input {
     .card-text {
       padding-left: .7em;
       padding-right: .7em;
-      padding-bottom: .7em;
+      // padding-bottom: .7em;
       text-align: center;
+      margin-bottom: 0;
     }
   }
 
