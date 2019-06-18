@@ -147,13 +147,13 @@ body {
   position: relative;
   min-height: 100vh !important;
   padding-bottom: 70px;
+  padding-top: 40px; // accounting for navbar-height
   overflow-x: hidden;
 
   @include linear-gradient($light-gray, $lighter-gray);
 }
 
 h1, h2, h3 {
-  // color: $lightest !important;
   color: $dark-gray !important;
 
   font-weight: 300 !important;
@@ -263,7 +263,6 @@ p, li {
 }
 
 a {
-  // color: $link !important;
   color: $bright-purple !important;
   font-weight: 300 !important;
   &.underline {
@@ -522,15 +521,11 @@ input {
 
 .form-check {
   margin-bottom: 0;
-
-  // @include sm {
-    display: block;
-    max-width: 400px !important;
-    margin: 0 auto !important;
-  // }
+  display: block;
+  max-width: 400px !important;
+  margin: 0 auto !important;
 
   @include md {
-    // padding-left: 0 !important;
     margin-left: 0 !important;
   }
 }
@@ -567,7 +562,6 @@ input {
 
   h3 {
     font-size: 2em !important;
-    // padding: 2em .5em 1em .5em;
   }
 
   hr {
@@ -1144,7 +1138,6 @@ input {
 }
 
 .factor-grp {
-  // background-color: rgba($lightest, .1) !important;
   padding: .5em;
   max-width: 180px;
   width: 100%;
@@ -1505,14 +1498,9 @@ section.single-career {
   h1, h2, h3, p {
     color: $dark-gray !important;
     padding: .3em 0;
-    // text-align: center;
-    // @include sm {
-      text-align: left;
-    //
-    // }
+    text-align: left;
   }
   a.icon-l {
-    // color: $purple !important;
     font-weight: 400 !important;
     i {
       padding-right: .3em;
@@ -1530,7 +1518,7 @@ section.single-resource {
     text-align: left;
   }
   a.icon-l {
-    // color: $purple !important;
+    // clor: $purple !important;
     font-weight: 400 !important;
     i {
       padding-right: .3em;
@@ -1543,7 +1531,7 @@ section.single-resource {
 }
 
 .resource-div {
-padding-bottom: 1em;
+  padding-bottom: 1em;
 
   p {
     opacity: .6 !important;
@@ -1600,7 +1588,7 @@ table.table {
     background-repeat: no-repeat;
   }
 
-  @include md {
+  @include lg {
     background-image: url('/images/revenue-background.svg');
     padding-left: 2em;
   }
@@ -1614,21 +1602,23 @@ table.table {
     font-weight: 400 !important;
     padding: .2em;
     padding-top: 1em;
+    padding-left: 0;
 
     @include sm {
       font-size: 2em !important;
       padding-bottom: .2em;
-      padding: 1rem .5rem .5rem 2.5rem;
+      padding: 1rem .5rem 0rem 2.5rem;
     }
 
     @include md {
       font-size: 2.5em !important;
-      text-align: left;
       padding-left: 0;
     }
 
     @include lg {
-      padding-left: 4rem;
+      text-align: left;
+
+      // padding-left: 4rem;
     }
   }
 
@@ -1645,11 +1635,12 @@ table.table {
     @include md {
       font-size: 1.5em !important;
       // padding-left: 2.25rem;
-      text-align: left;
       }
 
       @include lg {
-        padding-left: 4rem;
+        text-align: left;
+
+        // padding-left: 4rem;
       }
   }
 
@@ -1665,13 +1656,14 @@ table.table {
     @include md {
       padding-left: 2.5rem;
       font-size: 1.25em !important;
-      text-align: left;
+      text-align: center;
       padding-left: 0;
 
     }
 
     @include lg {
-      padding-left: 4rem;
+      text-align: left;
+      // padding-left: 4rem;
     }
 
 
@@ -1684,13 +1676,19 @@ table.table {
     margin: 0 auto !important;
 
     @include sm{
-      max-width: 500px;
+      max-width: 500px !important;
+    }
+
+    @include md {
+      max-width: 600px !important;
     }
   }
 
   .downtime-form {
     margin-top: 1.5em;
     padding: .75em;
+    padding-left: 0;
+    margin-left: 0;
 
     @include sm {
       margin-top: 6em;
@@ -1704,7 +1702,7 @@ table.table {
     }
 
     @include lg {
-      padding-left: 4rem;
+      // padding-left: 4rem;
     }
 
     label[for='user-email'] {
@@ -1722,7 +1720,12 @@ table.table {
       @include md {
         padding-left: 0;
         font-size: 1.45em !important;
+        // display: inline-block;
+      }
+
+      @include lg {
         display: inline-block;
+
       }
 
     }
@@ -1730,27 +1733,31 @@ table.table {
     #user-email {
       margin: 0 auto;
 
-      @include md {
+      @include lg {
         margin-left: 0 !important;
       }
     }
 
     .form-check-label {
-      font-size: .9em !important;
+      font-size: 1em !important;
       text-align: left;
     }
 
     .form-check {
       margin-bottom: 0;
+      display: block;
+      max-width: 400px !important;
+      margin: 0 auto !important;
 
-      // @include sm {
+      div {
         display: block;
-        max-width: 400px !important;
         margin: 0 auto !important;
-      // }
+        @include lg {
+          margin-left: 0 !important;
+        }
+      }
 
-      @include md {
-        // padding-left: 0 !important;
+      @include lg {
         margin-left: 0 !important;
       }
     }
@@ -1760,7 +1767,7 @@ table.table {
       text-align: center;
       margin-top: .3em !important;
 
-      @include md {
+      @include lg {
         text-align: left;
       }
     }
@@ -1771,7 +1778,7 @@ table.table {
       font-size: 1.2em !important;
       padding: 8px 20px;
 
-      @include md {
+      @include lg {
         margin-left: 0 !important;
       }
     }
@@ -1836,9 +1843,7 @@ table.table {
   background-color: transparent !important;
   padding: 1rem;
   padding-bottom: 2rem;
-  @include md {
-    padding-top: 2rem;
-  }
+  padding-top: 3rem;
   h1, h2, h3 {
     color: $dark-gray !important;
   }
@@ -2098,6 +2103,9 @@ table.table {
 nav {
   z-index: 5;
   background-color: $dark-gray !important;
+  position: fixed !important;
+  width: 100%;
+  top: 0 !important;
 
   .nav-link {
     color: $light !important;
