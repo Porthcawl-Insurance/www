@@ -1345,10 +1345,11 @@ input {
       padding: .3em .5em;
       color: $lightest;
       margin-top: -1em;
-      margin-bottom: .5em;
+      margin-bottom: .25em;
       text-align: center;
       font-size: 1.2em !important;
       border-radius: 2px;
+
     }
     .card-text {
       padding-left: .7em;
@@ -1356,6 +1357,7 @@ input {
       // padding-bottom: .7em;
       text-align: center;
       margin-bottom: 0;
+      margin-top: 0;
     }
   }
 
@@ -1378,7 +1380,7 @@ input {
     background-color: rgba($lightest, .5);
     .icon {
       text-align: center !important;
-      font-size: 2em !important;
+      font-size: 1.5em !important;
       margin-bottom: 0.2em !important;
     }
     .title {

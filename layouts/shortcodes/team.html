@@ -1,15 +1,13 @@
 {{ range sort $.Site.Data.team.founders ".nam" }}
 <div class='career card mx-3 my-2'>
 	<img class='card-img-top' src='{{ .img }}' alt='{{ .nam }}' />
-	<div class='links'>
+	<!-- <div class='links'>
 		<a href='{{ .lip }}' target='_blank'><i class="fab fa-linkedin"></i></a>
-	</div>
-	<div class='card-body'>
+	</div> -->
+	<div class='card-body text-center'>
 		<p class='card-title'>{{ .nam }}</p>
 		<p class='card-text'>{{ .tit }}</p>
-		<!-- <div class='card-links d-flex flex-row justify-content-center'>
-			<a href='{{ .lip }}' target='_blank'><i class="fab fa-linkedin"></i></a>
-		</div> -->
+		<a class='icon' href='{{ .lip }}' target='_blank'><i class="fab fa-linkedin"></i></a>
 	</div>
 </div>
 {{ end }}
