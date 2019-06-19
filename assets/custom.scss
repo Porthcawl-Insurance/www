@@ -147,7 +147,7 @@ body {
   position: relative;
   min-height: 100vh !important;
   padding-bottom: 70px;
-  padding-top: 40px; // accounting for navbar-height
+  padding-top: 50px; // accounting for navbar-height
   overflow-x: hidden;
 
   @include linear-gradient($light-gray, $lighter-gray);
