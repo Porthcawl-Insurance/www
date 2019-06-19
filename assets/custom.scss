@@ -1312,33 +1312,30 @@ input {
 .card {
 
   &.career {
-    max-width: 200px;
+    width: 100%;
+    max-width: 220px;
     background-color: transparent;
     border: none;
     position: relative !important;
 
     img.card-img-top {
       max-width: 200px;
+      max-height:200px;
       border-radius: 50%;
+      margin: 0 auto !important;
       box-shadow: 0px 4px 6px rgba($dark-purple, .75);
-    }
-    .links {
-      display: block;
-      position: absolute;
-      bottom: 35%;
-      right: 0;
-      a {
-        color: rgba($orange, .8) !important;
-        text-shadow: 0px 3px 6px $dark-purple;
-        font-size: 2em;
-        &:hover {
-          color: $orange !important;
-        }
-      }
-
     }
     .card-body {
       padding: 0 !important;
+      .icon {
+        text-align: center !important;
+        font-size: 1.5em !important;
+        margin-bottom: 0.2em !important;
+        color: rgba($bright-purple, .5) !important;
+
+        &:hover {
+          color: $bright-purple !important;
+        }
     }
     .card-title {
       background-color: rgba($dark-purple, .95);
@@ -1378,10 +1375,7 @@ input {
   }
   .card-body {
     background-color: rgba($lightest, .5);
-    .icon {
-      text-align: center !important;
-      font-size: 1.5em !important;
-      margin-bottom: 0.2em !important;
+
     }
     .title {
       text-align: center !important;
