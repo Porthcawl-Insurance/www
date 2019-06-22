@@ -19,7 +19,7 @@
 	}, false);
 })();
 
-// Clear the email input placeholder text when focused 
+// Clear the email input placeholder text when focused
 (function () {
 	'use strict';
 	var el = document.getElementById ('user-email');
@@ -64,4 +64,3 @@ $(function() {
     $('body').css('paddingBottom', footerHeight);
   });
 })();
-

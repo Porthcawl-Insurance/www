@@ -54,6 +54,7 @@ Codeup:
     }
   }
 
+	// get score info
   function getData(data) {
     $.ajax({
       method: "POST",
@@ -72,18 +73,35 @@ Codeup:
     });
   }
 
+	// get score info
+  // function getWhatsGood(data) {
+  //   $.ajax({
+  //     method: "POST",
+  //     url: "https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs_contributions",
+  //     contentType: "application/json",
+  //     data: JSON.stringify(data),
+  //   }).done(function(response) {
+  //     console.log(response);
+  //   }).fail(function(e) {
+  //     console.log(e)
+  //   });
+  // }
+
   // populate fields with info from json obj
   function populate(result) {
     var domain = result.domain,
       score = result.score,
       date = new Date(result.ts_p * 1000),
       conts = result.top_contributions,
-      url = document.location.host + document.location.pathname + '?id=' + _domain_id;
+      url = document.location.host + document.location.pathname + '?id=' + _domain_id,
+			timestamp = result.ts_p;
 
     $('#domain').text(domain);
     $('#score').html('<span>' + score + '</span> / 10 ');
     $('#score-message').text('as of ' + date.toLocaleDateString());
     $('#copy-url').text(url);
+
+		getWhatsGood(timestamp);
 
     fillRook(score);
     topFactors(conts);
