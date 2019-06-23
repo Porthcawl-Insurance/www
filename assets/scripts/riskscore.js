@@ -101,7 +101,7 @@ Codeup:
     $('#score-message').text('as of ' + date.toLocaleDateString());
     $('#copy-url').text(url);
 
-		getWhatsGood(timestamp);
+		// getWhatsGood(timestamp);
 
     fillRook(score);
     topFactors(conts);
