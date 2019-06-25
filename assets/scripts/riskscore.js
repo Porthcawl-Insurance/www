@@ -19,7 +19,7 @@ Codeup:
 */
 
 (function() {
-	'use strict';
+  'use strict';
 
   // Retrieve a specific URL parameter.
   function getURLParameter(sParam) {
@@ -37,24 +37,28 @@ Codeup:
   // If it is available, update Local Storage and call the API function to populate the RS data.
   // If not, attempt to read from Local Storage.
   // If still unavailable, present the user with an error.
-  var _domain_id = getURLParameter ('id');
+  var _domain_id = getURLParameter('id');
   if (_domain_id) {
     // Call API function to populate RS data with id = _domain_id
-    localStorage.setItem ('_domain_id', _domain_id);
-    var data = { id: _domain_id }
-    getData (data);
+    localStorage.setItem('_domain_id', _domain_id);
+    var data = {
+      id: _domain_id
+    }
+    getData(data);
   } else {
-    var _domain_id = localStorage.getItem ('_domain_id')
+    var _domain_id = localStorage.getItem('_domain_id')
     if (_domain_id) {
-      var data = { id: _domain_id }
+      var data = {
+        id: _domain_id
+      }
       getData(data);
     } else {
-      $('#jumbotron-loading').addClass ('d-none');
-      $('#jumbotron-error').removeClass ('d-none');
+      $('#jumbotron-loading').addClass('d-none');
+      $('#jumbotron-error').removeClass('d-none');
     }
   }
 
-	// get score info
+  // get score info
   function getData(data) {
     $.ajax({
       method: "POST",
@@ -63,46 +67,33 @@ Codeup:
       data: JSON.stringify(data),
     }).done(function(response) {
       populate(response);
-			$('#jumbotron-loading').addClass ('d-none');
-			$('#jumbotron-score').removeClass ('d-none');
-			$('#summary-div').removeClass ('d-none');
+      $('#jumbotron-loading').addClass('d-none');
+      $('#jumbotron-score').removeClass('d-none');
+      $('#summary-div').removeClass('d-none');
+      $('#whatsgood-div').removeClass('d-none');
     }).fail(function(e) {
       console.log(e)
-			$('#jumbotron-loading').addClass ('d-none');
-			$('#jumbotron-error').removeClass ('d-none');
+      $('#jumbotron-loading').addClass('d-none');
+      $('#jumbotron-error').removeClass('d-none');
     });
   }
 
-	// get score info
-  // function getWhatsGood(data) {
-  //   $.ajax({
-  //     method: "POST",
-  //     url: "https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs_contributions",
-  //     contentType: "application/json",
-  //     data: JSON.stringify(data),
-  //   }).done(function(response) {
-  //     console.log(response);
-  //   }).fail(function(e) {
-  //     console.log(e)
-  //   });
-  // }
-
   // populate fields with info from json obj
   function populate(result) {
-    var domain = result.domain,
+    var result = result,
+      domain = result.domain,
       score = result.score,
       date = new Date(result.ts_p * 1000),
       conts = result.top_contributions,
       url = document.location.host + document.location.pathname + '?id=' + _domain_id,
-			timestamp = result.ts_p;
+      timestamp = result.ts_p;
 
     $('#domain').text(domain);
     $('#score').html('<span>' + score + '</span> / 10 ');
     $('#score-message').text('as of ' + date.toLocaleDateString());
     $('#copy-url').text(url);
 
-		getWhatsGood(timestamp);
-
+    getWhatsGood(result);
     fillRook(score);
     topFactors(conts);
     categorizeFactors(conts);
@@ -136,104 +127,108 @@ Codeup:
 
   // get top positively and negatively contributing factors
   function topFactors(conts) {
-		var positiveFactors = Array ();
-		var negativeFactors = Array ();
+    var positiveFactors = Array();
+    var negativeFactors = Array();
 
-		conts.forEach (function (item) {
-			if (item.weight <= 0) {
-				positiveFactors.push (item);
-			} else {
-				negativeFactors.push (item);
-			}
-		});
+    conts.forEach(function(item) {
+      if (item.weight <= 0) {
+        positiveFactors.push(item);
+      } else {
+        negativeFactors.push(item);
+      }
+    });
 
-		// Sort & slice appropriately
-		var limit = 3;
-		positiveFactors = positiveFactors.sort (function (a, b) { return a.weight - b.weight }).slice (0, 3);
-		negativeFactors = negativeFactors.sort (function (a, b) { return b.weight - a.weight }).slice (0, 3);
+    // Sort & slice appropriately
+    var limit = 3;
+    positiveFactors = positiveFactors.sort(function(a, b) {
+      return a.weight - b.weight
+    }).slice(0, 3);
+    negativeFactors = negativeFactors.sort(function(a, b) {
+      return b.weight - a.weight
+    }).slice(0, 3);
 
-		if (positiveFactors.length) {
-			$(positiveFactors).each (function (i) {
-				var name = this.name,
-					tag = this.tag,
-					desc = this.description,
-					summary = this.summary,
-					weight = this.weight_normalized,
-					icon = getIcon(tag),
-					color = getColor(weight),
-					collapseId = i + 't-collapse';
+    if (positiveFactors.length) {
+      $(positiveFactors).each(function(i) {
+        var name = this.name,
+          tag = this.tag,
+          desc = this.description,
+          summary = this.summary,
+          weight = this.weight_normalized,
+          icon = getIcon(tag),
+          color = getColor(weight),
+          collapseId = i + 't-collapse';
 
-				$('#top-factors').append(
-					'<div class="d-flex flex-row flex-nowrap align-items-start">' +
-					'<div class="icon-div pt-2">' +
-					'<p class="icon ' + color + ' text-center">' +
-					'<span class="fa-stack">' +
-					'<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
-					'<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
-					'<div class="text-div">' +
-					'<p class="f-name">' + name + ' <span>[ ' + tag + ' ]</span>' +
-					'</p>' +
-					'<p class="f-desc">' + summary + '</p>' +
-					'</div></div>'
-				);
-			});
-		} else {
-			$('#top-factors').append(
-				'<div class="d-flex flex-row flex-nowrap align-items-start">' +
-				'<div class="icon-div pt-2">' +
-				'<p class="icon none text-center">' +
-				'<span class="fa-stack">' +
-				'<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
-				'<i class="fal fa-times fa-stack-1x"></i></span></p></div>' +
-				'<div class="text-div">' +
-				'<p class="f-name">None</p>' +
-				'<p class="f-desc">When calculating your score, no significant positive contributions were included.</p>' +
-				'</div>' +
-				'</div>'
-			);
-		}
+        $('#top-factors').append(
+          '<div class="d-flex flex-row flex-nowrap align-items-start">' +
+          '<div class="icon-div pt-2">' +
+          '<p class="icon ' + color + ' text-center">' +
+          '<span class="fa-stack">' +
+          '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
+          '<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
+          '<div class="text-div">' +
+          '<p class="f-name">' + name + ' <span>[ ' + tag + ' ]</span>' +
+          '</p>' +
+          '<p class="f-desc">' + summary + '</p>' +
+          '</div></div>'
+        );
+      });
+    } else {
+      $('#top-factors').append(
+        '<div class="d-flex flex-row flex-nowrap align-items-start">' +
+        '<div class="icon-div pt-2">' +
+        '<p class="icon none text-center">' +
+        '<span class="fa-stack">' +
+        '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
+        '<i class="fal fa-times fa-stack-1x"></i></span></p></div>' +
+        '<div class="text-div">' +
+        '<p class="f-name">None</p>' +
+        '<p class="f-desc">When calculating your score, no significant positive contributions were included.</p>' +
+        '</div>' +
+        '</div>'
+      );
+    }
 
-		if (negativeFactors.length) {
-			$(negativeFactors).each (function (i) {
-				var name = this.name,
-					tag = this.tag,
-					desc = this.description,
-					summary = this.summary,
-					weight = this.weight_normalized,
-					icon = getIcon(tag),
-					color = getColor(weight),
-					collapseId = i + 't-collapse';
+    if (negativeFactors.length) {
+      $(negativeFactors).each(function(i) {
+        var name = this.name,
+          tag = this.tag,
+          desc = this.description,
+          summary = this.summary,
+          weight = this.weight_normalized,
+          icon = getIcon(tag),
+          color = getColor(weight),
+          collapseId = i + 't-collapse';
 
-				$('#bottom-factors').append(
-					'<div class="d-flex flex-row flex-nowrap align-items-start">' +
-					'<div class="icon-div pt-2">' +
-					'<p class="icon ' + color + ' text-center">' +
-					'<span class="fa-stack">' +
-					'<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
-					'<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
-					'<div class="text-div">' +
-					'<p class="f-name">' + name + ' <span>[ ' + tag + ' ]</span>' +
-					'</p>' +
-					'<p class="f-desc">' + summary + '</p>' +
-					'</div></div>'
-				);
-			});
-		} else {
-			$('#bottom-factors').append(
-				'<div class="d-flex flex-row flex-nowrap align-items-start">' +
-				'<div class="icon-div pt-2">' +
-				'<p class="icon none text-center">' +
-				'<span class="fa-stack">' +
-				'<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
-				'<i class="fal fa-times fa-stack-1x"></i></span></p></div>' +
-				'<div class="text-div">' +
-				'<p class="f-name">None</p>' +
-				'<p class="f-desc">When calculating your score, no significant negative contributions were included.</p>' +
+        $('#bottom-factors').append(
+          '<div class="d-flex flex-row flex-nowrap align-items-start">' +
+          '<div class="icon-div pt-2">' +
+          '<p class="icon ' + color + ' text-center">' +
+          '<span class="fa-stack">' +
+          '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
+          '<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
+          '<div class="text-div">' +
+          '<p class="f-name">' + name + ' <span>[ ' + tag + ' ]</span>' +
+          '</p>' +
+          '<p class="f-desc">' + summary + '</p>' +
+          '</div></div>'
+        );
+      });
+    } else {
+      $('#bottom-factors').append(
+        '<div class="d-flex flex-row flex-nowrap align-items-start">' +
+        '<div class="icon-div pt-2">' +
+        '<p class="icon none text-center">' +
+        '<span class="fa-stack">' +
+        '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
+        '<i class="fal fa-times fa-stack-1x"></i></span></p></div>' +
+        '<div class="text-div">' +
+        '<p class="f-name">None</p>' +
+        '<p class="f-desc">When calculating your score, no significant negative contributions were included.</p>' +
 
-				'</div>' +
-				'</div>'
-			);
-		}
+        '</div>' +
+        '</div>'
+      );
+    }
   }
 
   // categorize factors by tag
@@ -389,6 +384,91 @@ Codeup:
 
   }
 
+  // populate what's good info
+  function getWhatsGood(userResults) {
+
+    var data = {
+        "id": 1558626498
+      },
+      userResults = userResults;
+
+    $.ajax({
+      method: "POST",
+      url: "https://us-central1-cyberfortress-sandbox.cloudfunctions.net/rs_contributions",
+      contentType: "application/json",
+      data: JSON.stringify(data),
+    }).done(function(response) {
+      console.log('----- Response -----');
+      console.log(response);
+      populateGood(response, userResults);
+    }).fail(function(e) {
+      console.log(e)
+    });
+
+    function populateGood(response, results) {
+      var topNeg = response.top_neg,
+        allKeys = Object.keys(topNeg),
+        conts = results.top_contributions,
+        tags = [],
+        relKeys = [];
+
+      var resultsDiv = $('#goodresults-div');
+
+      console.log('----- Results -----');
+      console.log(results);
+      console.log('----- Relevent Keys -----');
+      console.log(relKeys);
+      console.log('----- top_neg -----');
+      console.log(topNeg);
+
+      // make array of tags
+      $(conts).each(function() {
+        var tag = this.tag;
+        if ($.inArray(tag, tags) === -1) {
+          tags.push(tag);
+        }
+      });
+
+      // make array of only keys matching tags
+      $(allKeys).each(function() {
+        var key = this;
+        if ($.inArray(key, tags) !== -1) {
+          relKeys.push(key);
+        }
+      });
+
+      // generate divs only for relevent tags
+      $(relKeys).each(function() {
+        var key = this;
+        $(resultsDiv).append('<div id="' + key + '-row"><p class="bold larger">' + key + '</p></div>');
+      });
+
+      // genereate lists per key
+      function generateLists() {
+
+        $(relKeys).each(function() { // iterate through relevent keys / tags
+
+          if (topNeg.hasOwnProperty(this)) {
+            var arr = topNeg[this],
+                key = this;
+
+            console.log(arr);
+
+            $.each( arr, function (i) {
+
+              $('#' + key + '-row').append(
+                '<p>' + arr[i].name + '</p>'
+              );
+
+            });
+          }
+        });
+      }
+      generateLists();
+
+    }
+  }
+
   // return icon class based on tag
   function getIcon(tag) {
     var icon;
@@ -464,26 +544,26 @@ Codeup:
   }
 
   //share score link
-	$('#share-score').click (function (e) {
-		_domain_id = getURLParameter ('id') || localStorage.getItem ('_domain_id');
-		if (!_domain_id) {
-			console.error ('Error. Unable to find a _domain_id to share.')
-		} else {
-			var _sl = document.location.host + document.location.pathname + '?id=' + _domain_id;
-			var par = e.target
-			var el = document.createElement ("textarea");
-			el.value = _sl;
-			par.appendChild (el);
-			el.focus ();
-			el.select ();
-			try {
-				var ok = document.execCommand ("copy");
-			} catch (err) {
-				console.error (err);
-			}
-			par.removeChild (el);
-		}
-	});
+  $('#share-score').click(function(e) {
+    _domain_id = getURLParameter('id') || localStorage.getItem('_domain_id');
+    if (!_domain_id) {
+      console.error('Error. Unable to find a _domain_id to share.')
+    } else {
+      var _sl = document.location.host + document.location.pathname + '?id=' + _domain_id;
+      var par = e.target
+      var el = document.createElement("textarea");
+      el.value = _sl;
+      par.appendChild(el);
+      el.focus();
+      el.select();
+      try {
+        var ok = document.execCommand("copy");
+      } catch (err) {
+        console.error(err);
+      }
+      par.removeChild(el);
+    }
+  });
 
   // scroll to full summary btn function
   $('#full-summary').click(function() {

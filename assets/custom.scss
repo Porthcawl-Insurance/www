@@ -2048,8 +2048,13 @@ table.table {
   }
 }
 
+#whatsgood-div {
+  h4 {
+    font-weight: 300!important;
+  }
+}
 #summary-div {
-  margin-bottom: 1em;
+  // margin-bottom: 1em;
   h3{
     font-size: 1.5em !important;
   }
