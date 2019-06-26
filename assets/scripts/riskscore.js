@@ -88,6 +88,9 @@ Codeup:
       url = document.location.host + document.location.pathname + '?id=' + _domain_id,
       timestamp = result.ts_p;
 
+      var positiveTags = Array();
+      var negativeTags = Array();
+
     $('#domain').text(domain);
     $('#score').html('<span>' + score + '</span> / 10 ');
     $('#score-message').text('as of ' + date.toLocaleDateString());
@@ -95,10 +98,11 @@ Codeup:
 
     getWhatsGood(result);
     fillRook(score);
-    topFactors(conts);
-    categorizeFactors(conts);
+    topFactors(conts, positiveTags, negativeTags);
     popFactorSummary(conts);
-    popSummary(conts);
+
+    console.log('postiive tags returned --> ' + positiveTags);
+    console.log('negative tags returned --> ' + negativeTags);
   }
 
   // color rook based on score
@@ -126,7 +130,7 @@ Codeup:
   }
 
   // get top positively and negatively contributing factors
-  function topFactors(conts) {
+  function topFactors(conts, positiveTags, negativeTags) {
     var positiveFactors = Array();
     var negativeFactors = Array();
 
@@ -158,6 +162,10 @@ Codeup:
           color = getColor(weight),
           collapseId = i + 't-collapse';
 
+          if ($.inArray(tag, positiveTags) === -1) {
+            positiveTags.push(tag);
+          }
+
         $('#top-factors').append(
           '<div class="d-flex flex-row flex-nowrap align-items-start">' +
           '<div class="icon-div pt-2">' +
@@ -172,7 +180,7 @@ Codeup:
           '</div></div>'
         );
       });
-    } else {
+    } else {  // if no positive factors exist
       $('#top-factors').append(
         '<div class="d-flex flex-row flex-nowrap align-items-start">' +
         '<div class="icon-div pt-2">' +
@@ -199,6 +207,10 @@ Codeup:
           color = getColor(weight),
           collapseId = i + 't-collapse';
 
+          if ($.inArray(tag, negativeTags) === -1) {
+            negativeTags.push(tag);
+          }
+
         $('#bottom-factors').append(
           '<div class="d-flex flex-row flex-nowrap align-items-start">' +
           '<div class="icon-div pt-2">' +
@@ -213,7 +225,7 @@ Codeup:
           '</div></div>'
         );
       });
-    } else {
+    } else { // if no negative factors exist
       $('#bottom-factors').append(
         '<div class="d-flex flex-row flex-nowrap align-items-start">' +
         '<div class="icon-div pt-2">' +
@@ -229,34 +241,10 @@ Codeup:
         '</div>'
       );
     }
+
   }
 
-  // categorize factors by tag
-  function categorizeFactors(conts) {
-    var factorGrps = $('.factor-grp'),
-      factorList = $('.factor-list');
-
-    $(conts).each(function() {
-      var tag = this.tag;
-
-      if (tag === 'web-server') {
-        tag = 'server';
-      }
-
-      $('#rs-' + tag).append(
-        '<p class="rs-factor">' + this.name + '</p>'
-      );
-
-    });
-
-    // if factor group has nothing listed, hide it
-    $(factorGrps).each(function(i) {
-      if ($(this).children().length <= 2) {
-        $(this).hide();
-      }
-    });
-  }
-
+  // populate full list of factors (all contributing factors)
   function popFactorSummary(conts) {
     $(conts).each(function() {
       var desc = this.description,
@@ -284,104 +272,9 @@ Codeup:
           "<div class='desc-div'>" +
           "<p class='f-sum'>" + summary + "</p>" +
           "<p class='f-desc'>" + desc + "</p>" +
-
           "</div></div></div>");
       }
     });
-  }
-
-  // create summary
-  function popSummary(conts) {
-
-    // don't include the top three
-    var otherFactors = conts.slice(3);
-
-    var widgets = [],
-      framework = [],
-      hosting = [],
-      cms = [],
-      shop = [],
-      mx = [],
-      payment = [],
-      webServer = [],
-      ssl = [],
-      cdn = [],
-      server = [];
-
-    $(otherFactors).each(function() {
-
-      var desc = this.description,
-        name = this.name,
-        summary = this.summary,
-        tag = this.tag,
-        weight = this.weight,
-        icon = getIcon(tag),
-        color;
-
-      if (name != null && tag != 'ns') {
-
-        switch (tag) {
-          case 'widgets':
-            widgets.push(this);
-            break;
-          case 'framework':
-            framework.push(this);
-            break;
-          case 'hosting':
-            hosting.push(this);
-            break;
-          case 'cms':
-            cms.push(this);
-            break;
-          case 'shop':
-            shop.push(this);
-            break;
-          case 'mx':
-            mx.push(this);
-            break;
-          case 'payment':
-            payment.push(this);
-            break;
-          case 'web-server':
-            webServer.push(this);
-            break;
-          case 'ssl':
-            ssl.push(this);
-            break;
-          case 'cdn':
-            cdn.push(this);
-            break;
-          case 'server':
-            server.push(this);
-            break;
-        }
-
-        if (summary.indexOf('positive') >= 0) {
-          color = 'r7';
-        } else if (summary.indexOf('negative') >= 0) {
-          color = 'r1';
-        }
-
-        $('#cat-info').append(
-          "<div class='cat long d-flex flex-row justify-content-between'>" +
-          "<div class='icon-div'>" +
-          "<p class='icon " + color + " text-center'>" +
-          "<span class='fa-stack'>" +
-          "<i class='fa fa-circle fa-stack-2x icon-background'></i>" +
-          "<i class='" + icon + " fa-stack-1x'></i>" +
-          "</span></p>" +
-          "</div>" +
-          "<div class='text-div'>" +
-          "<p class='c-title'>" + name + "</p>" +
-          "<p class='c-desc'>" + desc + "</p>" +
-          "</div>" +
-          "<div class='sum-div'>" +
-          "<p class='c-sum'>" + summary + "</p>" +
-          "</div></div>");
-      }
-
-    }); //end of .each()
-
   }
 
   // populate what's good info
@@ -416,8 +309,8 @@ Codeup:
 
       console.log('----- Results -----');
       console.log(results);
-      console.log('----- Relevent Keys -----');
-      console.log(relKeys);
+      // console.log('----- Relevent Keys -----');
+      // console.log(relKeys);
       console.log('----- top_neg -----');
       console.log(topNeg);
 
@@ -439,25 +332,25 @@ Codeup:
 
       // generate divs only for relevent tags
       $(relKeys).each(function() {
-        var key = this;
-        $(resultsDiv).append('<div id="' + key + '-row"><p class="bold larger">' + key + '</p></div>');
+        var key = this,
+            icon = getIcon(key);
+
+        $(resultsDiv).append('<div id="' + key + '-row"><p class="bold larger"><i class="' + icon + '"></i> ' + key + '</p></div>');
       });
 
       // genereate lists per key
       function generateLists() {
 
         $(relKeys).each(function() { // iterate through relevent keys / tags
-
           if (topNeg.hasOwnProperty(this)) {
             var arr = topNeg[this],
                 key = this;
 
             console.log(arr);
-
             $.each( arr, function (i) {
-
+              var num = i + 1;
               $('#' + key + '-row').append(
-                '<p>' + arr[i].name + '</p>'
+                '<p><span class="bold">' + num + '</span> '+ arr[i].name + '</p>'
               );
 
             });
@@ -465,7 +358,6 @@ Codeup:
         });
       }
       generateLists();
-
     }
   }
 
