@@ -1836,7 +1836,6 @@ table.table {
   min-width: 550px;
 }
 
-
 #email-resend {
   display: block;
   margin: 1em auto !important;
@@ -2052,7 +2051,23 @@ table.table {
   h4 {
     font-weight: 300!important;
   }
+
+  .good-tech {
+
+  }
+
+  .user-tech {
+    padding: .5em 1em;
+    background-color: rgba($mid-gray, .5);
+    p {
+      margin-bottom: .5em;
+    }
+    p.name {
+      font-size: .75em !important;
+    }
+  }
 }
+
 #summary-div {
   // margin-bottom: 1em;
   h3{

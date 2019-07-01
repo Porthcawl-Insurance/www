@@ -88,45 +88,49 @@ Codeup:
       url = document.location.host + document.location.pathname + '?id=' + _domain_id,
       timestamp = result.ts_p;
 
-      var positiveTags = Array();
-      var negativeTags = Array();
+    // Tags of user's most important factors, positive & negative //
+    var positiveTags = Array(),
+      negativeTags = Array();
+
+    // Names of users technologies by tag
+    var sortedByTags = {
+      'ads': [],
+      'analytics': [],
+      'cdn': [],
+      'cms': [],
+      'copyright': [],
+      'css': [],
+      'feeds': [],
+      'framework': [],
+      'hosting': [],
+      'javascript': [],
+      'link': [],
+      'mapping': [],
+      'media': [],
+      'mx': [],
+      'mobile': [],
+      'payment': [],
+      'server': [],
+      'shipping': [],
+      'shop': [],
+      'ssl': [],
+      'webmaster': [],
+      'webserver': [],
+      'widgets': []
+    };
+
+    fillRook(score);
+    topFactors(conts, positiveTags, negativeTags);
+    popFactorSummary(conts);
+    groupByTag(conts, sortedByTags);
+    getWhatsGood(result, sortedByTags, positiveTags, negativeTags);
 
     $('#domain').text(domain);
     $('#score').html('<span>' + score + '</span> / 10 ');
     $('#score-message').text('as of ' + date.toLocaleDateString());
     $('#copy-url').text(url);
 
-    getWhatsGood(result);
-    fillRook(score);
-    topFactors(conts, positiveTags, negativeTags);
-    popFactorSummary(conts);
-
-    console.log('postiive tags returned --> ' + positiveTags);
-    console.log('negative tags returned --> ' + negativeTags);
-  }
-
-  // color rook based on score
-  function fillRook(score) {
-    var getScoreColor = d3.scaleQuantize()
-      .domain([0, 6])
-      .range(['#CC444B', '#D8774F', '#DE9151', '#E9B15D', '#FFF275', '#D3E468', '#7AC74F']);
-
-    var getScoreRow = d3.scaleLinear()
-      .domain([0, 10])
-      .range([0, 6]);
-
-    // Note that the group or <g> elements in the rook's svg are ordered backwards
-    d3.select("#rook-svg").selectAll(".row")
-      .transition()
-      .delay(function(d, i) {
-        return i * 100
-      })
-      .duration(1500)
-      .style('fill', function(d, i) {
-        if (i <= getScoreRow(score)) {
-          return getScoreColor(getScoreRow(score));
-        }
-      });
+    console.log(sortedByTags);
   }
 
   // get top positively and negatively contributing factors
@@ -162,9 +166,9 @@ Codeup:
           color = getColor(weight),
           collapseId = i + 't-collapse';
 
-          if ($.inArray(tag, positiveTags) === -1) {
-            positiveTags.push(tag);
-          }
+        if ($.inArray(tag, positiveTags) === -1) {
+          positiveTags.push(tag);
+        }
 
         $('#top-factors').append(
           '<div class="d-flex flex-row flex-nowrap align-items-start">' +
@@ -180,7 +184,7 @@ Codeup:
           '</div></div>'
         );
       });
-    } else {  // if no positive factors exist
+    } else { // if no positive factors exist
       $('#top-factors').append(
         '<div class="d-flex flex-row flex-nowrap align-items-start">' +
         '<div class="icon-div pt-2">' +
@@ -207,9 +211,9 @@ Codeup:
           color = getColor(weight),
           collapseId = i + 't-collapse';
 
-          if ($.inArray(tag, negativeTags) === -1) {
-            negativeTags.push(tag);
-          }
+        if ($.inArray(tag, negativeTags) === -1) {
+          negativeTags.push(tag);
+        }
 
         $('#bottom-factors').append(
           '<div class="d-flex flex-row flex-nowrap align-items-start">' +
@@ -277,13 +281,110 @@ Codeup:
     });
   }
 
+  // group user's technologies by tags
+  function groupByTag(conts, obj) {
+
+    var widgetsList = Array(),
+      sslList = Array(),
+      hostingList = Array(),
+      cdnList = Array(),
+      frameworkList = Array(),
+      cmsList = Array(),
+      shopList = Array(),
+      mxList = Array(),
+      paymentList = Array(),
+      serverList = Array(),
+      webserverList = Array();
+
+    $(conts).each(function() { // make array of relevent tags
+      var tag = this.tag,
+        name = this.name;
+
+      switch (tag) {
+        case 'widgets':
+          widgetsList.push(name);
+          break;
+        case 'ssl':
+          sslList.push(name);
+          break;
+        case 'hosting':
+          hostingList.push(name);
+          break;
+        case 'cdn':
+          cdnList.push(name);
+          break;
+        case 'framework':
+          frameworkList.push(name);
+          break;
+        case 'cms':
+          cmsList.push(name);
+          break;
+        case 'shop':
+          shopList.push(name);
+          break;
+        case 'mx':
+          mxList.push(name);
+          break;
+        case 'payment':
+          paymentList.push(name);
+          break;
+        case 'server':
+          serverList.push(name);
+          break;
+        case 'web-server':
+          webserverList.push(name);
+          break;
+      }
+
+    });
+
+    if (widgetsList.length !== 0) {
+      obj.widgets = widgetsList;
+    }
+    if (sslList.length !== 0) {
+      obj.ssl = sslList;
+    }
+    if (hostingList.length !== 0) {
+      obj.hosting = hostingList;
+    }
+    if (cdnList.length !== 0) {
+      obj.cdn = cdnList;
+    }
+    if (frameworkList.length !== 0) {
+      obj.framework = frameworkList;
+    }
+    if (cmsList.length !== 0) {
+      obj.cms = cmsList;
+    }
+    if (shopList.length !== 0) {
+      obj.shop = shopList;
+    }
+    if (shopList.length !== 0) {
+      obj.shop = shopList;
+    }
+    if (mxList.length !== 0) {
+      obj.mx = mxList;
+    }
+    if (paymentList.length !== 0) {
+      obj.payment = paymentList;
+    }
+    if (serverList.length !== 0) {
+      obj.server = serverList;
+    }
+    if (webserverList.length !== 0) {
+      obj.webserver = webserverList;
+    }
+
+  }
+
   // populate what's good info
-  function getWhatsGood(userResults) {
+  function getWhatsGood(userResults, obj, pTags, nTags) {
 
     var data = {
         "id": 1558626498
       },
-      userResults = userResults;
+      userResults = userResults,
+      obj = obj;
 
     $.ajax({
       method: "POST",
@@ -293,26 +394,20 @@ Codeup:
     }).done(function(response) {
       console.log('----- Response -----');
       console.log(response);
-      populateGood(response, userResults);
+      populateGood(response, userResults, obj);
     }).fail(function(e) {
       console.log(e)
     });
 
-    function populateGood(response, results) {
+    function populateGood(response, results, obj) {
+
       var topNeg = response.top_neg,
         allKeys = Object.keys(topNeg),
         conts = results.top_contributions,
         tags = [],
-        relKeys = [];
-
-      var resultsDiv = $('#goodresults-div');
-
-      console.log('----- Results -----');
-      console.log(results);
-      // console.log('----- Relevent Keys -----');
-      // console.log(relKeys);
-      console.log('----- top_neg -----');
-      console.log(topNeg);
+        relKeys = [],
+        resultsDiv = $('#goodresults-div'),
+        tagsDiv = $('#sortedByTags-div');
 
       // make array of tags
       $(conts).each(function() {
@@ -330,35 +425,89 @@ Codeup:
         }
       });
 
-      // generate divs only for relevent tags
-      $(relKeys).each(function() {
-        var key = this,
-            icon = getIcon(key);
+      // generate list of top technologies & user's technologies by tag
+      function generateLists(userObj, goodObj, relKeys) {
 
-        $(resultsDiv).append('<div id="' + key + '-row"><p class="bold larger"><i class="' + icon + '"></i> ' + key + '</p></div>');
-      });
+        var goodTags = [],
+            userTechNames = [];
 
-      // genereate lists per key
-      function generateLists() {
+        Object.keys(userObj).forEach(key => { //for each key in the user's object
 
-        $(relKeys).each(function() { // iterate through relevent keys / tags
-          if (topNeg.hasOwnProperty(this)) {
-            var arr = topNeg[this],
-                key = this;
+          let value = userObj[key];
 
-            console.log(arr);
-            $.each( arr, function (i) {
+          if ($.inArray(key, relKeys) && value.length) {
+            var icon = getIcon(key);
+
+            goodTags.push(key);
+
+            $(tagsDiv).append(
+              '<div id="' + key + '-row" class="user-tech">' +
+              '<p class="bold tag"><i class="' + icon + '"></i> ' + key + '</p>' +
+              '</div>'
+            );
+
+            $.each(value, function(i, val) { // generate each value for that key
               var num = i + 1;
               $('#' + key + '-row').append(
-                '<p><span class="bold">' + num + '</span> '+ arr[i].name + '</p>'
+                '<p class="name">' + val + '</p>'
               );
-
+              userTechNames.push(val);
             });
           }
         });
+
+        Object.keys(goodObj).forEach(key => { // for each key in good object
+
+          let value = goodObj[key];
+
+          if (goodTags.includes(key)) {
+            var icon = getIcon(key);
+
+            $(resultsDiv).append(
+              '<div id="top-' + key + '-div" class="good-tech">' +
+              '<p class="bold"><i class="' + icon + '"></i> ' + key + '</p>' +
+              '</div>'
+            );
+
+            $.each(value, (function(i, val) {
+              var num = i + 1,
+                  name = val.name;
+
+              $('#top-' + key + '-div').append(
+                '<p>' + num + '. ' + name + '</p>'
+              );
+
+            }));
+          }
+        });
       }
-      generateLists();
-    }
+      generateLists(obj, topNeg, relKeys);
+
+    } // end of populateGood()
+  }
+
+  // color rook based on score
+  function fillRook(score) {
+    var getScoreColor = d3.scaleQuantize()
+      .domain([0, 6])
+      .range(['#CC444B', '#D8774F', '#DE9151', '#E9B15D', '#FFF275', '#D3E468', '#7AC74F']);
+
+    var getScoreRow = d3.scaleLinear()
+      .domain([0, 10])
+      .range([0, 6]);
+
+    // Note that the group or <g> elements in the rook's svg are ordered backwards
+    d3.select("#rook-svg").selectAll(".row")
+      .transition()
+      .delay(function(d, i) {
+        return i * 100
+      })
+      .duration(1500)
+      .style('fill', function(d, i) {
+        if (i <= getScoreRow(score)) {
+          return getScoreColor(getScoreRow(score));
+        }
+      });
   }
 
   // return icon class based on tag
