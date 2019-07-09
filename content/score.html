@@ -112,33 +112,43 @@ draft: true
 <!-- </div> -->
 <!-- end of .jumbotron -->
 
-<!-- FULL SUMMARY -->
-<div id='summary-div' class='container-fluid background-gradient colorful d-none'>
-  <div class='container'>
-    <h3 class='text-center p-3 pb-5 t-light'>All Contributing Factors</h3>
-    <div class='d-flex flex-row flex-nowrap justify-content-center'>
-      <div id='factor-info' class='d-flex flex-column flex-nowrap'>
-        <!-- populated from js / popFactorSummary() -->
-      </div>
-    </div>
-    <!--end of .flex-row-->
-  </div>
-</div>
-
 <!--WHATS GOOD-->
-<div id='whatsgood-div' class='container-fluid background-light'>
-  <div class='container d-flex row'>
+<div id='whatsgood-div' class='container-fluid '>
+  <div class='container background-light'>
     <h4 class='text-center py-3 mb-3'>What we know from current technology trends</h4>
+    <p class='text-center'>
+      Based on our current model, we’ve gathered the Top 20 Technologies (per category) being used by other eCommerce
+      businesses like you.
+      <br />
+      These lists will change overtime due to various factors, but you can count on us
+      for the most up-to-date feedback.
+    </p>
     <hr class="dark" />
+    <div class='d-flex flex-row flex-wrap justify-content-center'>
 
-    <div id='goodresults-div' class='d-flex flex-row flex-wrap justify-content-around w-75'>
+      <div id='goodresults-div' class='d-flex flex-row flex-wrap justify-content-around w-75'>
+      </div>
+
+      <!-- <div id='sortedByTags-div' class='d-flex flex-column p-2'>
+      </div> -->
+
     </div>
-
-    <div id='sortedByTags-div' class='d-flex flex-column p-2'>
-    </div>
-
   </div>
-</div>
 
-{{< share-modal >}}
-{{< riskscore-helpers >}}
+  <!-- FULL SUMMARY -->
+  <div id='summary-div' class='container-fluid background-gradient colorful d-none'>
+    <div class='container'>
+      <h3 class='text-center p-3 pb-5 t-light'>All Contributing Factors</h3>
+      <div class='d-flex flex-row flex-nowrap justify-content-center'>
+        <div id='factor-info' class='d-flex flex-column flex-nowrap'>
+          <!-- populated from js / popFactorSummary() -->
+        </div>
+      </div>
+      <!--end of .flex-row-->
+    </div>
+  </div>
+
+
+
+  {{< share-modal >}}
+  {{< riskscore-helpers >}}

@@ -429,7 +429,8 @@ Codeup:
       function generateLists(userObj, goodObj, relKeys) {
 
         var goodTags = [],
-            userTechNames = [];
+          userTechNames = [],
+          goodTechNames = [];
 
         Object.keys(userObj).forEach(key => { //for each key in the user's object
 
@@ -440,17 +441,17 @@ Codeup:
 
             goodTags.push(key);
 
-            $(tagsDiv).append(
-              '<div id="' + key + '-row" class="user-tech">' +
-              '<p class="bold tag"><i class="' + icon + '"></i> ' + key + '</p>' +
-              '</div>'
-            );
+            // $(tagsDiv).append(
+            //   '<div id="' + key + '-row" class="user-tech">' +
+            //   '<p class="bold tag"><i class="' + icon + '"></i> ' + key + '</p>' +
+            //   '</div>'
+            // );
 
             $.each(value, function(i, val) { // generate each value for that key
-              var num = i + 1;
-              $('#' + key + '-row').append(
-                '<p class="name">' + val + '</p>'
-              );
+              // var num = i + 1;
+              // $('#' + key + '-row').append(
+              //   '<p class="name">' + val + '</p>'
+              // );
               userTechNames.push(val);
             });
           }
@@ -471,15 +472,48 @@ Codeup:
 
             $.each(value, (function(i, val) {
               var num = i + 1,
-                  name = val.name;
+                name = val.name.replace(/-/g, ' ');
 
-              $('#top-' + key + '-div').append(
-                '<p>' + num + '. ' + name + '</p>'
-              );
+              // take dashes out of names, replace with spaces for better readability
+              // name = name.replace(/-/g, ' ');
 
-            }));
-          }
-        });
+              // add class to matching technologies
+              if (userTechNames.includes(name)) {
+                $('#top-' + key + '-div').append(
+                  '<p class="tech-name match d-none">' + num + '. ' + name + '</p>'
+                );
+              } else {
+                $('#top-' + key + '-div').append(
+                  '<p class="tech-name no-match d-none" >' + num + '. ' + name + '</p>'
+                );
+              }
+
+              // if(num <= 3)
+
+            })); // end of $.each(value... //
+
+            // determine which to show
+            $.each($('.tech-name'), function(i, val) {
+              var text = val.innerText,
+                  num = i + 1 ;
+
+              console.log(text);
+
+              if ($(this).hasClass('match') || text.match( /(1. |2. |3. )/ )) {
+                $(this).removeClass('d-none');
+              }
+
+              if (!$(this).hasClass('match') && text.match( /(11. |12. |13. |21. |22. |23. )/)) {
+                $(this).addClass('d-none');
+              }
+            });
+
+          } // end of if(goodTags.includes(key)) //
+
+        }); // end of Object.keys(goodObj) //
+
+        console.log('goodTags[] => ' + goodTags);
+        console.log('userTechNames[] => ' + userTechNames);
       }
       generateLists(obj, topNeg, relKeys);
 
@@ -545,7 +579,43 @@ Codeup:
         icon = 'fal fa-server';
         break;
       case 'payment':
-        icon = 'fal fa-money-bill-wave'
+        icon = 'fal fa-money-bill-wave';
+        break;
+      case 'link':
+        icon = 'fal fa-link';
+        break;
+      case 'web-master':
+        icon = 'fal fa-wrench';
+        break;
+      case 'mapping':
+        icon = 'fal fa-sitemap';
+        break;
+      case 'feeds':
+        icon = 'fal fa-rss';
+        break;
+      case 'css':
+        icon = 'fal fa-file-code';
+        break;
+      case 'ads':
+        icon = 'fal fa-file-spreadsheet';
+        break;
+      case 'media':
+        icon = 'fal fa-photo-video';
+        break;
+      case 'copyright':
+        icon = 'fal fa-copyright';
+        break;
+      case 'shipping':
+        icon = 'fal fa-shippinig-timed';
+        break;
+      case 'javascript':
+        icon = 'fal fa-js';
+        break;
+      case 'mobile':
+        icon = 'fal fa-mobile';
+        break;
+      case 'analytics':
+        icon = 'fal fa-analytics';
         break;
       default:
         icon = 'fal fa-laptop-code';
