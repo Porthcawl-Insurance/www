@@ -113,42 +113,40 @@ draft: true
 <!-- end of .jumbotron -->
 
 <!--WHATS GOOD-->
-<div id='whatsgood-div' class='container-fluid '>
-  <div class='container background-light'>
-    <h4 class='text-center py-3 mb-3'>What we know from current technology trends</h4>
-    <p class='text-center'>
+<div id='whatsgood-div' class='container-fluid d-none'>
+  <div class='container background-light p-5'>
+    <h4 class='text-center py-4 bold'>What we know from current technology trends</h4>
+    <p class='text-center p-4 mb-2'>
       Based on our current model, we’ve gathered the Top 20 Technologies (per category) being used by other eCommerce
       businesses like you.
-      <br />
+      <!-- <br /> -->
       These lists will change overtime due to various factors, but you can count on us
       for the most up-to-date feedback.
     </p>
-    <hr class="dark" />
-    <div class='d-flex flex-row flex-wrap justify-content-center'>
+    <!-- <hr class="dark" /> -->
+    <div class='d-flex flex-row flex-wrap justify-content-center py-4'>
 
-      <div id='goodresults-div' class='d-flex flex-row flex-wrap justify-content-around w-75'>
+      <div id='goodresults-div' class='d-flex flex-row flex-wrap justify-content-around'>
       </div>
-
-      <!-- <div id='sortedByTags-div' class='d-flex flex-column p-2'>
-      </div> -->
 
     </div>
   </div>
+</div>
 
-  <!-- FULL SUMMARY -->
-  <div id='summary-div' class='container-fluid background-gradient colorful d-none'>
-    <div class='container'>
-      <h3 class='text-center p-3 pb-5 t-light'>All Contributing Factors</h3>
-      <div class='d-flex flex-row flex-nowrap justify-content-center'>
-        <div id='factor-info' class='d-flex flex-column flex-nowrap'>
-          <!-- populated from js / popFactorSummary() -->
-        </div>
+<!-- FULL SUMMARY -->
+<div id='summary-div' class='container-fluid background-gradient colorful d-none'>
+  <div class='container'>
+    <h3 class='text-center p-3 pb-5 t-light'>All Contributing Factors</h3>
+    <div class='d-flex flex-row flex-nowrap justify-content-center'>
+      <div id='factor-info' class='d-flex flex-column flex-nowrap'>
+        <!-- populated from js / popFactorSummary() -->
       </div>
-      <!--end of .flex-row-->
     </div>
+    <!--end of .flex-row-->
   </div>
+</div>
 
 
 
-  {{< share-modal >}}
-  {{< riskscore-helpers >}}
+{{< share-modal >}}
+{{< riskscore-helpers >}}

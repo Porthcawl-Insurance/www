@@ -433,36 +433,26 @@ Codeup:
           goodTechNames = [];
 
         Object.keys(userObj).forEach(key => { //for each key in the user's object
-
           let value = userObj[key];
-
           if ($.inArray(key, relKeys) && value.length) {
             var icon = getIcon(key);
-
             goodTags.push(key);
-
-            // $(tagsDiv).append(
-            //   '<div id="' + key + '-row" class="user-tech">' +
-            //   '<p class="bold tag"><i class="' + icon + '"></i> ' + key + '</p>' +
-            //   '</div>'
-            // );
-
             $.each(value, function(i, val) { // generate each value for that key
-              // var num = i + 1;
-              // $('#' + key + '-row').append(
-              //   '<p class="name">' + val + '</p>'
-              // );
               userTechNames.push(val);
             });
           }
         });
 
         Object.keys(goodObj).forEach(key => { // for each key in good object
-
           let value = goodObj[key];
 
           if (goodTags.includes(key)) {
-            var icon = getIcon(key);
+            var icon = getIcon(key),
+              div = $('#top-' + key + '-div'),
+              top3Array = Array(),
+              top20Array = Array(),
+              top3 = false,
+              top20 = false;
 
             $(resultsDiv).append(
               '<div id="top-' + key + '-div" class="good-tech">' +
@@ -474,46 +464,104 @@ Codeup:
               var num = i + 1,
                 name = val.name.replace(/-/g, ' ');
 
-              // take dashes out of names, replace with spaces for better readability
-              // name = name.replace(/-/g, ' ');
-
               // add class to matching technologies
               if (userTechNames.includes(name)) {
                 $('#top-' + key + '-div').append(
-                  '<p class="tech-name match d-none">' + num + '. ' + name + '</p>'
+                  '<p class="tech-name match d-none" data-rank="' + num + '" data-name="' + name + '">' + num + '. ' + name + '</p>'
                 );
+                if (num <= 3) {
+                  top3 = true;
+                }
+                if (num <= 4) {
+                  top20 = true;
+                }
               } else {
                 $('#top-' + key + '-div').append(
-                  '<p class="tech-name no-match d-none" >' + num + '. ' + name + '</p>'
+                  '<p class="tech-name no-match d-none" data-rank="' + num + '" data-name="' + name + '">' + num + '. ' + name + '</p>'
                 );
               }
 
-              // if(num <= 3)
-
+              if (num <= 3) {
+                top3Array.push(num + '. ' + name);
+              }
+              if (num >= 4) {
+                top20Array.push(num + '. ' + name);
+              }
             })); // end of $.each(value... //
 
             // determine which to show
             $.each($('.tech-name'), function(i, val) {
-              var text = val.innerText,
-                  num = i + 1 ;
+              var rank = Number($(this).attr('data-rank')),
+                num = i + 1;
 
-              console.log(text);
-
-              if ($(this).hasClass('match') || text.match( /(1. |2. |3. )/ )) {
+              if ($(this).hasClass('match') || rank <= 3) {
                 $(this).removeClass('d-none');
               }
-
-              if (!$(this).hasClass('match') && text.match( /(11. |12. |13. |21. |22. |23. )/)) {
+              if (!$(this).hasClass('match') && rank >= 4) {
                 $(this).addClass('d-none');
               }
-            });
 
+            });
           } // end of if(goodTags.includes(key)) //
 
         }); // end of Object.keys(goodObj) //
 
-        console.log('goodTags[] => ' + goodTags);
-        console.log('userTechNames[] => ' + userTechNames);
+        $.each($('.good-tech'), function() {
+          var div = $(this),
+            children = $(this).children('p.tech-name'),
+            matches = Array(),
+            top3 = false,
+            top20 = false;
+
+          $.each(children, function() {
+            var rank = Number($(this).attr('data-rank'));
+
+            if ($(this).hasClass('match')) {
+              matches.push(this);
+            }
+
+            if (rank == 3) {
+              $(this).after('<i class="ellipsis far fa-ellipsis-v"></i>');
+            }
+
+            if ($(this).hasClass('match') && rank <= 3) {
+              $(this).append('<i class="top3-check fas fa-check-circle"></i>');
+              top3 = true;
+            } else if ($(this).hasClass('match') && rank >= 4) {
+              $(this).append('<i class="top20-check fas fa-check"></i>');
+              top20 = true;
+            }
+
+          });
+
+          if (matches === undefined || matches.length == 0) {
+            $(this).addClass('d-none');
+          }
+
+          if (top3) {
+            $(div).append(
+              '<p class="top3-text"><span class="bold">Congrats!</span> You\'re using one of the top 3 technologies in this category!</p>'
+            );
+          }
+
+          if (top20) {
+            $.each(matches, function(i , val) {
+              var rank = Number(val.attributes[1].value), // get data-rank of matches
+                name = val.attributes[2].value; // get data-name of matches
+
+                $(div).append(
+                  '<p class="top20-text"><span class="bold">' + name + '</span> is rated <span class="bold">' + rank + '</span> out of 20!'
+                );
+
+            });
+          }
+
+
+
+          console.log(matches);
+
+        });
+
       }
       generateLists(obj, topNeg, relKeys);
 

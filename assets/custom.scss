@@ -2052,15 +2052,48 @@ table.table {
 #whatsgood-div {
   h4 {
     font-weight: 300!important;
+    font-size: 2em !important;
   }
 
   .good-tech {
     background-color: $lightest;
     box-shadow: 0px 3px 6px rgba($very-dark, .25);
     padding: 1em;
+    margin: .2em;
+    width: 100%;
+    max-width: 300px;
     .match {
-      font-weight: 400 !important;
-      text-decoration: underline;
+      font-weight: 600 !important;
+      color: $purple;
+      i {
+        padding-left: 1em;
+        color: $r7;
+      }
+    }
+    .icon, .title {
+      color: $purple;
+    }
+    .icon {
+      font-size: 2.5em !important;
+      margin-bottom: .1em !important;
+    }
+    .title {
+      margin-bottom: 1em;
+      border-bottom: 1px solid $mid-gray;
+      padding-bottom: 1em;
+    }
+    p:nth-child(5){
+      padding-bottom: .1em;
+      margin-bottom: 0;
+    }
+    i.ellipsis {
+      padding-left: .1em;
+    }
+    i.top3-check,
+    i.top20-check {
+      color: $r7;
+      display: inline;
+      // float: right;
     }
   }
 
