@@ -456,7 +456,8 @@ Codeup:
 
             $(resultsDiv).append(
               '<div id="top-' + key + '-div" class="good-tech">' +
-              '<p class="bold"><i class="' + icon + '"></i> ' + key + '</p>' +
+              '<p class="icon text-center"><i class="' + icon + '"></i></p>' +
+              '<p class="text-center larger title"> Top <span class="topNum">3</span> in <span class="bold">' + key + '</span></p>' +
               '</div>'
             );
 
@@ -494,6 +495,10 @@ Codeup:
               var rank = Number($(this).attr('data-rank')),
                 num = i + 1;
 
+              if (rank <= 3 ) {
+                $(this).addClass('top3');
+              }
+
               if ($(this).hasClass('match') || rank <= 3) {
                 $(this).removeClass('d-none');
               }
@@ -514,7 +519,8 @@ Codeup:
             top20 = false;
 
           $.each(children, function() {
-            var rank = Number($(this).attr('data-rank'));
+            var rank = Number($(this).attr('data-rank')),
+              name = $(this).attr('data-name');
 
             if ($(this).hasClass('match')) {
               matches.push(this);
@@ -532,7 +538,8 @@ Codeup:
               top20 = true;
             }
 
-          });
+          }); // end of $.each(children / '.tech-name') in each .good-tech div //
+
 
           if (matches === undefined || matches.length == 0) {
             $(this).addClass('d-none');
@@ -545,22 +552,18 @@ Codeup:
           }
 
           if (top20) {
-            $.each(matches, function(i , val) {
+            $.each(matches, function(i, val) {
               var rank = Number(val.attributes[1].value), // get data-rank of matches
                 name = val.attributes[2].value; // get data-name of matches
-
-                $(div).append(
-                  '<p class="top20-text"><span class="bold">' + name + '</span> is rated <span class="bold">' + rank + '</span> out of 20!'
-                );
-
+              $(div).append(
+                '<p class="top20-text"><span class="bold">' + name + '</span> is rated <span class="bold">' + rank + '</span> out of 20!'
+              );
             });
           }
 
-
-
           console.log(matches);
 
-        });
+        }); // end of $.each('.good-tech') //
 
       }
       generateLists(obj, topNeg, relKeys);

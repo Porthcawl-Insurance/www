@@ -2061,15 +2061,8 @@ table.table {
     padding: 1em;
     margin: .2em;
     width: 100%;
-    max-width: 300px;
-    .match {
-      font-weight: 600 !important;
-      color: $purple;
-      i {
-        padding-left: 1em;
-        color: $r7;
-      }
-    }
+    max-width: 350px;
+
     .icon, .title {
       color: $purple;
     }
@@ -2082,19 +2075,51 @@ table.table {
       border-bottom: 1px solid $mid-gray;
       padding-bottom: 1em;
     }
-    p:nth-child(5){
-      padding-bottom: .1em;
+    .tech-name {
+      padding: .5em;
       margin-bottom: 0;
+      &.top3 {
+        font-weight: 400 !important;
+        color: $dark-gray;
+        &:nth-child(odd){
+          background-color: rgba($mid-gray, .1);
+        }
+        &:nth-child(even){
+          background-color: rgba($mid-gray, .2);
+        }
+        &.match {
+          font-weight: bold !important;
+        }
+      }
+      &.match {
+        font-weight: 400 !important;
+        color: $purple !important;
+        i {
+          padding-left: 1em;
+          color: $r7;
+        }
+      }
     }
+
     i.ellipsis {
-      padding-left: .1em;
+      padding-left: .6em;
     }
     i.top3-check,
     i.top20-check {
       color: $r7;
       display: inline;
-      // float: right;
     }
+
+    .top3-text {
+      // font-weight: 400 !important;
+      font-size: 1.1em !important;
+      margin-top: 1em;
+      text-align: center !important;
+      // background-color: rgba ($r7, .4);
+      border: 2px solid $r7;
+      padding: .5em;
+    }
+
   }
 
   .user-tech {
