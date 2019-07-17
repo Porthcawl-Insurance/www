@@ -119,15 +119,27 @@ draft: true
     <p class='text-center p-4 mb-2'>
       Based on our current model, we’ve gathered the Top 20 Technologies (per category) being used by other eCommerce
       businesses like you.
-      <!-- <br /> -->
       These lists will change overtime due to various factors, but you can count on us
       for the most up-to-date feedback.
     </p>
     <!-- <hr class="dark" /> -->
-    <div class='d-flex flex-row flex-wrap justify-content-center py-4'>
+    <div id='goodresults-div' class='d-flex flex-column py-4'>
 
-      <div id='goodresults-div' class='d-flex flex-row flex-wrap justify-content-around'>
+      <div id='top3-section' class='flex-column d-none'>
+        <p class='text-center larger'>
+          Congrats! <span id='3count' class='bold'></span> of your technologies are in the Top 3 of their category!
+        </p>
+        <div id='top3-results' class='d-flex flex-row flex-wrap justify-content-around results-row'></div>
       </div>
+
+      <div id='top20-section' class='flex-column d-none'>
+        <p class='text-center'>
+          <span id='20count'></span> of your technologies are in the Top 20 of their category!
+        </p>
+        <div id='top20-results' class='d-flex flex-row flex-wrap justify-content-around d-none results-row'></div>
+      </div>
+
+      <div id='no-results' class='d-flex flex-row d-none results-row'></div>
 
     </div>
   </div>
