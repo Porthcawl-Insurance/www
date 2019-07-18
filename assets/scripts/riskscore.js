@@ -395,6 +395,8 @@ Codeup:
     }).done(function(response) {
       console.log('----- Response -----');
       console.log(response);
+      console.log('--- User Results ---');
+      console.log(userResults);
       populateGood(response, userResults, obj);
     }).fail(function(e) {
       console.log(e)
@@ -407,7 +409,9 @@ Codeup:
         userFactors = results.top_contributions,
         relTags = getRelTags(userFactors, allKeys),
         userTechNames = getUserTechNames(userFactors),
-        withTop3 = Array();
+        withTop3 = Array(),
+        withoutTop3 = Array();
+
 
       populateTop3(allTech, userFactors, relTags, userTechNames);
       populateTop20(allTech, userFactors, relTags, userTechNames, withTop3);
@@ -415,20 +419,28 @@ Codeup:
       function getRelTags(userFactors, allKeys) {
         var userTags = Array(),
           returnKeys = Array();
-        $(userFactors).each(function() {
+
+        $(userFactors).each(function(i, val) {
           var tag = this.tag;
-          if (userTags.indexOf(tag === -1)) {
+          if (!userTags.includes(tag)) {
             userTags.push(tag);
           }
         });
-        $(userTags).each(function() {
+
+        // console.log('-- User Tags --')
+        // console.log(userTags);
+
+        $(userTags).each(function(i, val) {
           var tag = this;
-          if ($.inArray(tag, allKeys) !== -1) {
-            returnKeys.push(tag);
+          if (allKeys.includes(tag) && userTags.includes(tag)) {
+            if (!returnKeys.includes(tag)) {
+              returnKeys.push(tag);
+            }
           }
         });
+
         return returnKeys;
-      }
+      } // end of getRelTags();
 
       function getUserTechNames(factors) {
         var names = Array();
@@ -436,11 +448,11 @@ Codeup:
           names.push(val.name);
         });
         return names;
-      }
+      } // end of getUserTechNames();
 
       function populateTop3(techObj, userObj, reltags, userTechNames) {
-        var section = $('#top3-section'),
-          div = $('#top3-results'),
+        var section = $('#top-section'),
+          div = $('#top-results'),
           countText = $('#3count');
 
         Object.keys(techObj).forEach(key => {
@@ -455,9 +467,11 @@ Codeup:
                 name = val.name.replace(/-/g, ' ');
 
               // if userTechName if found within first 3 values
-              if (num <= 3) {
+              if (num <= 3 && !withTop3.includes(tag)) {
                 if (userTechNames.includes(name)) {
-                  $(section).removeClass('d-none');
+                  if ($(section).hasClass('d-none')){
+                    $(section).removeClass('d-none');
+                  }
                   $(div).append(
                     '<div id="top-' + tag + '-div" class="good-tech top3 d-flex flex-column">' +
                     '<div class="icon-div">' +
@@ -481,8 +495,8 @@ Codeup:
       } // end of populateTop3();
 
       function populateTop20(techObj, userObj, reltags, userTechNames, top3Array) {
-        var section = $('#top3-section'),
-          div = $('#top3-results');
+        var section = $('#top-section'),
+          div = $('#top-results');
 
         Object.keys(techObj).forEach(key => {
           let value = techObj[key];
@@ -495,8 +509,10 @@ Codeup:
                 tag = val.tag,
                 name = val.name.replace(/-/g, ' ');
 
-              if (userTechNames.includes(name)) {
-                $(section).removeClass('d-none');
+              if (userTechNames.includes(name) && !withoutTop3.includes(tag)) {
+                if ($(section).hasClass('d-none')){
+                  $(section).removeClass('d-none');
+                }
                 $(div).append(
                   '<div id="top-' + tag + '-div" class="good-tech d-flex flex-column">' +
                   '<div class="icon-div">' +
@@ -507,7 +523,7 @@ Codeup:
                   '</div>'
                 );
                 var listDiv = $('#top-' + tag + '-list');
-                // withTop3.push(tag);
+                withoutTop3.push(tag);
                 generateList(techObj, userTechNames, tag, listDiv);
               }
 
