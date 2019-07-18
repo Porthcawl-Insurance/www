@@ -257,11 +257,12 @@ Codeup:
         tag = this.tag,
         weight = this.weight_normalized,
         icon = getIcon(tag),
-        color = getColor(weight);
+        color = getColor(weight),
+        id = name.replace(/\s+/g, '-').toLowerCase();
 
       if (name != null) {
         $('#factor-info').append(
-          "<div class='factor-sum d-flex flex-row justify-content-start'>" +
+          "<div id='" + id + "' class='factor-sum d-flex flex-row justify-content-start'>" +
           "<div class='icon-div'>" +
           "<p class='icon " + color + " text-center'>" +
           "<span class='fa-stack'>" +
@@ -458,15 +459,17 @@ Codeup:
                 if (userTechNames.includes(name)) {
                   $(section).removeClass('d-none');
                   $(div).append(
-                    '<div id="top-' + tag + '-div" class="good-tech top3">' +
+                    '<div id="top-' + tag + '-div" class="good-tech top3 d-flex flex-column">' +
+                    '<div class="icon-div">' +
                     '<p class="icon text-center"><i class="' + icon + '"></i></p>' +
-                    '<p class="text-center larger title bold">' + tag + '</p>' +
-                    '<div id="top-' + tag + '-list" class="list"></div>' +
+                    '<p class="text-center larger title bold">Top 3 in ' + tag + '</p>' +
+                    '</div>' +
+                    '<div id="top-' + tag + '-list" class="list-div"></div>' +
                     '</div>'
                   );
                   var listDiv = $('#top-' + tag + '-list');
                   withTop3.push(tag);
-                  generateList(techObj, userTechNames, tag, listDiv, 3);
+                  generateList(techObj, userTechNames, tag, listDiv);
                 }
               }
             }); // end of $.each(value);
@@ -478,9 +481,8 @@ Codeup:
       } // end of populateTop3();
 
       function populateTop20(techObj, userObj, reltags, userTechNames, top3Array) {
-        var section = $('#top20-section'),
-          div = $('#top20-results'),
-          countText = $('#20count');
+        var section = $('#top3-section'),
+          div = $('#top3-results');
 
         Object.keys(techObj).forEach(key => {
           let value = techObj[key];
@@ -496,67 +498,109 @@ Codeup:
               if (userTechNames.includes(name)) {
                 $(section).removeClass('d-none');
                 $(div).append(
-                  '<div id="top-' + tag + '-div" class="good-tech top20">' +
+                  '<div id="top-' + tag + '-div" class="good-tech d-flex flex-column">' +
+                  '<div class="icon-div">' +
                   '<p class="icon text-center"><i class="' + icon + '"></i></p>' +
-                  '<p class="text-center larger title bold">' + tag + '</p>' +
-                  '<div id="top-' + tag + '-list" class="list"></div>' +
+                  '<p class="text-center larger title bold">Top 3 in ' + tag + '</p>' +
+                  '</div>' +
+                  '<div id="top-' + tag + '-list" class="list-div"></div>' +
                   '</div>'
                 );
                 var listDiv = $('#top-' + tag + '-list');
-                generateList(techObj, userTechNames, tag, listDiv, 20);
+                // withTop3.push(tag);
+                generateList(techObj, userTechNames, tag, listDiv);
               }
 
             }); // end of $.each(value);
           } // end of if(tags.includes(key))...
         }); // end of forEach(key)...
 
-        var count = $(div).children('.top20').length;
-        $(countText).text(count);
       } // end of populateTop20();
 
-      function generateList(techObj, userTechNames, tag, div, topNum) {
-        var tech = techObj[tag];
-
+      function generateList(techObj, userTechNames, tag, div) {
+        var tech = techObj[tag],
+          namesArray = Array(),
+          count = 0;
 
         $.each(tech, function(i, val) {
           var num = i + 1,
-            name = val.name.replace(/-/g, ' ');
-          if (topNum == 3) {
-            if (num <= 3) {
-              if (userTechNames.includes(name)) {
-                $(div).append(
-                  '<p class="tech-name match" data-rank="' + num + '">' + num + '. ' + name + '</p>'
-                );
-              } else {
-                $(div).append(
-                  '<p class="tech-name no-match" data-rank="' + num + '">' + num + '. ' + name + '</p>'
-                );
-              }
-            } else if (num >= 4) {
-              if (userTechNames.includes(name)) {
-                $(div).append(
-                  '<p class="tech-name match" data-rank="' + num + '">' + num + '. ' + name + '</p>'
-                );
-              } else {
-                $(div).append(
-                  '<p class="tech-name no-match d-none" data-rank="' + num + '">' + num + '. ' + name + '</p>'
-                );
-              }
-            }
-          } else if (topNum == 20) {
-            if (userTechNames.includes(name)) {
+            name = val.name.replace(/-/g, ' '),
+            tag = val.tag,
+            target = name.replace(/\s+/g, '-').toLowerCase();
+
+          if (num <= 3) {
+            if (userTechNames.includes(name) && !namesArray.includes(name)) {
               $(div).append(
-                '<p class="tech-name match" data-rank="' + num + '">' + num + '. ' + name + '</p>'
+                '<p class="tech-name match top3" data-rank="' + num + '">' + num + '. <a href="#' + target + '">' + name + '</a> <i class="top3-check fas fa-check-circle"></i></p>'
               );
+              namesArray.push(name);
             } else {
               $(div).append(
-                '<p class="tech-name no-match" data-rank="' + num + '">' + num + '. ' + name + '</p>'
+                '<p class="tech-name no-match top3" data-rank="' + num + '">' + num + '. ' + name + '</p>'
               );
             }
+          } else if (num >= 4) {
+            if (userTechNames.includes(name) && !namesArray.includes(name)) {
+              if (count == 0) {
+                $(div).append(
+                  '<p class="tech-name ellipses"><i class="ellipses far fa-ellipsis-v"></i></p>' +
+                  '<p class="tech-name match bottom" data-rank="' + num + '">' + num + '. <a href="#' + target + '">' + name + '</a> <i class="top20-check far fa-check"></i></p>'
+                );
+                count = 1;
+                namesArray.push(name);
+              } else if (count == 1) {
+                $(div).append(
+                  '<p class="tech-name match bottom" data-rank="' + num + '">' + num + '. <a href="#' + target + '">' + name + '</a> <i class="top20-check far fa-check"></i></p>'
+                );
+                namesArray.push(name);
+              }
+            }
           }
-        });
+        }); // end of $.each(tech)
+
+        $(div).append(
+          '<div class="full-list-div">' +
+          '<a href="#;" id="' + tag + '-modal-trigger" class="full-list-link" data-tag="' + tag + '" data-toggle="modal" data-target="#list-modal">See Full List</a>' +
+          '</div>'
+        );
 
       } // end of generateList();
+
+      $('#list-modal').on('show.bs.modal', function(e) {
+        var link = e.relatedTarget,
+          tag = $(link).attr('data-tag');
+        getModalContent(tag, allTech, userTechNames);
+      });
+
+      function getModalContent(tag, techObj, userTechNames) {
+        var modal = $('#list-modal'),
+          title = $('#list-modal-title'),
+          body = $('#list-modal-body'),
+          icon = getIcon(tag),
+          namesArray = Array(),
+          key = tag;
+
+        $(title).html(
+          '<h5 class="modal-list-title">Top 20 in ' + tag + ' technologies</h5>'
+        );
+        $(body).html('<div id="modal-list"></div>');
+
+        $.each(techObj[key], function(i, val) {
+          var num = i + 1,
+            name = val.name.replace(/-/g, ' ');
+
+          if (userTechNames.includes(name) && !namesArray.includes(name)) {
+            $('#modal-list').append(
+              '<p class="modal-tech-name match">' + num + '. ' + name + ' <i class="check far fa-check"></i></p>'
+            );
+            namesArray.push(name);
+          } else {
+            $('#modal-list').append(
+              '<p class="modal-tech-name">' + num + '. ' + name + '</p>'
+            );
+          }
+        });
+      } // end of getModalContent();
 
     } // end of populateGood();
   } // end of getWhatsGood();
@@ -723,5 +767,6 @@ Codeup:
       scrollTop: $("#summary-div").offset().top
     }, 1000);
   });
+
 
 })();

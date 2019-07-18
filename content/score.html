@@ -114,7 +114,7 @@ draft: true
 
 <!--WHATS GOOD-->
 <div id='whatsgood-div' class='container-fluid d-none'>
-  <div class='container background-light p-5'>
+  <div class='container background-light py-5 px-2'>
     <h4 class='text-center py-4 bold'>What we know from current technology trends</h4>
     <p class='text-center p-4 mb-2'>
       Based on our current model, we’ve gathered the Top 20 Technologies (per category) being used by other eCommerce
@@ -122,21 +122,21 @@ draft: true
       These lists will change overtime due to various factors, but you can count on us
       for the most up-to-date feedback.
     </p>
-    <!-- <hr class="dark" /> -->
+    <hr class="dark" />
     <div id='goodresults-div' class='d-flex flex-column py-4'>
 
-      <div id='top3-section' class='flex-column d-none'>
+      <div id='top3-section' class='top-tech-section flex-column d-none'>
         <p class='text-center larger'>
-          Congrats! <span id='3count' class='bold'></span> of your technologies are in the Top 3 of their category!
+          Congrats! <span id='3count' class='count'></span> of your technologies are in the Top 3 of their category!
         </p>
-        <div id='top3-results' class='d-flex flex-row flex-wrap justify-content-around results-row'></div>
+        <div id='top3-results' class='d-flex flex-row flex-wrap justify-content-center results-row'></div>
       </div>
 
-      <div id='top20-section' class='flex-column d-none'>
-        <p class='text-center'>
-          <span id='20count'></span> of your technologies are in the Top 20 of their category!
+      <div id='top20-section' class='top-tech-section flex-column d-none'>
+        <p class='text-center larger'>
+          <span id='20count' class="count"></span> of your technologies are in the Top 20 of their category!
         </p>
-        <div id='top20-results' class='d-flex flex-row flex-wrap justify-content-around d-none results-row'></div>
+        <div id='top20-results' class='d-flex flex-row flex-wrap justify-content-center d-none results-row'></div>
       </div>
 
       <div id='no-results' class='d-flex flex-row d-none results-row'></div>
@@ -158,7 +158,25 @@ draft: true
   </div>
 </div>
 
+<!-- TOP20 LIST MODAL -->
+<div id='list-modal' class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="list-modal-title"></div>
+      <div id="list-modal-body" class="modal-body">
 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn m-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 {{< share-modal >}}
 {{< riskscore-helpers >}}
