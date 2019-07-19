@@ -410,11 +410,31 @@ Codeup:
         relTags = getRelTags(userFactors, allKeys),
         userTechNames = getUserTechNames(userFactors),
         withTop3 = Array(),
-        withoutTop3 = Array();
+        withoutTop3 = Array(),
+        matchLinks = Array();
 
 
       populateTop3(allTech, userFactors, relTags, userTechNames);
       populateTop20(allTech, userFactors, relTags, userTechNames, withTop3);
+      getMatchLinks();
+
+      $.each(matchLinks, function(i, val) {
+        var id = val.hash;
+
+        $(this).click(function(e) {
+          // e.preventDefault();
+          $('html, body').animate({
+              scrollTop: $(id).offset().top - 100
+            }, 'slow')
+            .queue(function() {
+              $(id).animate({
+                borderColor: 'rgba(211,228,104, 1)',
+                backgroundColor: 'rgba(3, 25, 39, .5)'
+              }, 1000).dequeue();
+            });
+
+        });
+      }); //end of $.each(matchLinks)
 
       function getRelTags(userFactors, allKeys) {
         var userTags = Array(),
@@ -469,7 +489,7 @@ Codeup:
               // if userTechName if found within first 3 values
               if (num <= 3 && !withTop3.includes(tag)) {
                 if (userTechNames.includes(name)) {
-                  if ($(section).hasClass('d-none')){
+                  if ($(section).hasClass('d-none')) {
                     $(section).removeClass('d-none');
                   }
                   $(div).append(
@@ -510,7 +530,7 @@ Codeup:
                 name = val.name.replace(/-/g, ' ');
 
               if (userTechNames.includes(name) && !withoutTop3.includes(tag)) {
-                if ($(section).hasClass('d-none')){
+                if ($(section).hasClass('d-none')) {
                   $(section).removeClass('d-none');
                 }
                 $(div).append(
@@ -547,7 +567,7 @@ Codeup:
           if (num <= 3) {
             if (userTechNames.includes(name) && !namesArray.includes(name)) {
               $(div).append(
-                '<p class="tech-name match top3" data-rank="' + num + '">' + num + '. <a href="#' + target + '">' + name + '</a> <i class="top3-check fas fa-check-circle"></i></p>'
+                '<p class="tech-name match top3" data-rank="' + num + '">' + num + '. <a class="match-link" href="#' + target + '">' + name + '</a> <i class="top3-check fas fa-check-circle"></i></p>'
               );
               namesArray.push(name);
             } else {
@@ -560,13 +580,13 @@ Codeup:
               if (count == 0) {
                 $(div).append(
                   '<p class="tech-name ellipses"><i class="ellipses far fa-ellipsis-v"></i></p>' +
-                  '<p class="tech-name match bottom" data-rank="' + num + '">' + num + '. <a href="#' + target + '">' + name + '</a> <i class="top20-check far fa-check"></i></p>'
+                  '<p class="tech-name match bottom" data-rank="' + num + '">' + num + '. <a class="match-link" href="#' + target + '">' + name + '</a> <i class="top20-check far fa-check"></i></p>'
                 );
                 count = 1;
                 namesArray.push(name);
               } else if (count == 1) {
                 $(div).append(
-                  '<p class="tech-name match bottom" data-rank="' + num + '">' + num + '. <a href="#' + target + '">' + name + '</a> <i class="top20-check far fa-check"></i></p>'
+                  '<p class="tech-name match bottom" data-rank="' + num + '">' + num + '. <a class="match-link" href="#' + target + '">' + name + '</a> <i class="top20-check far fa-check"></i></p>'
                 );
                 namesArray.push(name);
               }
@@ -580,7 +600,16 @@ Codeup:
           '</div>'
         );
 
+
+
       } // end of generateList();
+
+      function getMatchLinks() {
+        var matchLink = $('.match-link');
+        $.each(matchLink, function(i) {
+          matchLinks.push(this);
+        });
+      }
 
       $('#list-modal').on('show.bs.modal', function(e) {
         var link = e.relatedTarget,
@@ -783,6 +812,5 @@ Codeup:
       scrollTop: $("#summary-div").offset().top
     }, 1000);
   });
-
 
 })();
