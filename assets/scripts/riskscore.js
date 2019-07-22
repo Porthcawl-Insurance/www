@@ -119,6 +119,8 @@ Codeup:
       'widgets': []
     };
 
+    console.log($(conts).length);
+
     fillRook(score);
     topFactors(conts, positiveTags, negativeTags);
     popFactorSummary(conts);
@@ -129,8 +131,6 @@ Codeup:
     $('#score').html('<span>' + score + '</span> / 10 ');
     $('#score-message').text('as of ' + date.toLocaleDateString());
     $('#copy-url').text(url);
-
-    // console.log(sortedByTags);
   }
 
   // get top positively and negatively contributing factors
@@ -250,36 +250,45 @@ Codeup:
 
   // populate full list of factors (all contributing factors)
   function popFactorSummary(conts) {
-    $(conts).each(function() {
-      var desc = this.description,
-        name = this.name,
-        summary = this.summary,
-        tag = this.tag,
-        weight = this.weight_normalized,
-        icon = getIcon(tag),
-        color = getColor(weight),
-        id = name.replace(/\s+/g, '-').toLowerCase();
 
-      if (name != null) {
-        $('#factor-info').append(
-          "<div id='" + id + "' class='factor-sum d-flex flex-row justify-content-start'>" +
-          "<div class='icon-div'>" +
-          "<p class='icon " + color + " text-center'>" +
-          "<span class='fa-stack'>" +
-          "<i class='fa fa-circle fa-stack-2x icon-background'></i>" +
-          "<i class='" + icon + " fa-stack-1x'></i>" +
-          "</span></p>" +
-          "</div>" +
-          "<div class='text-div d-flex flex-column " + color + "'>" +
-          "<div class='name-div'>" +
-          "<p class='f-title'>" + name + " <span class='f-tag'>[ " + tag + " ]</span></p>" +
-          "</div>" +
-          "<div class='desc-div'>" +
-          "<p class='f-sum'>" + summary + "</p>" +
-          "<p class='f-desc'>" + desc + "</p>" +
-          "</div></div></div>");
-      }
-    });
+    if (conts.length > 0) {
+
+
+      $(conts).each(function() {
+        var desc = this.description,
+          name = this.name,
+          summary = this.summary,
+          tag = this.tag,
+          weight = this.weight_normalized,
+          icon = getIcon(tag),
+          color = getColor(weight),
+          id = name.replace(/\s+/g, '-').toLowerCase();
+
+        if (name != null) {
+          $('#factor-info').append(
+            "<div id='" + id + "' class='factor-sum d-flex flex-row justify-content-start'>" +
+            "<div class='icon-div'>" +
+            "<p class='icon " + color + " text-center'>" +
+            "<span class='fa-stack'>" +
+            "<i class='fa fa-circle fa-stack-2x icon-background'></i>" +
+            "<i class='" + icon + " fa-stack-1x'></i>" +
+            "</span></p>" +
+            "</div>" +
+            "<div class='text-div d-flex flex-column " + color + "'>" +
+            "<div class='name-div'>" +
+            "<p class='f-title'>" + name + " <span class='f-tag'>[ " + tag + " ]</span></p>" +
+            "</div>" +
+            "<div class='desc-div'>" +
+            "<p class='f-sum'>" + summary + "</p>" +
+            "<p class='f-desc'>" + desc + "</p>" +
+            "</div></div></div>");
+        }
+      });
+    } else if (conts.length == 0) {
+      $('#factor-info').append(
+        '<p class="t-light">You have no contributing factors.</p>'
+      );
+    }
   }
 
   // group user's technologies by tags
@@ -422,7 +431,7 @@ Codeup:
         var id = val.hash,
           target = id.substr(1);
 
-        $(id).append('<a href="#top-link-' + target + '" class="badge match-badge"><i class="fas fa-badge"></i></a>' );
+        $(id).append('<a href="#top-link-' + target + '" class="badge match-badge"><i class="fas fa-badge"></i></a>');
 
         $(this).click(function(e) {
           e.preventDefault();
@@ -439,17 +448,17 @@ Codeup:
         });
       }); //end of $.each(matchLinks)
 
-      $.each($('.match-badge'), function (i) {
+      $.each($('.match-badge'), function(i) {
         var id = $(this).attr('href'),
           parent = $(id).parents('.good-tech');
 
-          console.log(parent);
+        console.log(parent);
 
-        $(this).click(function (e) {
+        $(this).click(function(e) {
           e.preventDefault();
           $('html, body').animate({
-              scrollTop: $(parent).offset().top - 100
-            }, 'slow')
+            scrollTop: $(parent).offset().top - 100
+          }, 'slow')
         });
       });
 
