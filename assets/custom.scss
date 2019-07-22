@@ -474,6 +474,13 @@ input {
 
 /****************************** Forms */
 
+.badge {
+  &.match-badge {
+    color: $orange !important;
+    font-size: 2em;
+  }
+}
+
 .downtime-form {
 
   @include sm {
@@ -1167,7 +1174,7 @@ input {
   margin: .2em;
   padding: 0 .3em;
   border: 4px solid transparent;
-  
+
   p {
     text-align: left !important;
   }

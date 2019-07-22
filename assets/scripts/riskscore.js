@@ -419,10 +419,13 @@ Codeup:
       getMatchLinks();
 
       $.each(matchLinks, function(i, val) {
-        var id = val.hash;
+        var id = val.hash,
+          target = id.substr(1);
+
+        $(id).append('<a href="#top-link-' + target + '" class="badge match-badge"><i class="fas fa-badge"></i></a>' );
 
         $(this).click(function(e) {
-          // e.preventDefault();
+          e.preventDefault();
           $('html, body').animate({
               scrollTop: $(id).offset().top - 100
             }, 'slow')
@@ -430,11 +433,25 @@ Codeup:
               $(id).animate({
                 borderColor: 'rgba(211,228,104, 1)',
                 backgroundColor: 'rgba(3, 25, 39, .5)'
-              }, 1000).dequeue();
-            });
-
+              }, 1000);
+            })
+            .dequeue();
         });
       }); //end of $.each(matchLinks)
+
+      $.each($('.match-badge'), function (i) {
+        var id = $(this).attr('href'),
+          parent = $(id).parents('.good-tech');
+
+          console.log(parent);
+
+        $(this).click(function (e) {
+          e.preventDefault();
+          $('html, body').animate({
+              scrollTop: $(parent).offset().top - 100
+            }, 'slow')
+        });
+      });
 
       function getRelTags(userFactors, allKeys) {
         var userTags = Array(),
@@ -567,7 +584,7 @@ Codeup:
           if (num <= 3) {
             if (userTechNames.includes(name) && !namesArray.includes(name)) {
               $(div).append(
-                '<p class="tech-name match top3" data-rank="' + num + '">' + num + '. <a class="match-link" href="#' + target + '">' + name + '</a> <i class="top3-check fas fa-check-circle"></i></p>'
+                '<p class="tech-name match top3" data-rank="' + num + '">' + num + '. <a id="top-link-' + target + '" class="match-link" href="#' + target + '">' + name + '</a> <i class="top3-check fas fa-check-circle"></i></p>'
               );
               namesArray.push(name);
             } else {
@@ -580,13 +597,13 @@ Codeup:
               if (count == 0) {
                 $(div).append(
                   '<p class="tech-name ellipses"><i class="ellipses far fa-ellipsis-v"></i></p>' +
-                  '<p class="tech-name match bottom" data-rank="' + num + '">' + num + '. <a class="match-link" href="#' + target + '">' + name + '</a> <i class="top20-check far fa-check"></i></p>'
+                  '<p class="tech-name match bottom" data-rank="' + num + '">' + num + '. <a id="top-link-' + target + '" class="match-link" href="#' + target + '">' + name + '</a> <i class="top20-check far fa-check"></i></p>'
                 );
                 count = 1;
                 namesArray.push(name);
               } else if (count == 1) {
                 $(div).append(
-                  '<p class="tech-name match bottom" data-rank="' + num + '">' + num + '. <a class="match-link" href="#' + target + '">' + name + '</a> <i class="top20-check far fa-check"></i></p>'
+                  '<p class="tech-name match bottom" data-rank="' + num + '">' + num + '. <a id="top-link-' + target + '" class="match-link" href="#' + target + '">' + name + '</a> <i class="top20-check far fa-check"></i></p>'
                 );
                 namesArray.push(name);
               }
