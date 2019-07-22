@@ -540,14 +540,6 @@ Codeup:
           } // end of if(tags.includes(key))...
         }); // end of forEach(key)...
 
-        // var count = $(div).children('.top3').length;
-        // $(countText).text(count);
-
-        // function getCount(div) {
-        //   var withTop3 = $(div).children('.top3').length,
-        //
-        //
-        // }
       } // end of populateTop3();
 
       function populateTop20(techObj, userObj, reltags, userTechNames, top3Array) {
@@ -847,6 +839,13 @@ Codeup:
       }
       par.removeChild(el);
     }
+  });
+
+  // scroll to full summary btn function
+  $('#more-info').click(function() {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#whatsgood-div").offset().top
+    }, 1000);
   });
 
   // scroll to full summary btn function

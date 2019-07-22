@@ -2069,6 +2069,7 @@ table.table {
 }
 
 #jumbotron-score {
+  padding-bottom: 1em;
 
   .container {
     background-color: rgba($lightest, .9);
@@ -2197,15 +2198,6 @@ table.table {
     }
   }
 
-  #full-summary.btn {
-      font-size: 1.4em;
-      font-weight: 400 !important;
-      color: $orange !important;
-    i {
-      padding-left: .3em;
-    }
-  }
-
   #share-score.btn {
     padding-top: 2em;
     font-size: 1em !important;
@@ -2223,10 +2215,24 @@ table.table {
   }
 }
 
+#full-summary.btn,
+#more-info.btn {
+    margin-top: 1em;
+    font-weight: 400 !important;
+    color: $orange !important;
+  i {
+    padding-left: .3em;
+  }
+}
+
 #whatsgood-div {
   h4 {
     font-weight: 300!important;
     font-size: 2em !important;
+  }
+
+  .container {
+    // padding-bottom: 1em !important;
   }
 
   .user-tech {
@@ -2242,7 +2248,6 @@ table.table {
 }
 
 #summary-div {
-  // margin-bottom: 1em;
   h3{
     font-size: 1.5em !important;
   }
