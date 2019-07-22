@@ -526,7 +526,7 @@ Codeup:
                     '<div id="top-' + tag + '-div" class="good-tech top3 d-flex flex-column">' +
                     '<div class="icon-div">' +
                     '<p class="icon text-center"><i class="' + icon + '"></i></p>' +
-                    '<p class="text-center larger title bold">Top 3 in ' + tag + '</p>' +
+                    '<p class="text-center larger title">Top 3 in <span class="bold">' + tag + '</span></p>' +
                     '</div>' +
                     '<div id="top-' + tag + '-list" class="list-div"></div>' +
                     '</div>'
@@ -565,7 +565,7 @@ Codeup:
                   '<div id="top-' + tag + '-div" class="good-tech d-flex flex-column">' +
                   '<div class="icon-div">' +
                   '<p class="icon text-center"><i class="' + icon + '"></i></p>' +
-                  '<p class="text-center larger title bold">Top 3 in ' + tag + '</p>' +
+                  '<p class="text-center larger title">Top 3 in <span class="bold">' + tag + '</span></p>' +
                   '</div>' +
                   '<div id="top-' + tag + '-list" class="list-div"></div>' +
                   '</div>'
@@ -658,10 +658,12 @@ Codeup:
           body = $('#list-modal-body'),
           icon = getIcon(tag),
           namesArray = Array(),
+          icon = getIcon(tag),
           key = tag;
 
         $(title).html(
-          '<h5 class="modal-list-title">Top 20 in ' + tag + ' technologies</h5>'
+          '<p class="icon text-center"><i class="' + icon + '"></i></p>' +
+          '<h5 class="modal-list-title">Top 20 <span class="bold">' + tag + '</span> technologies</h5>'
         );
         $(body).html('<div id="modal-list"></div>');
 
@@ -841,7 +843,7 @@ Codeup:
     }
   });
 
-  // scroll to full summary btn function
+  // scroll to top tech btn function
   $('#more-info').click(function() {
     $([document.documentElement, document.body]).animate({
       scrollTop: $("#whatsgood-div").offset().top

@@ -1990,10 +1990,24 @@ table.table {
 }
 
 #list-modal {
+  .modal-header {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+  p.icon {
+    font-size: 2em !important;
+    padding-top: .5em !important;
+    margin-bottom: 0;
+  }
   .modal-list-title {
     text-align: center;
     padding: 1em;
+    padding-top: .5em;
     margin-bottom: 0;
+    font-weight: 300 !important;
+    span {
+      font-size: 1.1em;
+    }
   }
   .modal-body {
     padding-top: 0;
@@ -2019,6 +2033,13 @@ table.table {
         padding-left: 1em;
         color: $r7;
       }
+    }
+  }
+
+  .modal-footer {
+    padding: .75rem .1rem !important;
+    .btn {
+      font-size: 1em !important;
     }
   }
 }
