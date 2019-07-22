@@ -427,6 +427,10 @@ Codeup:
       populateTop20(allTech, userFactors, relTags, userTechNames, withTop3);
       getMatchLinks();
 
+      if (matchLinks.length == 0) {
+        console.log('No matches');
+      }
+
       $.each(matchLinks, function(i, val) {
         var id = val.hash,
           target = id.substr(1);
@@ -498,8 +502,8 @@ Codeup:
 
       function populateTop3(techObj, userObj, reltags, userTechNames) {
         var section = $('#top-section'),
-          div = $('#top-results'),
-          countText = $('#3count');
+          div = $('#top-results');
+          // countText = $('#3count');
 
         Object.keys(techObj).forEach(key => {
           let value = techObj[key];
@@ -536,8 +540,14 @@ Codeup:
           } // end of if(tags.includes(key))...
         }); // end of forEach(key)...
 
-        var count = $(div).children('.top3').length;
-        $(countText).text(count);
+        // var count = $(div).children('.top3').length;
+        // $(countText).text(count);
+
+        // function getCount(div) {
+        //   var withTop3 = $(div).children('.top3').length,
+        //
+        //
+        // }
       } // end of populateTop3();
 
       function populateTop20(techObj, userObj, reltags, userTechNames, top3Array) {
@@ -578,6 +588,13 @@ Codeup:
         }); // end of forEach(key)...
 
       } // end of populateTop20();
+
+      function populateNoResults (userObj) {
+        var section = $('#top-section'),
+          div = $('#top-results');
+
+          console.log(userObj);
+      }
 
       function generateList(techObj, userTechNames, tag, div) {
         var tech = techObj[tag],

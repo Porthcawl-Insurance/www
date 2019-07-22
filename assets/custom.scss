@@ -1902,24 +1902,15 @@ table.table {
   }
   .title {
     margin-bottom: 1em;
-    // padding-bottom: 1em;
   }
   .tech-name {
     padding: .5em 1em;
-    margin-bottom: 0;
+    margin-bottom: .05em;
     &.top3 {
       font-weight: 400 !important;
       color: rgba($dark-purple, 1);
-
-      &:nth-child(odd){
-        background-color: rgba($mid-gray, .1);
-      }
-      &:nth-child(even){
-        background-color: rgba($mid-gray, .2);
-      }
       &.match {
         font-weight: 600 !important;
-        // font-size: 1.1em !important;
         border: 1px solid rgba($r7, .75);
       }
     }
