@@ -459,6 +459,35 @@ Codeup:
 
       }); //end of $.each(matchLinks)
 
+      $.each($('.good-tech'), function(i, val) {
+        var children = $(this).find('.match.bottom'),
+          ranks = Array();
+
+        $.each($(children), function(i, val) {
+          var rank = Number($(this).attr('data-rank'));
+          ranks.push(rank);
+          console.log(children);
+        });
+
+        if (ranks.length >= 2) {
+          var rank = 0;
+          $.each(ranks, function(i, val) {
+            if (rank == 0) {
+              rank = val;
+            } else {
+              console.log('current rank - ' + rank);
+              console.log('next value - ' + val);
+              if (val > rank + 1) {
+                console.log('this --> ' + this);
+                $('.match.bottom[data-rank="' + this + '"]').prev().append(
+                  '<p class="tech-name ellipses bottom"><i class="ellipses far fa-ellipsis-v"></i></p>'
+                );
+              }
+            }
+          });
+        }
+      }); // end of $.each('.good-tech')
+
 
       function getRelTags(userFactors, allKeys) {
         var userTags = Array(),
@@ -497,7 +526,7 @@ Codeup:
       function populateTop3(techObj, userObj, reltags, userTechNames) {
         var section = $('#top-section'),
           div = $('#top-results');
-          // countText = $('#3count');
+        // countText = $('#3count');
 
         Object.keys(techObj).forEach(key => {
           let value = techObj[key];
@@ -575,11 +604,11 @@ Codeup:
 
       } // end of populateTop20();
 
-      function populateNoResults (userObj) {
+      function populateNoResults(userObj) {
         var section = $('#top-section'),
           div = $('#top-results');
 
-          console.log(userObj);
+        console.log(userObj);
       }
 
       function generateList(techObj, userTechNames, tag, div) {
@@ -622,6 +651,8 @@ Codeup:
             }
           }
         }); // end of $.each(tech)
+
+
 
         $(div).append(
           '<div class="full-list-div">' +
@@ -758,23 +789,23 @@ Codeup:
       case 'ads':
         icon = 'fal fa-file-spreadsheet';
         break;
-      case 'media':
-        icon = 'fal fa-photo-video';
-        break;
       case 'copyright':
         icon = 'fal fa-copyright';
         break;
       case 'shipping':
-        icon = 'fal fa-shippinig-timed';
+        icon = 'fal fa-shipping-timed';
         break;
       case 'javascript':
-        icon = 'fal fa-js';
+        icon = 'fab fa-js';
         break;
       case 'mobile':
         icon = 'fal fa-mobile';
         break;
       case 'analytics':
         icon = 'fal fa-analytics';
+        break;
+      case 'media':
+        icon = 'fal fa-photo-video';
         break;
       default:
         icon = 'fal fa-laptop-code';

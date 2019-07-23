@@ -23,7 +23,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <title>{{ .Title }}{{ if not .IsHome }} | CyberFortress{{ end }}{{ if .Params.Titleaddtype }} {{ .Type | title }}{{ end }}</title>
 
   <link type='text/css' rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto:100,300,400'>
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-vlOMx0hKjUCl4WzuhIhSNZSm2yQCaf0mOU1hEDK/iztH3gU4v5NMmJln9273A6Jz" crossorigin="anonymous">
 
 	{{ $options := (dict "targetPath" "static/css/style.css" "outputStyle" "compressed" "enableSourceMap" false) }}
 	{{ $style := resources.Get "custom.scss" | resources.ToCSS $options }}
