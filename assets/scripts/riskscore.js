@@ -436,12 +436,6 @@ Codeup:
           target = id.substr(1),
           tag = $(id).find('span.f-tag');
 
-        if ($(this).hasClass('top3')) {
-          $(tag).append('<a href="#top-link-' + target + '" class="badge match-badge"><i class="top3-check fas fa-check-circle"></i></a>');
-        } else if ($(this).hasClass('top20')) {
-          $(tag).append('<a href="#top-link-' + target + '" class="badge match-badge"><i class="top20-check far fa-check"></i></a>');
-        }
-
         $(this).click(function(e) {
           e.preventDefault();
           $('html, body').animate({
@@ -465,30 +459,6 @@ Codeup:
 
       }); //end of $.each(matchLinks)
 
-      $.each($('.match-badge'), function(i) {
-        var id = $(this).attr('href'),
-          parent = $(id).parents('.good-tech'),
-          row = $(id).parent('.tech-name');
-
-        $(this).click(function(e) {
-          e.preventDefault();
-          $('html, body').animate({
-            scrollTop: $(parent).offset().top - 100
-          }, 'slow')
-          .queue(function() {
-            $(row).animate({
-              backgroundColor: 'rgba(211, 228, 104, .5)'
-            }, 500);
-          })
-          .dequeue()
-          .queue(function() {
-            $(row).delay(50).animate({
-              backgroundColor: 'rgba(211, 228, 104, 0)'
-            }, 250);
-          })
-          .dequeue();
-        });
-      });
 
       function getRelTags(userFactors, allKeys) {
         var userTags = Array(),
