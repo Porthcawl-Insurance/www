@@ -448,6 +448,13 @@ Codeup:
                 backgroundColor: 'rgba(3, 25, 39, .5)'
               }, 1000);
             })
+            .dequeue()
+            .queue(function() {
+              $(id).delay(50).animate({
+                borderColor: 'rgba(211,228,104, 0)',
+                backgroundColor: 'rgba(3, 25, 39, .25)'
+              }, 500);
+            })
             .dequeue();
         });
       }); //end of $.each(matchLinks)
@@ -634,8 +641,6 @@ Codeup:
           '<a href="#;" id="' + tag + '-modal-trigger" class="full-list-link" data-tag="' + tag + '" data-toggle="modal" data-target="#list-modal">See Full List</a>' +
           '</div>'
         );
-
-
 
       } // end of generateList();
 

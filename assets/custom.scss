@@ -1907,18 +1907,20 @@ table.table {
     padding: .5em 1em;
     margin-bottom: .05em;
     &.top3 {
-      font-weight: 400 !important;
-      color: rgba($dark-purple, 1);
+      font-weight: 300 !important;
+      color: rgba($very-dark, .75);
       &.match {
         font-weight: 600 !important;
-        border: 1px solid rgba($r7, .75);
+        // border: 1px solid rgba($r7, .75);
       }
     }
     &.match {
       font-weight: 400 !important;
       color: $purple !important;
       i {
-        padding-left: 1em;
+        padding-left: .5em;
+        padding-top: .25em;
+        // float: right;
         color: $r7;
       }
       a {
@@ -2266,6 +2268,30 @@ table.table {
       font-size: .75em !important;
     }
   }
+
+  #top-tech-key {
+    margin: 0 auto;
+    div {
+      padding: .5em;
+      &:first-child {
+        p{
+          font-weight: 400 !important;
+        }
+      }
+      &:nth-child(2) {
+        p{
+          margin-bottom: .5em;
+        }
+      }
+    }
+    p {
+      text-align: left;
+    }
+    i {
+      color: $r7;
+    }
+  }
+
 }
 
 #summary-div {
