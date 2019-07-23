@@ -1911,6 +1911,8 @@ table.table {
   .tech-name {
     padding: .5em 1em;
     margin-bottom: .05em;
+    text-align: left;
+
     &.top3 {
       font-weight: 300 !important;
       color: rgba($very-dark, .75);
@@ -2247,7 +2249,8 @@ table.table {
     }
   }
 
-  #share-score.btn {
+  #share-score.btn,
+  #faq-btn.btn {
     padding-top: 2em;
     font-size: 1em !important;
     font-weight: 400 !important;
@@ -2271,6 +2274,16 @@ table.table {
     color: $orange !important;
   i {
     padding-left: .3em;
+  }
+}
+
+#questions-btn.btn,
+#faq-btn {
+  color: $purple !important;
+  font-weight: bold !important;
+  i {
+    font-size: 1.25em;
+    padding-top: .3em;
   }
 }
 
@@ -2300,8 +2313,13 @@ table.table {
     div {
       padding: .5em;
       &:first-child {
-        p{
+        p {
           font-weight: 400 !important;
+          text-align: center;
+
+          @include sm {
+            text-align: left;
+          }
         }
       }
       &:nth-child(2) {
@@ -2327,6 +2345,7 @@ table.table {
 
   .container {
     padding: 0;
+    padding-bottom: 4em;
   }
 }
 
