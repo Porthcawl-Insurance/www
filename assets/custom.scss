@@ -2254,16 +2254,23 @@ table.table {
     padding-top: 2em;
     font-size: 1em !important;
     font-weight: 400 !important;
-    color: rgba($purple, .8) !important;
+    color: rgba($bright-purple, .8) !important;
     margin-bottom: 0 !important;
     i {
       padding-left: .3em;
+      font-size: .9em !important;
     }
-
     @include sm {
       padding-top:0;
       font-size: 1em;
     }
+    &:hover {
+      font-weight: bold !important;
+    }
+  }
+  #faq-btn.btn {
+    font-size: .95em !important;
+    padding-top: .2em !important;
   }
 }
 
@@ -2277,13 +2284,13 @@ table.table {
   }
 }
 
-#questions-btn.btn,
-#faq-btn {
-  color: $purple !important;
+#questions-btn.btn {
+  padding-top: 2em;
   font-weight: bold !important;
-  i {
-    font-size: 1.25em;
-    padding-top: .3em;
+  color: $lightest !important;
+  text-shadow: 0 2px 2px rgba($dark-purple, .5) !important;
+  &:hover {
+    text-shadow: 0 1px 2px rgba($dark-purple, .75) !important
   }
 }
 
