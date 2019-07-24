@@ -2512,6 +2512,11 @@ footer {
 
     &.social {
       font-size: 2.5em !important;
+      color: $orange !important;
+
+      &:visited {
+        color: $orange !important;
+      }
     }
 
     &:hover, &:focus, &:active {
@@ -2520,7 +2525,7 @@ footer {
     }
 
     &:visited {
-      color: $orange !important;
+      color: $teal !important;
     }
   }
 
