@@ -12,7 +12,7 @@ draft: true
 
 #### What is downtime?
 
-Downtime is our term for when your website isn’t functioning. This impacts your ability to collect revenue from digital sources, which we think one of the essential business risks of our time.
+Downtime is our term for when your website isn’t functioning. This impacts your ability to collect revenue from digital sources, which we think is one of the essential business risks of our time.
 
 #### I wasn’t able to get an assessment? Why?
 
