@@ -614,14 +614,14 @@ Codeup:
           keys = Array();
 
         // console.log(userObj);
-        if (relTags.length == 0) {
+        // if (relTags.length == 0) {
           Object.keys(techObj).forEach(key => {
             let value = techObj[key];
             if (value.length >= 20) {
               keys.push(key);
             } // end of if(tags.includes(key))...
           }); // end of forEach(key)...
-        }
+        // }
 
         var fewKeys = keys.slice(0,3); // take first three keys from array to generate lists for
 
@@ -649,6 +649,9 @@ Codeup:
         $(moreInfoBtn).addClass('lighter');
         $(questionsBtn).addClass('purple');
 
+        $('#good-text').text('We have gathered the top 20 technologies most frequently used by e-commerce companies across all different categories. We’ve shared a few of the most important ones below!');
+        var hr = $('#whatsgood-div').find('hr');
+        $(hr).hide();
       }
 
       function generateList(techObj, userTechNames, tag, div) {
