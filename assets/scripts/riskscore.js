@@ -286,7 +286,7 @@ Codeup:
       });
     } else if (conts.length == 0) {
       $('#factor-info').append(
-        '<p class="t-light">You have no contributing factors.</p>'
+        '<p id="no-factors-msg" class="t-light"><i class="fal fa-times-circle"></i> You have no contributing factors.</p>'
       );
     }
   }
@@ -428,7 +428,9 @@ Codeup:
       getMatchLinks();
 
       if (matchLinks.length == 0) {
-        console.log('No matches');
+        $('#whatsgood-div').insertAfter('#summary-div');
+        $('#top-tech-key').remove();
+        populateNoResults(allTech, userFactors, relTags);
       }
 
       $.each(matchLinks, function(i, val) {
@@ -487,7 +489,6 @@ Codeup:
           });
         }
       }); // end of $.each('.good-tech')
-
 
       function getRelTags(userFactors, allKeys) {
         var userTags = Array(),
@@ -604,11 +605,50 @@ Codeup:
 
       } // end of populateTop20();
 
-      function populateNoResults(userObj) {
+      function populateNoResults(techObj, userObj, relTags) {
         var section = $('#top-section'),
-          div = $('#top-results');
+          div = $('#top-results'),
+          moreInfoBtn = $('#more-info'),
+          fullSummaryBtn = $('#full-summary'),
+          questionsBtn = $('#questions-btn'),
+          keys = Array();
 
-        console.log(userObj);
+        // console.log(userObj);
+        if (relTags.length == 0) {
+          Object.keys(techObj).forEach(key => {
+            let value = techObj[key];
+            if (value.length >= 20) {
+              keys.push(key);
+            } // end of if(tags.includes(key))...
+          }); // end of forEach(key)...
+        }
+
+        var fewKeys = keys.slice(0,3); // take first three keys from array to generate lists for
+
+        $.each(fewKeys, function (i, val)  {
+          var tag = this,
+            icon = getIcon(tag);
+
+          $(div).append(
+            '<div id="top-' + tag + '-div" class="good-tech d-flex flex-column">' +
+            '<div class="icon-div">' +
+            '<p class="icon text-center"><i class="' + icon + '"></i></p>' +
+            '<p class="text-center larger title">Top 3 in <span class="bold">' + tag + '</span></p>' +
+            '</div>' +
+            '<div id="top-' + tag + '-list" class="list-div"></div>' +
+            '</div>'
+          );
+          var listDiv = $('#top-' + tag + '-list');
+          generateNoResultsList(techObj, tag, listDiv);
+        }); // end of $.each(fewKeys);
+
+        $(fullSummaryBtn).insertAfter(moreInfoBtn);
+        $(moreInfoBtn).insertAfter(questionsBtn);
+        $(questionsBtn).insertAfter(section);
+
+        $(moreInfoBtn).addClass('lighter');
+        $(questionsBtn).addClass('purple');
+
       }
 
       function generateList(techObj, userTechNames, tag, div) {
@@ -652,8 +692,6 @@ Codeup:
           }
         }); // end of $.each(tech)
 
-
-
         $(div).append(
           '<div class="full-list-div">' +
           '<a href="#;" id="' + tag + '-modal-trigger" class="full-list-link" data-tag="' + tag + '" data-toggle="modal" data-target="#list-modal">See Full List</a>' +
@@ -661,6 +699,30 @@ Codeup:
         );
 
       } // end of generateList();
+
+      function generateNoResultsList(techObj, tag, div) {
+        var tech = techObj[tag];
+
+        $.each(tech, function(i, val) {
+          var num = i +1,
+          name = val.name.replace(/-/g, ' '),
+          tag = val.tag,
+          target = name.replace(/\s+/g, '-').toLowerCase();
+
+          if (num <= 3) {
+            $(div).append(
+              '<p class="tech-name no-match top3" data-rank="' + num + '">' + num + '. ' + name + '</p>'
+            );
+          }
+
+          $(div).append(
+            '<div class="full-list-div">' +
+            '<a href="#;" id="' + tag + '-modal-trigger" class="full-list-link" data-tag="' + tag + '" data-toggle="modal" data-target="#list-modal">See Full List</a>' +
+            '</div>'
+          );
+        });
+
+      } // end of generateNoResultsList();
 
       function getMatchLinks() {
         var matchLink = $('.match-link');

@@ -412,7 +412,7 @@ input {
     @include linear-gradient($dark-gray, $mid-gray);
   }
   &.colorful {
-    @include linear-gradient(rgba($dark-purple, .9), $teal);
+    @include linear-gradient(rgba($dark-purple, 1), $teal);
   }
   &.purples {
     @include linear-gradient(rgba($dark-purple, .8), rgba($purple,.8));
@@ -2284,13 +2284,27 @@ table.table {
   }
 }
 
+#more-info.btn {
+  &.lighter {
+    color: $lightest !important;
+    padding-top: 1em;
+  }
+}
+
 #questions-btn.btn {
   padding-top: 2em;
   font-weight: bold !important;
   color: $lightest !important;
   text-shadow: 0 2px 2px rgba($dark-purple, .5) !important;
+  &.purple {
+    color: $bright-purple !important;
+    text-shadow: 0 2px 2px rgba($dark-purple, 0) !important;
+    &:hover {
+      text-shadow: 0 1px 2px rgba($dark-purple, 0) !important;
+    }
+  }
   &:hover {
-    text-shadow: 0 1px 2px rgba($dark-purple, .75) !important
+    text-shadow: 0 1px 2px rgba($dark-purple, .75) !important;
   }
 }
 
@@ -2349,13 +2363,27 @@ table.table {
   h3{
     font-size: 1.5em !important;
   }
-
   .container {
     padding: 0;
     padding-bottom: 4em;
   }
 }
 
+
+#no-factors-msg {
+  min-width: 400px;
+  margin: 20px auto;
+  padding: 1em;
+  border: 1px solid rgba($light, .25);
+  text-align: center;
+  font-weight: 400;
+  font-size: 1em !important;
+  i {
+    font-size: 1.25em;
+    padding-right: .5em;
+    color: rgba($lightest, .75);
+  }
+}
 /* modal on thanks page */
 #no-email {
   label {
