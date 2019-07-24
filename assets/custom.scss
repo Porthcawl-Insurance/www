@@ -2312,10 +2312,26 @@ table.table {
   h4 {
     font-weight: 300!important;
     font-size: 2em !important;
+
+    @include md {
+      padding-left: 1em !important;
+      padding-right: 1em !important;
+    }
+  }
+
+  hr {
+      margin-left: 1em !important;
+      margin-right: 1em !important;
+  }
+
+  #good-text {
+    @include md {
+      padding-left: 1em !important;
+      padding-right: 1em !important;
+    }
   }
 
   .container {
-    // padding-bottom: 1em !important;
   }
 
   .user-tech {
