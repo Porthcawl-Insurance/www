@@ -24,7 +24,7 @@ Simply put: all of your behaviors through history! Every business leaves fingerp
 
 #### Who is the downtime risk assessment intended for?
 
-We are focused on protecting smaller e-commerce companies, so the risk score is really meant for businesses like that. Now, our data collectors scour the entire internet so it will return scores for any business domain, but our model was trained to predict the risk of downtime for e-commerce companies and as a result may be of limited utility to large corporations or those who have a small web presence.
+We are focused on protecting smaller ecommerce companies, so the risk score is really meant for businesses like that. Now, our data collectors scour the entire internet so it will return scores for any business domain, but our model was trained to predict the risk of downtime for ecommerce companies and as a result may be of limited utility to large corporations or those who have a small web presence.
 
 #### What should I do with my assessment?
 
