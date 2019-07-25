@@ -170,6 +170,7 @@ Codeup:
           positiveTags.push(tag);
         }
 
+
         $('#top-factors').append(
           '<div class="d-flex flex-row flex-nowrap align-items-start">' +
           '<div class="icon-div pt-2">' +
