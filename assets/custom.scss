@@ -147,13 +147,13 @@ body {
   position: relative;
   min-height: 100vh !important;
   padding-bottom: 70px;
+  padding-top: 50px; // accounting for navbar-height
   overflow-x: hidden;
 
   @include linear-gradient($light-gray, $lighter-gray);
 }
 
 h1, h2, h3 {
-  // color: $lightest !important;
   color: $dark-gray !important;
 
   font-weight: 300 !important;
@@ -263,7 +263,6 @@ p, li {
 }
 
 a {
-  // color: $link !important;
   color: $bright-purple !important;
   font-weight: 300 !important;
   &.underline {
@@ -413,7 +412,7 @@ input {
     @include linear-gradient($dark-gray, $mid-gray);
   }
   &.colorful {
-    @include linear-gradient(rgba($dark-purple, .9), $teal);
+    @include linear-gradient(rgba($dark-purple, 1), $teal);
   }
   &.purples {
     @include linear-gradient(rgba($dark-purple, .8), rgba($purple,.8));
@@ -475,6 +474,18 @@ input {
 
 /****************************** Forms */
 
+.badge {
+  &.match-badge {
+    color: rgba($lightest, .75) !important;
+    font-size: 1em;
+    padding-left: 1em;
+
+    &:hover {
+      color: rgba($r7, 1) !important;
+    }
+  }
+}
+
 .downtime-form {
 
   @include sm {
@@ -522,15 +533,11 @@ input {
 
 .form-check {
   margin-bottom: 0;
-
-  // @include sm {
-    display: block;
-    max-width: 400px !important;
-    margin: 0 auto !important;
-  // }
+  display: block;
+  max-width: 400px !important;
+  margin: 0 auto !important;
 
   @include md {
-    // padding-left: 0 !important;
     margin-left: 0 !important;
   }
 }
@@ -567,7 +574,6 @@ input {
 
   h3 {
     font-size: 2em !important;
-    // padding: 2em .5em 1em .5em;
   }
 
   hr {
@@ -1144,7 +1150,6 @@ input {
 }
 
 .factor-grp {
-  // background-color: rgba($lightest, .1) !important;
   padding: .5em;
   max-width: 180px;
   width: 100%;
@@ -1173,6 +1178,7 @@ input {
   background-color: rgba($very-dark, .25);
   margin: .2em;
   padding: 0 .3em;
+  border: 2px solid transparent;
 
   p {
     text-align: left !important;
@@ -1270,12 +1276,13 @@ input {
     }
   }
 
-
 }
 
 #factor-info {
   max-width: 800px;
 }
+
+
 
 .yes-no {
   i {
@@ -1319,33 +1326,49 @@ input {
 .card {
 
   &.career {
-    max-width: 200px;
+    width: 100%;
+    max-width: 220px;
     background-color: transparent;
     border: none;
+    position: relative !important;
 
     img.card-img-top {
       max-width: 200px;
+      max-height:200px;
       border-radius: 50%;
+      margin: 0 auto !important;
       box-shadow: 0px 4px 6px rgba($dark-purple, .75);
     }
     .card-body {
       padding: 0 !important;
+      .icon {
+        text-align: center !important;
+        font-size: 1.5em !important;
+        margin-bottom: 0.2em !important;
+        color: rgba($bright-purple, .5) !important;
+
+        &:hover {
+          color: $bright-purple !important;
+        }
     }
     .card-title {
       background-color: rgba($dark-purple, .95);
       padding: .3em .5em;
       color: $lightest;
       margin-top: -1em;
-      margin-bottom: .5em;
+      margin-bottom: .25em;
       text-align: center;
       font-size: 1.2em !important;
       border-radius: 2px;
+
     }
     .card-text {
       padding-left: .7em;
       padding-right: .7em;
-      padding-bottom: .7em;
+      // padding-bottom: .7em;
       text-align: center;
+      margin-bottom: 0;
+      margin-top: 0;
     }
   }
 
@@ -1366,10 +1389,7 @@ input {
   }
   .card-body {
     background-color: rgba($lightest, .5);
-    .icon {
-      text-align: center !important;
-      font-size: 2em !important;
-      margin-bottom: 0.2em !important;
+
     }
     .title {
       text-align: center !important;
@@ -1505,14 +1525,9 @@ section.single-career {
   h1, h2, h3, p {
     color: $dark-gray !important;
     padding: .3em 0;
-    // text-align: center;
-    // @include sm {
-      text-align: left;
-    //
-    // }
+    text-align: left;
   }
   a.icon-l {
-    // color: $purple !important;
     font-weight: 400 !important;
     i {
       padding-right: .3em;
@@ -1530,7 +1545,7 @@ section.single-resource {
     text-align: left;
   }
   a.icon-l {
-    // color: $purple !important;
+    // clor: $purple !important;
     font-weight: 400 !important;
     i {
       padding-right: .3em;
@@ -1543,7 +1558,7 @@ section.single-resource {
 }
 
 .resource-div {
-padding-bottom: 1em;
+  padding-bottom: 1em;
 
   p {
     opacity: .6 !important;
@@ -1564,6 +1579,7 @@ padding-bottom: 1em;
     color: $orange !important;
     padding-right: .5em;
 }
+
 
 table.table {
   thead {
@@ -1600,7 +1616,7 @@ table.table {
     background-repeat: no-repeat;
   }
 
-  @include md {
+  @include lg {
     background-image: url('/images/revenue-background.svg');
     padding-left: 2em;
   }
@@ -1614,21 +1630,23 @@ table.table {
     font-weight: 400 !important;
     padding: .2em;
     padding-top: 1em;
+    padding-left: 0;
 
     @include sm {
       font-size: 2em !important;
       padding-bottom: .2em;
-      padding: 1rem .5rem .5rem 2.5rem;
+      padding: 1rem .5rem 0rem 2.5rem;
     }
 
     @include md {
       font-size: 2.5em !important;
-      text-align: left;
       padding-left: 0;
     }
 
     @include lg {
-      padding-left: 4rem;
+      text-align: left;
+
+      // padding-left: 4rem;
     }
   }
 
@@ -1645,11 +1663,12 @@ table.table {
     @include md {
       font-size: 1.5em !important;
       // padding-left: 2.25rem;
-      text-align: left;
       }
 
       @include lg {
-        padding-left: 4rem;
+        text-align: left;
+
+        // padding-left: 4rem;
       }
   }
 
@@ -1665,13 +1684,14 @@ table.table {
     @include md {
       padding-left: 2.5rem;
       font-size: 1.25em !important;
-      text-align: left;
+      text-align: center;
       padding-left: 0;
 
     }
 
     @include lg {
-      padding-left: 4rem;
+      text-align: left;
+      // padding-left: 4rem;
     }
 
 
@@ -1684,13 +1704,19 @@ table.table {
     margin: 0 auto !important;
 
     @include sm{
-      max-width: 500px;
+      max-width: 500px !important;
+    }
+
+    @include md {
+      max-width: 600px !important;
     }
   }
 
   .downtime-form {
     margin-top: 1.5em;
     padding: .75em;
+    padding-left: 0;
+    margin-left: 0;
 
     @include sm {
       margin-top: 6em;
@@ -1704,7 +1730,7 @@ table.table {
     }
 
     @include lg {
-      padding-left: 4rem;
+      // padding-left: 4rem;
     }
 
     label[for='user-email'] {
@@ -1722,7 +1748,12 @@ table.table {
       @include md {
         padding-left: 0;
         font-size: 1.45em !important;
+        // display: inline-block;
+      }
+
+      @include lg {
         display: inline-block;
+
       }
 
     }
@@ -1730,27 +1761,31 @@ table.table {
     #user-email {
       margin: 0 auto;
 
-      @include md {
+      @include lg {
         margin-left: 0 !important;
       }
     }
 
     .form-check-label {
-      font-size: .9em !important;
+      font-size: 1em !important;
       text-align: left;
     }
 
     .form-check {
       margin-bottom: 0;
+      display: block;
+      max-width: 400px !important;
+      margin: 0 auto !important;
 
-      // @include sm {
+      div {
         display: block;
-        max-width: 400px !important;
         margin: 0 auto !important;
-      // }
+        @include lg {
+          margin-left: 0 !important;
+        }
+      }
 
-      @include md {
-        // padding-left: 0 !important;
+      @include lg {
         margin-left: 0 !important;
       }
     }
@@ -1760,7 +1795,7 @@ table.table {
       text-align: center;
       margin-top: .3em !important;
 
-      @include md {
+      @include lg {
         text-align: left;
       }
     }
@@ -1771,7 +1806,7 @@ table.table {
       font-size: 1.2em !important;
       padding: 8px 20px;
 
-      @include md {
+      @include lg {
         margin-left: 0 !important;
       }
     }
@@ -1816,7 +1851,6 @@ table.table {
   min-width: 550px;
 }
 
-
 #email-resend {
   display: block;
   margin: 1em auto !important;
@@ -1828,6 +1862,218 @@ table.table {
   }
 }
 
+/* Score Page */
+
+.results-row {
+  padding: 1em .5em;
+}
+
+.top-tech-section {
+  p.larger:first-child {
+    font-weight: 400 !important;
+  }
+  .count {
+    font-size: 1.3em;
+    font-weight: 600 !important;
+    color: $purple;
+  }
+}
+
+.good-tech {
+  background-color: $lightest;
+  box-shadow: 0px 3px 6px rgba($very-dark, .25);
+  padding: 1em;
+  width: 100%;
+  max-width: 350px;
+  margin: 1em .5em;
+  position: relative;
+
+  .icon-div {
+    margin: .5em 0;
+    border-bottom: 1px solid $dark-purple;
+  }
+
+  .list-div {
+    margin: 0;
+    width: 100%;
+  }
+
+  .icon, .title {
+    color: $purple;
+  }
+  .icon {
+    font-size: 2.5em !important;
+    margin-bottom: .1em !important;
+  }
+  .title {
+    margin-bottom: 1em;
+  }
+  .tech-name {
+    padding: .5em 1em;
+    margin-bottom: .05em;
+    text-align: left;
+
+    &.top3 {
+      font-weight: 300 !important;
+      color: rgba($very-dark, .75);
+      &.match {
+        font-weight: 600 !important;
+        // border: 1px solid rgba($r7, .75);
+      }
+    }
+    &.match {
+      font-weight: 400 !important;
+      color: $purple !important;
+      i {
+        padding-left: .5em;
+        padding-top: .25em;
+        color: $r7;
+      }
+      a {
+        font-weight: bolder !important;
+        &:hover {
+          font-weight: bold !important;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+
+    }
+
+    &.bottom {
+      padding: 0 1em;
+      a {
+        font-weight: 400 !important;
+        &:hover {
+          font-weight: bold !important;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+
+    }
+    &.ellipses {
+      margin-bottom: 0 !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      padding-left: 1.1em;
+      color: rgba($very-dark, .75);
+
+      &.bottom {
+        padding-left: 0 !important;
+        i {
+          padding-left: 0 !important;
+          color: rgba($very-dark, .75);
+          padding-left: 0.1em !important;
+
+        }
+      }
+    }
+  }
+
+  .list-div {
+    padding-bottom: 3em;
+  }
+
+  .full-list-div {
+    // display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    width: 100%;
+
+    a.full-list-link {
+      // margin-bottom: 1em;
+      // margin-top: 1em;
+      display: block;
+      text-align: center !important;
+      padding: .5em 1em !important;
+      font-size: .9em;
+      color: $link !important;
+      font-weight: 400 !important;
+    }
+  }
+
+  i.ellipsis {
+    padding-left: .6em;
+  }
+  i.top3-check,
+  i.top20-check {
+    color: $r7;
+    display: inline;
+  }
+
+  .top3-text {
+    // font-weight: 400 !important;
+    font-size: 1.1em !important;
+    margin-top: 1em;
+    text-align: center !important;
+    // background-color: rgba ($r7, .4);
+    border: 2px solid $r7;
+    padding: .5em;
+  }
+
+}
+
+#list-modal {
+  .modal-header {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+  p.icon {
+    font-size: 2em !important;
+    padding-top: .5em !important;
+    margin-bottom: 0;
+  }
+  .modal-list-title {
+    text-align: center;
+    padding: 1em;
+    padding-top: .5em;
+    margin-bottom: 0;
+    font-weight: 300 !important;
+    span {
+      font-size: 1.1em;
+    }
+  }
+  .modal-body {
+    padding-top: 0;
+  }
+  #modal-list {
+    padding-top: 0;
+    p.modal-tech-name {
+      text-align: left !important;
+      margin: 0;
+      padding: .4em 1em !important;
+      font-size: .9em !important;
+      &:nth-child(odd){
+        background-color: rgba($mid-gray, .1);
+      }
+      &:nth-child(even){
+        background-color: rgba($mid-gray, .2);
+      }
+    }
+    .match {
+      color: $purple !important;
+      font-weight: 400 !important;
+      i.check {
+        padding-left: 1em;
+        color: $r7;
+      }
+    }
+  }
+
+  .modal-footer {
+    padding: .75rem .1rem !important;
+    .btn {
+      font-size: 1em !important;
+    }
+  }
+}
+
 #jumbotron-loading {
   background-color: transparent !important;
 }
@@ -1836,9 +2082,7 @@ table.table {
   background-color: transparent !important;
   padding: 1rem;
   padding-bottom: 2rem;
-  @include md {
-    padding-top: 2rem;
-  }
+  padding-top: 3rem;
   h1, h2, h3 {
     color: $dark-gray !important;
   }
@@ -1876,6 +2120,7 @@ table.table {
 }
 
 #jumbotron-score {
+  padding-bottom: 1em;
 
   .container {
     background-color: rgba($lightest, .9);
@@ -2004,43 +2249,157 @@ table.table {
     }
   }
 
-  #full-summary.btn {
-      font-size: 1.4em;
-      font-weight: 400 !important;
-      color: $orange !important;
-    i {
-      padding-left: .3em;
-    }
-  }
-
-  #share-score.btn {
+  #share-score.btn,
+  #faq-btn.btn {
     padding-top: 2em;
     font-size: 1em !important;
     font-weight: 400 !important;
-    color: rgba($purple, .8) !important;
+    color: rgba($bright-purple, .8) !important;
     margin-bottom: 0 !important;
     i {
       padding-left: .3em;
+      font-size: .9em !important;
     }
-
     @include sm {
       padding-top:0;
       font-size: 1em;
     }
+    &:hover {
+      font-weight: bold !important;
+    }
+  }
+  #faq-btn.btn {
+    font-size: .95em !important;
+    padding-top: .2em !important;
   }
 }
 
-#summary-div {
-  margin-bottom: 1em;
-  h3{
-    font-size: 1.5em !important;
+#full-summary.btn,
+#more-info.btn {
+    margin-top: 1em;
+    font-weight: 400 !important;
+    color: $orange !important;
+  i {
+    padding-left: .3em;
+  }
+}
+
+#more-info.btn {
+  &.lighter {
+    color: $lightest !important;
+    padding-top: 1em;
+  }
+}
+
+#questions-btn.btn {
+  padding-top: 2em;
+  font-weight: bold !important;
+  color: $lightest !important;
+  text-shadow: 0 2px 2px rgba($dark-purple, .5) !important;
+  &.purple {
+    color: $bright-purple !important;
+    text-shadow: 0 2px 2px rgba($dark-purple, 0) !important;
+    &:hover {
+      text-shadow: 0 1px 2px rgba($dark-purple, 0) !important;
+    }
+  }
+  &:hover {
+    text-shadow: 0 1px 2px rgba($dark-purple, .75) !important;
+  }
+}
+
+#whatsgood-div {
+  h4 {
+    font-weight: 300!important;
+    font-size: 2em !important;
+
+    @include md {
+      padding-left: 1em !important;
+      padding-right: 1em !important;
+    }
+  }
+
+  hr {
+      margin-left: 1em !important;
+      margin-right: 1em !important;
+  }
+
+  #good-text {
+    @include md {
+      padding-left: 1em !important;
+      padding-right: 1em !important;
+    }
   }
 
   .container {
+  }
+
+  .user-tech {
+    padding: .5em 1em;
+    background-color: rgba($mid-gray, .5);
+    p {
+      margin-bottom: .5em;
+    }
+    p.name {
+      font-size: .75em !important;
+    }
+  }
+
+  #top-tech-key {
+    margin: 0 auto;
+    div {
+      padding: .5em;
+      &:first-child {
+        p {
+          font-weight: 400 !important;
+          text-align: center;
+
+          @include sm {
+            text-align: left;
+          }
+        }
+      }
+      &:nth-child(2) {
+        p{
+          margin-bottom: .5em;
+        }
+      }
+    }
+    p {
+      text-align: left;
+    }
+    i {
+      color: $r7;
+    }
+  }
+
+}
+
+#summary-div {
+  h3{
+    font-size: 1.5em !important;
+  }
+  .container {
     padding: 0;
+    padding-bottom: 4em;
   }
 }
 
+
+#no-factors-msg {
+  min-width: 400px;
+  margin: 20px auto;
+  padding: 1em;
+  border: 1px solid rgba($light, .25);
+  text-align: center;
+  font-weight: 400;
+  font-size: 1em !important;
+  i {
+    font-size: 1.25em;
+    padding-right: .5em;
+    color: rgba($lightest, .75);
+  }
+}
 /* modal on thanks page */
 #no-email {
   label {
@@ -2098,6 +2457,9 @@ table.table {
 nav {
   z-index: 5;
   background-color: $dark-gray !important;
+  position: fixed !important;
+  width: 100%;
+  top: 0 !important;
 
   .nav-link {
     color: $light !important;
@@ -2166,6 +2528,11 @@ footer {
 
     &.social {
       font-size: 2.5em !important;
+      color: $orange !important;
+
+      &:visited {
+        color: $orange !important;
+      }
     }
 
     &:hover, &:focus, &:active {
@@ -2174,7 +2541,7 @@ footer {
     }
 
     &:visited {
-      color: $orange !important;
+      color: $teal !important;
     }
   }
 

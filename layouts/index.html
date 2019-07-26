@@ -6,34 +6,39 @@
 <section id='home-content'>
   <!-- ---------------------------- HERO SECTION ---- -->
   <div id='home-hero' class='container-fluid d-flex flex-column background-gradient colorful'>
-    <div>
-    <h1 class='t-shadow-dark mt-4'>Digital means vulnerable.</h1>
-    <h2 class=''>Are you vulnerable to a cyber attack that could shut down your business?</h2>
-    <p class=''>Find out in seconds.</p>
-  </div>
+    <div class='container'>
 
-    <!-- DOWNTIME RISK FORM -->
-    <div class='downtime-form small minimal'>
-      <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
-        <input type='hidden' name='returl' value=''>
-        <div class='form-group'>
-          <label for='user-email' class='t-shadow-dark'>Enter your business email below for a downtime risk assessment</label>
-          <input id='user-email' class='form-control minimal' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
-          <div class='invalid-feedback'>
-            Sorry, this isn't a valid email address.
+      <div>
+        <h1 class='t-shadow-dark mt-4'>Digital means vulnerable.</h1>
+        <h2 class=''>Are you vulnerable to a cyber attack that could shut down your business?</h2>
+        <p class=''>Find out in seconds.</p>
+      </div>
+
+      <!-- DOWNTIME RISK FORM -->
+      <div class='downtime-form small minimal'>
+        <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
+          <input type='hidden' name='returl' value=''>
+          <div class='form-group'>
+            <label for='user-email' class='t-shadow-dark'>Enter your business email below for a downtime risk assessment</label>
+            <input id='user-email' class='form-control minimal' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
+            <div class='invalid-feedback'>
+              Sorry, this isn't a valid email address.
+            </div>
           </div>
-        </div>
-        <div class='form-group form-check'>
-          <input id='notifications_option' class='form-check-input' type='checkbox' name='notifications_option' checked>
-          <label class='form-check-label smaller' for='notifications_option'>Yes, I'd like to receive future CyberFortress updates.</label>
-        </div>
-        <button id='landing-btn' class='btn btn-primary bigger' type='submit'>Get Assessment</button>
-      </form>
-    </div>
-    <!-- end of DOWNTIME RISK FORM -->
+          <div class='form-group form-check d-flex'>
+            <div>
+              <input id='notifications_option' class='form-check-input' type='checkbox' name='notifications_option' checked>
+              <label class='form-check-label smaller' for='notifications_option'>Yes, I'd like to receive future CyberFortress updates.</label>
+            </div>
+          </div>
+          <button id='landing-btn' class='btn btn-primary bigger' type='submit'>Get Assessment</button>
+        </form>
+      </div>
+      <!-- end of DOWNTIME RISK FORM -->
 
-    <div class='d-xs-block d-md-none'>
-      <img class='' src='/images/revenue.png' />
+      <div class='d-xs-block d-lg-none'>
+        <img class='' src='/images/revenue.png' />
+      </div>
     </div>
   </div>
   <!--end of #home-hero-->
@@ -93,10 +98,9 @@
 <script src='{{ $script.RelPermalink }}'></script>
 
 <script>
-!function () {
-	$('#get_downtime_risk').submit (submitIfEmailNotProvider);
-}();
-
+  ! function() {
+    $('#get_downtime_risk').submit(submitIfEmailNotProvider);
+  }();
 </script>
 
 {{ end }}
