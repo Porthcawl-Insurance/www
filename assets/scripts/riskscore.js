@@ -752,7 +752,7 @@ Codeup:
 
         $(title).html(
           '<p class="icon text-center"><i class="' + icon + '"></i></p>' +
-          '<h5 class="modal-list-title">Top 20 <span class="bold">' + tag + '</span> technologies</h5>'
+          '<h5 class="modal-list-title">Top <span class="bold">' + tag + '</span> technologies</h5>'
         );
         $(body).html('<div id="modal-list"></div>');
 
