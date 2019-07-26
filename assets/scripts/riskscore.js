@@ -119,8 +119,6 @@ Codeup:
       'widgets': []
     };
 
-    console.log($(conts).length);
-
     fillRook(score);
     topFactors(conts, positiveTags, negativeTags);
     popFactorSummary(conts);
@@ -403,10 +401,6 @@ Codeup:
       contentType: "application/json",
       data: JSON.stringify(data),
     }).done(function(response) {
-      console.log('----- Response -----');
-      console.log(response);
-      console.log('--- User Results ---');
-      console.log(userResults);
       populateGood(response, userResults, obj);
     }).fail(function(e) {
       console.log(e)
@@ -424,14 +418,17 @@ Codeup:
         matchLinks = Array();
 
 
-      populateTop3(allTech, userFactors, relTags, userTechNames);
-      populateTop20(allTech, userFactors, relTags, userTechNames, withTop3);
+      populateRanks (allTech, userFactors, relTags, userTechNames);
+      
+			// populateTop3(allTech, userFactors, relTags, userTechNames);
+      // populateTop20(allTech, userFactors, relTags, userTechNames, withTop3);
       getMatchLinks();
 
       if (matchLinks.length == 0) {
-        $('#whatsgood-div').insertAfter('#summary-div');
         $('#top-tech-key').remove();
-        populateNoResults(allTech, userFactors, relTags);
+				// $('#whatsgood-div').remove ();
+        // $('#whatsgood-div').insertAfter('#summary-div');
+        //populateNoResults(allTech, userFactors, relTags);
       }
 
       $.each(matchLinks, function(i, val) {
@@ -469,7 +466,6 @@ Codeup:
         $.each($(children), function(i, val) {
           var rank = Number($(this).attr('data-rank'));
           ranks.push(rank);
-          console.log(children);
         });
 
         if (ranks.length >= 2) {
@@ -478,10 +474,7 @@ Codeup:
             if (rank == 0) {
               rank = val;
             } else {
-              console.log('current rank - ' + rank);
-              console.log('next value - ' + val);
               if (val > rank + 1) {
-                console.log('this --> ' + this);
                 $('.match.bottom[data-rank="' + this + '"]').prev().append(
                   '<p class="tech-name ellipses bottom"><i class="ellipses far fa-ellipsis-v"></i></p>'
                 );
@@ -501,9 +494,6 @@ Codeup:
             userTags.push(tag);
           }
         });
-
-        // console.log('-- User Tags --')
-        // console.log(userTags);
 
         $(userTags).each(function(i, val) {
           var tag = this;
@@ -525,6 +515,42 @@ Codeup:
         return names;
       } // end of getUserTechNames();
 
+      function populateRanks(techObj, userObj, reltags, userTechNames) {
+        var section = $('#top-section'),
+          div = $('#top-results');
+
+				console.log (techObj);
+
+        Object.keys(techObj).sort ().forEach(key => {
+          let value = techObj[key];
+
+          if (relTags.includes(key)) {
+            var icon = getIcon(key);
+
+            $.each(value, function(i, val) {
+              var num = i + 1,
+                tag = val.tag,
+                name = val.name.replace(/-/g, ' ');
+
+              if (!withoutTop3.includes(tag)) {
+                $(div).append(
+                  '<div id="top-' + tag + '-div" class="good-tech d-flex flex-column">' +
+                  '<div class="icon-div">' +
+                  '<p class="icon text-center"><i class="' + icon + '"></i></p>' +
+                  '<p class="text-center larger title">Top 3 in <span class="bold">' + tag + '</span></p>' +
+                  '</div>' +
+                  '<div id="top-' + tag + '-list" class="list-div"></div>' +
+                  '</div>'
+                );
+                var listDiv = $('#top-' + tag + '-list');
+                withoutTop3.push(tag);
+                generateList(techObj, userTechNames, tag, listDiv);
+              }
+            });
+          }
+        });
+      }
+/*
       function populateTop3(techObj, userObj, reltags, userTechNames) {
         var section = $('#top-section'),
           div = $('#top-results');
@@ -614,7 +640,6 @@ Codeup:
           questionsBtn = $('#questions-btn'),
           keys = Array();
 
-        // console.log(userObj);
         // if (relTags.length == 0) {
           Object.keys(techObj).forEach(key => {
             let value = techObj[key];
@@ -654,6 +679,7 @@ Codeup:
         var hr = $('#whatsgood-div').find('hr');
         $(hr).hide();
       }
+*/
 
       function generateList(techObj, userTechNames, tag, div) {
         var tech = techObj[tag],
