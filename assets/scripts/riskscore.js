@@ -650,7 +650,7 @@ Codeup:
         $(moreInfoBtn).addClass('lighter');
         $(questionsBtn).addClass('purple');
 
-        $('#good-text').text('We have gathered the top 20 technologies most frequently used by e-commerce companies across all different categories. We’ve shared a few of the most important ones below!');
+        $('#good-text').text("Our model analyzes the technology choices of tens of thousands of ecommerce companies on an ongoing basis. Here's what the lowest risk companies are doing.");
         var hr = $('#whatsgood-div').find('hr');
         $(hr).hide();
       }
