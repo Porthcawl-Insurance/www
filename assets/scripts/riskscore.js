@@ -519,8 +519,6 @@ Codeup:
         var section = $('#top-section'),
           div = $('#top-results');
 
-				console.log (techObj);
-
         Object.keys(techObj).sort ().forEach(key => {
           let value = techObj[key];
 
@@ -778,7 +776,7 @@ Codeup:
 
         $(title).html(
           '<p class="icon text-center"><i class="' + icon + '"></i></p>' +
-          '<h5 class="modal-list-title">Top <span class="bold">' + tag + '</span> technologies</h5>'
+          '<h5 class="modal-list-title">Top <span class="bold">' + tag + '</span> technologies<br><small>contributing to lower ecommerce risk</small></h5>'
         );
         $(body).html('<div id="modal-list"></div>');
 
