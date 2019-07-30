@@ -22,13 +22,13 @@ $l-link: $light;
 $link: #0EBBF4;
 
 /* Risk Level Colors */
-$r1: #cc444b;
+$r1: #cc444b; // red - worst
 $r2: #d8774f;
 $r3: #de9151;
 $r4: #e9b15d;
 $r5: #fff275;
 $r6: #d3e468;
-$r7: #7ac74f;
+$r7: #7ac74f; // green - best
 
 $input-box-shadow: none;
 $input-focus-box-shadow: none;
@@ -2415,8 +2415,8 @@ table.table {
 #no-matching {
   display: block;
   margin: auto !important;
-
 }
+
 /* modal on thanks page */
 #no-email {
   label {

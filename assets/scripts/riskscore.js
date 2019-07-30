@@ -164,10 +164,22 @@ Codeup:
           color = getColor(weight),
           collapseId = i + 't-collapse';
 
+          if (color === 'r4') {
+            color = 'r5';
+          }
+          if (color === 'r3') {
+            color = 'r5';
+          }
+          if ( color === 'r2') {
+            color = 'r5';
+          }
+          if (color === 'r1') {
+            color = 'r5';
+          }
+
         if ($.inArray(tag, positiveTags) === -1) {
           positiveTags.push(tag);
         }
-
 
         $('#top-factors').append(
           '<div class="d-flex flex-row flex-nowrap align-items-start">' +
