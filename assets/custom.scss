@@ -2390,19 +2390,32 @@ table.table {
 }
 
 
-#no-factors-msg {
-  min-width: 400px;
+.no-factors-msg {
+  // min-width: 400px;
   margin: 20px auto;
   padding: 1em;
-  border: 1px solid rgba($light, .25);
+  border: 1px solid rgba($dark-gray, .25);
   text-align: center;
   font-weight: 400;
   font-size: 1em !important;
+  @include md {
+    min-width: 400px;
+    max-width: 600px;
+  }
   i {
     font-size: 1.25em;
     padding-right: .5em;
     color: rgba($lightest, .75);
   }
+  &.t-light {
+    border: 1px solid rgba($light, .25);
+  }
+}
+
+#no-matching {
+  display: block;
+  margin: auto !important;
+
 }
 /* modal on thanks page */
 #no-email {

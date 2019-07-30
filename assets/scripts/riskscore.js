@@ -285,7 +285,7 @@ Codeup:
       });
     } else if (conts.length == 0) {
       $('#factor-info').append(
-        '<p id="no-factors-msg" class="t-light"><i class="fal fa-times-circle"></i> You have no contributing factors.</p>'
+        '<p class="no-factors-msg t-light"><i class="fal fa-times-circle"></i> You have no contributing factors.</p>'
       );
     }
   }
@@ -419,13 +419,18 @@ Codeup:
 
 
       populateRanks (allTech, userFactors, relTags, userTechNames);
-      
+
 			// populateTop3(allTech, userFactors, relTags, userTechNames);
       // populateTop20(allTech, userFactors, relTags, userTechNames, withTop3);
       getMatchLinks();
 
+      // ------ if user has no matching technologies ------ //
       if (matchLinks.length == 0) {
         $('#top-tech-key').remove();
+        $('span#with-results').remove();
+        $('#goodresults-div').append(
+          '<p id="no-matching" class="no-factors-msg good-results">This section will populate once you have significant contributing factors to your risk score.</p>'
+        );
 				// $('#whatsgood-div').remove ();
         // $('#whatsgood-div').insertAfter('#summary-div');
         //populateNoResults(allTech, userFactors, relTags);
