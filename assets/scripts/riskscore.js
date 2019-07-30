@@ -164,6 +164,8 @@ Codeup:
           color = getColor(weight),
           collapseId = i + 't-collapse';
 
+          // keep positive factor colors (just in this section)
+          // from dropping below r5 - yellow
           if (color === 'r4') {
             color = 'r5';
           }
@@ -221,6 +223,20 @@ Codeup:
           icon = getIcon(tag),
           color = getColor(weight),
           collapseId = i + 't-collapse';
+
+          console.log(tag + ' - ' + color);
+
+          // keep negative factor colors (just in this section)
+          // from going above r4 - orange
+          if (color === 'r7') {
+            color = 'r4';
+          }
+          if (color === 'r6') {
+            color = 'r4';
+          }
+          if ( color === 'r5') {
+            color = 'r4';
+          }
 
         if ($.inArray(tag, negativeTags) === -1) {
           negativeTags.push(tag);
