@@ -2325,11 +2325,11 @@ table.table {
   }
 
   #good-text {
+    // @include md {
+    //   padding-left: 1em !important;
+    //   padding-right: 1em !important;
+    // }
     @include md {
-      padding-left: 1em !important;
-      padding-right: 1em !important;
-    }
-    @include lg {
       padding-left: 3em !important;
       padding-right: 3em !important;
     }
