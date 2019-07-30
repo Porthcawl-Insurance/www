@@ -2329,6 +2329,10 @@ table.table {
       padding-left: 1em !important;
       padding-right: 1em !important;
     }
+    @include lg {
+      padding-left: 3em !important;
+      padding-right: 3em !important;
+    }
   }
 
   .container {
