@@ -1,0 +1,70 @@
+.modal-content {
+  text-align: center;
+}
+
+.modal-header {
+  background-color: $dark-purple;
+  border-radius: .2em .2em 0 0;
+  .close {
+    color: $lightest;
+  }
+}
+
+.modal-body {
+
+  p.icon {
+    margin-bottom: .5em;
+    font-size: 2em;
+    i.fa-stack-1x {
+      font-size: .8em;
+      color: $orange;
+      text-shadow: 0px 1px 1px rgba($dark-purple, .8);
+    }
+    i.fa-stack-2x {
+      font-size: 1.8em !important;
+      color: rgba($dark-purple, .75);
+      padding-top: .1em;
+    }
+  }
+}
+
+// .modal-header {
+//   background-color: $dark-purple !i;
+//   border-radius: 0 !important;
+//   .close {
+//     color: $lightest !important;
+//   }
+// }
+//
+// .modal-body {
+//   p, h4 {
+//     text-align: center !important;
+//     color: $dark-gray !important;
+//   }
+//   a.icon-r {
+//     color: $orange !important;
+//     font-size: 1.1em !important;
+//   }
+//
+//   p.icon {
+//     font-size: 2.5em !important;
+//   }
+//
+//   #m-icon {
+//     font-size: 4em !important;
+//     color: $purple;
+//     padding: .1em;
+//   }
+// }
+//
+// .modal-footer {
+//   background-color: $dark-purple !important;
+//   .btn {
+//     background-color: transparent !important;
+//     border: 1px solid rgba($lightest, .5) !important;
+//     color: $lightest !important;
+//     font-size: 1.2em !important;
+//     &:hover {
+//       background-color: rgba($lightest,.05) !important;
+//     }
+//   }

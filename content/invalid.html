@@ -7,10 +7,10 @@ slug: "/invalid/"
 
 {{< block >}}
 
-<div class='header'>
-  <h1><span>Whoops!</span><br />Sorry, that's not a business email.</h1>
-</div>
-<div class='body'>
+<!-- <div class='header'> -->
+  <h1 class='heading'><strong>Whoops!</strong><br />Sorry, that's not a business email.</h1>
+<!-- </div> -->
+<!-- <div class='body'> -->
   <p>
     In order to determine your business’s downtime risk we need your business email
     so that our risk model can run its analysis on the business domain as opposed to <span class='bold'>gmail.com</span> or <span class='bold'>yahoo.com</span>.
@@ -23,8 +23,8 @@ slug: "/invalid/"
   <hr class='dark'/>
 
   <!-- DOWNTIME RISK FORM -->
-  <div class='text-center downtime-form small p-4'>
-    <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
+  <div class='downtime-form'>
+    <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation downtime-form' novalidate>
       <div class='form-group'>
         <label for='user-email'>Enter your business email below for a downtime risk assessment</label>
         <input id='user-email' class='form-control' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
@@ -32,7 +32,7 @@ slug: "/invalid/"
           <i class="far fa-exclamation-circle"></i> Sorry, this isn't a valid email address.
         </div>
       </div>
-      <div class='custom-control custom-checkbox'>
+      <div class='custom-control custom-checkbox form-check'>
         <input id='notifications_option' class='custom-control-input' type='checkbox' name='notifications_option' checked>
         <label class='custom-control-label smaller' for='notifications_option'>Yes, I'd like to recieve future CyberFortress updates.</label>
       </div>
@@ -41,7 +41,7 @@ slug: "/invalid/"
   </div>
   <!-- end of DOWNTIME RISK FORM -->
 
-</div>
+<!-- </div> -->
 <!--end of .body-->
 
 {{</ block >}}

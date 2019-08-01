@@ -1,0 +1,55 @@
+input {
+
+}
+
+label {
+  font-weight: 300;
+}
+
+.downtime-form {
+
+  label {
+    font-size: 1.25em;
+  }
+
+  input[type='email'] {
+    max-width: 500px;
+    border-radius: .1rem .1rem 0 0;
+
+    &.minimal {
+      background-color: rgba($dark-purple,.25);
+      border: none;
+      border-bottom: 2px solid $lightest;
+      color: $lightest;
+      font-weight: 300;
+
+      &::placeholder {
+        color: rgba($lightest, .8);
+        font-size: .8em;
+
+        @include sm {
+          font-size: 1em;
+        }
+      }
+
+      &:focus {
+        background-color: rgba($dark-purple,.5);
+        color: $lightest;
+      }
+    }
+  }
+}
+
+.invalid-feedback {
+  color: $r1;
+}
+
+.form-check {
+  margin-bottom: 0;
+  display: block;
+  // max-width: 400px;
+  label {
+    font-size: 1em;
+    padding-left: .5em;
+  }
+}

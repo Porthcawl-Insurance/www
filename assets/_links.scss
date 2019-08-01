@@ -1,0 +1,19 @@
+a {
+
+  /* Logos that link to another page */
+  /* Currently used in Featured On banner */
+  &.logo-link {
+    img {
+        max-width: 120px;
+        margin: 1em .5em;
+        padding: .4em;
+      }
+      @include sm{
+        img {
+          max-width: 150px;
+          max-height: 70px;
+        }
+      }
+  }
+
+}

@@ -8,21 +8,21 @@ draft: true
 
 {{< block >}}
 
-<div class='header'>
-  <h1>Your Downtime Risk Assessment has been generated!</h1>
+<!-- <div class='header'> -->
+  <h1 class='heading'>Your Downtime Risk Assessment has been generated!</h1>
   <img id='mail-knight' class='img-fluid' src='/images/mail-knight.svg' />
-</div>
-<div class='body'>
-  <h2 class='bold'>Last step: Go check your email!</h2>
+<!-- </div> -->
+<!-- <div class='body'> -->
+  <h2 class='sub-heading'><strong>Last step: Go check your email!</strong></h2>
   <p>
     We've sent you an email containing link that will redirect you to your
     downtime risk score and assesment. By clicking the link, you are confirming
     your email address. This is required to recieve your downtime risk score.
   </p>
-  <a class='no-email' data-toggle="modal" data-target="#no-email" style="cursor:pointer;">
+  <a class='link no-email' data-toggle='modal' data-target='#no-email' style='cursor:pointer;'>
     Didn't get an email?
   </a>
-</div>
+<!-- </div> -->
 
 {{</ block >}}
 
@@ -53,7 +53,6 @@ draft: true
         <hr />
         <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
           <div class='form-group'>
-            <!-- <label for='user-email' class=''>Enter your business email below for a downtime risk assessment</label> -->
             <input id='user-email' class='form-control' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
             <div class='invalid-feedback'>
               Sorry, this isn't a valid email address.

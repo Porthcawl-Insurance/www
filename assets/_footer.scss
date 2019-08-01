@@ -1,0 +1,95 @@
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: $dark-gray;
+  width: 100%;
+  color: $lightest;
+  font-size: 0.75rem;
+  padding-top: 2rem;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $lightest;
+    text-transform: uppercase;
+  }
+
+  li {
+    margin: none;
+    margin-bottom: .25em;
+    text-align: center;
+
+    @include md {
+      text-align: left;
+    }
+  }
+
+  a {
+    color: $lightest !important;
+    font-size: 1.2em !important;
+
+    &.social {
+      font-size: 2.5em !important;
+      color: $orange !important;
+
+      &:visited {
+        color: $orange !important;
+      }
+    }
+
+    &:hover, &:focus, &:active {
+      color: $orange !important;
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: $teal !important;
+    }
+  }
+
+  hr {
+    margin: 0 0;
+    border: none;
+    border-top: solid rgba(255,255,255,.15) 1px;
+  }
+
+  .rook {
+
+    img {
+      max-height: 100px;
+      opacity: .8;
+    }
+  }
+
+  .contact {
+    i {
+      font-size: 1.5em !important;
+      padding-right: .3em;
+      color: $orange;
+    }
+
+    p {
+      text-align: center;
+
+      @include md{
+        text-align: left;
+      }
+    }
+
+    #contact-email {
+      font-size: 1.4em !important;
+    }
+  }
+
+  .list {
+    min-width: 200px;
+  }
+
+  .text-uppercase {
+    text-align: center !important;
+
+    @include md {
+      text-align: left !important;
+    }
+  }
+
+}

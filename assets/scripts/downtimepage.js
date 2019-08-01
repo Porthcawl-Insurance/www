@@ -76,10 +76,12 @@ $(function() {
         modId = this.modId;
 
       $('#what-effects').append(
-        "<div class='cat min d-flex flex-column'>" +
+        "<div class='card icon min'>" +
+        "<div class='card-body'>" +
         "<p class='icon'><i class='" + icon + "'></i></p>" +
-        "<p class='c-title'>" + name + "</p>" +
-        "<p class='desc'>" + desc + "</p>" +
+        "<h5 class='card-title t-light'>" + name + "</h5>" +
+        "<p class='card-text t-light'>" + desc + "</p>" +
+        "</div>" +
         "</div>"
       );
     });

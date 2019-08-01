@@ -1,0 +1,40 @@
+/* Nav */
+nav {
+  z-index: 5;
+  background-color: $dark-gray;
+  position: fixed !important;
+  width: 100%;
+  top: 0 !important;
+
+  .nav-link {
+    color: $light !important;
+    text-transform: none;
+    padding: 8px 0px 8px 40px !important;
+    text-align: right !important;
+    &:hover {
+      // color: $link !important;
+    }
+  }
+
+  .navbar-brand {
+    padding-top: 0;
+  }
+
+  .dropdown-menu {
+    background-color: $dark-gray !important;
+    border: none !important;
+  }
+
+  .dropdown-item {
+    color: $lightest !important;
+    font-weight: 300;
+    &:hover {
+      background-color: rgba($very-dark, .1) !important;
+      color: $link !important;
+    }
+  }
+
+  @include sm {
+    padding-top: 0.5rem !important;
+  }
+}

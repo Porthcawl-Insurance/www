@@ -1,0 +1,136 @@
+/* --------------------------------------------- */
+/* --- CONTAINERS ------------------------------ */
+/* --------------------------------------------- */
+// tweaks and additional classes added to
+// Bootstrap's .container / .container-fluid / .jumbotron type classes
+// .container/.container-fluid REQUIRED for row / col support
+
+
+.container-fluid { // full width container, used for most individual "sections" of each page layout
+
+  padding: 4rem;
+
+  &.background { // if serving as a background behind another container
+    padding: 2rem;
+  }
+
+  &.img {
+    background-image: url('/images/split-background.svg');
+    background-size: cover;
+    background-position: bottom;
+  }
+
+}
+
+.container { // can be nested within .container-fluid, creating smaller block
+
+  &.t-light {
+    h1, h2, h3, h4, h5, h6, p {
+      color: $lightest;
+    }
+  }
+
+  &.page-block { // for single full-page block - EX: Thanks / Invalid pages
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 3em;
+    background-color: $lightest;
+    text-align: center;
+
+    .heading {
+      font-size: 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+    .sub-heading {
+      font-size: 1.25em;
+      margin-bottom: 1em;
+    }
+
+    img {
+      display: block;
+      max-width: 50%;
+      margin: 1em auto;
+    }
+
+    .link {
+      color: $link;
+      &:hover {
+        color: $link;
+        text-decoration: underline;
+      }
+    }
+
+    .email-examples {
+      padding: .5em;
+      padding-top: 1em;
+      p {
+        padding: 0;
+        &.good {
+          i {
+            color: $r7;
+          }
+        }
+        &.bad {
+          i {
+            color: $r1;
+          }
+        }
+      }
+    }
+
+    hr {
+      margin-bottom: 2.5em;
+    }
+
+    label {
+      font-size: 1em;
+      margin-bottom: 0;
+    }
+
+    input[type='email'] {
+      display: block;
+      margin: 1em auto;
+    }
+  } // end of .page-block
+
+} // end of .container
+
+.jumbotron { // for showcasing hero unit style content
+  border-radius: 0;
+  margin-bottom: 0;
+  background-color: $lightest;
+}
+
+.card {
+
+  &.icon.min {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    max-width: 180px;
+    margin: 1em;
+
+    i {
+      color: $r7;
+      text-shadow: 0px 2px 3px rgba($dark-purple, .5);
+      font-size: 2em;
+      margin: 0 auto;
+      padding-bottom: 0;
+    }
+
+    .card-title {
+      padding-bottom: .5em;
+      margin-bottom: .5em;
+      @include sm {
+        border-bottom: 1px solid rgba($lightest, .2)
+      }
+    }
+
+  }
+
+}
+
+/* --------------------------------------------- */
+/* --- CUSTOM BLOCKS / CONTAINERS -------------- */
+/* --------------------------------------------- */

@@ -5,21 +5,23 @@
 {{ define "main" }}
 <section id='home-content'>
   <!-- ---------------------------- HERO SECTION ---- -->
-  <div id='home-hero' class='container-fluid d-flex flex-column background-gradient colorful'>
-    <div class='container'>
+  <div id='home-hero' class='container-fluid background background-gradient colorful'>
+    <div class='container t-light'>
 
-      <div>
-        <h1 class='t-shadow-dark mt-4'>Digital means vulnerable.</h1>
-        <h2 class=''>Are you vulnerable to a cyber attack that could shut down your business?</h2>
-        <p class=''>Find out in seconds.</p>
+      <div class='mt-4 pt-5'>
+        <h1 class='t-shadow-dark text-left display-4'>
+          Digital means vulnerable.
+        </h1>
+        <h2 class='text-left sub-heading'>Are you vulnerable to a cyber attack that could shut down your business?</h2>
+        <p class='lead'>Find out in seconds.</p>
       </div>
 
       <!-- DOWNTIME RISK FORM -->
-      <div class='downtime-form small minimal'>
-        <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
+      <div class='mt-2 pt-5'>
+        <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation downtime-form' novalidate>
           <input type='hidden' name='returl' value=''>
           <div class='form-group'>
-            <label for='user-email' class='t-shadow-dark'>Enter your business email below for a downtime risk assessment</label>
+            <label for='user-email' class='t-shadow-light'>Enter your business email below for a downtime risk assessment</label>
             <input id='user-email' class='form-control minimal' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
             <div class='invalid-feedback'>
               Sorry, this isn't a valid email address.
@@ -28,7 +30,7 @@
           <div class='form-group form-check d-flex'>
             <div>
               <input id='notifications_option' class='form-check-input' type='checkbox' name='notifications_option' checked>
-              <label class='form-check-label smaller' for='notifications_option'>Yes, I'd like to receive future CyberFortress updates.</label>
+              <label class='form-check-label' for='notifications_option'>Yes, I'd like to receive future CyberFortress updates.</label>
             </div>
           </div>
           <button id='landing-btn' class='btn btn-primary bigger' type='submit'>Get Assessment</button>
@@ -45,30 +47,30 @@
 
   <!-- ---------------------------- FEATURED -------- -->
   <div id='featured-on' class='container-fluid'>
-    <p class='text-center t-shadow'>Featured on</p>
-    <div class='container d-flex flex-row flex-wrap justify-content-around align-items-center'>
-      <div class='featured-div'>
-        <a class='img-link' target='_blank' href='https://www.prnewswire.com/news-releases/plug-and-play-selects-150-startups-for-their-summer-batches-300821308.html'>
+    <p class='text-center t-shadow-light'>Featured on</p>
+    <div class='container d-flex flew-row flex-wrap justify-content-around align-items-center'>
+      <div>
+        <a class='logo-link' target='_blank' href='https://www.prnewswire.com/news-releases/plug-and-play-selects-150-startups-for-their-summer-batches-300821308.html'>
           <img src='/images/pnp_logo.png' alt='Plug and Play' />
         </a>
       </div>
-      <div class='featured-div'>
-        <a class='img-link' target='_blank' href='https://collisionconf.com/'>
+      <div>
+        <a class='logo-link' target='_blank' href='https://collisionconf.com/'>
           <img src='/images/collision_logo.png' />
         </a>
       </div>
-      <div class='featured-div'>
-        <a class='img-link' target='_blank' href='https://innoconf.com/'>
+      <div>
+        <a class='logo-link' target='_blank' href='https://innoconf.com/'>
           <img src='/images/inno_logo.png' />
         </a>
       </div>
-      <div class='featured-div'>
-        <a class='img-link' target='_blank' href='https://www.startupssanantonio.com/cyberfortress-delivers-new-kind-of-cyber-insurance/'>
+      <div>
+        <a class='logo-link' target='_blank' href='https://www.startupssanantonio.com/cyberfortress-delivers-new-kind-of-cyber-insurance/'>
           <img src='/images/sss_logo.png' />
         </a>
       </div>
-      <div class='featured-div'>
-        <a class='img-link' target='_blank' href='https://xconomy.com/texas/2018/10/16/cyberfortress-plans-2019-launch-as-cyber-insurance-industry-grows/'>
+      <div>
+        <a class='logo-link' target='_blank' href='https://xconomy.com/texas/2018/10/16/cyberfortress-plans-2019-launch-as-cyber-insurance-industry-grows/'>
           <img src='/images/xconomy_logo.png' />
         </a>
       </div>

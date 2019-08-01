@@ -1,0 +1,30 @@
+/* --------------------------------------------- */
+/* --- LANDING PAGE ---------------------------- */
+/* --------------------------------------------- */
+// Styling specific to the landing page due to different styling
+
+#home-hero {
+  background-image: url('/images/tablet-background.svg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  max-height: 1200px;
+  padding-bottom: 2em;
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  @include sm {
+    min-height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @include lg {
+    background-image: url('/images/revenue-background.svg');
+    padding-left: 2em;
+  }
+
+} /* end of #home-hero */

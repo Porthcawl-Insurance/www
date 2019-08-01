@@ -1,0 +1,38 @@
+.btn {
+  border-radius: .2em;
+  font-weight: 300;
+  margin: 1em 0;
+
+  &.btn-primary {
+    background-color: $orange;
+    color: $very-dark !important;
+    border: none;
+    box-shadow: 0px 3px 3px rgba($very-dark, .25);
+  }
+
+  &.center {
+    display: block;
+    margin: 0 auto;
+  }
+
+  // &.tip {
+  //   .fas{
+  //     color: $mid-gray;
+  //     font-size: 2em;
+  //
+  //     &:hover {
+  //       color: $orange;
+  //     }
+  //   }
+  //
+  //   &:hover {
+  //     // background-color: $teal;
+  //   }
+  //
+  //   &:focus {
+  //     .fas {
+  //       color: $orange;
+  //     }
+  //   }
+  // } /* end of &.tip */
+}
