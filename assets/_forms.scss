@@ -53,3 +53,22 @@ label {
     padding-left: .5em;
   }
 }
+
+.page-block { // for small downtime form on invalid page and any other .page-block containers
+
+  label {
+    font-size: 1.1em;
+    margin-bottom: 0;
+  }
+
+  input[type='email'] {
+    display: block;
+    margin: 1em auto;
+  }
+
+  .form-check {
+    label {
+      font-size: 1em;
+    }
+  }
+}
