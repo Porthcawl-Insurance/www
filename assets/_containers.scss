@@ -82,7 +82,7 @@
     hr {
       margin-bottom: 2.5em;
     }
-    // 
+    //
     // label {
     //   font-size: 1em;
     //   margin-bottom: 0;
@@ -102,7 +102,7 @@
   background-color: $lightest;
 }
 
-.card {
+.card { // A Bootstrap content container with multiple variants and options
 
   &.icon.min {
     background-color: transparent;
@@ -129,6 +129,62 @@
 
   }
 
+  &.team { // used for team
+    width: 100%;
+    max-width: 220px;
+    background-color: transparent;
+    border: none;
+    position: relative !important;
+
+    img.team-img {
+      max-width: 200px;
+      max-height:200px;
+      border-radius: 50%;
+      margin: 0 auto !important;
+      box-shadow: 0px 4px 6px rgba($dark-purple, .75);
+    }
+
+    .card-body {
+      padding: 0;
+      .icon {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 0.2em;
+        color: rgba($bright-purple, .5);
+        &:hover {
+          color: $bright-purple;
+        }
+      }
+
+      .card-title {
+        background-color: rgba($dark-purple, .95);
+        padding: .3em .5em;
+        color: $lightest;
+        margin-top: -1em;
+        margin-bottom: .25em;
+        text-align: center;
+        font-size: 1.2em !important;
+        border-radius: 2px;
+      }
+
+      .card-text {
+        padding-left: .7em;
+        padding-right: .7em;
+        // padding-bottom: .7em;
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+
+}
+}
+
+.media { // construct repetitive components like score factors
+
+  .media-body {
+
+  }
 }
 
 /* --------------------------------------------- */
