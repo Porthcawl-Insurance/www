@@ -7,7 +7,7 @@ draft: true
 ---
 
 <!-- LOADING -->
-<div id='jumbotron-loading' class='jumbotron text-center'>
+<div id='score-loading' class='conainer-fluid text-center'>
   <p class='larger text-center'>
     Calculating your Downtime Risk Assessment
   </p>
@@ -21,7 +21,7 @@ draft: true
 </div>
 
 <!-- ERROR SECTION -->
-<div id='jumbotron-error' class='jumbotron d-none'>
+<div id='score-error' class='container-fluid d-none'>
   <div class='container'>
     <h1 class='text-center pb-4'>Sorry, we don't have a risk assessment yet for your domain. </h1>
     <div class='d-flex flex-column flex-lg-row flex-nowrap justify-content-md-center justify-content-lg-between justify-content-xl-around align-items-center align-items-lg-start'>
@@ -51,13 +51,12 @@ draft: true
 </div>
 
 <!-- TOP MAIN SECTION -->
-<div id='jumbotron-score' class='jumbotron d-none'>
+<div id='score-render' class=' container-fluid d-none background-light'>
   <div class='container'>
-
     <!-- Heading -->
-    <div class='d-flex flex-column flex-lg-row justify-content-between algin-items-end'>
+    <div id='main-heading' class='d-flex flex-column flex-lg-row justify-content-between algin-items-end'>
       <div class=''>
-        <h2 class='jumbotron-heading' id='domain'></h2>
+        <h2 id='domain'></h2>
       </div>
       <div>
         <h1 id='score-heading' class=''>Ecommerce Risk Assessment</h1>
@@ -69,9 +68,8 @@ draft: true
     <hr class='dark' />
 
     <!-- Score section -->
-    <div id='score-row' class='d-flex flex-column'>
-
-      <div class='d-flex flex-row flex-nowrap justify-content-center align-items-center '>
+    <div id='score-row' class='col'>
+      <div class='row flex-nowrap justify-content-center align-items-center p-3'>
         <div id='rook-div' class='mr-5'>
           {{< rook >}}
         </div>
@@ -79,45 +77,41 @@ draft: true
           <p id='score'>-</p>
         </div>
       </div>
-
       <!--Share score link & confirmation -->
-      <div class='d-flex flex-column justify-content-around text-center'>
-        <!-- <a id='faq-btn' class='btn center text-center icon-l ' href='/faq'>Freqently Asked Questions</a> -->
-        <a id='share-score' class='btn center text-center icon-l ' href="#Copied" data-toggle="modal" data-target="#share-modal">Share your score <i class="far fa-share-square"></i></a>
+      <div class='col text-center p-2'>
+        <a id='share-score' class='icon left purple m-3' href="#Copied" data-toggle="modal" data-target="#share-modal">Share your score <i class="far fa-share-square"></i></a>
       </div>
     </div>
 
     <!-- Positive / Negative -->
-    <div id='factors-row' class='d-flex flex-column flex-md-row justify-content-center'>
+    <div id='factors-row' class='d-flex flex-column flex-md-row justify-content-center mt-3'>
       <div class='col'>
-        <div id='top-factors' class='factor top'>
-          <p class='header'>Positive contributing factors</p>
+        <div id='top-factors' class='list top-factor top'>
+          <p class='header'><span>Positive</span> contributing factors</p>
           <!-- populated from js -->
         </div>
       </div>
       <div class='col'>
-        <div id='bottom-factors' class='factor bottom'>
+        <div id='bottom-factors' class='list top-factor bottom'>
           <p class='header'>Negative contributing factors</p>
           <!-- populated from js -->
         </div>
       </div>
     </div>
-
+    <!-- end of #factors-row -->
   </div>
-  <!--end of .flex-row-->
+  <!--end of .container-->
 
-  <!-- <a id='full-summary' class='btn center text-center icon-b' style='cursor:pointer;'>Full Summary<br /><i class="fas fa-chevron-circle-down"></i></a> -->
-  <a id='more-info' class='btn center text-center icon-b' style='cursor:pointer;'>Get More Information<br /><i class="fas fa-chevron-circle-down"></i></a>
+  <div class='col text-center'>
+    <a id='more-info' class='icon bottom orange larger' style='cursor:pointer;'>Get More Information<i class="fas fa-chevron-circle-down"></i></a>
+  </div>
 
 </div>
-<!--end of .container-->
-<!-- </div> -->
-<!-- end of .jumbotron -->
 
 <!--WHATS GOOD-->
 <div id='whatsgood-div' class='container-fluid d-none'>
   <div class='container background-light py-5 px-2'>
-    <h4 class='text-center pt-4 bold'>What we know from current technology trends</h4>
+    <h4 class=''>What we know from current technology trends</h4>
     <p id='good-text' class='text-center py-4 px-3 mb-2'>
       Below we have listed a few key categories and ranked the most influential
       technologies currently being used by the lowest risk ecommerce companies.
@@ -131,7 +125,7 @@ draft: true
             Technologies you're using:
           </p>
         </div>
-        <div class="d-flex flex-column">
+        <div class="col">
           <p>
             <i class="top3-check fas fa-check-circle"></i> - in the top 3 of it's category
           </p>
@@ -140,12 +134,14 @@ draft: true
           </p>
         </div>
       </div>
-      <div id='top-section' class='top-tech-section flex-column'>
+      <div id='top-section' class='col'>
         <div id='top-results' class='d-flex flex-row flex-wrap justify-content-center results-row'>
         </div>
       </div>
     </div>
-    <a id='full-summary' class='btn center text-center icon-b' style='cursor:pointer;'>Full Summary<br /><i class="fas fa-chevron-circle-down"></i></a>
+    <div class='col text-center'>
+      <a id='full-summary' class='icon bottom orange larger' style='cursor:pointer;'>Full Summary<i class="fas fa-chevron-circle-down"></i></a>
+    </div>
   </div>
 </div>
 
@@ -159,13 +155,15 @@ draft: true
       </div>
     </div>
     <!--end of .flex-row-->
-    <a id='questions-btn' href='/faq' class='btn center icon-b mt-4 light' style='cursor:pointer;'>Have Questions?<br /><i class="fas fa-question-circle"></i></a>
+    <div class='col text-center pt-4'>
+      <a id='questions-btn' href='/faq' class='icon bottom light t-shadow-light larger' style='cursor:pointer;'>Have Questions?<i class="fas fa-question-circle"></i></a>
+    </div>
   </div>
   <!-- end of .container -->
 </div>
 
 <!-- TOP20 LIST MODAL -->
-<div id='list-modal' class="modal fade" tabindex="-1" role="dialog">
+<div id='list-modal' class="modal tech-list fade" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">

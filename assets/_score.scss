@@ -1,0 +1,122 @@
+/* --------------------------------------------- */
+/* --- SCORE PAGE / score.html ----------------- */
+/* --------------------------------------------- */
+// considering the drastically different styling of the score page,
+// we'll but in score page specific styling here
+
+#main-heading {
+
+  h1#score-heading {
+    text-align: center;
+    color: $dark-gray;
+    font-size: 1.1em;
+
+    @include md {
+      margin-bottom: .1em;
+    }
+
+    @include lg {
+      text-align: left;
+    }
+  }
+
+  h2#domain {
+    color: $purple;
+    font-size: 1.75em;
+    font-weight: 400;
+    text-align: center;
+    max-width: 100%;
+
+   @include sm {
+     font-size: 2.5em;
+   }
+
+   @include md {
+     text-align: center;
+   }
+  }
+
+  p {
+    text-align: center;
+    font-size: .8em;
+    color: rgba($dark-gray, .75);
+
+    @include sm {
+      font-size: 1em;
+    }
+
+    @include lg {
+      text-align: right;
+    }
+  }
+
+}
+
+#rook-svg {
+  display: block;
+  margin: 0 auto !important;
+  height: 100%;
+  width: 100%;
+  min-width: 80px;
+  max-height: 250px;
+  max-width: 150px;
+
+  @include sm {
+
+  }
+}
+
+#score {
+  font-size: 1.5em !important;
+    margin-bottom: 0 !important;
+    font-weight: 400 !important;
+    white-space: nowrap;
+
+    @include sm {
+      font-size: 2em !important;
+    }
+
+    @include md {
+      font-size: 2.5em !important;
+    }
+
+    span {
+      font-size: 2em !important;
+
+      @include sm {
+        font-size: 2.5em !important;;
+      }
+
+      @include md {
+        font-size: 2.8em !important;
+      }
+    }
+}
+
+#top-tech-key {
+  margin: 0 auto;
+   div {
+     padding: .5em;
+     &:first-child {
+       p {
+         font-weight: 400;
+         text-align: center;
+
+         @include sm {
+           text-align: left;
+         }
+       }
+     }
+     &:nth-child(2) {
+       p{
+         margin-bottom: .5em;
+       }
+     }
+   }
+   p {
+     text-align: left;
+   }
+   i {
+     color: $r7;
+   }
+}

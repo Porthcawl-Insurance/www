@@ -1,0 +1,30 @@
+/* --------------------------------------------- */
+/* --- LISTS ----------------------------------- */
+/* --------------------------------------------- */
+// styling for <ul>/<ol>/<li> .etc elements, as well as
+// divs that act like lists, ex: factor lists on score page
+
+ul {
+
+}
+
+li {
+
+}
+
+div.list {
+
+  &.top-factor {
+
+    .header {
+      color: $lightest;
+      font-weight: 400;
+      background-color: rgba($dark-gray, .5);
+      padding: .5em;
+      text-align: center;
+      margin-bottom :.2em;
+    }
+
+  }
+
+}

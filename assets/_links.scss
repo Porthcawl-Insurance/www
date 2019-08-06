@@ -1,4 +1,58 @@
+/* --------------------------------------------- */
+/* --- LINKS ----------------------------------- */
+/* --------------------------------------------- */
+// styling for links without .btn class
+// ex: simple hyperlinks, links with inline icons,
+//     imgs that are links to other pages, etc.
+
 a {
+
+  /* specific purple or orange color links, no default blue */
+  &.purple {
+      color: rgba($bright-purple, .8);
+      font-weight: 400;
+      &:hover {
+        color: $bright-purple;
+        text-decoration: none;
+      }
+  }
+
+  &.orange {
+    color: rgba($orange, .8) !important;
+    font-weight: 400;
+    &:hover {
+      color: $orange !important;
+      text-decoration: none;
+    }
+  }
+
+  &.light {
+    color: rgba($lightest, .8);
+    &:hover {
+      color: $lightest;
+      text-decoration: none;
+    }
+  }
+  &.larger {
+    font-size: larger;
+  }
+  /* Links that have inline icon */
+  /* 'share score' link on score page, etc. */
+  &.icon {
+
+    &.left { /* icon to the left of text */
+      i {
+        padding-left: .3em;
+      }
+    }
+
+    &.bottom { /* icon centered below text */
+      i {
+        display: block;
+        padding-top: .3em;
+      }
+    }
+  }
 
   /* Logos that link to another page */
   /* Currently used in Featured On banner */
@@ -14,6 +68,12 @@ a {
           max-height: 70px;
         }
       }
+  }
+
+  /* Links in "top tech" lists for users' matching technologies */
+  /* Score page, "Tech trends" section */
+  &.match-link {
+    color: $bright-purple;
   }
 
 }
