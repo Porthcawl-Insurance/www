@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div class='my-5 list-container'>
+<div class='list-container'>
 	<div>
 		<h1>Resources</h1>
 	</div>
@@ -16,7 +16,7 @@
     <div class='d-flex flex-column p-3'>
       {{ range $i, $e := .Data.Pages }}
       <div class='resource-div'>
-        <a class='link big' href='{{ .RelPermalink }}'><i class="far fa-angle-right"></i> {{ .Title }} </a>
+        <a class='link larger purple' href='{{ .RelPermalink }}'><i class="far fa-angle-right"></i> {{ .Title }} </a>
         {{ truncate 140 .Content }}
       </div>
       {{ end }}

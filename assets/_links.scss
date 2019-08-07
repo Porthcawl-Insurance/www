@@ -42,6 +42,12 @@ a {
 
     &.left { /* icon to the left of text */
       i {
+        padding-right: .3em;
+      }
+    }
+
+    &.right {
+      i {
         padding-left: .3em;
       }
     }

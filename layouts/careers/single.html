@@ -1,14 +1,14 @@
 {{ define "main" }}
 
-<section class='mt-4 mb-4 single-career'>
+<section class='single-career'>
   <div class='container'>
     <div class='row'>
-      <div class='col-md-8 offset-md-0'>
+      <div class='col'>
 
-        <a class='icon-l' href='/careers/'><i class="fal fa-angle-left"></i> Back to Careers</a>
+        <a class='icon left purple larger' href='/careers/'><i class="fal fa-angle-left"></i> Back to Careers</a>
 
         <h1 class='display-4'>{{ .Params.Title }}</h1>
-        <p class='mb-5'><strong>{{ if isset .Params "location" }}{{ .Params.Location }}{{ else }}San Antonio, TX{{ end }}</strong></p>
+        <p class=''><strong>{{ if isset .Params "location" }}{{ .Params.Location }}{{ else }}San Antonio, TX{{ end }}</strong></p>
 
         {{ .Content }}
 

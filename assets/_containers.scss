@@ -113,9 +113,9 @@
   background-color: $lightest;
 }
 
-.card {
-  // A Bootstrap content container with multiple variants and options
-  &.icon.min {
+.card { // A Bootstrap content container with multiple variants and options
+
+  &.icon.min { // used on landing page for downtime risk section
     background-color: transparent;
     border: none;
     width: 100%;
@@ -139,8 +139,7 @@
     }
   }
 
-  &.team {
-    // used for team
+  &.team { // used for team photos
     width: 100%;
     max-width: 220px;
     background-color: transparent;
@@ -191,7 +190,8 @@
     }
   }
   // end of &.team
-  &.tech {
+
+  &.tech { // used for tech cards on score page
     background-color: $lightest;
     box-shadow: 0 3px 6px rgba($very-dark, .25);
     padding: 1em;
@@ -257,6 +257,26 @@
           }
         }
       }
+
+      &.ellipses {
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 1.1em;
+        color: rgba($very-dark, .75);
+
+        &.bottom {
+          padding-left: 0;
+          i {
+            padding-left: 0;
+            color: rgba($very-dark, .75);
+            padding-left: 0.1em;
+          }
+          .ellipses {
+            padding-top: 0.5em;
+          }
+        }
+      }
     }
 
     .list-div {
@@ -286,6 +306,7 @@
       }
     }
   }
+
 }
 // .media { // construct repetitive components like score factors
 //
@@ -298,6 +319,58 @@
 /* --------------------------------------------- */
 // single factor block, usually contained in a div.list element
 // currently used on score.html
+
+// used for basic markdown files
+// ex. privacy, terms of service, etc.
+.md-container,
+.list-container {
+
+  margin: 3rem 0;
+  padding: 2rem 0 3rem 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    padding: 1em;
+  }
+
+  h1 {
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    border-bottom: 1px solid rgba($dark-purple, .5);
+    margin-bottom: 1em;
+  }
+
+  a.icon {
+    padding: .5em;
+    font-size: 1.5em;
+    &.orange {
+      // text-shadow: 0px 1px 1px rgba($dark-purple, .5);
+    }
+  }
+
+}
+
+.single-resource,
+.single-career {
+
+  margin: 3rem 0;
+  padding: 3rem 0 3rem 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+    padding: .5em 0 .5em 0;
+
+  }
+}
+
+.single-resource {
+
+  h1 {
+    margin-top: 1em;
+    margin-bottom: .5em;
+  }
+}
 
 .factor {
   p {
