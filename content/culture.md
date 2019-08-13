@@ -460,7 +460,7 @@ This document was produced over several months of open discussion and conversati
 * Rackspace Cultural Development
 * Solitude and Leadership by William Deresiewicz
 * The Human Condition by Hannah Arendt
-* The No Asshle Rule by Robert Sutton
+* The No Asshole Rule by Robert Sutton
 * The Protestant Ethic and the Spirit of Capitalism by Max Weber
 * The Seven Spiritual Laws of Success by Deepak Chopra
 * The Tao of Charlie Munger by David Clark
