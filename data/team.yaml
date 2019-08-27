@@ -34,11 +34,11 @@ founders:
   lip:    https://www.linkedin.com/in/haliekoehler/
   img:    /images/team/halie.png
   jot:    "Halie leads UX Development at CyberFortress."
-- nam:  Perry Robinson
-  tit:  Advisor, Insurance Strategy
-  lip:  https://www.linkedin.com/in/perry-robinson-65782632/
-  img:  /images/team/perry-robinson.jpg
-  jot:  "Perry advises CyberFortress on insurance strategy and operations. Prior to joining CyberFortress, Perry served as the Chief Regulatory and Compliance Officer at Medable, a healthcare startup in Palo Alto. Perry brings deep expertise in the insurance area, having worked as a Senior Vice President focused on cyber risk and technology at JLT Specialty, one of the largest and oldest specialty insurance brokers in the world. Perry spent nearly ten years at Rackspace serving in a variety of roles, ending as a General Manager for Managed Security. Perry graduated with highest honors from the University of Texas at Austin with a degree in anthropology. He has a JD from Baylor University."
+- nam:  Mark Sanders
+  tit:  Full Stack Developer
+  lip:  https://www.linkedin.com/in/mark-sanders-606829145/
+  img:  /images/team/mark.png
+  jot:  ""
 bod:
 - nam:    Bret Piatt
   tit:    Chairman
@@ -56,3 +56,8 @@ bod:
   tit:    Director
   img:    /images/team/martin-rico.jpg
   jot:    "Martin Rico is the Founder and a Director on the Board of Inspired eLearning, a web-based training company on the INC 5000 list of the fastest growing private companies in America. Inspired eLearning delivers corporate training globally in over 25 languages and is in the Leader Quadrant of Gartner’s Magic Quadrant for IT security training. Martin is also the President of Monte Tulum Real Estate with both commercial and residential real estate investments and is a Director on the Board for Carpe Diem Schools, a local public charter school focused on using eLearning to enhance K-12 education. Prior to founding Inspired eLearning, Martin served as COO of TechNow, a technology and IT security company that delivers instructor-led training and consulting services. Martin received Bachelor of Applied Science from University of Texas at Austin."
+- nam:  Perry Robinson
+  tit:  Advisor, Insurance Strategy
+  lip:  https://www.linkedin.com/in/perry-robinson-65782632/
+  img:  /images/team/perry-robinson.jpg
+  jot:  "Perry advises CyberFortress on insurance strategy and operations. Prior to joining CyberFortress, Perry served as the Chief Regulatory and Compliance Officer at Medable, a healthcare startup in Palo Alto. Perry brings deep expertise in the insurance area, having worked as a Senior Vice President focused on cyber risk and technology at JLT Specialty, one of the largest and oldest specialty insurance brokers in the world. Perry spent nearly ten years at Rackspace serving in a variety of roles, ending as a General Manager for Managed Security. Perry graduated with highest honors from the University of Texas at Austin with a degree in anthropology. He has a JD from Baylor University."
