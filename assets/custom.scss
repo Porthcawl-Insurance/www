@@ -144,6 +144,7 @@ html {
 /* Body */
 
 body {
+
   position: relative;
   min-height: 100vh !important;
   padding-bottom: 70px;
@@ -551,6 +552,7 @@ input {
 }
 
 .md-container {
+  padding-top: 2em;
 
   h1, h2, h3, h4, h5, h6 {
     color: $dark-gray !important;
@@ -606,6 +608,9 @@ input {
 }
 
 .list-container {
+
+  padding-top: 2em;
+
   h1 {
     color: $dark-gray !important;
     padding-bottom: 1em;
@@ -1521,6 +1526,7 @@ input {
 }
 
 section.single-career {
+  padding-top: 2em;
   padding-bottom: 4em;
   h1, h2, h3, p {
     color: $dark-gray !important;
@@ -1540,6 +1546,7 @@ section.single-career {
 }
 
 section.single-resource {
+  padding-top: 2em;
   h1 {
     color: $dark-gray !important;
     text-align: left;
@@ -2076,6 +2083,8 @@ table.table {
 
 #jumbotron-loading {
   background-color: transparent !important;
+  min-height: 80vh;
+  padding: 5rem 2rem;
 }
 
 #jumbotron-error {
@@ -2440,9 +2449,8 @@ table.table {
 }
 
 #about-hero {
-
   .container {
-    padding: 0 .2em 0 .2em;
+    padding: 3em .2em 0 .2em;
   }
 
   p.larger {
