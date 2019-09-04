@@ -144,19 +144,16 @@ html {
 /* Body */
 
 body {
-
   position: relative;
   min-height: 100vh !important;
   padding-bottom: 70px;
   padding-top: 50px; // accounting for navbar-height
   overflow-x: hidden;
-
   @include linear-gradient($light-gray, $lighter-gray);
 }
 
 h1, h2, h3 {
   color: $dark-gray !important;
-
   font-weight: 300 !important;
   text-align: center;
 }
@@ -1624,12 +1621,14 @@ table.table {
   }
 
   @include lg {
-    background-image: url('/images/revenue-background.svg');
+    background-image: url('/images/split-background.svg');
+    // background-image: url('/images/tablet-background.svg');
+
     padding-left: 2em;
   }
 
   h1, h2, h3 {
-    color: $lightest !important;
+    color: #ffffff !important;
   }
 
   h1 {
@@ -1652,8 +1651,6 @@ table.table {
 
     @include lg {
       text-align: left;
-
-      // padding-left: 4rem;
     }
   }
 
@@ -1700,8 +1697,11 @@ table.table {
       text-align: left;
       // padding-left: 4rem;
     }
+  }
 
-
+  #img-col {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   img {
@@ -1720,14 +1720,17 @@ table.table {
   }
 
   .downtime-form {
-    margin-top: 1.5em;
+    // margin-top: 1em;
     padding: .75em;
     padding-left: 0;
     margin-left: 0;
+    // min-width: 400px;
+
 
     @include sm {
       margin-top: 6em;
       padding: 1em;
+
     }
 
     @include md {
@@ -1737,7 +1740,7 @@ table.table {
     }
 
     @include lg {
-      // padding-left: 4rem;
+      min-width: 400px;
     }
 
     label[for='user-email'] {
@@ -1755,12 +1758,11 @@ table.table {
       @include md {
         padding-left: 0;
         font-size: 1.45em !important;
-        // display: inline-block;
       }
 
       @include lg {
         display: inline-block;
-
+        text-align: left;
       }
 
     }
