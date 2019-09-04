@@ -2451,8 +2451,25 @@ table.table {
 }
 
 #about-hero {
+
+  background-image: url('/images/tablet-background.svg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include lg {
+    background-image: url('/images/split-background.svg');
+  }
+
   .container {
     padding: 3em .2em 0 .2em;
+  }
+
+  h1, h2, p {
+    text-align: center !important;
+    @include lg {
+      text-align: left !important;
+    }
   }
 
   p.larger {
