@@ -2,7 +2,7 @@
 title: "Systems Developer"
 titleaddtype: true
 description: "Job listing for the role: Systems Developer"
-location: "San Antonio, TX"
+location: "San Antonio, TX  or Austin, TX"
 slug: ""
 date: 2018-08-08T12:09:32-05:00
 draft: true

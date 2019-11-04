@@ -2,7 +2,7 @@
 title: "Data Scientist"
 titleaddtype: true
 description: "Job listing for the role: Data Scientist"
-location: "San Antonio, TX"
+location: "San Antonio, TX or Austin, TX"
 slug: ""
 date: 2018-08-08T10:49:51-05:00
 draft: true
