@@ -10,7 +10,7 @@ draft: true
 
 # Our Culture Blueprint
 
-CyberFortress was formed to be a new kind of company to tackle a big problem. Insurance is one of the most painful and hated experiences in modern life. We want to change that. But we don’t think we can change the insurance industry without first changing ourselves. So we have thrown out a lot of the startup playbook: No founder dictators. No managers. No vesting handcuffs. No work obsession leading to burnout. No living in a future that doesn’t exist.
+CyberFortress was formed to be a new kind of company to tackle a big problem. Insurance is one of the most painful and hated experiences in modern life. We want to change that. But we don’t think we can change the insurance industry without first changing ourselves. So we have thrown out a lot of the startup playbook: No founder dictators. No managers. No vesting handcuffs. No work obsession leading to burnout. Being present.
 
 #### Contents
 * [What is a culture?](#what-is-a-culture)
@@ -49,7 +49,7 @@ CyberFortress was formed to be a new kind of company to tackle a big problem. In
 ---
 
 #### Our narrative is comprised of three layers
-1. Tech industry has not innovated culturally or organizatioanlly, perpetuating flaws in the corporate form that have resulted in widespread immiseration
+1. Tech industry has not innovated culturally or organizationally, perpetuating flaws in the corporate form that have resulted in widespread immiseration
 2. Small business is the bedrock of the American economy; the internet is its greatest asset but is also its greatest threat
 3. Existing small business insurance is anti-customer and cyber risk is the best entry point to start fixing that
 
@@ -66,8 +66,8 @@ CyberFortress was formed to be a new kind of company to tackle a big problem. In
 #### Tech industry has lifted greed to new heights
 * Greed has become a primary motivation for entering the tech industry
 * Large pools of highly mobile capital have changed management priorities to be focused on short-term financial results at the expense of fundamentals and employees
+    * Founders want to build a company to exit as quickly as possible in order to cash out on a fortune
     * Employees stick around for options to vest
-    * Founders want to build a company to exit as quickly as possible in order to cash out on a      fortune
     * Notions of “disruption” and “changing the world” are forms of moral self-exculpation
     * Any sense of serving the public good, of solving problems that need to be solved, has largely been lost
 
@@ -101,7 +101,7 @@ CyberFortress was formed to be a new kind of company to tackle a big problem. In
 
 #### The internet is not only the greatest opportunity but also the greatest threat for small business today
 * The internet is vital to virtually every small business; the internet is arguably the greatest *potential* for small businesses
-* But cyberspace is the major threat to small businesses, not burglary, a fire, or someone slipping in the bathroom,
+* But downtime is the major threat to small businesses, not burglary, a fire, or someone slipping in the bathroom,
 * Whether it's an accidental leak, a malicious attack, or social engineering, the potential loss from a cyber event is enormous
 * Small businesses can only unlock the potential of digital technology if the threat that it poses can be mitigated; otherwise they will either refuse to adopt new technology or continue to be devastated by cyber events
 
@@ -115,7 +115,7 @@ CyberFortress was formed to be a new kind of company to tackle a big problem. In
 #### The insurance industry is fundamentally anti-customer
 * The business model of the insurance industry is simple: hold on to as much client money for as long as possible to generate as much investment income  as possible
 * This business model is not aligned with the needs of 21st century small businesses
-* A cyber event can cripple a small business, requiring immediate attention and deep technical expertise, not a weeks-long claims process without technical help
+* A cyber event can cripple a small business, requiring immediate attention and deep technical expertise, not a months-long claims process without technical help
 
 #### Existing insurance ecosystem is strangling cyber
 * Business insurance is rife with information overload; the insurance-buying and renewal processes can take weeks and involve dozens of pages of forms filled with legalese
@@ -133,19 +133,19 @@ CyberFortress was formed to be a new kind of company to tackle a big problem. In
 ---
 
 #### Eliminate the pain of commercial insurance for SMB
-Utilize digital technology to build a new insurance carrier from the ground up:
+Utilize digital technology to build a new insurance company from the ground up:
 
 * A new relationship with the insured
   * New application process
   * New claims experience
-  * Ongoing feedback and risk mitigation services for insureds
+  * Ongoing feedback and risk mitigation for insureds
 * Predicated on a new model for cyber risk
 
 #### Pro-customer small business insurance
 * **Easy to understand:** What is covered and what isn't written in clear language
 * **Easy to buy:** Get started with a minimum of information and a clear path on what else is needed
-* **Affordable:** Price is always an issue. small businesses have limited IT budgets for protection before a breach. They will likely have little budget for post breach protection
-* **Easy to file claim:** If you've been breached and need to file a claim, you've already got a lot going on. The last thing you need is a difficult claims process
+* **Affordable:** Price is always an issue. Small businesses have limited budgets for protection before and after a breach. They will likely have little budget for post cyber event protection
+* **Easy to file claim:** If you've had a downtime event and need to file a claim, you've already got a lot going on. The last thing you need is a difficult claims process
 * **Continuous value provided:** not just set and forget; helpful and proactive
 * **Provides peace of mind:** If we do all of the above and do it well, our customers will have the peace of mind that they are covered
 
@@ -157,7 +157,7 @@ Utilize digital technology to build a new insurance carrier from the ground up:
 ---
 
 #### #1 Be present
-* While we are building the insurance carrier of the future we build it in the present moment; one step at a time
+* While we are building the insurance company of the future we build it in the present moment; one step at a time
 * We don't live for a future that doesn't exist but rather work to have a meaningful present
 * We don't work solely for the exit
 
@@ -226,23 +226,23 @@ Utilize digital technology to build a new insurance carrier from the ground up:
 * Sharing ownership in the company is how we ensure that individuals are oriented towards the long-term and bound together in this common project
 * This ownership must be real and substantive; not just the cherry on top of a compensation package
 * Owners clean up the office, live the culture, and care for the long-term interests of the company
-* We don't exploit interns, part-time workers, or consultants to fill full-time roles
+* We don't exploit interns, part-time workers, or consultants to avoid hiring for full-time roles
 
 #### Democratic people management
 * Every company requires oversight and authority to function, but most companies invest single individuals, managers, with that responsibility and organize their companies around them
 * We see this practice as producing dehumanizing, fragile, and wasteful hierarchies
-* So we don't employe anyone whose sole responsibility is to hire, fire, plan for, supervise, surveil, evaluate, coach, optimize, or correct others
+* So we don't employe anyone whose sole responsibility is to hire, fire, plan for, advocate for, supervise, surveil, evaluate, coach, optimize, or correct others
 * Our mechanism for this oversight and authority is not the judgment of individual managers but a temporary democratic, deliberative body convened for a single purpose and then dissolved
 * An temporary, democratic body is empowering and antifragile
 
 #### Equality in the day-to-day
 * Everyone sits on the same model of chair at the same model of desk
-* Everyone has equal access to resources, tools, training, or benefits
+* Everyone has equal access to resources, tools, and training. Everyone has benefits.
 * We don't use resources, tools, training, or benefits to create a caste system; either everybody flies first class or nobody flies first class
 
-#### Standardized Compensation Buckets
+#### Standardized Salary Buckets
 * Most companies devote an enormous amount of resources to determining who should get paid what
-* At CyberFortress, salaries are not tied to a specific role or type of work; we have standardized compensation buckets made up of salary and immediately vested equity
+* At CyberFortress, salaries are not tied to a specific role or type of work; we have standardized salary buckets
 * Ratio of the salary of the highest paid person to the lowest paid person is fixed at 6:1
 * We don't have a standardized raise schedule - great work is rewarded by leveling up to a higher salary which is determined by a panel
 
@@ -255,7 +255,7 @@ Utilize digital technology to build a new insurance carrier from the ground up:
 * Everyone we hire has to earn it on their own merit
 * The two previous points are not contradictory because we believe that talent is evenly distributed across races, ethnicities, genders, sexual orientations, and socioeconomic classes
 * We also recognize that diversity is not only a racial, ethnic, gender, or sexual identity but extends beyond that to encompass the entirety of one's life experience, patterns of thought, interests, and ways of engaging with the world and other people
-* We recognize, however, that certain groups have been marginazlied throughout history and that structural forces restrict these same groups in the present day, producing inequities that we want to rectify through our hiring
+* We recognize, however, that certain groups have been marginalized throughout history and that structural forces restrict these same groups in the present day, producing inequities that we want to rectify through our hiring
 * We are also aware of the fact that our organization as it currently stands has failed to achieve these goals and we recognize that the seemingly "passive" replication of existing inequities is itself a form of structural violence alongside active prejudice and discrimination
 * We hope to achieve our goal of a diverse workplace by casting as wide a net as possible in our hiring and make sure that people of all backgrounds know about, and feel welcome at, CyberFortress
 * We are open to any and all feedback, criticism, and suggestions about how we can do this better
@@ -290,10 +290,10 @@ Utilize digital technology to build a new insurance carrier from the ground up:
 
 #### Adequate performance gets a generous severance package
 * Adequate performance is not defined solely by metrics or a formula - what Justice Potter Stewart said about pornography applies to adequate performance: "I shall not today attempt further to define the kinds of material I understand to be embraced within that shorthand description ['hard-core pornography'], and perhaps I could never succeed in intelligibly doing so. But I know it when I see it."
-* The company, not the individual, should feel pain for a mistake in the hiring process so every employee will be granted a minimum of 4 months severance
+* The company, not the individual, should feel pain for a mistake in the hiring process so every employee will be granted a minimum of 1 month severance
 
 #### Hire only in-demand people
-* If it is not believable that a person would be hired within the same market to a similar or better role with similar or bettery pay and status, we do not consider them for hire
+* If it is not believable that a person would be hired within the same market to a similar or better role with similar or better pay and status, we do not consider them for hire
 * Otherwise their man focus will inevitably become preserving their salary at all costs
 * As a valued team member, there is no greater joy than knowing each of your coworkers is working with you purely by choice
 
@@ -309,7 +309,7 @@ Utilize digital technology to build a new insurance carrier from the ground up:
 ### Part 3 - Quality of life
 
 #### Flexible working
-* We value effectiveness over hard owrk
+* We value effectiveness over hard work
 * We do not work 9-5, or have a set number of hours or days in a work week, and we never come to work to be seen working
 * Some of us get in early; some of us work late; some thrive in the office; others thrive in solitude; what matters is producing great work in a way consistent with our values
 * Being authentically curious involves things that may not look like 'work', such as reading or taking a walk to discuss a subject, but those moments and activities are essential to our company
@@ -342,7 +342,7 @@ Utilize digital technology to build a new insurance carrier from the ground up:
 #### Wellness
 * Health is not just about our physical bodies; we care as much about our minds and souls as we do about our bodies
 * With this in mind, we are happy to cover part, or all, of the costs for a wide range of wellness, therapeutic, and spiritual programs
-* This includes but is not limited to: religous community memberships, meditation or therapeutic courses and retreats, and a certain number of sessions with a therapist, psychiatrist, or psychoanalyst
+* This includes but is not limited to: religious community memberships, meditation or therapeutic courses and retreats, and a certain number of sessions with a therapist, psychiatrist, or psychoanalyst
 * This is not intended to be used for career development, skills training, or vacation
 
 #### Leave of absence
@@ -439,7 +439,7 @@ Utilize digital technology to build a new insurance carrier from the ground up:
 ## Sources
 ---
 
-This document was produced over several months of open discussion and conversation by every member of the CyberFortress team. We drew deeply upon our own professional experiences as well as from a number of books, talks, papers, and culture documents from a wide variety of sources. We have listed these below and are deeply greatful towards all of the companies, speakers, and authors for their thoughtfulness and wisdom.
+This document was produced over several months of open discussion and conversation by every member of the CyberFortress team. We drew deeply upon our own professional experiences as well as from a number of books, talks, papers, and culture documents from a wide variety of sources. We have listed these below and are deeply grateful towards all of the companies, speakers, and authors for their thoughtfulness and wisdom.
 
 * Amazon's Leadership Principles
 * Bullshit Jobs and The Utopia of Rules by David Graeber
