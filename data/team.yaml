@@ -34,11 +34,11 @@ founders:
   lip:    https://www.linkedin.com/in/haliekoehler/
   img:    /images/team/halie.png
   jot:    "Halie leads UX Development at CyberFortress."
-- nam:    Mark Sanders
-  tit:    Full Stack Developer
-  lip:    https://www.linkedin.com/in/mark-sanders-606829145/
-  img:    /images/team/mark.png
-  jot:    ""
+# - nam:    Mark Sanders
+#   tit:    Full Stack Developer
+#   lip:    https://www.linkedin.com/in/mark-sanders-606829145/
+#   img:    /images/team/mark.png
+#   jot:    ""
 - nam:    Kathryn Salts
   tit:    Data Scientist
   lip:    https://www.linkedin.com/in/kathryn-salts/
