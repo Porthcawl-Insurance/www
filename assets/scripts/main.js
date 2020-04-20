@@ -1,23 +1,29 @@
-// Form validation - with Bootstrap 4//
-(function () {
-	'use strict';
+// Bulma - Navbar responsive toggle
+document.addEventListener('DOMContentLoaded', () => {
 
-	window.addEventListener ('load', function () {
-		// Fetch all the forms we want to apply custom Bootstrap validation styles to
-		var forms = document.getElementsByClassName ('needs-validation');
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-		// Loop over them and prevent submission
-		var validation = Array.prototype.filter.call (forms, function (form) {
-			form.addEventListener ('submit', function (e) {
-				if (form.checkValidity () === false) {
-					e.preventDefault ();
-					e.stopPropagation ();
-				}
-				form.classList.add ('was-validated');
-			}, false);
-		});
-	}, false);
-})();
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
 
 // Clear the email input placeholder text when focused
 (function () {
@@ -34,33 +40,14 @@
 		});
 	}
 })();
-
-/*
-// Team Photos
-$(function() {
-  $('.figure-img').click(function() {
-    // Go to LinkedIn Page on click
-    var link = $(this).siblings('.figure-caption').find('a').attr('href');
-    window.location.href = link;
-  });
-
-  $('.figure-img').hover(function() {
-    var link = $(this).siblings('.figure-caption').find('a');
-    $(link).css('fontWeight', 'bold');
-  }, function() {
-    var link = $(this).siblings('.figure-caption').find('a');
-    $(link).css('fontWeight', '400');
-  });
-})();
-*/
-
-// Footer height
-(function () {
-	var footerHeight = $('footer').height ();
-	$('body').css ('paddingBottom', footerHeight);
-
-  $(window).resize (function () {
-    var footerHeight = $('footer').height ();
-    $('body').css('paddingBottom', footerHeight);
-  });
-})();
+//
+// // Footer height
+// (function () {
+// 	var footerHeight = $('footer').height ();
+// 	$('body').css ('paddingBottom', footerHeight);
+//
+//   $(window).resize (function () {
+//     var footerHeight = $('footer').height ();
+//     $('body').css('paddingBottom', footerHeight);
+//   });
+// })();

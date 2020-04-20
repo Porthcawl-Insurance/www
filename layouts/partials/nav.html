@@ -1,37 +1,40 @@
-<nav class='navbar sticky-top navbar-expand-md navbar-dark'>
-  <div class='container'>
-    <a class='navbar-brand' href='/'>
-      <img src='/images/logo-cf.svg' height='30' class='' alt='CyberFortress'>
-    </a>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="container">
 
-    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarContent' aria-controls='navbarContent' aria-expanded='false' aria-label='Toggle navigation'>
-      <span class='navbar-toggler-icon'></span>
-    </button>
+  <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/darker_logo.png" height="30">
+      </a>
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div><!-- end of navbar-brand -->
 
-    <div id='navbarContent' class='collapse navbar-collapse text-right mt-4 mt-sm-0' id='nav1'>
-      <ul class='navbar-nav ml-auto'>
-        <li class='nav-item'>
-          <a class='nav-link' href='/'>Home</a>
-        </li>
-        <li class='nav-item'>
-          <a class='nav-link' href='/score/'>Risk Assessment</a>
-        </li>
-        <li class='nav-item dropdown'>
-          <a id='navbarDropdown' class='nav-link dropdown-toggle' href='#' role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Who We Are
-          </a>
-          <div class="dropdown-menu text-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about/">About</a>
-            <a class="dropdown-item" href='/about/#team'>Team</a>
-            <a class="dropdown-item" href="/about/culture/">Culture</a>
-          </div>
-        </li>
-        <li class='nav-item'>
-          <a class='nav-link' href='/careers/'>Join Us</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+    <div id="navbar" class="navbar-menu">
+
+      <div class="navbar-start">
+
+      </div><!-- end of navbar-start -->
+
+      <div class="navbar-end">
+        <a class="navbar-item">
+          Home
+        </a>
+        <a class="navbar-item">
+          Policy
+        </a>
+        <a class="navbar-item">
+          About
+        </a>
+        <a class="navbar-item">
+          Log In
+        </a>
+        <a class="navbar-item">
+          Get A Quote
+        </a>
+      </div><!-- end of navbar-end -->
+    </div><!-- end of navbar-menu -->
+  </div><!-- end of .container -->
 </nav>
-
-<div id='top'></div>

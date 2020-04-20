@@ -23,11 +23,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Pinterest -->
   <meta name="p:domain_verify" content="b185474a4c490361d64d6b5df03786ed"/>
 
-
   <title>{{ .Title }}{{ if not .IsHome }} | CyberFortress{{ end }}{{ if .Params.Titleaddtype }} {{ .Type | title }}{{ end }}</title>
 
+  <!-- Google Fonts -->
   <link type='text/css' rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto:100,300,400'>
+  <!-- FontAwesome -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-vlOMx0hKjUCl4WzuhIhSNZSm2yQCaf0mOU1hEDK/iztH3gU4v5NMmJln9273A6Jz" crossorigin="anonymous">
+  <!-- Bulma -->
 
 	{{ $options := (dict "targetPath" "static/css/style.css" "outputStyle" "compressed" "enableSourceMap" false) }}
 	{{ $style := resources.Get "custom.scss" | resources.ToCSS $options }}
@@ -46,7 +48,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<!-- JQuery -->
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 
   {{ block "nav" . }}
   {{ partial "nav.html" . }}
@@ -59,9 +60,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {{ partial "footer.html" . }}
   {{ end }}
 
-  <!-- Popper.js, then Bootstrap JS-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 	{{ $script := resources.Get "/scripts/main.js" | resources.Minify }}
 	<script src='{{ $script.RelPermalink }}'></script>
