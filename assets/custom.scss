@@ -1,8 +1,7 @@
-@import "../node_modules/bulma/bulma.sass";
-
 $font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-/* Grays */
+// CyberFortress Colors
+
 $very-dark: #031927;
 $dark: #2D3047;
 $dark-gray: #8693AB;
@@ -17,9 +16,6 @@ $purple: #63308F;
 $dark-purple: #38215C;
 // $bright-purple: #632999;
 
-/* Link Colors */
-$link: $teal;
-
 /* Risk Level Colors */
 $r1: #cc444b; // red - worst
 $r2: #d8774f;
@@ -29,8 +25,14 @@ $r5: #fff275;
 $r6: #d3e468;
 $r7: #7ac74f; // green - best
 
-$input-box-shadow: none;
-$input-focus-box-shadow: none;
+// Update Bulma's global variables
+$family-sans-serif: "Roboto", sans-serif;
+$grey-dark: $dark-gray;
+$grey-light: $light-gray;
+$primary: $orange;
+$link: $teal;
+
+@import "../node_modules/bulma/bulma.sass";
 
 /*******************************************************/
 /******* Breakpoints / Media Query Mixin ***************/
@@ -130,4 +132,26 @@ $screen-xl-min: 1200px;
   }
 
   @return 90deg - $value;
+}
+
+
+
+h1,h1.title {
+  font-size:$size-1;
+}
+
+h2,h2.title {
+  font-size:$size-2;
+}
+
+h3,h3.title  {
+  font-size:$size-3;
+}
+
+h4,h4.title  {
+  font-size:$size-4;
+}
+
+h5,h5.title {
+  font-size:$size-5;
 }
