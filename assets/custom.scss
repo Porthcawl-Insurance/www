@@ -32,6 +32,9 @@ $grey-light: $light-gray;
 $primary: $orange;
 $link: $teal;
 
+$footer-background-color: $dark;
+$footer-color: $lightest;
+
 @import "../node_modules/bulma/bulma.sass";
 
 /*******************************************************/
@@ -154,4 +157,41 @@ h4,h4.title  {
 
 h5,h5.title {
   font-size:$size-5;
+}
+
+h6,h6.title {
+  font-size:$size-6;
+}
+
+p {
+  font-size:$size-5;
+  color: rgba($dark, .8);
+  margin-bottom: 10px;
+  strong  {
+    color: rgba($dark, .8);
+  }
+}
+
+ul {
+  &.no-style {
+    margin-left: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+footer.footer {
+  h6.is-uppercase {
+    color: $orange;
+  }
+  a {
+    color: $lightest;
+    display: inline-block;
+    padding-right: 1em;
+    &:hover{
+      color: $teal;
+    }
+  }
 }
