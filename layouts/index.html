@@ -4,24 +4,35 @@
 
 {{ define "main" }}
 
+<!-- Main Page Hero -->
 <section class="hero is-large">
   <div class="hero-body">
       <div class="container">
-        <h1 class="title">
-          Insurance for your virtual storefront.
-        </h1>
-        <h2 class="subtitle">
-          Get your online revenue covered in minutes.
-          Claims paid within 24 hours of an unexpected
-          downtime event.
-        </h2>
-        <a class="button is-primary">
-          Get A Quote
-        </a>
+        <div class="columns has-text-centered-mobile">
+          <div class="column">
+            <h1 class="title is-size-3-mobile">
+              Insurance for your virtual storefront.
+            </h1>
+            <h2 class="subtitle">
+              Get your online revenue covered in minutes.
+              Claims paid within 24 hours of an unexpected
+              downtime event.
+            </h2>
+            <a class="button is-primary">
+              Get A Quote
+            </a>
+          </div>
+          <div class="column">
+            <figure class="image">
+              <img src="" />
+            </figure>
+          </div>
+        </div>
       </div>
     </div>
 </section>
 
+<!-- Backed / Supported by Banner -->
 <section>
   <div class="container">
     <div class="columns">
@@ -47,8 +58,9 @@
   </div>
 </section>
 
+<!-- Why -->
 <section>
-  <div class="container">
+  <div class="container has-text-centered-mobile">
     <h2 class="has-text-centered title">Your website is your storefront. Protect it.</h2>
     <div class="columns">
       <div class="column">
@@ -84,6 +96,7 @@
   </div>
 </section>
 
+<!-- How Our Insurnace Works -->
 <section>
   <div class="container has-text-centered">
     <h2 class="title">How our insurance works</h2>
@@ -92,7 +105,7 @@
       your website for downtime and alert you of such an event. Then we payout your claim
       within 24 hours!
     </h3>
-  <div class="columns">
+  <div class="columns is-mobile">
     <div class="column">
       <figure class="image is-128x128">
         <img src="https://bulma.io/images/placeholders/128x128.png">
@@ -120,8 +133,10 @@
   </div>
 </div>
 </section>
+
+<!-- Game Changing Approach -->
 <section>
-<div class="container">
+  <div class="container has-text-centered-mobile">
     <h2 class="title  has-text-centered">Our game-changing approach</h2>
     <div class="columns">
       <div class="column">
@@ -194,8 +209,9 @@
 </div><!-- end of .container -->
 </section>
 
+<!-- Need Insurance Banner -->
 <section>
-  <div class="container">
+  <div class="container has-text-centered-mobile">
     <div class="columns">
       <div class="column">
         <h4>Not ready for insurance?</h4>
@@ -241,44 +257,47 @@
       </div><!-- end of .container -->
     </section>
 
-<section>
+<!-- Bottom Banner -->
+<section id="main-bottom-banner">
   <div class="container">
-      <div class="level">
-        <div class="level-left">
-            <div class="level-item">
-              <!-- Texas Icon Here -->
-
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="columns is-mobile">
+              <div class="column">
+                <feature class="image is-64x64">
+                  <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png">
+                </feature>
               </div>
-              <div class="level-item">
-                <div>
-                  <h5 class="title">Homegrown in Texas</h5>
-                  <p>
-                    Founded and operated in
-                    San Antonio, Texas since 2018.
-                    </p>
-                  </div>
-
-                </div>
+              <div class="column is-three-quarters">
+                <h5 class="title">Homegrown in Texas</h5>
+                <p class="desc">
+                  Founded and operated in
+                  San Antonio, Texas since 2018.
+                </p>
+              </div>
           </div>
-          <div class="level-right">
-            <div class="level-item">
-              <!-- A-rated Icon Here -->
-              </div>
-              <div class="level-item">
-                <div>
+        </div><!-- end of .column -->
+          <div class="column">
+            <div class="columns is-mobile">
+                <div class="column">
+                  <feature class="image is-64x64">
+                    <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png">
+                  </feature>
+                </div>
+                <div class="column is-three-quarters">
                   <h5 class="title">A-rated and backed by Markel</h5>
-                  <p>
-                    CyberFortress is rated A-Exceptional, licensed
-                    in Texas, and reinsured by one of the most trusted
-                    names in the world.
-                    </p>
-                  </div>
-
+                  <p class="desc">
+                      CyberFortress is rated A-Exceptional, licensed
+                      in Texas, and reinsured by one of the most trusted
+                      names in the world.
+                  </p>
                 </div>
             </div>
+
+          </div><!-- end of .column -->
         </div>
     </div>
-  </section>
+</section>
 
 {{ end }}
 

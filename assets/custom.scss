@@ -29,9 +29,18 @@ $r7: #7ac74f; // green - best
 $family-sans-serif: "Roboto", sans-serif;
 $grey-dark: $dark-gray;
 $grey-light: $light-gray;
+
 $primary: $orange;
 $link: $teal;
+$info: $purple;
+$success: $r7;
+$warning: $r5;
+$danger: $r1;
+$dark: $dark;
+$text: $dark;
 
+
+// Bulma Footer
 $footer-background-color: $dark;
 $footer-color: $lightest;
 
@@ -137,39 +146,89 @@ $screen-xl-min: 1200px;
   @return 90deg - $value;
 }
 
+html, body {
+  position: relative;
+  min-height: 100vh !important;
+  overflow-x: hidden;
+}
 
+h1, h2, h3 {
+  margin-bottom: 20px;
+  &.title {
+    margin-bottom: 20px;
+  }
+}
+
+h4, h5, h6 {
+  margin-bottom: 10px;
+  &.title {
+    margin-bottom: 10px;
+  }
+}
 
 h1,h1.title {
-  font-size:$size-1;
+  font-size: $size-2;
+  @include sm {
+    font-size:$size-1;
+  }
 }
 
 h2,h2.title {
-  font-size:$size-2;
+  font-size: $size-3;
+  @include sm {
+    font-size:$size-2;
+  }
 }
 
 h3,h3.title  {
-  font-size:$size-3;
+  font-size: $size-4;
+  @include sm {
+    font-size:$size-3;
+  }
 }
 
 h4,h4.title  {
-  font-size:$size-4;
+  font-size: $size-5;
+  @include sm {
+    font-size:$size-4;
+  }
 }
 
 h5,h5.title {
-  font-size:$size-5;
+  font-size: $size-6;
+  @include sm {
+    font-size:$size-5;
+  }
 }
 
 h6,h6.title {
-  font-size:$size-6;
+  font-size: $size-7;
+  @include sm {
+    font-size:$size-6;
+  }
 }
 
 p {
   font-size:$size-5;
   color: rgba($dark, .8);
   margin-bottom: 10px;
+
+  @include sm {
+    font-size: $size-5;
+  }
+
   strong  {
     color: rgba($dark, .8);
   }
+
+  &.desc {
+    font-size: $size-7;
+
+    @include sm {
+      font-size: $size-6;
+    }
+  }
+
 }
 
 ul {
@@ -193,5 +252,15 @@ footer.footer {
     &:hover{
       color: $teal;
     }
+  }
+}
+
+.container {
+  padding: 1em;
+}
+
+#main-bottom-banner {
+  h5.title {
+    margin-bottom: 10px;
   }
 }
