@@ -38,7 +38,7 @@ $warning: $r5;
 $danger: $r1;
 $dark: $dark;
 $text: $dark;
-
+$light: $lightest;
 
 // Bulma Footer
 $footer-background-color: $dark;
@@ -288,6 +288,21 @@ section {
       .title {
         color: white;
         text-shadow: 1px 2px 3px rgba($dark, .25);
+      }
+    }
+    &.support {
+      padding: 1em 0;
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      img {
+        filter: grayscale(100%);
+      }
+
+      .level {
+
       }
     }
   }
