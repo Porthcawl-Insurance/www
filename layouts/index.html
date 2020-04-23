@@ -5,9 +5,9 @@
 {{ define "main" }}
 
 <!-- Main Page Hero -->
-<section class="hero is-large">
+<section class="hero main is-large">
   <div class="hero-body">
-      <div class="container is-paddingless">
+      <div class="container">
         <div class="columns has-text-centered-mobile">
           <div class="column">
             <h1 class="title is-size-3-mobile">
@@ -129,17 +129,17 @@
   <div class="hero-body">
     <div class="container add-padding has-text-centered">
       <h2 class="title">How our insurance works</h2>
-      <h3 class="subtitle add-padding-bottom">We know how hard buying insurance is and how painful making a claim can be.
+      <h3 class="subtitle">We know how hard buying insurance is and how painful making a claim can be.
         That’s why we built a simple policy that you can sign up for in minutes. We monitor
         your website for downtime and alert you of such an event. Then we payout your claim
         within 24 hours!
       </h3>
-    <div id="how-img-row" class="columns add-padding-top is-mobile">
+    <div id="how-img-row" class="columns add-padding-top">
       <div class="column">
         <figure class="image center is-128x128">
           <img src="https://bulma.io/images/placeholders/128x128.png">
         </figure>
-        <p>
+        <p class="is-size-6-mobile">
           Apply with just your online revenue and email address
         </p>
       </div>
@@ -147,7 +147,7 @@
         <figure class="image center is-128x128">
           <img src="https://bulma.io/images/placeholders/128x128.png">
         </figure>
-        <p>
+        <p class="is-size-6-mobile">
           A downtime event triggers the coverage on your policy
         </p>
       </div>
@@ -155,7 +155,7 @@
         <figure class="image center is-128x128">
           <img src="https://bulma.io/images/placeholders/128x128.png">
         </figure>
-        <p>
+        <p class="is-size-6-mobile">
           We pay your claim within 24 hours via ACH payment
         </p>
       </div>
@@ -169,7 +169,15 @@
 <section>
   <div class="container add-padding has-text-centered-mobile">
     <h2 class="title has-text-centered add-padding-top add-padding-bottom">Our game-changing approach</h2>
+
+    <!-- We Pay Out Fast -->
     <div class="columns add-padding-bottom">
+      <!-- Shown on mobile only -->
+      <div class="column is-hidden-tablet">
+        <figure class="image is-3by2">
+          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+        </figure>
+      </div>
       <div class="column">
         <h3 class="title">We payout fast</h3>
         <p>
@@ -184,36 +192,45 @@
             problems immediately.
             </p>
         </div>
-        <div class="column">
+        <!-- Hidden on mobile -->
+        <div class="column is-hidden-mobile">
           <figure class="image is-3by2">
             <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
           </figure>
         </div>
       </div><!-- end of .columns -->
+
+      <!-- We Make It Easy To Understand -->
       <div class="columns add-padding-bottom">
         <div class="column">
           <figure class="image is-3by2">
             <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
           </figure>
-      </div>
+        </div>
         <div class="column">
-
           <h3 class="title">We made it easy to understand</h3>
           <p>
-            In e-commerce, you are pulled in a million different directions
-            at one time. Product. Shipping. Marketing. Customer Retention.
-            It’s a lot.
-            </p>
-            <p>
-              There’s no time to investigate and decipher insurance policies,
-              but you know you have revenue that your business relies on.
-              Our policy is designed to provide your business the stability it
-              needs when your website is down.
-              </p>
-          </div>
+          In e-commerce, you are pulled in a million different directions
+          at one time. Product. Shipping. Marketing. Customer Retention.
+          It’s a lot.
+          </p>
+          <p>
+          There’s no time to investigate and decipher insurance policies,
+          but you know you have revenue that your business relies on.
+          Our policy is designed to provide your business the stability it
+          needs when your website is down.
+          </p>
+        </div>
+      </div><!-- end of .columns -->
 
-  </div><!-- end of .columns -->
+  <!-- We Have Your Back -->
   <div class="columns add-padding-bottom">
+    <!-- Shown on mobile only -->
+    <div class="column is-hidden-tablet">
+      <figure class="image is-3by2">
+        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+      </figure>
+    </div>
     <div class="column">
       <h3 class="title">We are on your side</h3>
       <p>
@@ -228,7 +245,8 @@
           to keep your website up and running.
           </p>
       </div>
-      <div class="column">
+      <!-- Hidden on mobile -->
+      <div class="column is-hidden-mobile">
         <figure class="image is-3by2">
           <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
         </figure>

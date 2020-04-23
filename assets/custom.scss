@@ -273,6 +273,13 @@ footer.footer {
 }
 
 section {
+
+  &.hero {
+    &.main {
+      // padding-top: 2em;
+    }
+  }
+
   &.banner {
     &.is-gray  {
       background-color: rgba($gray, .8);
