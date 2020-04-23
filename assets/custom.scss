@@ -250,13 +250,17 @@ ul {
   }
 }
 
-feature.image {
+.image {
   &.center {
     margin: 0 auto;
   }
 }
 
-nav {
+img.placeholder {
+  opacity: 50%;
+}
+
+nav.navbar {
 
   .navbar-start, .navbar-end {
     .navbar-item {
@@ -383,5 +387,27 @@ section {
 #main-bottom-banner {
   h5.title {
     margin-bottom: 10px;
+  }
+}
+
+#team-div {
+  max-width: 1200px;
+  padding: 2em 1em;
+  margin: 0 auto;
+  .image {
+    max-height: 200px;
+  }
+
+  .column {
+    div:first-child {
+      margin: 0 auto;
+    }
+  }
+
+  img {
+    max-height: 200px;
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 1em;
   }
 }
