@@ -250,12 +250,7 @@ ul {
   }
 }
 
-img {
-  &.is-logo {
-    max-height: 20px;
-    width: auto;
-  }
-}
+
 
 .image {
   &.center {
@@ -292,7 +287,7 @@ section {
   &.banner {
 
     &.is-gray  {
-      background-color: rgba($gray, .8);
+      background-color: rgba($light-gray, 1);
       p  {
         color: $dark-gray;
       }
@@ -315,18 +310,22 @@ section {
     }
 
     &.support {
-      padding: 1em 0;
-
+      padding: 2em 0;
       p {
-        margin-bottom: 20px;
+        color: rgba($dark, .75);
       }
 
       img {
         filter: grayscale(100%);
+        &.is-logo {
+          max-height: 30px;
+          width: auto;
+        }
       }
 
       .level {
-
+        max-width: 1000px;
+        margin: 0 auto;
       }
     }
   }// end of .banner
