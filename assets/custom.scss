@@ -250,12 +250,29 @@ ul {
   }
 }
 
-
-
-.image {
+feature.image {
   &.center {
     margin: 0 auto;
   }
+}
+
+nav {
+
+  .navbar-start, .navbar-end {
+    .navbar-item {
+      font-size: 1.25em;
+      padding-left: 1em;
+      padding-right: 1em;
+
+      .button {
+        margin: 0 0 0 1em ;
+      }
+    }
+  }
+
+  .navbar-menu.is-active {
+  }
+
 }
 
 footer.footer {
@@ -276,7 +293,7 @@ section {
   /* ******************* Hero (Bulma) */
   &.hero {
     &.main {
-      padding-top: 3em;
+      padding-top: 5em;
       @include md {
         padding-top: 0;
       }
@@ -352,6 +369,10 @@ section {
 .no-padding {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 1px rgba($dark, .25);
 }
 
 .button {
