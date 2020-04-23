@@ -40,6 +40,11 @@ $dark: $dark;
 $text: $dark;
 $light: $lightest;
 
+// Bulma navbar
+$navbar-item-color: $dark-gray;
+$navbar-item-hover-color: $dark;
+$navbar-item-hover-background-color: transparent;
+
 // Bulma Footer
 $footer-background-color: $dark;
 $footer-color: $lightest;
@@ -233,7 +238,7 @@ p {
     color: $orange;
   }
 
-}
+} // end of <p>
 
 ul {
   &.no-style {
@@ -270,23 +275,29 @@ footer.footer {
       color: $teal;
     }
   }
-}
+} // end of <footer>
 
 section {
-
+  /* ******************* Hero (Bulma) */
   &.hero {
     &.main {
-      // padding-top: 2em;
+      padding-top: 3em;
+      @include md {
+        padding-top: 0;
+      }
     }
-  }
+  } // end of .hero
 
+  /* ******************* Banners */
   &.banner {
+
     &.is-gray  {
       background-color: rgba($gray, .8);
       p  {
         color: $dark-gray;
       }
     }
+
     &.is-dark-gray {
       background-color: rgba($dark-gray, .8);
       p {
@@ -297,6 +308,12 @@ section {
         text-shadow: 1px 2px 3px rgba($dark, .25);
       }
     }
+
+    &.is-dark {
+      background-color: rgba($dark, 1);
+
+    }
+
     &.support {
       padding: 1em 0;
 
@@ -312,8 +329,9 @@ section {
 
       }
     }
-  }
-}
+  }// end of .banner
+
+} // end of <section>
 
 .container {
   padding: 1em;
