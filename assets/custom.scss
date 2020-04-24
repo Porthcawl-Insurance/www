@@ -213,6 +213,11 @@ h6,h6.title {
   }
 }
 
+/* mostly used on heading tags */
+.title {
+  padding-bottom: .5em
+}
+
 p {
   font-size:$size-5;
   color: rgba($dark, .8);
@@ -250,11 +255,6 @@ ul {
   }
 }
 
-.image {
-  &.center {
-    margin: 0 auto;
-  }
-}
 
 img.placeholder {
   opacity: 50%;
@@ -264,7 +264,7 @@ nav.navbar {
 
   .navbar-start, .navbar-end {
     .navbar-item {
-      font-size: 1.25em;
+      // font-size: 1.25em;
       padding-left: 1em;
       padding-right: 1em;
 
@@ -327,20 +327,25 @@ section {
 
     &.is-dark {
       background-color: rgba($dark, 1);
-
     }
 
     &.support {
-      padding: 2em 0;
+      padding: 1em 0;
+
       p {
         color: rgba($dark, .75);
+        padding-bottom: 1em;
       }
 
       img {
         filter: grayscale(100%);
         &.is-logo {
-          max-height: 30px;
+          max-height: 20px;
           width: auto;
+          margin: 0 auto;
+          @include sm {
+            max-height: 30px;
+          }
         }
       }
 
@@ -382,6 +387,13 @@ section {
 .button {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+/* mainly class used on <feature> element */
+.image {
+  &.center {
+    margin: 0 auto;
+  }
 }
 
 #main-bottom-banner {
