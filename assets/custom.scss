@@ -293,6 +293,17 @@ footer.footer {
   }
 } // end of <footer>
 
+/* Sticky Footer */
+body.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main.wrapper-content {
+  flex:1;
+}
+
 section {
   /* ******************* Hero (Bulma) */
   &.hero {
@@ -330,7 +341,11 @@ section {
     }
 
     &.support {
-      padding: 1em 0;
+      padding: .5em 0;
+
+      @include sm {
+        padding: 1em 0;
+      }
 
       p {
         color: rgba($dark, .75);
