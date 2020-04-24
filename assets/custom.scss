@@ -371,6 +371,15 @@ section {
     }
   }// end of .banner
 
+  /* ******************* Markdown Files using shortcode */
+  &.md {
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    div.container {
+      padding: 2em 1em;
+    }
+  }
 } // end of <section>
 
 .container {
