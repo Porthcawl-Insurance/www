@@ -255,6 +255,20 @@ ul {
   }
 }
 
+table.table {
+  thead {
+    background-color: $light-gray;
+    th {
+      font-weight: 400;
+    }
+  }
+  tbody {
+    background-color: white;
+    tr {
+      font-weight: 400;
+    }
+  }
+}
 
 img.placeholder {
   opacity: 50%;
@@ -446,4 +460,9 @@ section {
     margin: 0 auto;
     margin-bottom: 1em;
   }
+}
+
+#license-table-div {
+  margin: 0 auto;
+  max-width: 800px;
 }
