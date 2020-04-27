@@ -1,34 +1,26 @@
 {{ define "main" }}
-<section id="resource-single">
+
+<section id="resource-single" class="add-padding-bottom">
 	<div class='container add-padding-top add-padding-bottom'>
-
-	</div>
-</section><!-- end of .resource-single -->
-<section class='single-resource mt-4 mb-4'>
-  <div class='container'>
-
-    <div class='row'>
-
-      <div class='col-md-8'>
-
-        <a class='icon-l' href='/resources/'><i class="fal fa-angle-left"></i> Back to Resources</a>
-        <h1 class='display-4 my-5'>{{ .Params.Title }}</h1>
-
+    <nav class="breadcrumb add-padding-top" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/resources/">Resources</a></li>
+        <li class="is-active"><a href="#" aria-current="page">{{ .Params.Title }}</a></li>
+      </ul>
+    </nav><!-- end of .breadcrumbs -->
+    <div class="has-text-centered add-padding">
+      <h1>{{ .Params.Title }}</h1>
+      <div class="content">
         {{ .Content }}
-
-        <a class='mt-4 btn btn-primary' href='{{ .Params.href }}' target='_blank'>Read More</a>
-
+      </div><!-- end of .content -->
+      <div class="buttons is-centered add-padding-bottom">
+        <a class='button is-primary is-outlined is-medium' href='{{ .Params.href }}' target='_blank'>Read More</a>
       </div>
-      <!-- end of .col -->
-      <div class='col-md-2'>
-        <a class='' href='{{ .Params.href }}' target='_blank'>
-          <img class='my-5 resource-img' src='{{ .Params.img }}' />
-        </a>
-      </div>
-
+      <a class='' href='{{ .Params.href }}' target='_blank'>
+        <img class="image center" src='{{ .Params.img }}' />
+      </a>
     </div>
-    <!--end of .row-->
-  </div>
-</section>
+	</div><!-- end of .container -->
+</section><!-- end of .resource-single -->
 
 {{ end }}
