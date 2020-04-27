@@ -219,9 +219,9 @@ h6,h6.title {
 }
 
 p {
-  font-size:$size-5;
+  font-size:$size-6;
   color: rgba($dark, .8);
-  margin-bottom: 10px;
+  margin-bottom: 1em;
 
   @include sm {
     font-size: $size-5;
@@ -305,6 +305,19 @@ footer.footer {
       color: $teal;
     }
   }
+  .column {
+    padding-left: .25rem;
+    @include sm {
+      padding: .75rem;
+    }
+  }
+  #footer-logo {
+    margin: 0;
+    @include sm {
+      margin-left: 2em;
+      margin-right: 2em;
+    }
+  }
 } // end of <footer>
 
 /* Sticky Footer */
@@ -321,6 +334,15 @@ main.wrapper-content {
 section {
   /* ******************* Hero (Bulma) */
   &.hero {
+
+    .hero-body {
+      padding-left: 0;
+      padding-right: 0;
+      @include sm {
+        padding: 3rem 1.5rem
+      }
+    }
+
     &.main {
       padding-top: 5em;
       @include md {
