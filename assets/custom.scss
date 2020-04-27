@@ -283,7 +283,12 @@ nav.navbar {
       padding-right: 1em;
 
       .button {
-        margin: 0 0 0 1em ;
+        &:first-child {
+          margin-left: 0;
+        }
+        @include md {
+          margin: 0 0 0 1em;
+        }
       }
     }
   }
