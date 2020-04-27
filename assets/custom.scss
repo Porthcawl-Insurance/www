@@ -466,6 +466,7 @@ section {
   max-width: 1200px;
   padding: 2em 1em;
   margin: 0 auto;
+
   .image {
     max-height: 200px;
   }
@@ -474,6 +475,10 @@ section {
     div:first-child {
       margin: 0 auto;
     }
+  }
+
+  .name {
+    margin-bottom: .25em;
   }
 
   img {
