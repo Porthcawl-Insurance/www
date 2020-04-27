@@ -1,25 +1,23 @@
 {{ define "main" }}
-
-<div class='my-5 list-container'>
-	<div>
-		<h1>Careers at CyberFortress</h1>
-	</div>
-
-	<div class='container d-flex flex-column justify-content-center'>
-		<div class='mb-4'>
-			<p class='larger text-center'>
-				We believe that small business insurance should be easy to understand, easy to buy, and easy to file a claim. <br /> Interested in joining? Check out our <a href='/about/culture/' class='purple'>Culture Blueprint</a>.
-			</p>
-		</div>
-		<div class='d-flex flex-column list-div mx-auto'>
+<section>
+	<div class='container has-text-centered-touch'>
+		<h1 class="add-padding-top">Careers at CyberFortress</h1>
+		<p class="subtitle">
+			We believe that small business insurance should be easy to understand, easy to buy, and easy to file a claim.
+		</p>
+		<p>
+			Interested in joining? Check out our
+			<a href='/about/culture/' class='purple'>Culture Blueprint</a>.
+		</p>
+		<div class="add-padding-top">
 			{{ range $i, $e := .Data.Pages }}
-			<!-- <div class=''> -->
-				<a class='link big ' href='{{ .RelPermalink }}'> <i class="far fa-angle-right"></i> {{ .Title }} </a>
+			<p>
+				<a class='' href='{{ .RelPermalink }}'> <i class="far fa-angle-right"></i> {{ .Title }} </a>
 				<!-- {{ truncate 140 .Content }} -->
-			<!-- </div> -->
+			</p>
 			{{ end }}
 		</div>
-	</div>
-</div>
+	</div><!-- end of .container -->
+</section>
 
 {{ end }}
