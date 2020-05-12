@@ -237,6 +237,10 @@ p {
     @include sm {
       font-size: $size-6;
     }
+
+    &.source {
+      opacity: .5;
+    }
   }
 
   &.orange {
@@ -459,6 +463,21 @@ section {
   &.center {
     margin: 0 auto;
   }
+
+  img.how-image {
+    max-height: 250px;
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+}
+
+#main-hero {
+  background-image: url('/images/hero_test.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
 }
 
 #main-bottom-banner {

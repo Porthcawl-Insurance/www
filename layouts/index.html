@@ -5,7 +5,7 @@
 {{ define "main" }}
 
 <!-- Main Page Hero -->
-<section class="hero main is-medium">
+<section id="main-hero" class="hero main is-medium">
   <div class="hero-body">
       <div class="container">
         <div class="columns has-text-centered-touch is-desktop">
@@ -149,8 +149,9 @@
         </p>
       </div>
       <div class="column">
-        <figure class="image center is-128x128">
-          <img src="https://bulma.io/images/placeholders/128x128.png">
+        <figure class="image center">
+          <!-- <img src="https://bulma.io/images/placeholders/128x128.png"> -->
+          <img class="how-image" src="/images/parachutes.png">
         </figure>
         <p class="is-size-5-mobile">
           We pay your claim within 24 hours via ACH payment
@@ -177,17 +178,20 @@
       </div>
       <div class="column">
         <h3 class="title">We payout fast</h3>
-        <p>
+        <p class="is-marginless">
           Have you ever had to file and wait on an insurance claim
           to be paid out?
-          In the US, the average length of time from claim filed to
-          claim paid out for a business insurance claim is <strong>5 months</strong>.
-          </p>
-          <p>
-            CyberFortress commits to paying out your claim within
-            24 hours, getting cash in your hands to start solving
-            problems immediately.
-            </p>
+          A US Property & Casualty business interruption claim takes on average
+          <strong>5 months</strong> for the claim to be paid.
+        </p>
+        <p class="desc source">
+            - <span class="is-italic">Aon,</span> internal estimates for 2014-2019.
+        </p>
+        <p>
+          CyberFortress commits to paying out your claim within
+          24 hours, getting cash in your hands to start solving
+          problems immediately.
+        </p>
         </div>
         <!-- Hidden on mobile -->
         <div class="column is-hidden-touch">
