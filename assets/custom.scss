@@ -473,11 +473,19 @@ section {
 }
 
 #main-hero {
-  background-image: url('/images/hero_test.png');
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
+  // background-image: url('/images/hero_test.png');
+  // background-position: center bottom;
+  // background-repeat: no-repeat;
+  // background-attachment: scroll;
+  // background-size: cover;
+
+  div.hero-body {
+
+    // @include lg {
+    //   padding-top: 1.5rem;
+    //   padding-bottom: 1.5rem;
+    // }
+  }
 }
 
 #main-bottom-banner {
