@@ -479,8 +479,8 @@ section {
   // background-attachment: scroll;
   // background-size: cover;
 
-  div.hero-body {
-
+  .hero-body {
+    padding-bottom: 0;
     // @include lg {
     //   padding-top: 1.5rem;
     //   padding-bottom: 1.5rem;
