@@ -469,22 +469,31 @@ section {
     margin: 0 auto;
   }
 
+  &.half-sized {
+    padding: 1em;
+    img {
+      max-width: 600px;
+      height: auto;
+    }
+  }
+
   img.how-image {
     max-height: 250px;
     width: auto;
     margin: 0 auto;
     margin-bottom: 1em;
   }
+
 }
 
 
 
 #main-hero {
-  // background-image: url('/images/hero_test.png');
-  // background-position: center bottom;
-  // background-repeat: no-repeat;
-  // background-attachment: scroll;
-  // background-size: cover;
+  background-image: url('/images/hero_3.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: auto;
 
   .hero-body {
     padding-bottom: 0;
