@@ -243,6 +243,11 @@ p {
     }
   }
 
+  &.how {
+    padding: .5em 1em;
+    color: $dark;
+  }
+
   &.orange {
     color: $orange;
   }
@@ -472,6 +477,8 @@ section {
   }
 }
 
+
+
 #main-hero {
   // background-image: url('/images/hero_test.png');
   // background-position: center bottom;
@@ -485,6 +492,15 @@ section {
     //   padding-top: 1.5rem;
     //   padding-bottom: 1.5rem;
     // }
+  }
+}
+
+#hero-image {
+  padding:  2em;
+  img {
+    max-height: 470px;
+    width: auto;
+
   }
 }
 
