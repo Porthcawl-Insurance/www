@@ -237,19 +237,23 @@ p {
     @include sm {
       font-size: $size-6;
     }
-
-    &.source {
-      opacity: .5;
-    }
   }
 
-  &.how {
-    padding: .5em 1em;
-    color: $dark;
+  &.source {
+    opacity: .5;
   }
 
   &.orange {
     color: $orange;
+  }
+
+  &.quote {
+    padding-bottom: .5em;
+    span {
+      font-weight: 400;
+      font-style: italic;
+      white-space: nowrap;
+    }
   }
 
 } // end of <p>
@@ -432,8 +436,65 @@ section {
   }
 } // end of <section>
 
-.container {
+/* <feature> element .image class */
+.image {
+  &.center {
+    margin: 0 auto;
+  }
+
+  &.half-sized {
+    img {
+      max-width: 600px;
+      height: auto;
+      padding: 1em;
+    }
+  }
+
+} // end of <feature>
+
+
+div.container {
   padding: 1em;
+}
+
+div.box {
+
+  box-shadow: 0 0.5em 1em -0.125em rgba($dark, .15);
+
+  &.how {
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    min-width: 280px;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: rgba(white, .5);
+
+    @include lg {
+      padding: 2em;
+    }
+    p {
+      margin: 0;
+      color: rgba($dark, .9);
+      padding-top: 1em;
+      font-size: 18px;
+
+      @include md {
+        font-size: $size-5;
+      }
+    }
+    img {
+      max-height: 200px;
+      width: auto;
+      margin: 0 auto;
+      margin-bottom: 1em;
+      @include lg {
+        max-height: 225px;
+        padding-top: 0;
+      }
+    }
+  }
+
 }
 
 .add-padding {
@@ -463,28 +524,6 @@ section {
   margin-bottom: 1em;
 }
 
-/* mainly class used on <feature> element */
-.image {
-  &.center {
-    margin: 0 auto;
-  }
-
-  &.half-sized {
-    padding: 1em;
-    img {
-      max-width: 600px;
-      height: auto;
-    }
-  }
-
-  img.how-image {
-    max-height: 250px;
-    width: auto;
-    margin: 0 auto;
-    margin-bottom: 1em;
-  }
-
-}
 
 
 
