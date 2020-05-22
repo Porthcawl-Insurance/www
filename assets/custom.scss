@@ -289,6 +289,10 @@ img.placeholder {
 
 nav.navbar {
 
+  div.container {
+    padding: 1em !important;
+  }
+
   .navbar-start, .navbar-end {
     .navbar-item {
       // font-size: 1.25em;
@@ -455,7 +459,7 @@ section {
 } // end of feature.image
 
 div.container {
-  padding: 1em;
+  padding: 2em;
 }
 
 div.box {
@@ -553,6 +557,14 @@ div.box {
   background-size: auto;
 }
 
+.background-bottom {
+  background-image: url('/images/hero_background1.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: auto;
+}
+
 #main-hero {
   background-image: url('/images/hero_background1.png');
   background-position: center bottom;
@@ -570,6 +582,15 @@ div.box {
   img {
     max-height: 470px;
     width: auto;
+  }
+}
+
+#game-changing {
+  .image {
+    img {
+      max-width: 550px;
+      margin: 10px auto;
+    }
   }
 }
 
