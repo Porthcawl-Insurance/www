@@ -396,7 +396,8 @@ section {
 
     &.support {
       padding: .5em 0;
-
+      background-color: $light-gray;
+      box-shadow: 0 5px 10px 0 rgba($dark, .25);
       @include sm {
         padding: 1em 0;
       }
@@ -409,18 +410,19 @@ section {
       img {
         filter: grayscale(100%);
         &.is-logo {
-          max-height: 20px;
+          max-height: 30px;
           width: auto;
+          max-width: 140px;
           margin: 0 auto;
+          opacity: .75;
           @include sm {
             max-height: 30px;
           }
         }
       }
 
-      .level {
-        max-width: 1000px;
-        margin: 0 auto;
+      .container {
+        max-width: 900px;
       }
     }
   }// end of .banner
@@ -450,7 +452,7 @@ section {
     }
   }
 
-} // end of <feature>
+} // end of feature.image
 
 
 div.container {
@@ -524,11 +526,8 @@ div.box {
   margin-bottom: 1em;
 }
 
-
-
-
 #main-hero {
-  background-image: url('/images/hero_3.png');
+  background-image: url('/images/hero_background1.png');
   background-position: center bottom;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -536,10 +535,6 @@ div.box {
 
   .hero-body {
     padding-bottom: 0;
-    // @include lg {
-    //   padding-top: 1.5rem;
-    //   padding-bottom: 1.5rem;
-    // }
   }
 }
 
@@ -548,7 +543,6 @@ div.box {
   img {
     max-height: 470px;
     width: auto;
-
   }
 }
 
