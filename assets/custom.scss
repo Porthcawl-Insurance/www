@@ -396,8 +396,8 @@ section {
 
     &.support {
       padding: .5em 0;
-      background-color: $light-gray;
-      box-shadow: 0 5px 10px 0 rgba($dark, .25);
+      background-color: rgba($gray, .35);
+      box-shadow: 0 5px 10px 0 rgba($dark, .15);
       @include sm {
         padding: 1em 0;
       }
@@ -453,7 +453,6 @@ section {
   }
 
 } // end of feature.image
-
 
 div.container {
   padding: 1em;
@@ -524,6 +523,34 @@ div.box {
 .button {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.is-lightest {
+  background-color: rgba($lightest, .5);
+}
+
+.is-light-gray {
+  background-color: $light-gray;
+}
+
+.is-gray {
+  background-color: $gray;
+}
+
+.is-dark-gray {
+  background-color: $dark-gray;
+}
+
+.is-dark {
+  background-color: $dark;
+}
+
+.background-top {
+  background-image: url('/images/background_top.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: auto;
 }
 
 #main-hero {
