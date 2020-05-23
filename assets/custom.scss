@@ -547,7 +547,9 @@ div.box {
 
   &.is-outlined {
     font-weight: bold;
-
+    &.filled {
+      background-color: white;
+    }
   }
 
   &.is-large {
