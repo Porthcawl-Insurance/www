@@ -10,7 +10,8 @@ $light-gray: #E3E9F2;
 $lightest: #F5F9FF;
 
 /* Accent Colors*/
-$orange: #F79253;
+// $orange: #F79253;
+$orange: #ff914d; // bright option
 $teal: #5CB0BC;
 $purple: #63308F;
 $dark-purple: #38215C;
@@ -313,6 +314,9 @@ nav.navbar {
   .navbar-menu.is-active {
   }
 
+  .button {
+    box-shadow: none;
+  }
 }
 
 footer.footer {
@@ -375,6 +379,11 @@ section {
 
   /* ******************* Banners */
   &.banner {
+
+    .container {
+      padding: 1em 2em;
+      // padding: .5em;
+    }
 
     &.is-gray  {
       background-color: rgba($light-gray, 1);
@@ -524,9 +533,26 @@ div.box {
   text-shadow: 1px 1px 1px rgba($dark, .25);
 }
 
+/* Buttons */
+
 .button {
   margin-top: 1em;
   margin-bottom: 1em;
+  box-shadow: 0 3px 5px 0 rgba($dark, .25);
+
+
+  &.is-primary {
+    // color: $dark;
+  }
+
+  &.is-outlined {
+    font-weight: bold;
+
+  }
+
+  &.is-large {
+    font-size: 1.25rem;
+  }
 }
 
 .is-lightest {
@@ -558,13 +584,15 @@ div.box {
 }
 
 .background-bottom {
-  background-image: url('/images/hero_background1.png');
+  background-image: url('/images/background_bottom.png');
   background-position: center bottom;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: auto;
 }
 
+
+/* Main Page */
 #main-hero {
   background-image: url('/images/hero_background1.png');
   background-position: center bottom;
@@ -586,6 +614,9 @@ div.box {
 }
 
 #game-changing {
+  border-top: 2px solid $light-gray;
+  border-bottom: 2px solid $light-gray;
+
   .image {
     img {
       max-width: 550px;
@@ -596,10 +627,12 @@ div.box {
 
 #main-bottom-banner {
   h5.title {
-    margin-bottom: 10px;
+    margin-bottom:0;
+    color: rgba($dark, .5);
   }
 }
 
+/* About Page */
 #team-div {
   max-width: 1200px;
   padding: 2em 1em;
@@ -627,8 +660,10 @@ div.box {
   }
 }
 
+/* Downloads */
 #resource-img
 
+/* Licenses Page */
 #license-table-div {
   margin: 0 auto;
   max-width: 800px;
