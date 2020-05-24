@@ -45,6 +45,12 @@ $light: $lightest;
 $navbar-item-color: $dark-gray;
 $navbar-item-hover-color: $dark;
 $navbar-item-hover-background-color: transparent;
+$navbar-dropdown-arrow: $orange;
+$navbar-dropdown-border-top: 2px solid rgba($gray, 0);
+$navbar-dropdown-boxed-shadow: 0 4px 6px rgba($dark, .05);
+$navbar-dropdown-item-hover-color: $dark;
+$navbar-dropdown-item-hover-background-color: rgba($light-gray, .25);
+$navbar-dropdown-item-active-background-color: rgba($light-gray, .25);
 
 // Bulma Footer
 $footer-background-color: $dark;
@@ -296,7 +302,6 @@ nav.navbar {
 
   .navbar-start, .navbar-end {
     .navbar-item {
-      // font-size: 1.25em;
       padding-left: 1em;
       padding-right: 1em;
 
@@ -307,6 +312,35 @@ nav.navbar {
         @include md {
           margin: 0 0 0 1em;
         }
+      }
+
+      &.has-dropdown {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .navbar-item.has-dropdown {
+    a.navbar-link:first-child {
+      border-bottom: 1px solid rgba($gray, .5);
+      @include lg {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .navbar-link:not(.is-arrowless)::after {
+    border-color: $gray;
+  }
+
+  .navbar-dropdown {
+    .navbar-item {
+      font-size: 1rem;
+      padding-left: 1.25em;
+
+      @include lg {
+        padding-left: 1em;
       }
     }
   }
@@ -533,8 +567,8 @@ div.box {
   text-shadow: 1px 1px 1px rgba($dark, .25);
 }
 
-/* Buttons */
 
+/* Buttons */
 .button {
   margin-top: 1em;
   margin-bottom: 1em;
