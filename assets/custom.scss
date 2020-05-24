@@ -635,6 +635,29 @@ div.box {
 }
 
 /* About Page */
+#about-hero {
+  background-image: url('/images/hero_background1.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: auto;
+  border-bottom: 2px solid $light-gray;
+  .hero-body {
+    padding-bottom: 0;
+  }
+  img {
+    max-height: 220px;
+    width: auto;
+    margin: 0 auto;
+  }
+}
+
+#about {
+  .column {
+    margin: 0 auto;
+  }
+}
+
 #team-div {
   max-width: 1200px;
   padding: 2em 1em;
