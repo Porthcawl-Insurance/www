@@ -504,6 +504,26 @@ section {
     div.container {
       padding: 2em 1em;
     }
+
+    h1 {
+      text-align: center;
+      padding-bottom: 1em;
+    }
+
+    h4 {
+      font-weight: bold;
+    }
+
+    p {
+      padding-bottom: 1em;
+    }
+
+    a {
+      // padding-left: 1em;
+      color: $orange;
+      font-weight: bold;
+    }
+
   }
 } // end of <section>
 
