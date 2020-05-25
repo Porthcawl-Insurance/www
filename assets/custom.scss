@@ -180,7 +180,7 @@ h4, h5, h6 {
 }
 
 h1,h1.title {
-  font-size: $size-2;
+  font-size: $size-3;
   @include sm {
     font-size:$size-1;
   }
@@ -224,6 +224,13 @@ h6,h6.title {
 /* mostly used on heading tags */
 .title {
   padding-bottom: .5em
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  @include sm {
+    font-size: 1.25rem;
+  }
 }
 
 p {
@@ -288,6 +295,15 @@ ul {
     li {
       list-style: none;
     }
+  }
+}
+
+span {
+
+  // Keep contents of span from wrapping
+  // Ex: "e-commerce" will wrap at the dash
+  &.no-wrap {
+    white-space: nowrap;
   }
 }
 
@@ -416,19 +432,29 @@ main.wrapper-content {
 section {
   /* ******************* Hero (Bulma) */
   &.hero {
-
     .hero-body {
       padding-left: 0;
       padding-right: 0;
       @include sm {
-        padding: 3rem 1.5rem
+        // padding: 3rem 1.5rem;
       }
     }
-
     &.main {
-      padding-top: 5em;
-      @include md {
+      padding-top: 2em;
+      @include md{
         padding-top: 0;
+      }
+      .hero-body {
+        padding: 5em 0;
+        @include sm{
+          padding: 6em 0;
+        }
+        @include md {
+          padding-top: 7em;
+        }
+        @include lg {
+          padding-top: 9em;
+        }
       }
     }
   } // end of .hero
@@ -479,7 +505,7 @@ section {
       img {
         filter: grayscale(100%);
         &.is-logo {
-          max-height: 30px;
+          max-height: 20px;
           width: auto;
           max-width: 140px;
           margin: 0 auto;
@@ -559,11 +585,13 @@ section {
       padding: 1em;
     }
   }
-
 } // end of feature.image
 
 div.container {
-  padding: 2em;
+  padding: 1em;
+  @include md {
+    padding: 2em;
+  }
 }
 
 div.box {
@@ -604,6 +632,30 @@ div.box {
     }
   }
 
+}
+
+div.how {
+  max-width: 250px;
+  min-height: 250px;
+  margin: 0 auto;
+
+  p {
+    font-size: $size-6;
+    font-weight: bold;
+    opacity: .9;
+    // margin-bottom: 0;
+  }
+
+  img.how-image {
+    max-height: 160px;
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 1em;
+
+    @include md {
+      max-height: 225px;
+    }
+  }
 }
 
 .add-padding {
