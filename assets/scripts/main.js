@@ -40,14 +40,3 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 })();
-//
-// // Footer height
-// (function () {
-// 	var footerHeight = $('footer').height ();
-// 	$('body').css ('paddingBottom', footerHeight);
-//
-//   $(window).resize (function () {
-//     var footerHeight = $('footer').height ();
-//     $('body').css('paddingBottom', footerHeight);
-//   });
-// })();

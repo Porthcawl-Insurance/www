@@ -609,7 +609,6 @@ div.box {
   text-shadow: 1px 1px 1px rgba($dark, .25);
 }
 
-
 /* Buttons */
 .button {
   margin-top: 1em;
@@ -668,7 +667,6 @@ div.box {
   background-attachment: scroll;
   background-size: auto;
 }
-
 
 /* Main Page */
 #main-hero {
@@ -751,7 +749,6 @@ div.box {
 
   .name {
     margin-bottom:0;
-    // color: $orange;
   }
 
   .position {
@@ -774,4 +771,36 @@ div.box {
 #license-table-div {
   margin: 0 auto;
   max-width: 800px;
+}
+
+/* Terms of Service */
+#tos {
+  h2{
+      font-size: $size-5;
+  }
+
+  ol {
+    list-style-type: upper-alpha;
+    margin-bottom: 2em;
+  }
+}
+
+#prohibited {
+  h1, h2 {
+    text-align: center;
+    font-size: $size-3;
+  }
+
+  h1 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    padding-bottom: 1em;
+  }
+
+  ol {
+    list-style-type: lower-roman;
+  }
 }
