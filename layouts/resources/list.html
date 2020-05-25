@@ -1,23 +1,25 @@
 {{ define "main" }}
-<section id="resource-list">
-	<div class='container add-padding-bottom'>
-		<h1 class="add-padding-top">Resources</h1>
-		<p class="subtitle">
-			We know that technology is complicated and insurance is boring (to most
-			people...but not to us!). To help make things less confusing, we have put
-			together a list of resources that we hope you enjoy. If you ever have a
-			question, don’t hesitate to
-			<a href='mailto:info@cyberfortress.com' class='purple'>contact us</a>.
-		</p>
-		<div class="add-padding-top add-padding-bottom">
-			{{ range $i, $e := .Data.Pages }}
-      <div class='resource-div'>
-        <a class='is-size-4' href='{{ .RelPermalink }}'><i class="far fa-angle-right"></i> {{ .Title }} </a>
-        {{ truncate 140 .Content }}
-      </div>
-      {{ end }}
-		</div>
-	</div><!-- end of .container -->
+<section id="resource-list" class="hero">
+	<div class="hero-body">
+		<div class='container add-padding-bottom'>
+			<h1 class="add-padding-top has-text-centered">Resources</h1>
+			<p class="subtitle has-text-centered">
+				We know that technology is complicated and insurance is boring (to most
+				people...but not to us!). To help make things less confusing, we have put
+				together a list of resources that we hope you enjoy. If you ever have a
+				question, don’t hesitate to
+				<a href='mailto:info@cyberfortress.com' class='purple'>contact us</a>.
+			</p>
+			<div class="add-padding-top add-padding-bottom">
+				{{ range $i, $e := .Data.Pages }}
+	      <div class='resource-div'>
+	        <a class='is-size-4' href='{{ .RelPermalink }}'><i class="far fa-angle-right"></i> {{ .Title }} </a>
+	        {{ truncate 140 .Content }}
+	      </div>
+	      {{ end }}
+			</div>
+		</div><!-- end of .container -->
+	</div>
 </section>
 
 {{ end }}
