@@ -750,14 +750,20 @@ div.box {
   }
 
   .name {
-    margin-bottom: .25em;
+    margin-bottom:0;
+    // color: $orange;
+  }
+
+  .position {
+    font-size: $size-6;
   }
 
   img {
     max-height: 200px;
     width: auto;
     margin: 0 auto;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
+    box-shadow: 0 .5em .75em 0 rgba($dark, .15);
   }
 }
 
