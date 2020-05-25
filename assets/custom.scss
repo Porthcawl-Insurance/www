@@ -505,9 +505,17 @@ section {
       padding: 2em 1em;
     }
 
+    h1, h2, h3 {
+      margin-top: 20px;
+    }
+
     h1 {
       text-align: center;
       padding-bottom: 1em;
+    }
+
+    h2 {
+      font-size: $size-4;
     }
 
     h4 {
@@ -515,15 +523,26 @@ section {
     }
 
     p {
-      padding-bottom: 1em;
+      font-size: 1em;
     }
 
     a {
-      // padding-left: 1em;
       color: $orange;
       font-weight: bold;
     }
 
+    ul {
+      list-style: disc;
+      padding-bottom: 1em;
+      padding-left: 1.5em;
+      li {
+        font-size: 1em;
+      }
+    }
+
+    ol {
+      padding-left: 1.5em;
+    }
   }
 } // end of <section>
 
@@ -775,13 +794,52 @@ div.box {
 
 /* Terms of Service */
 #tos {
-  h2{
-      font-size: $size-5;
+  #cyberfortress-com {
+    padding-bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  #terms-of-use-and-terms-of-service-and-insurance-related-notices {
+    font-size: $size-4;
+    margin-top: 0;
+    padding-bottom: 1em;
+    margin-botton: 10px;
+  }
+
+  p:first-child {
+    color: rgba($dark, .5);
+    strong {
+      color: rgba($dark, .55);
+    }
+  }
+
+  h3 {
+    font-size: $size-4;
+    text-align: center;
   }
 
   ol {
     list-style-type: upper-alpha;
     margin-bottom: 2em;
+  }
+
+  // for some nested lists
+  // will improve how this is done soon
+  blockquote {
+    ol {
+      li {
+        list-style: lower-alpha;
+        ol {
+          li {
+            list-style-type: none;
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
   }
 }
 
@@ -798,9 +856,29 @@ div.box {
 
   h2 {
     padding-bottom: 1em;
+    margin-top: 0;
   }
 
   ol {
     list-style-type: lower-roman;
+    padding-bottom: 1em;
+    li {
+      padding-left: 1.5em;
+    }
+  }
+
+  ul {
+    padding: 1em 0;
+    list-style: none;
+    li {
+      font-size: $size-5;
+    }
+  }
+
+  p:first-child {
+    color: rgba($dark, .5);
+    strong {
+      color: rgba($dark, .55);
+    }
   }
 }

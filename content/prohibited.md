@@ -35,4 +35,8 @@ The following acts are &quot;Prohibited Acts&quot; for any applicant for insuran
 18. Attempt to or actually access the Services by any means other than through the interfaces provided by us. This prohibition includes accessing or attempting to access the Services using any third-party service, including software-as-a-service platforms that aggregate access to multiple services;
 19. Engage in any action that directly or indirectly interferes with the proper working of or places an unreasonable load on the Services&#39; infrastructure, including, but not limited to, sending unsolicited communications to other users or our personnel, attempting to gain unauthorized access to the Services, or transmitting or activating computer viruses, Trojan horses, worms, time bombs or any other harmful or deleterious software programs through or on the Services; and/or (xxiii) Interfere or disrupt or game the Services, including, but not limited to any servers or networks connected to the Services, or the underlying software.
 
+-------------------------------
+
+* [Terms of Service](/tos/)
+* [Privacy Policy](/privacy/)
 {{% /prohibited-section %}}

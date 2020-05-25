@@ -12,7 +12,7 @@ Last updated: **April 30, 2020**
 
 # **CyberFortress.com**
 
-_**Terms of Use and Terms of Service and Insurance Related Notices**_
+# *Terms of Use and Terms of Service and Insurance Related Notices*
 
 _**IT IS VERY IMPORTANT THAT YOU READ THESE TERMS CAREFULLY AS THEY MAKE A BINDING LEGAL AGREEMENT BETWEEN YOU AND US. THE TERMS STATE THE AGREEMENT BETWEEN YOU AND US REGARDING EACH OF OUR LEGAL RIGHTS, REMEDIES AND OBLIGATIONS TO THE OTHER PARTY.THESE TERMS GOVERN YOUR ACCESS TO AND USE OF THE WEBSITE.**_
 
@@ -29,8 +29,8 @@ CyberFortress may amend this Agreement at any time by posting the amended Terms 
 ## **I. Use of CyberFortress.com**
 
 1. The Site is provided by CyberFortress for your information. Your use is limited to and you agree to use this Site strictly in accordance with applicable international, federal, state and local law and regulations (&quot;Applicable Laws&quot;) and you agree you will abide by all Applicable Laws.
-2. The Site refers to Services for U.S. business only and provides general information related thereto. By accessing this Site or using our Services, you agree to be bound by these Terms and by our  **Privacy Policy**
-3. By accessing or using our Services, you agree to be bound by these Terms and by our  **Privacy Policy**.
+2. The Site refers to Services for U.S. business only and provides general information related thereto. By accessing this Site or using our Services, you agree to be bound by these Terms and by our [Privacy Policy](/privacy/).
+3. By accessing or using our Services, you agree to be bound by these Terms and by our [Privacy Policy](/privacy/).
 4. By accessing or using our Services, you confirm that: you can form a binding contract with us; and you are over the age of 18, as the Services are not intended for children under 18. _If it comes to our attention through reliable means that a registered user is a child under 18 years of age, we will cancel that user&#39;s account and/or access to the Services._ If you are using the Services on behalf of a corporation (or any legal entity other than using it personally), you represent that you are authorized to enter into an agreement on behalf of that legal entity and are nevertheless individually bound by these Terms even if we have a separate agreement with such corporation.
 5. To use the Site, you must have access to a wireless network, and you agree to pay all fees associated with such access. You also agree to pay all fees (if any) charged by Google Play or App Store in connection with the Services, including the App, if any.
 6. You agree to comply with, and your license to use the App is conditioned upon your compliance with, all applicable third-party terms of use and agreements (e.g., Google Play&#39;s or App Store&#39;s terms and policies) when using the Services, including the App, if any. You acknowledge that Google Play and/or App Store (and its subsidiaries) are third-party beneficiaries of the Terms and will have the right to enforce them.
@@ -53,19 +53,19 @@ CyberFortress may amend this Agreement at any time by posting the amended Terms 
 ## **V. Site Inquiries or Complaints**
 
 >  1. **If you have any inquiries about the Site, please address them to:**
->    1. **Name / Title / Address / Phone / E-Mail**
+>   1. a. **Name / Title / Address / Phone / E-Mail**
 >  2. **If you have any complaints about the Site, please address them to:**
->   1. **Name / Title / Address / Phone / E-Mail**
+>   2. b. **Name / Title / Address / Phone / E-Mail**
 
 ## **VI. Application – Limited License Conditioned on Compliance with Terms**
 
 1. Subject to these Terms and our policies (including policies made available to you within the Services), we grant you a limited, non-transferable, non-exclusive, and revocable permission to access and use this Site and our Services, provided that:
 
-    * You will not copy, distribute or modify any part of the Services without our prior written authorization;
-    * You will not send unsolicited or unauthorized advertisements, spam, chain letters, etc.;
-    * You will not transmit any Content which contains software viruses, or other harmful computer code, files or programs;
-    * You will not disrupt servers or networks connected to the Services; and
-    * You comply with these Terms.
+    * i. You will not copy, distribute or modify any part of the Services without our prior written authorization;
+    * ii. You will not send unsolicited or unauthorized advertisements, spam, chain letters, etc.;
+    * iii. You will not transmit any Content which contains software viruses, or other harmful computer code, files or programs;
+    * iv. You will not disrupt servers or networks connected to the Services; and
+    * v. You comply with these Terms.
 
 2. Using our Services does not give you ownership of any intellectual property rights in this Site, the App or our Services or the content you access (other than your User Content), which shall remain with us and our respective licensors.
 
