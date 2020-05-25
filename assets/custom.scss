@@ -54,7 +54,8 @@ $navbar-dropdown-item-active-background-color: rgba($light-gray, .25);
 
 // Bulma Footer
 $footer-background-color: $dark;
-$footer-color: $lightest;
+$footer-color: #ffffff;
+$footer-padding: 3rem 1.5rem 4rem;
 
 @import "../node_modules/bulma/bulma.sass";
 
@@ -263,6 +264,21 @@ p {
     }
   }
 
+  &.copyright {
+    color: $lightest;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: $footer-background-color;
+    margin: 0;
+    padding: 5px 5px 5px 10px;
+    text-align: center;
+    font-size: 12px;
+
+    @include sm {
+      font-size: 14px;
+    }
+  }
 } // end of <p>
 
 ul {
@@ -358,12 +374,17 @@ footer.footer {
     color: $orange;
   }
   a {
-    color: $lightest;
+    color: white;
     display: inline-block;
     padding-right: 1em;
     &:hover{
-      color: $teal;
+      color: $lightest;
+      font-weight: bold;
     }
+  }
+
+  .container {
+    padding: 1em;
   }
   .column {
     padding-left: .25rem;
@@ -373,6 +394,7 @@ footer.footer {
   }
   #footer-logo {
     margin: 0;
+    max-height: 30px;
     @include sm {
       margin-left: 2em;
       margin-right: 2em;
