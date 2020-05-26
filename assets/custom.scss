@@ -961,6 +961,31 @@ nav.level {
   }
 }
 
+#privacy {
+
+  h1{
+    padding-bottom: 0;
+    font-size: $size-3;
+  }
+
+  #cyberfortress-insurance-services {
+    padding-top: 1em;
+    margin-bottom: 0;
+  }
+
+  #customer-privacy-policy {
+    margin-top: 0;
+    padding-bottom: 1em;
+  }
+
+  p:first-child {
+    color: rgba($dark, .5);
+    strong {
+      color: rgba($dark, .55);
+    }
+  }
+}
+
 #prohibited {
   h1, h2 {
     text-align: center;
