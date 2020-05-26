@@ -750,13 +750,25 @@ div.how {
   .hero-body {
     padding-bottom: 0;
   }
+
+  .column.is-half-desktop{
+    padding-bottom: 0;
+    @include md {
+      padding-bottom: .75rem;
+    }
+  }
 }
 
 #hero-image {
-  padding:  2em;
+  padding: .5em 1.5em;
+
   img {
-    max-height: 470px;
+    max-height: 300px;
     width: auto;
+    margin: 0 auto;
+    @include md {
+      max-height: 400px;
+    }
   }
 }
 
