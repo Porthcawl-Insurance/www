@@ -187,7 +187,7 @@ h1,h1.title {
 }
 
 h2,h2.title {
-  font-size: $size-3;
+  font-size: $size-4;
   @include sm {
     font-size:$size-2;
   }
@@ -304,6 +304,13 @@ span {
   // Ex: "e-commerce" will wrap at the dash
   &.no-wrap {
     white-space: nowrap;
+  }
+}
+
+hr {
+  margin: .5em 0;
+  @include md {
+    margin: 1.5em 0;
   }
 }
 
@@ -658,6 +665,35 @@ div.how {
   }
 }
 
+nav.level {
+  .level-item {
+    div {
+      max-width: 400px;
+    }
+    p {
+      font-size: 1em;
+      margin-bottom: 0;
+      padding-top: 1em;
+    }
+  }
+  &.cta {
+    padding: 1em;
+    .level-item {
+      div {
+        margin: 0 auto;
+        max-width: 400px;
+      }
+    }
+    p {
+      font-weight: bold;
+      color: $dark;
+    }
+    hr {
+      background-color: rgba($dark, .25);
+    }
+  }
+}
+
 .add-padding {
   padding-top: 2em;
   padding-bottom: 2em;
@@ -685,7 +721,6 @@ div.how {
   margin-top: 1em;
   margin-bottom: 1em;
   box-shadow: 0 3px 5px 0 rgba($dark, .25);
-
 
   &.is-primary {
     // color: $dark;
@@ -778,9 +813,22 @@ div.how {
 
   .image {
     img {
-      max-width: 550px;
+      max-height: 200px;
+      max-width: 300px;
       margin: 10px auto;
+      @include sm {
+        max-height: 300px;
+        max-width: auto;
+      }
+      @include md {
+        max-width: 400px;
+        max-height: 400px;
+      }
     }
+  }
+
+  .column.is-narrow-desktop {
+    padding-right: 1.5em;
   }
 }
 
@@ -812,6 +860,12 @@ div.how {
 #about {
   .column {
     margin: 0 auto;
+  }
+}
+
+#team {
+  .hero-body {
+    padding-bottom: 2em;
   }
 }
 
