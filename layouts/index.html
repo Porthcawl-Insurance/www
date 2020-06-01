@@ -74,17 +74,16 @@
 <!-- Why -->
 <section class="hero">
   <div class="hero-body">
-    <div class="container">
+    <!-- <div class="container">
       <h2 class="has-text-centered title add-padding-top">Your website is your storefront.<br />Protect it.</h2>
       <p class="subtitle has-text-centered">
         Like a good chess player, a good business owner stays 10 steps ahead.
         <strong>CyberFortress is your check against downtime.</strong>
       </p>
-    </div>
+    </div> -->
   <div class="container has-text-centered-mobile">
-    <hr />
     <div class="columns is-desktop is-vcentered">
-      <div class="column add-padding">
+      <div class="column">
         <figure class="image half-sized center">
           <img src="/images/website_revenue.png" />
           </figure>
@@ -104,21 +103,28 @@
           You need to understand the threats to your website and be proactive
           to protect it. From human error on your team to issues outside your
           control like a cloud provider failure or 3rd party plugin issue -
-          managing risk is more critical than ever.
+          managing risk is more critical than ever. Like a good chess player,
+          a good business owner stays 10 steps ahead.
         </p>
       </div>
     </div><!-- end of .columns -->
-    <hr />
-  </div><!-- end of .container -->
-  <div class="container has-text-centered">
-    <p id="main-quote" class="quote has-text-weight-semibold orange is-size-4-mobile is-size-2-desktop is-marginless">
-      “The average cost of IT downtime is $5,600 per minute.” <span>-Gartner</span>
-    </p>
-    <p class="has-text-weight-semibold is-size-5-mobile">
-      Can your business afford it?
-    </p>
   </div><!-- end of .container -->
 </div>
+</section>
+
+<!-- Quote Banner -->
+<section class="hero is-small has-text-centered">
+  <div class="hero-body">
+    <div class="container">
+      <p id="main-quote" class="quote orange is-size-4-mobile is-size-3-desktop is-marginless">
+        A US Property & Casualty business interruption claim takes on average
+        <strong>5 months</strong> for the claim to be paid.<span class="is-size-5-mobile is-size-4-desktop"> *</span>
+      </p>
+      <p class="is-size-6-mobile is-size-5-desktop quote-desc">
+        <strong>*</strong><span class="is-italic">Aon,</span> internal estimates for 2014-2019
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- How Our Insurnace Works -->
@@ -135,7 +141,7 @@
             </p>
           </div>
       </div><!-- end of .columns -->
-      <div id="how-img-row" class="columns is-multiline add-padding-top">
+      <div id="how-img-row" class="columns is-multiline add-padding-top is-vcentered">
         <div class="column">
           <div class="how">
             <figure class="image center">
@@ -146,6 +152,10 @@
             </p>
           </div><!-- end of .box -->
         </div><!-- end of .column -->
+        <div class="column arrow is-narrow">
+          <i class="fal fa-arrow-right is-hidden-mobile"></i>
+          <i class="fal fa-arrow-down is-mobile is-hidden-tablet"></i>
+        </div>
         <div class="column">
           <div class="how">
             <figure class="image center">
@@ -153,10 +163,14 @@
             </figure>
             <p class="">
               <!--Targeting previous FAQ as a quick way too account for navbar height-->
-              A <a href="/faq#what-is-online-revenue-interruption-insurance">downtime event</a> triggers the coverage on your policy
+              A <a href="/faq#what-is-online-revenue-interruption-insurance" target="_blank" class="orange">downtime event</a> triggers the coverage on your policy
             </p>
           </div><!-- end of .box -->
         </div><!-- end of .column -->
+        <div class="column arrow is-narrow">
+          <i class="fal fa-arrow-right is-hidden-mobile"></i>
+          <i class="fal fa-arrow-down is-mobile is-hidden-tablet"></i>
+        </div>
         <div class="column">
           <div class="how">
             <figure class="image center">
@@ -193,12 +207,12 @@
           <p class="is-marginless">
             Have you ever had to file and wait on an insurance claim
             to be paid out?
-            A US Property & Casualty business interruption claim takes on average
-            <strong>5 months</strong> for the claim to be paid.*
+            <!-- A US Property & Casualty business interruption claim takes on average
+            <strong>5 months</strong> for the claim to be paid.* -->
           </p>
-          <p class="desc source">
+          <!-- <p class="desc source">
               * <span class="is-italic">Aon,</span> internal estimates for 2014-2019.
-          </p>
+          </p> -->
           <p>
             CyberFortress commits to paying out your claim within
             24 hours, getting cash in your hands to start solving
@@ -338,7 +352,7 @@
                   <h5 class="title">A-rated and backed by Markel</h5>
                   <p class="desc is-marginless">
                     Our policies are backed by Markel Corporation, Inc rated A+
-                    by A.M. Best. 
+                    by A.M. Best.
                   </p>
                 </div>
             </div>

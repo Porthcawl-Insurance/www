@@ -264,11 +264,22 @@ p {
 
   &.quote {
     padding-bottom: .5em;
+    strong{
+      color: $orange;
+    }
     span {
-      font-weight: 400;
-      font-style: italic;
+      color: rgba($dark, .5);
+      font-weight: 600;
+      // font-style: italic;
       white-space: nowrap;
     }
+  }
+
+  &.quote-desc {
+    strong{
+      color: rgba($dark, .5);
+    }
+    color: rgba($dark, .5);
   }
 
   &.copyright {
@@ -804,6 +815,23 @@ nav.level {
     @include md {
       max-height: 400px;
     }
+  }
+}
+
+#how-img-row {
+  .column.arrow {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 30px;
+    padding-top: 0;
+    i {
+      color: rgba($dark-gray, .75);
+      font-size: 2em;
+    }
+    @include md{
+      padding: .75rem 0;
+    }
+
   }
 }
 
