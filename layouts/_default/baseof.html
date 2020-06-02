@@ -31,6 +31,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous">
   <!-- Bulma -->
 
+  <!-- Animate CSS  -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+
 	{{ $options := (dict "targetPath" "static/css/style.css" "outputStyle" "compressed" "enableSourceMap" false) }}
 	{{ $style := resources.Get "custom.scss" | resources.ToCSS $options }}
   <link type='text/css' rel='stylesheet' href='{{ $style.RelPermalink }}'>
