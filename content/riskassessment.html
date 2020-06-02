@@ -1,0 +1,59 @@
+---
+title: "Risk Assessment"
+description: "Get a risk assessment for your website"
+date: 2020-06-02T16:52:12+00:00
+draft: true
+js: "/scripts/clearbit-check_if_email_provider.js"
+slug: "/riskassessment/"
+---
+
+<!-- Hero -->
+<section id="risk-hero" class="hero is-medium background-bottomf">
+	<div class="hero-body">
+		<div class="container">
+		<div class="columns">
+			<div class="column is-four-fifths-tablet is-two-thirds-desktop is-half-widescreen">
+				<h1 class="title is-size-3-mobile">
+					Is your business vulnerable?
+				</h1>
+				<h2 class="subtitle">
+					Find out in seconds! All you need is a business email address.
+				</h2>
+
+				<form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation ' novalidate>
+					<div class="field has-addons add-padding">
+						<div class="control has-icons-left is-expanded">
+						  <input id="user-email" class="input" type="email" name="email" placeholder="me@mycompany.com" required>
+							<span class="icon is-small is-left">
+					      <i class="fas fa-envelope"></i>
+					    </span>
+						</div>
+						<div class="control">
+					    <a id="landing-btn" class="button is-primary is-marginless" type="submit">
+					      Get Assessment
+					    </a>
+					  </div>
+					</div><!-- end of .field-->
+				</form>
+			</div>
+		</div><!-- end of .columns -->
+	</div><!-- end of .container -->
+	</div><!-- end of .hero-body -->
+</section>
+
+
+<!-- {{ end }}
+
+{{ define "addscripts" }}
+
+{{ if .Params.js }}
+<script src="{{ .Params.js }}"></script>
+{{ end }}
+
+<script>
+  ! function() {
+    $('#get_downtime_risk').submit(submitIfEmailNotProvider);
+  }();
+</script>
+
+{{ end }} -->
