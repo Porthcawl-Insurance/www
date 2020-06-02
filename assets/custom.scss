@@ -263,23 +263,29 @@ p {
   }
 
   &.quote {
-    padding-bottom: .5em;
+    padding-bottom: 1em;
+    @include md {
+      padding-bottom: .5em;
+    }
     strong{
       color: $orange;
     }
     span {
-      color: rgba($dark, .5);
-      font-weight: 600;
-      // font-style: italic;
+      color: rgba($gray, 1);
       white-space: nowrap;
+      display: inline-block;
+      // font-size: 1rem;
     }
   }
 
   &.quote-desc {
-    strong{
-      color: rgba($dark, .5);
+    color: rgba($gray, .9);
+    font-size: 1rem;
+    margin-bottom: 0;
+    strong, span {
+      color: rgba($gray, .9);
+      font-size: 1rem;
     }
-    color: rgba($dark, .5);
   }
 
   &.copyright {
@@ -298,6 +304,15 @@ p {
     }
   }
 } // end of <p>
+
+a {
+  &.orange {
+    color: $teal;
+    &:hover {
+
+    }
+  }
+}
 
 ul {
   &.no-style {
@@ -475,6 +490,15 @@ section {
         }
       }
     }
+    &.background-top {
+      padding-top: 3em;
+      @include sm {
+        padding-top: 2em;
+      }
+      @include md {
+        padding-top: 1em;
+      }
+    }
   } // end of .hero
 
   /* ******************* Banners */
@@ -509,14 +533,14 @@ section {
 
     &.support {
       padding: .5em 0;
-      background-color: rgba($gray, .35);
+      background-color: rgba($gray, .9);
       box-shadow: 0 5px 10px 0 rgba($dark, .15);
       @include sm {
         padding: 1em 0;
       }
 
       p {
-        color: rgba($dark, .75);
+        color: rgba($dark, .9);
         padding-bottom: 1em;
       }
 
@@ -527,7 +551,7 @@ section {
           width: auto;
           max-width: 140px;
           margin: 0 auto;
-          opacity: .75;
+          opacity: .65;
           @include sm {
             max-height: 30px;
           }
