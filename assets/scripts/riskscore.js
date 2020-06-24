@@ -53,8 +53,8 @@ Codeup:
       }
       getData(data);
     } else {
-      $('#jumbotron-loading').addClass('d-none');
-      $('#jumbotron-error').removeClass('d-none');
+      $('#score-loading').addClass('is-hidden');
+      $('#score-error').removeClass('is-hidden');
     }
   }
 
@@ -67,14 +67,14 @@ Codeup:
       data: JSON.stringify(data),
     }).done(function(response) {
       populate(response);
-      $('#jumbotron-loading').addClass('d-none');
-      $('#jumbotron-score').removeClass('d-none');
-      $('#summary-div').removeClass('d-none');
-      $('#whatsgood-div').removeClass('d-none');
+      $('#score-loading').addClass('is-hidden');
+      $('#score-results').removeClass('is-hidden');
+      $('#summary-div').removeClass('is-hidden');
+      $('#whatsgood-div').removeClass('is-hidden');
     }).fail(function(e) {
       console.log(e)
-      $('#jumbotron-loading').addClass('d-none');
-      $('#jumbotron-error').removeClass('d-none');
+      $('#jscore-loading').addClass('is-hidden');
+      $('#score-error').removeClass('is-hidden');
     });
   }
 
