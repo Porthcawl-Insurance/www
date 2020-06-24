@@ -1,29 +1,16 @@
 {{ define "main"}}
 
-<main id="404">
-
-
-  <div class='container-fluid p-5 background-gradient colorful'>
-    <div class='d-flex flex-column justify-content-center align-items-center block background-light text-center mb-4'>
-      <div class='header'>
-        <h2 class='pb-3'>404 Error</h2>
-        <h1>Sorry, we couldn't find that page...</h1>
-      </div>
-      <div class='body 404'>
-        <div class='d-flex flex-column justify-content-center'>
-          <div>
-            <img src='/images/shrugknight.svg' class='medium' />
-            <a class='block larger underline pt-3' href='/'>Go Home</a>
-          </div>
-        </div>
-      </div>
-
-
+<section id="404" class="hero is-large">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">404 Error</h1>
+      <h2 class="subtitle">Sorry, we could not find that page.</h2>
+      <figure class="image center">
+        <img id="404-img" src="/images/trigger.png" />
+      </figure>
+      <a href="/">Go Home</a>
     </div>
   </div>
-
-
-
-</main>
+</section>
 
 {{ end }}

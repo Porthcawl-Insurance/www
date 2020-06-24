@@ -893,11 +893,6 @@ nav.level {
 
 /* About Page */
 #about-hero {
-  // background-image: url('/images/hero_background1.png');
-  // background-position: center bottom;
-  // background-repeat: no-repeat;
-  // background-attachment: scroll;
-  // background-size: auto;
   border-bottom: 4px solid $gray;
   padding-bottom: 0;
 
@@ -1100,4 +1095,10 @@ nav.level {
       color: rgba($dark, .55);
     }
   }
+}
+
+#404-img {
+    max-width: 200px;
+    height: auto;
+    margin: 10px auto;
 }
