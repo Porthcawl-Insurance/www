@@ -1097,8 +1097,14 @@ nav.level {
   }
 }
 
-#404-img {
-    max-width: 200px;
+#error {
+    max-width: 300px;
     height: auto;
     margin: 10px auto;
+    padding-bottom: 1em;
+}
+
+#get_downtime_risk {
+  max-width: 600px;
+  margin: 0 auto;
 }

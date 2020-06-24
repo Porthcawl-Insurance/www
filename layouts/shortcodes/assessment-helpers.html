@@ -1,0 +1,8 @@
+{{ $script := resources.Get "/scripts/clearbit-check_if_email_provider.js" | resources.Minify }}
+<script src='{{ $script.RelPermalink }}'></script>
+
+<script>
+  ! function() {
+    $('#get_downtime_risk').submit(submitIfEmailNotProvider);
+  }();
+</script>

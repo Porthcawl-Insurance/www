@@ -8,52 +8,31 @@ slug: "/riskassessment/"
 ---
 
 <!-- Hero -->
-<section id="risk-hero" class="hero is-medium background-bottom">
+<section id="risk-hero" class="hero is-medium">
 	<div class="hero-body">
-		<div class="container">
-		<div class="columns">
-			<div class="column is-four-fifths-tablet is-two-thirds-desktop is-half-widescreen">
+		<div class="container has-text-centered">
 				<h1 class="title is-size-3-mobile">
 					Is your business vulnerable?
 				</h1>
 				<h2 class="subtitle">
 					Find out in seconds! All you need is a business email address.
 				</h2>
-
 				<form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation ' novalidate>
-					<div class="field has-addons add-padding">
+					<input type='hidden' name='returl' value=''>
+					<div class="field add-padding">
 						<div class="control has-icons-left is-expanded">
 						  <input id="user-email" class="input" type="email" name="email" placeholder="me@mycompany.com" required>
 							<span class="icon is-small is-left">
 					      <i class="fas fa-envelope"></i>
 					    </span>
 						</div>
-						<div class="control">
-					    <a id="landing-btn" class="button is-primary is-marginless" type="submit">
-					      Get Assessment
-					    </a>
-					  </div>
 					</div><!-- end of .field-->
+					<button id="landing-btn" class="button is-primary is-marginless" type="submit">
+						Get Assessment
+					</button>
 				</form>
-			</div>
-		</div><!-- end of .columns -->
-	</div><!-- end of .container -->
+		</div><!-- end of .container -->
 	</div><!-- end of .hero-body -->
 </section>
 
-
-<!-- {{ end }}
-
-{{ define "addscripts" }}
-
-{{ if .Params.js }}
-<script src="{{ .Params.js }}"></script>
-{{ end }}
-
-<script>
-  ! function() {
-    $('#get_downtime_risk').submit(submitIfEmailNotProvider);
-  }();
-</script>
-
-{{ end }} -->
+{{< assessment-helpers >}}
