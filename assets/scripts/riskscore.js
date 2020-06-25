@@ -184,13 +184,13 @@ Codeup:
         }
 
         $('#top-factors').append(
-          '<div class="d-flex flex-row flex-nowrap align-items-start">' +
-          '<div class="icon-div pt-2">' +
+          '<div class="columns">' +
+          '<div class="icon-div column is-narrow">' +
           '<p class="icon ' + color + ' text-center">' +
           '<span class="fa-stack">' +
           '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
           '<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
-          '<div class="text-div">' +
+          '<div class="text-div column">' +
           '<p class="f-name">' + name + ' <span>[ ' + tag + ' ]</span>' +
           '</p>' +
           '<p class="f-desc">' + summary + '</p>' +
@@ -199,13 +199,13 @@ Codeup:
       });
     } else { // if no positive factors exist
       $('#top-factors').append(
-        '<div class="d-flex flex-row flex-nowrap align-items-start">' +
-        '<div class="icon-div pt-2">' +
+        '<div class="columns">' +
+        '<div class="icon-div column is-narrow">' +
         '<p class="icon none text-center">' +
         '<span class="fa-stack">' +
         '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
         '<i class="fal fa-times fa-stack-1x"></i></span></p></div>' +
-        '<div class="text-div">' +
+        '<div class="text-div column">' +
         '<p class="f-name">None</p>' +
         '<p class="f-desc">When calculating your score, no significant positive contributions were included.</p>' +
         '</div>' +
@@ -243,13 +243,13 @@ Codeup:
         }
 
         $('#bottom-factors').append(
-          '<div class="d-flex flex-row flex-nowrap align-items-start">' +
-          '<div class="icon-div pt-2">' +
+          '<div class="columns">' +
+          '<div class="icon-div column is-narrow">' +
           '<p class="icon ' + color + ' text-center">' +
           '<span class="fa-stack">' +
           '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
           '<i class="' + icon + ' fa-stack-1x"></i></span></p></div>' +
-          '<div class="text-div">' +
+          '<div class="text-div column">' +
           '<p class="f-name">' + name + ' <span>[ ' + tag + ' ]</span>' +
           '</p>' +
           '<p class="f-desc">' + summary + '</p>' +
@@ -258,13 +258,13 @@ Codeup:
       });
     } else { // if no negative factors exist
       $('#bottom-factors').append(
-        '<div class="d-flex flex-row flex-nowrap align-items-start">' +
-        '<div class="icon-div pt-2">' +
+        '<div class="columns">' +
+        '<div class="icon-div column is-narrow">' +
         '<p class="icon none text-center">' +
         '<span class="fa-stack">' +
         '<i class="fa fa-circle fa-stack-2x icon-background"></i>' +
         '<i class="fal fa-times fa-stack-1x"></i></span></p></div>' +
-        '<div class="text-div">' +
+        '<div class="text-div column">' +
         '<p class="f-name">None</p>' +
         '<p class="f-desc">When calculating your score, no significant negative contributions were included.</p>' +
 

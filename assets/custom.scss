@@ -1108,3 +1108,53 @@ nav.level {
   max-width: 600px;
   margin: 0 auto;
 }
+
+#score-results {
+  #domain {
+    color: $orange;
+    font-size: 3em;
+    padding-bottom: .25em;
+  }
+  #rook-svg {
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+    height: auto;
+    margin: 0 auto;
+  }
+  #score {
+    font-size: 3em;
+    margin-bottom: 0;
+    span {
+      font-weight: bold;
+      font-size: 2em;
+      color: $very-dark;
+    }
+  }
+  .factors {
+    padding-left: 2em;
+    padding-right: 2em;
+
+    p.title {
+      font-weight: normal;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      font-size: 1.5em;
+    }
+  }
+  .f-name{
+    margin-bottom: 0;
+    font-weight: bold;
+    span{
+      color: $dark-gray;
+      font-weight: normal;
+    }
+  }
+  .f-desc {
+    font-size: 1em;
+  }
+  h3.title {
+    text-align: center;
+  }
+
+}

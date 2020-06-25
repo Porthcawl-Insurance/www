@@ -14,7 +14,9 @@ draft: true
             This may take a few seconds...
           </h2>
           <p>
-            [put a spinner deal here]
+            <span class="icon">
+              <i class="fas fa-spinner fa-pulse"></i>
+            </span>
           </p>
         </div>
     </div>
@@ -49,30 +51,46 @@ draft: true
 <section id="score-results" class="hero is-medium is-hidden">
     <div class="hero-body">
       <div class="container">
-        <div class="has-text-centered">
-          <h1 id="domain" class="title is-marginless">Downtime Risk Assessment</h1>
-          <h2 class="is-marginless">Downtime Risk Assessment</h2>
-          <p id="score-message"></p>
+        <div class="has-text-centered add-padding-bottom">
+          <h1 id="domain" class="title">Downtime Risk Assessment</h1>
+          <h2 class="subtitle add-padding-bottom">Downtime Risk Assessment <span id="score-message"></span></h2>
         </div>
         <!-- Domain Score -->
-        <div class="columns add-padding">
+        <div class="columns add-padding-bottom">
+          <!-- Rook and Score -->
           <div class="column">
-            {{< rook >}}
-          </div>
-          <div class="column">
-            <p id="score"></p>
-          </div>
+              <div class="columns is-vcentered is-mobile">
+                <div id="rook-col" class="column">
+                  {{< rook >}}
+                </div>
+                <div class="column">
+                  <p id="score"></p>
+                </div>
+              </div>
+          </div><!-- end of .column -->
         </div>
-        <!-- Factors -->
-        <div class="columns">
-          <div id="top-factors" class="column">
-            <p>Top Factors</p>
-          </div>
-          <div id="bottom-factors" class="column">
-            <p>Bottom Factors</p>
-          </div>
+        <div class="columns add-padding-top">
+          <!-- Factors -->
+          <div class="column">
+            <div class="columns">
+              <div class="columns">
+                <div id="top-factors" class="column factors">
+                  <p class="title">Top Factors</p>
+                  <hr />
+                </div>
+                <div id="bottom-factors" class="column factors">
+                  <p class="title">Bottom Factors</p>
+                  <hr />
+                </div>
+              </div>
+            </div>
+          </div><!-- end of .column -->
+
         </div>
       </div><!-- end of .container -->
+      <div id="whatsgood-div" class="container">
+          <h3 class="title">What does good look like?</h3>
+      </div>
     </div>
 </section>
 
