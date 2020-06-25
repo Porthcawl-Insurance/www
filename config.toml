@@ -4,7 +4,7 @@ title = 'CyberFortress'
 theme = ''
 
 [params]
-description = "Digital means vulnerable. CyberFortress is building a new way to protect your online revenue in minutes."
+description = "CyberFortress offers a new kind of insurance for e-commerce! Parametric in nature, we pay out fast on lost revenue due to unexpected downtime."
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
