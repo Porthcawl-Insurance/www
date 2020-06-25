@@ -892,7 +892,7 @@ nav.level {
 }
 
 /* About Page */
-#about-hero {
+#about{
   border-bottom: 4px solid $gray;
   padding-bottom: 0;
 
@@ -909,30 +909,30 @@ nav.level {
   }
 }
 
-#about {
-  .column {
-    margin: 3em auto;
-  }
-  .columns {
-    margin-top: 0;
-    @include md {
-      margin-top: 1em;
-    }
-  }
-  .hero-body {
-    padding-top: 0;
-    padding-bottom: 0;
-    @include md {
-      padding: 3rem 1.5rem;
-    }
-  }
-  .box {
-    background-color: rgba(#ffffff, .75);
-    @include md{
-      background-color: #ffffff;
-    }
-  }
-}
+// #about {
+//   .column {
+//     margin: 3em auto;
+//   }
+//   .columns {
+//     margin-top: 0;
+//     @include md {
+//       margin-top: 1em;
+//     }
+//   }
+//   .hero-body {
+//     padding-top: 0;
+//     padding-bottom: 0;
+//     @include md {
+//       padding: 3rem 1.5rem;
+//     }
+//   }
+//   .box {
+//     background-color: rgba(#ffffff, .75);
+//     @include md{
+//       background-color: #ffffff;
+//     }
+//   }
+// }
 
 #team {
   .hero-body {
