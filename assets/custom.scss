@@ -231,6 +231,9 @@ h6,h6.title {
   @include sm {
     font-size: 1.25rem;
   }
+  &.muted {
+    color: $dark-gray;
+  }
 }
 
 p {
@@ -260,6 +263,10 @@ p {
 
   &.orange {
     color: $orange;
+  }
+
+  &.muted {
+    color: $dark-gray;
   }
 
   &.quote {
@@ -1097,16 +1104,28 @@ nav.level {
   }
 }
 
+#get_downtime_risk {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#invalid {
+  .fa-check {
+    color: $r7;
+  }
+  .fa-times {
+    color: $r1;
+  }
+  i {
+    padding-right: .5em;
+  }
+}
+
 #error {
     max-width: 300px;
     height: auto;
     margin: 10px auto;
     padding-bottom: 1em;
-}
-
-#get_downtime_risk {
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 #score-results {

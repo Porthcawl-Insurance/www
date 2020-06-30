@@ -6,52 +6,29 @@ slug: "/invalid/"
 robots: noindex, nofollow
 ---
 
-{{< block >}}
-
-<div class='header'>
-  <h1><span>Whoops!</span><br />Sorry, that's not a business email.</h1>
-</div>
-<div class='body'>
-  <p>
-    In order to determine your business’s downtime risk we need your business email
-    so that our risk model can run its analysis on the business domain as opposed to <span class='bold'>gmail.com</span> or <span class='bold'>yahoo.com</span>.
-  </p>
-  <!-- <hr class='dark'/> -->
-  <div class='email-examples'>
-    <p class='good'><i class="fas fa-check-circle"></i> your.name@yourbusiness.com</p>
-    <p class='bad'><i class="fas fa-times-circle"></i> your.name@gmail.com</p>
-  </div>
-  <hr class='dark'/>
-
-  <!-- DOWNTIME RISK FORM -->
-  <div class='text-center downtime-form small p-4'>
-    <form id='get_downtime_risk' action='https://us-central1-cyberfortress-sandbox.cloudfunctions.net/submit' method='post' class='needs-validation' novalidate>
-      <div class='form-group'>
-        <label for='user-email'>Enter your business email below for a downtime risk assessment</label>
-        <input id='user-email' class='form-control' type='email' name='email' placeholder='your.name@yourbusiness.com' required>
-        <div class='invalid-feedback'>
-          <i class="far fa-exclamation-circle"></i> Sorry, this isn't a valid email address.
-        </div>
+<section id="invalid" class="hero is-medium">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">Whoops! Sorry, that's not a business email.</h1>
+        <div class="columns">
+          <div class="column is-three-fifths-desktop is-offset-one-fifth-desktop">
+          <p class="add-padding-bottom">
+            In order to determine your business’s downtime risk we need your business email
+            so that our risk model can run its analysis on the business domain as opposed to
+            <strong>gmail.com</strong> or <strong>yahoo.com</strong>.
+          </p>
+          <div class="box">
+            <div class='email-examples add-padding'>
+              <p class=""<strong>For example...</strong></p>
+              <p class='good'><i class="fas fa-check"></i> <strong>your.name@yourbusiness.com</strong></p>
+              <p class='bad'><i class="fas fa-times"></i> your.name@gmail.com</p>
+            </div>
+          </div><!-- end of .box -->
+          <div class="add-padding-top">
+            <a class="button is-primary" href="/assessment">Use different email</a>
+          </div>
+          </div><!-- end of .column -->
+        </div><!-- end of .columns -->
       </div>
-      <div class='custom-control custom-checkbox'>
-        <input id='notifications_option' class='custom-control-input' type='checkbox' name='notifications_option' checked>
-        <label class='custom-control-label smaller' for='notifications_option'>Yes, I'd like to recieve future CyberFortress updates.</label>
-      </div>
-      <button class='btn btn-primary' type='submit'>Get Assessment</button>
-    </form>
-  </div>
-  <!-- end of DOWNTIME RISK FORM -->
-
-</div>
-<!--end of .body-->
-
-{{</ block >}}
-
-<script src='/scripts/clearbit-check_if_email_provider.js'></script>
-<script>
-el = document.getElementById ('get_downtime_risk');
-if (el) {
-	el.addEventListener ('submit', submitIfEmailNotProvider);
-}
-
-</script>
+    </div><!-- end of .hero-body -->
+</section>
